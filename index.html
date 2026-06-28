@@ -297,19 +297,23 @@
             margin-top: 20px;
         }
 
-        /* --- ল্যান্ডস্কেপ ফুল স্ক্রিন লক --- */
+        /* --- 👑 সিএসএস মোড: বাটন ছাড়া ১০০% ফুলস্ক্রিন ফিক্স --- */
         @media (max-width: 950px) and (orientation: landscape) {
             html, body {
                 overflow: hidden !important;
-                height: 100% !important;
-                width: 100% !important;
+                height: 100vh !important;
+                width: 100vw !important;
                 padding: 0 !important;
                 margin: 0 !important;
+                position: fixed !important;
             }
+            
+            /* ভিডিও ছাড়া বাকি সবকিছু লুকিয়ে ফেলা */
             header, .playing-now-bar, .category-container, .search-container, .main-content {
                 display: none !important; 
             }
             
+            /* প্লেয়ার সেকশন স্ক্রিনের সমান চওড়া করা */
             .player-section {
                 max-width: 100% !important;
                 width: 100vw !important;
@@ -322,30 +326,19 @@
                 margin: 0 !important;
                 padding: 0 !important;
                 border: none !important;
-                z-index: 99999 !important;
+                z-index: 999999 !important;
             }
             
             .video-container {
-                width: 100% !important;
-                height: 100% !important;
+                width: 100vw !important;
+                height: 100vh !important;
                 aspect-ratio: auto !important;
                 padding: 0 !important;
                 margin: 0 !important;
             }
             
-            .video-js {
-                width: 100vw !important;
-                height: 100vh !important;
-                position: absolute !important;
-                top: 0 !important;
-                left: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                display: flex !important;
-                align-items: stretch !important;
-                justify-content: center !important;
-            }
-            
+            /* প্লেয়ারের চারপাশের সব ফাঁকা জায়গা এবং বর্ডার দূর করা */
+            .video-js,
             .video-js .vjs-tech,
             .video-js video {
                 width: 100vw !important;
@@ -355,7 +348,12 @@
                 left: 0 !important;
                 margin: 0 !important;
                 padding: 0 !important;
-                object-fit: fill !important; 
+                object-fit: fill !important; /* এটি ১ পিক্সেল কালো দাগও রাখবে না */
+            }
+            
+            /* ফুলস্ক্রিন অবস্থায় কন্ট্রোল বার লুকিয়ে রাখা (প্রয়োজনে টাচ করলে আসবে) */
+            .video-js .vjs-control-bar {
+                z-index: 9999999 !important;
             }
         }
     </style>
@@ -598,23 +596,6 @@
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        /* 🛠️ নতুন সংযোজন: ফোন কাত করলে অটোমেটিক ফুলস্ক্রিন রিকোয়েস্ট লজিক */
-        window.addEventListener("orientationchange", function() {
-            if (player) {
-                if (window.orientation === 90 || window.orientation === -90) {
-                    // ল্যান্ডস্কেপ মোড হলে ফুলস্ক্রিন অন হবে
-                    if (!player.isFullscreen()) {
-                        player.requestFullscreen();
-                    }
-                } else {
-                    // পোর্টেট (সোজা) মোড হলে ফুলস্ক্রিন বন্ধ হবে
-                    if (player.isFullscreen()) {
-                        player.exitFullscreen();
-                    }
-                }
-            }
-        });
 
         window.onload = fetchPlaylist;
     </script>
