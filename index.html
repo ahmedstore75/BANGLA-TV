@@ -297,7 +297,7 @@
             margin-top: 20px;
         }
 
-        /* --- 🛠️ আলটিমেট এবং ওয়াটারপ্রুফ ল্যান্ডস্কেপ ফুল স্ক্রিন ফিক্স --- */
+        /* --- ল্যান্ডস্কেপ ফুল স্ক্রিন লক --- */
         @media (max-width: 950px) and (orientation: landscape) {
             html, body {
                 overflow: hidden !important;
@@ -310,7 +310,6 @@
                 display: none !important; 
             }
             
-            /* প্লেয়ার সেকশনকে একদম জিরো মার্জিনে স্ক্রিনের সাথে লক করা */
             .player-section {
                 max-width: 100% !important;
                 width: 100vw !important;
@@ -334,7 +333,6 @@
                 margin: 0 !important;
             }
             
-            /* Video.js এর মূল কন্টেইনার এবং তার ভেতরের প্রতিটা চাইল্ড উইন্ডোকে স্ট্রেচ করা */
             .video-js {
                 width: 100vw !important;
                 height: 100vh !important;
@@ -348,7 +346,6 @@
                 justify-content: center !important;
             }
             
-            /* ভিডিও ট্যাগ এবং প্রজেক্টেড স্ক্রিনকে কোনো বর্ডার ছাড়াই ১০০% চওড়া করা */
             .video-js .vjs-tech,
             .video-js video {
                 width: 100vw !important;
@@ -358,7 +355,7 @@
                 left: 0 !important;
                 margin: 0 !important;
                 padding: 0 !important;
-                object-fit: fill !important; /* এটি দুই পাশের কালো বর্ডার পুরোপুরি কেটে স্ক্রিনে টানটান করে বসাবে */
+                object-fit: fill !important; 
             }
         }
     </style>
@@ -366,7 +363,7 @@
 <body>
 
     <header>
-        <h1>এস এ লাইভทีভি</h1>
+        <h1>এস এ লাইভ টিভি</h1>
     </header>
 
     <div class="player-section" id="playerSection">
