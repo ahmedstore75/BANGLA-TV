@@ -81,7 +81,7 @@
             object-fit: fill !important; 
         }
 
-        /* ডাইনামিক ক্যাটাগরি কন্টেইনার (হরাইজনটাল স্ক্রোল) */
+        /* ডাইনামিক ক্যাটাগরি কন্টেইনার */
         .category-container {
             width: 100%;
             max-width: 800px;
@@ -598,6 +598,23 @@
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        /* 🛠️ নতুন সংযোজন: ফোন কাত করলে অটোমেটিক ফুলস্ক্রিন রিকোয়েস্ট লজিক */
+        window.addEventListener("orientationchange", function() {
+            if (player) {
+                if (window.orientation === 90 || window.orientation === -90) {
+                    // ল্যান্ডস্কেপ মোড হলে ফুলস্ক্রিন অন হবে
+                    if (!player.isFullscreen()) {
+                        player.requestFullscreen();
+                    }
+                } else {
+                    // পোর্টেট (সোজা) মোড হলে ফুলস্ক্রিন বন্ধ হবে
+                    if (player.isFullscreen()) {
+                        player.exitFullscreen();
+                    }
+                }
+            }
+        });
 
         window.onload = fetchPlaylist;
     </script>
