@@ -66,18 +66,17 @@
         .video-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 16 / 9; /* সোজা থাকা অবস্থায় রেশিও ঠিক রাখবে */
+            aspect-ratio: 16 / 9; 
             background: #000;
         }
 
-        /* Video.js এর ভেতরের ডিফল্ট কালো ব্যাকগ্রাউন্ড দূর করা */
+        /* Video.js এর ডিফল্ট স্টাইল */
         .video-js {
             background-color: #000 !important;
             width: 100% !important;
             height: 100% !important;
         }
 
-        /* সাধারণ মোডে ভিডিওর স্টাইল */
         .video-js video {
             object-fit: fill !important; 
         }
@@ -298,10 +297,10 @@
             margin-top: 20px;
         }
 
-        /* --- 🛠️ আগের কোডের মতো ১০০% পারফেক্ট ল্যান্ডস্কেপ ফুল স্ক্রিন ফিক্স --- */
+        /* --- 🛠️ শতভাগ পারফেক্ট ল্যান্ডস্কেপ ফুল স্ক্রিন লক (এক সাইডের কালো দাগ দূর করার জন্য) --- */
         @media (max-width: 950px) and (orientation: landscape) {
             body {
-                overflow: hidden;
+                overflow: hidden !important;
                 height: 100vh !important;
                 width: 100vw !important;
             }
@@ -313,24 +312,41 @@
                 width: 100vw !important;
                 height: 100vh !important;
                 margin: 0 !important;
+                padding: 0 !important;
                 border: none !important;
+                left: 0 !important;
+                top: 0 !important;
+                position: fixed !important;
             }
             .video-container {
                 width: 100vw !important;
                 height: 100vh !important;
-                aspect-ratio: auto !important; /* ল্যান্ডস্কেপে অ্যাসপেক্ট লক রিমুভ */
+                aspect-ratio: auto !important;
+                padding: 0 !important;
+                margin: 0 !important;
             }
             
-            /* Video.js এর মেইন কন্টেইনার ও তার ভেতরের প্রতিটা এলিমেন্টকে জোরপূর্বক ১০০% ফুল স্ক্রিন করা */
-            .video-js, 
+            /* Video.js এর মূল কন্টেইনার রি-পজিশনিং এবং ভেতরের ডিফ্লেক্ট ফিক্স */
+            .video-js {
+                width: 100vw !important;
+                height: 100vh !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            /* ভিডিও এলিমেন্টকে কোনো মার্জিন বা অ্যালাইনমেন্ট ছাড়াই একদম স্ক্রিনে মেলানো */
             .video-js .vjs-tech,
             .video-js video {
                 width: 100vw !important;
                 height: 100vh !important;
-                position: fixed !important;
                 top: 0 !important;
                 left: 0 !important;
-                object-fit: fill !important; /* দুই পাশের কালো বর্ডার পুরোপুরি রিমুভ করবে */
+                margin: 0 !important;
+                padding: 0 !important;
+                object-fit: fill !important; 
             }
         }
     </style>
