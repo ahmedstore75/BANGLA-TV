@@ -599,26 +599,22 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        /* 🛠️ রোটেশন ডিটেক্টর লজিক (বাটন ছাড়া অটো ফুলস্ক্রিন) */
-        function checkOrientation() {
-            if (player && (window.innerWidth > window.innerHeight)) {
-                // ল্যান্ডস্কেপ (কাত) হলে অটোমেটিক ফুলস্ক্রিন রিকোয়েস্ট করবে
-                if (!player.isFullscreen()) {
-                    player.requestFullscreen();
-                }
-            } else if (player) {
-                // সোজা করলে ফুলস্ক্রিন কেটে যাবে
-                if (player.isFullscreen()) {
-                    player.exitFullscreen();
+        /* 🛠️ নতুন সংযোজন: ফোন কাত করলে অটোমেটিক ফুলস্ক্রিন রিকোয়েস্ট লজিক */
+        window.addEventListener("orientationchange", function() {
+            if (player) {
+                if (window.orientation === 90 || window.orientation === -90) {
+                    // ল্যান্ডস্কেপ মোড হলে ফুলস্ক্রিন অন হবে
+                    if (!player.isFullscreen()) {
+                        player.requestFullscreen();
+                    }
+                } else {
+                    // পোর্টেট (সোজা) মোড হলে ফুলস্ক্রিন বন্ধ হবে
+                    if (player.isFullscreen()) {
+                        player.exitFullscreen();
+                    }
                 }
             }
-        }
-
-        // স্ক্রিন ঘোরানো অথবা সাইজ পরিবর্তন ট্র্যাক করার ইভেন্ট
-        window.addEventListener("orientationchange", function() {
-            setTimeout(checkOrientation, 200);
         });
-        window.addEventListener("resize", checkOrientation);
 
         window.onload = fetchPlaylist;
     </script>
