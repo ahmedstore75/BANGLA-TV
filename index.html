@@ -211,8 +211,8 @@
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
         }
 
-        .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; }
-        .video-js { width: 100% !important; height: 100% !important; }
+        .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+        .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
         .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
 
         /* 🔍 সার্চ ও ক্যাটাগরি জোন */
@@ -288,8 +288,8 @@
         @media (max-width: 950px) and (orientation: landscape) {
             header, .sticky-controls-container, .playing-now-bar, .main-content { display: none !important; }
             .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0; margin: 0; z-index: 9999999; display: block; }
-            .video-container, .video-js { width: 100vw !important; height: 100vh !important; }
-            .video-js video { object-fit: fill !important; }
+            .video-container, .video-js, .native-player-style { width: 100vw !important; height: 100vh !important; }
+            .video-js video, .native-player-style { object-fit: fill !important; }
         }
     </style>
 </head>
@@ -361,11 +361,13 @@
         </div>
     </div>
 
-    <!-- ভিডিও ইঞ্জিন কোড -->
+    <!-- ভিডিও ইঞ্জিন স্ক্রিপ্ট (ভিডিও.জেএস এবং এইচএলএস ব্যাকআপ ইঞ্জিন) -->
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
     <script>
         let player; 
+        let hlsBackupEngine = null;
         const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/refs/heads/main/mixiptvchannel.m3u';
         const fetchUrls = [
             githubUrl,
@@ -516,6 +518,18 @@
             }
         }
 
+        function resetContainers() {
+            if (player) {
+                try { player.dispose(); } catch(e){}
+                player = null;
+            }
+            if (hlsBackupEngine) {
+                hlsBackupEngine.destroy();
+                hlsBackupEngine = null;
+            }
+            document.getElementById('videoContainer').innerHTML = `<video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>`;
+        }
+
         function playVideo(name, url, clickedElement) {
             document.querySelectorAll('.channel-row.active-channel').forEach(row => row.classList.remove('active-channel'));
             if(clickedElement) clickedElement.classList.add('active-channel');
@@ -523,53 +537,58 @@
             document.getElementById('playingTitle').innerText = name;
             document.getElementById('playerSection').style.display = 'block';
             
-            // নতুন করে মেইন কন্টেইনার সেটআপ (যদি আগের সেশন ড্রপ হয়ে থাকে)
-            const checkPlayer = document.getElementById('live-player');
-            if(!checkPlayer) {
-                document.getElementById('videoContainer').innerHTML = `<video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>`;
-                player = null;
-            }
+            resetContainers();
 
-            if (!player) {
-                player = videojs('live-player');
-                setupForcedDoubleTapZoom(); 
-                
-                // 🔄 অটো-ব্যাকআপ ইন্টিগ্রেশন লজিক
-                player.on('error', function() {
-                    console.log("প্রধান প্লেয়ার ফেইল! ব্যাকআপ ইঞ্জিন চালু হচ্ছে...");
-                    const videoEl = document.getElementById('live-player_html5_api');
-                    if(videoEl) {
-                        player.dispose(); 
-                        
-                        // ব্যাকআপ HTML5 নেটিভ কোর রান করা হচ্ছে
-                        const container = document.getElementById('videoContainer');
-                        container.innerHTML = `<video id="live-player" class="forced-zoom" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
-                        
-                        const backupVideo = document.getElementById('live-player');
-                        backupVideo.src = url;
-                        backupVideo.play().catch(e => {
-                            document.getElementById('playingTitle').innerText = name + " (লিঙ্কটি বর্তমানে ডাউন আছে)";
-                        });
-                        
-                        player = null; // রিলিজ
-                        setupForcedDoubleTapZoom();
-                    }
-                });
-            }
-            
+            player = videojs('live-player');
+            setupForcedDoubleTapZoom();
+
+            // 🔄 ৩-স্তর বিশিষ্ট ফলব্যাক/ব্যাকআপ প্লেয়ার লজিক
+            player.on('error', function() {
+                console.log("ইঞ্জিন ১ (Video.js) ফেইল! ইঞ্জিন ২ (Hls.js) ট্রাই করা হচ্ছে...");
+                if (player) { player.dispose(); player = null; }
+
+                const container = document.getElementById('videoContainer');
+                container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
+                const videoElement = document.getElementById('live-player');
+
+                if (Hls.isSupported()) {
+                    hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
+                    hlsBackupEngine.loadSource(url);
+                    hlsBackupEngine.attachMedia(videoElement);
+                    setupForcedDoubleTapZoom();
+
+                    hlsBackupEngine.on(Hls.Events.ERROR, function(event, data) {
+                        if (data.fatal) {
+                            console.log("ইঞ্জিন ২ ফেইল! ফাইনাল ব্যাকআপ ইঞ্জিন ৩ (HTML5 Native) এ ট্রান্সফার হচ্ছে...");
+                            runNativeFallback(videoElement, url, name);
+                        }
+                    });
+                } else {
+                    runNativeFallback(videoElement, url, name);
+                }
+            });
+
             try {
                 player.src({ src: url, type: 'application/x-mpegURL' });
                 player.play();
             } catch(e) {
-                console.log("সরাসরি এরর ক্যাচ ট্র্রিগার");
+                console.log("প্লেব্যাক ট্রাই এক্সেপশন");
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function runNativeFallback(element, url, name) {
+            if(hlsBackupEngine) { hlsBackupEngine.destroy(); hlsBackupEngine = null; }
+            element.src = url;
+            element.play().catch(e => {
+                document.getElementById('playingTitle').innerText = name + " (চ্যানেল লিঙ্কটি বর্তমানে অফলাইন আছে)";
+            });
+            setupForcedDoubleTapZoom();
         }
 
         function setupForcedDoubleTapZoom() {
             const container = document.getElementById('videoContainer');
             let lastTapTime = 0;
-            container.removeEventListener('touchstart', () => {}); // ওল্ড রিমুভ
             container.addEventListener('touchstart', function(e) {
                 const now = new Date().getTime();
                 if (now - lastTapTime < 300) {
