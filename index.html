@@ -311,13 +311,13 @@
             height: 100% !important;
         }
 
-        /* 📱 ডিফল্ট মোড (সোজা স্ক্রিন): ভিডিও অরিজিনাল রেশিওতে থাকবে, ক্রপ বা স্ট্রেচ হবে না */
+        /* 📱 সোজা স্ক্রিন (Portrait): কোনো প্রকারের স্ট্রেচ বা ক্রপ হবে না */
         .video-js video,
         .video-js .vjs-tech {
             object-fit: contain !important; 
         }
 
-        /* 🔄 ফুল স্ক্রিন বা ল্যান্ডস্কেপ মোড: ভিডিও পুরো স্ক্রিন জুড়ে ১০০% ফিট (স্ট্রেচ) হয়ে যাবে */
+        /* 🔄 শুধুমাত্র বাস্তবেই ল্যান্ডস্কেপ বা ঘোরানো হলে ভিডিও ১০০% স্ট্রেচ হয়ে ফুল ফিট হবে */
         body.landscape-mode .video-js video,
         body.landscape-mode .vjs-tech,
         .video-js.vjs-fullscreen video,
@@ -325,7 +325,7 @@
             object-fit: fill !important; 
         }
 
-        /* কাস্টম জলদি রোটেট বাটন */
+        /* কাস্টম রোটেশন বাটন */
         .vjs-custom-rotate-button {
             cursor: pointer;
             font-size: 1.6em;
@@ -711,7 +711,7 @@
             if(window.innerWidth <= 950) window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        /* 🔄 কাস্টম রোটেশন বাটন */
+        /* 🔄 কাস্টম রোটেশন বাটন লজিক ফিক্স */
         function addCustomRotateButton() {
             const Button = videojs.getComponent('Button');
             const RotateButton = videojs.extend(Button, {
@@ -729,13 +729,13 @@
                 handleClick: function() {
                     if(window.innerWidth > 950) return;
                     
+                    // ⚠️ স্ক্রিন সোজা থাকলে জোর করে ফুল স্ক্রিন করা বন্ধ। 
+                    // এটি ইউজারকে রিমাইন্ডার দিবে বা ফুলস্ক্রিন রিকোয়েস্ট তৈরি করবে কিন্তু অরিয়েন্টেশন চেঞ্জ না হওয়া পর্যন্ত ফুল স্ট্রেচ করবে না।
                     const container = document.getElementById('videoContainer');
                     if (!document.body.classList.contains('landscape-mode')) {
-                        document.body.classList.add('landscape-mode');
                         if (container.requestFullscreen) container.requestFullscreen();
                         else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
                     } else {
-                        document.body.classList.remove('landscape-mode');
                         if (document.exitFullscreen) document.exitFullscreen();
                         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
                     }
@@ -746,7 +746,7 @@
             player.getChild('controlBar').addChild('RotateButton', {}, player.getChild('controlBar').children_.length - 1);
         }
 
-        /* ওরিয়েন্টেশন ট্রিগার ফিক্স */
+        /* ওরিয়েন্টেশন ট্র্যাকিং (প্রকৃত চেঞ্জ হ্যান্ডলার) */
         function setupOrientationTrigger() {
             const orientationMatcher = window.matchMedia("(orientation: landscape)");
             
@@ -755,6 +755,7 @@
                 
                 const container = document.getElementById('videoContainer');
                 if (m.matches) {
+                    // 📱 শুধুমাত্র বাস্তবে ফোন ল্যান্ডস্কেপ মোডে ঘুরলেই ফুল স্ক্রিন মোড ট্রিগার হবে
                     document.body.classList.add('landscape-mode');
                     setTimeout(() => {
                         if (container.requestFullscreen) container.requestFullscreen();
@@ -773,11 +774,15 @@
                 orientationMatcher.addListener(handleOrientationChange); 
             }
 
+            // ফুলস্ক্রিন থেকে ব্যাক করলে ক্লাস রিমুভ করার সেফটি চেক
             const exitEvents = ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'];
             exitEvents.forEach(evt => {
                 document.addEventListener(evt, () => {
+                    // ফুলস্ক্রিন এক্সিট হয়ে গেলে এবং স্ক্রিন যদি সোজা (Portrait) থাকে তবে ল্যান্ডস্কেপ মোড রিমুভ
                     if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-                        document.body.classList.remove('landscape-mode');
+                        if (window.innerHeight > window.innerWidth) {
+                            document.body.classList.remove('landscape-mode');
+                        }
                     }
                 });
             });
