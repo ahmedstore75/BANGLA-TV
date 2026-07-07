@@ -13,137 +13,251 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* থিম ভেরিয়েবল */
+        :root {
+            --bg-color: #060913;
+            --panel-bg: #0b0f19;
+            --text-color: #e2e8f0;
+            --input-bg: #1e293b;
+            --border-color: #334155;
+            --card-bg: linear-gradient(135deg, #111827, #1e293b);
+            --card-hover: linear-gradient(135deg, #1e293b, #ff333322);
+            --drawer-bg: rgba(11, 15, 25, 0.88); 
+            --menu-text-color: #ff4d4d;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f1f5f9;
+            --panel-bg: #ffffff;
+            --text-color: #1e293b;
+            --input-bg: #e2e8f0;
+            --border-color: #cbd5e1;
+            --card-bg: linear-gradient(135deg, #ffffff, #f8fafc);
+            --card-hover: linear-gradient(135deg, #f1f5f9, #ff333311);
+            --drawer-bg: rgba(255, 255, 255, 0.88);
+            --menu-text-color: #cc0000;
+        }
+
         body {
-            background-color: #060913; 
-            color: #e2e8f0;
+            background-color: var(--bg-color); 
+            color: var(--text-color);
             display: flex;
             flex-direction: column;
             height: 100vh;
             overflow: hidden;
+            transition: background 0.3s, color 0.3s;
         }
 
-        /* প্রফেশনাল ডার্ক ও রেড হেডার */
+        /* হেডার */
         header {
             background: linear-gradient(90deg, #121214, #1a1a1e);
-            padding: 14px;
-            text-align: center;
+            padding: 14px 15px;
             border-bottom: 2px solid #ff3333; 
             box-shadow: 0 4px 15px rgba(255, 51, 51, 0.3);
             z-index: 999;
+            position: relative; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #ff3333 !important;
+            font-size: 26px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.8);
         }
 
         header h1 {
             color: #ff3333; 
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             letter-spacing: 1px;
             text-shadow: 0 0 10px rgba(255, 51, 51, 0.4);
-        }
-
-        /* ফিক্সড টপ ভিডিও প্লেয়ার কন্টেইনার */
-        .player-section {
-            background-color: #000;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
-            border-bottom: 2px solid #ff3333;
-            display: none; 
-        }
-
-        /* "এখন দেখছেন" বার */
-        .playing-now-bar {
-            background-color: #0f172a;
-            padding: 10px 15px;
-            font-size: 14px;
-            color: #ff3333;
-            font-weight: bold;
-            border-bottom: 1px solid #1e293b;
-            text-align: center;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9; 
-            background: #000;
-        }
-
-        /* Video.js এর ডিফল্ট স্টাইল */
-        .video-js {
-            background-color: #000 !important;
-            width: 100% !important;
-            height: 100% !important;
-        }
-
-        .video-js video {
-            object-fit: fill !important; 
-        }
-
-        /* ডাইনামিক ক্যাটাগরি কন্টেইনার */
-        .category-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 10px 15px 5px 15px;
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
             white-space: nowrap;
-            background-color: #0b0f19;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .category-container::-webkit-scrollbar {
-            display: none;
-        }
-        .category-container {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .category-btn {
-            background-color: #1e293b;
-            color: #cbd5e1;
-            border: 1px solid #334155;
-            padding: 8px 16px;
-            border-radius: 20px;
+        .channel-count-badge {
+            background: none; 
+            color: #ff3333; 
             font-size: 13px;
-            font-weight: 600;
+            font-weight: bold;
+            padding: 4px 12px; 
+            border: 2px solid #ff3333; 
+            border-radius: 20px; 
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 8px rgba(255, 51, 51, 0.4); 
+            flex-shrink: 0; 
+        }
+
+        /* সাইডবার ড্রয়ার */
+        .sidebar-drawer {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100vh;
+            background: var(--drawer-bg);
+            backdrop-filter: blur(20px); 
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 10px 0 35px rgba(0, 0, 0, 0.6);
+            z-index: 10000;
+            transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid rgba(255, 51, 51, 0.3);
+        }
+
+        .sidebar-drawer.open {
+            left: 0;
+        }
+
+        .drawer-header {
+            padding: 25px 20px;
+            background: linear-gradient(135deg, rgba(18, 18, 20, 0.9), rgba(26, 26, 30, 0.9));
+            border-bottom: 2px solid #ff3333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .drawer-header h2 {
+            color: #ff3333;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+        }
+
+        .close-drawer-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
             cursor: pointer;
-            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
         }
 
-        .category-btn:hover {
-            background-color: #334155;
+        .close-drawer-btn:hover {
+            background: #ff3333;
             color: #ffffff;
+            transform: rotate(90deg);
         }
 
-        .category-btn.active-category-btn {
-            background-color: #ff3333;
+        .drawer-menu-items {
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .drawer-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 14px 18px;
+            color: var(--menu-text-color); 
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 12px;
+            background: rgba(255, 51, 51, 0.03); 
+            border: 1px solid rgba(255, 51, 51, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .drawer-item:hover {
+            background: linear-gradient(90deg, rgba(255, 51, 51, 0.2), rgba(255, 51, 51, 0.02));
+            border-color: rgba(255, 51, 51, 0.5);
+            color: #ffffff; 
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(255, 51, 51, 0.15);
+        }
+
+        .drawer-item .icon-box {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #ff3333, #bd0000);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #ffffff;
-            border-color: #ff3333;
-            box-shadow: 0 0 8px rgba(255, 51, 51, 0.4);
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(255, 51, 51, 0.3);
         }
 
-        /* রিয়েল-টাইম সার্চ বার */
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(3, 5, 10, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .drawer-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* সার্চ ও ক্যাটাগরি কনটেইনার */
+        .controls-wrapper {
+            background-color: var(--panel-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 15px;
+            display: none; /* প্লেলিস্ট লোড হলে জাভাস্ক্রিপ্ট দিয়ে flex করা হবে */
+            align-items: center;
+            gap: 10px;
+        }
+
         .search-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 5px 15px 10px 15px;
-            background-color: #0b0f19;
-            border-bottom: 1px solid #1e293b;
-            display: none;
+            flex: 1; 
         }
 
         .search-input {
             width: 100%;
             padding: 10px 15px;
-            background-color: #1e293b;
-            border: 1px solid #334155;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            color: #ffffff;
+            color: var(--text-color);
             font-size: 14px;
             outline: none;
             transition: all 0.2s ease;
@@ -154,29 +268,88 @@
             box-shadow: 0 0 8px rgba(255, 51, 51, 0.2);
         }
 
-        .search-input::placeholder {
-            color: #64748b;
+        .category-select-wrapper {
+            position: relative;
+            min-width: 130px;
+            max-width: 160px;
         }
 
-        /* স্ক্রোলযোগ্য চ্যানেল কন্টেন্ট এরিয়া */
+        .category-dropdown {
+            width: 100%;
+            padding: 10px 30px 10px 12px;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-size: 14px;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            appearance: none; 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            transition: all 0.2s ease;
+        }
+
+        .category-select-wrapper::after {
+            content: "▼";
+            font-size: 10px;
+            color: #ff3333;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .app-layout {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+        }
+
         .main-content {
             flex: 1;
             overflow-y: auto;
             padding: 15px;
+        }
+
+        /* প্লেয়ার সেকশন */
+        .player-section {
+            background-color: #000;
             width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            border-bottom: 2px solid var(--border-color);
+            display: none; 
         }
 
-        #loading {
-            text-align: center;
-            font-size: 16px;
-            color: #ff3333;
-            margin-top: 40px;
+        .playing-now-bar {
+            background: linear-gradient(90deg, #0f172a, #1e293b);
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #ffffff;
             font-weight: bold;
+            border-bottom: 1px solid #ff333344;
+            text-align: center;
+            letter-spacing: 0.5px;
         }
 
-        /* IPTV Pro প্রিমিয়াম লিস্ট লেআউট */
+        .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9; 
+            background: #000;
+            overflow: hidden;
+        }
+
+        .video-js {
+            background-color: #000 !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
         .channel-list {
             display: flex;
             flex-direction: column;
@@ -184,7 +357,7 @@
         }
 
         .channel-row {
-            background: linear-gradient(135deg, #111827, #1e293b); 
+            background: var(--card-bg); 
             border-radius: 8px;
             padding: 14px;
             display: flex;
@@ -192,12 +365,12 @@
             justify-content: space-between;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
-            border: 1px solid #1e293b;
+            border: 1px solid var(--border-color);
             border-left: 5px solid #ff3333; 
         }
 
         .channel-row:hover {
-            background: linear-gradient(135deg, #1e293b, #ff333322); 
+            background: var(--card-hover); 
             border-left-color: #ff3333;
             box-shadow: 0 4px 12px rgba(255, 51, 51, 0.2);
             transform: translateX(4px);
@@ -221,14 +394,24 @@
             font-size: 14px;
             color: #64748b;
             font-weight: bold;
-            min-width: 25px;
+            min-width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .active-channel .channel-number {
+            color: #ffffff !important;
+            background-color: #ff3333 !important;
+            box-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
         }
 
         .logo-wrapper {
             width: 45px;
             height: 45px;
             flex-shrink: 0;
-            position: relative;
         }
 
         .channel-logo {
@@ -253,10 +436,7 @@
             padding: 2px 6px;
             border-radius: 4px;
             font-weight: 900;
-            letter-spacing: 0.5px;
-            box-shadow: 0 0 6px rgba(255, 51, 51, 0.7);
             animation: pulse 1.5s infinite ease-in-out;
-            flex-shrink: 0;
             display: none; 
         }
 
@@ -264,15 +444,9 @@
             display: inline-block;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.03); opacity: 0.7; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
         .channel-name {
             font-size: 15px;
-            color: #ffffff;
+            color: var(--text-color);
             font-weight: 600;
             white-space: nowrap;
             overflow: hidden;
@@ -282,110 +456,164 @@
         .play-icon {
             color: #ff3333; 
             font-size: 18px;
-            transition: transform 0.2s;
-        }
-
-        .channel-row:hover .play-icon, .active-channel .play-icon {
-            transform: scale(1.2);
-            color: #ffffff;
         }
 
         .no-result {
             text-align: center;
-            color: #64748b;
-            font-size: 14px;
-            margin-top: 20px;
+            color: #ff3333;
+            padding: 20px;
+            font-weight: bold;
         }
 
-        /* --- 👑 সিএসএস মোড: বাটন ছাড়া ১০০% ফুলস্ক্রিন ফিক্স --- */
+        #loading {
+            text-align: center;
+            font-size: 16px;
+            color: #ff3333;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* রেসপনসিভ ডেক্সটপ ভিউ */
+        @media (min-width: 951px) {
+            .app-layout {
+                flex-direction: row; 
+                height: calc(100vh - 56px); /* হেডার বাদ দিয়ে পুরো স্ক্রিন */
+            }
+            .player-section {
+                flex: 1.5; 
+                display: none; 
+                border-bottom: none;
+                border-right: 3px solid #ff3333;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .video-container {
+                width: 100%;
+                flex: 1; /* ডেক্সটপে প্লেয়ার বাকি অংশ জুড়ে থাকবে */
+                aspect-ratio: auto;
+            }
+            .main-content {
+                flex: 1; 
+                height: 100%;
+                overflow-y: auto; 
+                padding-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+            .channel-list {
+                flex: 1;
+                overflow-y: auto;
+            }
+        }
+
+        /* মোবাইল ল্যান্ডস্কেপ মোড */
         @media (max-width: 950px) and (orientation: landscape) {
             html, body {
                 overflow: hidden !important;
                 height: 100vh !important;
                 width: 100vw !important;
-                padding: 0 !important;
-                margin: 0 !important;
                 position: fixed !important;
             }
-            
-            /* ভিডিও ছাড়া বাকি সবকিছু লুকিয়ে ফেলা */
-            header, .playing-now-bar, .category-container, .search-container, .main-content {
+            header, .controls-wrapper, .playing-now-bar, .main-content {
                 display: none !important; 
             }
-            
-            /* প্লেয়ার সেকশন স্ক্রিনের সমান চওড়া করা */
             .player-section {
-                max-width: 100% !important;
                 width: 100vw !important;
                 height: 100vh !important;
                 position: fixed !important;
-                top: 0 !important;
-                left: 0 !important;
-                right: 0 !important;
-                bottom: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
+                top: 0; left: 0;
                 border: none !important;
                 z-index: 999999 !important;
+                display: block !important;
             }
-            
             .video-container {
                 width: 100vw !important;
                 height: 100vh !important;
                 aspect-ratio: auto !important;
-                padding: 0 !important;
-                margin: 0 !important;
             }
-            
-            /* প্লেয়ারের চারপাশের সব ফাঁকা জায়গা এবং বর্ডার দূর করা */
-            .video-js,
-            .video-js .vjs-tech,
-            .video-js video {
+            .video-js, .video-js video {
                 width: 100vw !important;
                 height: 100vh !important;
-                position: absolute !important;
-                top: 0 !important;
-                left: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                object-fit: fill !important; /* এটি ১ পিক্সেল কালো দাগও রাখবে না */
-            }
-            
-            /* ফুলস্ক্রিন অবস্থায় কন্ট্রোল বার লুকিয়ে রাখা (প্রয়োজনে টাচ করলে আসবে) */
-            .video-js .vjs-control-bar {
-                z-index: 9999999 !important;
+                object-fit: fill !important; 
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- 🚪 সাইডবার ড্রয়ার -->
+    <div class="drawer-overlay" id="drawerOverlay" onclick="toggleMenu()"></div>
+    <div class="sidebar-drawer" id="sidebarDrawer">
+        <div class="drawer-header">
+            <h2>নিয়ন্ত্রণ প্যানেল</h2>
+            <button class="close-drawer-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        <div class="drawer-menu-items">
+            <div class="drawer-item" onclick="toggleTheme()">
+                <div class="icon-box">🌓</div>
+                <span>থিম পরিবর্তন (Light/Dark)</span>
+            </div>
+            <div class="drawer-item" onclick="refreshPlaylist()">
+                <div class="icon-box">🔄</div>
+                <span>প্লেলিস্ট রিফ্রেশ করুন</span>
+            </div>
+            <div class="drawer-item" onclick="alert('রিপোর্ট করার জন্য ধন্যবাদ! আমরা লিংকটি পরীক্ষা করব।')">
+                <div class="icon-box">⚠️</div>
+                <span>চ্যানেল অচল? রিপোর্ট করুন</span>
+            </div>
+            <a href="https://facebook.com" target="_blank" class="drawer-item">
+                <div class="icon-box">💬</div>
+                <span>ফেসবুক পেজ (সাপোর্ট)</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 📺 হেডার এরিয়া -->
     <header>
-        <h1>এস এ লাইভ টিভি</h1>
+        <div class="header-left">
+            <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
+            <h1>এস এ লাইভ টিভি</h1>
+        </div>
+        <div class="channel-count-badge" id="totalChannels">CH-0</div>
     </header>
 
-    <div class="player-section" id="playerSection">
-        <div class="playing-now-bar">
-            <span id="playingTitle">এখন দেখছেন: লোড হচ্ছে...</span>
+    <div class="app-layout">
+        <!-- প্লেয়ার সেকশন (ভিডিও সবার উপরে থাকবে) -->
+        <div class="player-section" id="playerSection">
+            <div class="playing-now-bar">
+                এখন দেখছেন: <span id="playingTitle">কোনো চ্যানেল সিলেক্ট করা নেই</span>
+            </div>
+            <div class="video-container">
+                <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
+                    <p class="vjs-no-js">আপনার ব্রাউজারটি এই প্লেয়ারটি সাপোর্ট করছে না।</p>
+                </video>
+            </div>
         </div>
-        <div class="video-container">
-            <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
-                <p class="vjs-no-js">আপনার ব্রাউজারটি এই প্লেয়ারটি সাপোর্ট করছে না।</p>
-            </video>
+
+        <!-- মেইন কনটেন্ট (সার্চ অপশন এখন ভিডিও প্লেয়ারের নিচে) -->
+        <div class="main-content">
+            <!-- 🔍 সার্চ এবং ক্যাটাগরি বার -->
+            <div class="controls-wrapper" id="controlsWrapper" style="margin-bottom: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
+                <div class="search-container">
+                    <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেলের নাম লিখুন..." oninput="searchChannel()">
+                </div>
+                <div class="category-select-wrapper">
+                    <select class="category-dropdown" id="categoryDropdown" onchange="filterCategory(this.value)">
+                        <option value="All">All Categories</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="loading">সার্ভার থেকে চ্যানেল লিস্ট রিড করা হচ্ছে... একটু অপেক্ষা করুন।</div>
+            <div class="channel-list" id="channelList"></div>
         </div>
-    </div>
-
-    <div class="category-container" id="categoryContainer" style="display: none;">
-        <button class="category-btn active-category-btn" id="btn-All" onclick="filterCategory('All')">All Channels</button>
-    </div>
-
-    <div class="search-container" id="searchContainer">
-        <input type="text" class="search-input" id="searchBox" placeholder="যেকোনো চ্যানেলের নাম লিখুন..." oninput="searchChannel()">
-    </div>
-
-    <div class="main-content">
-        <div id="loading">সার্ভার থেকে চ্যানেল লিস্ট রিড করা হচ্ছে... একটু অপেক্ষা করুন।</div>
-        <div class="channel-list" id="channelList"></div>
     </div>
 
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
@@ -406,24 +634,47 @@
         let currentSelectedCategory = 'All'; 
         let lastUserCategory = 'All'; 
 
+        function toggleMenu() {
+            const drawer = document.getElementById('sidebarDrawer');
+            const overlay = document.getElementById('drawerOverlay');
+            drawer.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'light') {
+                document.body.removeAttribute('data-theme');
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+            }
+            toggleMenu();
+        }
+
+        function refreshPlaylist() {
+            toggleMenu();
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('loading').innerText = "প্লেলিস্ট রিফ্রেশ করা হচ্ছে...";
+            document.getElementById('channelList').innerHTML = '';
+            currentUrlIndex = 0;
+            fetchPlaylist();
+        }
+
         async function fetchPlaylist() {
             if (currentUrlIndex >= fetchUrls.length) {
-                document.getElementById('loading').innerHTML = "সব কটি কানেকশন এবং ব্যাকআপ এপিআই ব্যর্থ হয়েছে। প্লেলিস্ট লিঙ্কটি চেক করুন।";
+                document.getElementById('loading').innerHTML = "সব কটি কানেকশন ব্যর্থ হয়েছে।";
                 return;
             }
-            
             try {
                 const response = await fetch(fetchUrls[currentUrlIndex]);
                 if (!response.ok) throw new Error('Load failed');
                 const textData = await response.text();
-                
                 if(textData && textData.includes('#EXTM3U')) {
                     parseM3U(textData);
                 } else {
                     throw new Error('Data format error');
                 }
             } catch (err) {
-                console.warn(`Method ${currentUrlIndex + 1} failed. Shifting to next backup.`);
                 currentUrlIndex++;
                 fetchPlaylist();
             }
@@ -433,62 +684,45 @@
             const lines = data.split('\n');
             allChannels = [];
             let categories = new Set();
-
-            let currentName = '';
-            let currentLogo = '';
-            let currentGroup = 'Uncategorized';
+            let currentName = ''; let currentLogo = ''; let currentGroup = 'Uncategorized';
 
             lines.forEach(line => {
                 line = line.trim();
-                
                 if (line.startsWith('#EXTINF:')) {
                     const logoMatch = line.match(/tvg-logo="([^"]+)"/);
                     currentLogo = logoMatch ? logoMatch[1] : '';
-
                     const groupMatch = line.match(/group-title="([^"]+)"/);
                     currentGroup = groupMatch ? groupMatch[1] : 'Uncategorized';
-
                     const nameParts = line.split(',');
                     currentName = nameParts[nameParts.length - 1].trim();
-                } 
-                else if (line.startsWith('http')) {
-                    const streamUrl = line;
-
+                } else if (line.startsWith('http')) {
                     if (currentName) {
-                        allChannels.push({
-                            name: currentName,
-                            logo: currentLogo,
-                            category: currentGroup,
-                            url: streamUrl
-                        });
-                        if(currentGroup !== 'Uncategorized') {
-                            categories.add(currentGroup);
-                        }
+                        allChannels.push({ name: currentName, logo: currentLogo, category: currentGroup, url: line });
+                        if(currentGroup !== 'Uncategorized') categories.add(currentGroup);
                     }
-                    currentName = '';
-                    currentLogo = '';
+                    currentName = ''; currentLogo = '';
                 }
             });
 
-            createCategoryButtons(categories);
+            document.getElementById('totalChannels').innerText = "CH-" + allChannels.length;
+            populateCategoryDropdown(categories);
             renderChannels(allChannels); 
-            
             document.getElementById('loading').style.display = 'none';
-            document.getElementById('categoryContainer').style.display = 'flex';
-            document.getElementById('searchContainer').style.display = 'block'; 
+            document.getElementById('controlsWrapper').style.display = 'flex'; 
+            
+            if (allChannels.length > 0 && window.innerWidth > 950) {
+                const firstRow = document.querySelector('.channel-row');
+                if(firstRow) firstRow.click();
+            }
         }
 
-        function createCategoryButtons(categories) {
-            const container = document.getElementById('categoryContainer');
-            container.innerHTML = '<button class="category-btn active-category-btn" id="btn-All" onclick="filterCategory(\'All\', this)">All Channels</button>';
-            
+        function populateCategoryDropdown(categories) {
+            const dropdown = document.getElementById('categoryDropdown');
+            dropdown.innerHTML = '<option value="All">All Categories</option>';
             categories.forEach(cat => {
-                const btn = document.createElement('button');
-                btn.className = 'category-btn';
-                btn.setAttribute('data-category', cat);
-                btn.innerText = cat;
-                btn.onclick = function() { filterCategory(cat, this); };
-                container.appendChild(btn);
+                const option = document.createElement('option');
+                option.value = cat; option.innerText = cat;
+                dropdown.appendChild(option);
             });
         }
 
@@ -507,20 +741,14 @@
                 row.className = 'channel-row';
                 row.onclick = function() { playVideo(ch.name, ch.url, this); };
 
-                let logoHtml = '';
-                if (ch.logo) {
-                    logoHtml = `<img class="channel-logo" src="${ch.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`;
-                }
+                let logoHtml = ch.logo ? `<img class="channel-logo" src="${ch.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : '';
                 const fallbackLetter = ch.name.charAt(0).toUpperCase();
                 const letterHtml = `<div class="channel-logo" style="display: ${ch.logo ? 'none' : 'flex'}">${fallbackLetter}</div>`;
 
                 row.innerHTML = `
                     <div class="channel-left">
                         <div class="channel-number">${chCount++}</div>
-                        <div class="logo-wrapper">
-                            ${logoHtml}
-                            ${letterHtml}
-                        </div>
+                        <div class="logo-wrapper">${logoHtml}${letterHtml}</div>
                         <span class="channel-live-badge">LIVE</span>
                         <div class="channel-name">${ch.name}</div>
                     </div>
@@ -530,71 +758,42 @@
             });
         }
 
-        function filterCategory(category, btnElement) {
+        function filterCategory(category) {
             currentSelectedCategory = category; 
-            
-            if (document.getElementById('searchBox').value === '') {
-                lastUserCategory = category;
-            }
-
-            const buttons = document.querySelectorAll('.category-btn');
-            buttons.forEach(btn => btn.classList.remove('active-category-btn'));
-            
-            if(btnElement) {
-                btnElement.classList.add('active-category-btn');
-            } else {
-                if (category === 'All') {
-                    document.getElementById('btn-All').classList.add('active-category-btn');
-                } else {
-                    const targetBtn = document.querySelector(`.category-btn[data-category="${category}"]`);
-                    if (targetBtn) targetBtn.classList.add('active-category-btn');
-                }
-            }
+            if (document.getElementById('searchBox').value === '') lastUserCategory = category;
+            document.getElementById('categoryDropdown').value = category;
 
             if (category === 'All') {
                 renderChannels(allChannels);
             } else {
-                const filtered = allChannels.filter(ch => ch.category === category);
-                renderChannels(filtered);
+                renderChannels(allChannels.filter(ch => ch.category === category));
             }
         }
 
         function searchChannel() {
             const query = document.getElementById('searchBox').value.toLowerCase().trim();
-            
             if (query !== '') {
                 currentSelectedCategory = 'All';
-                const buttons = document.querySelectorAll('.category-btn');
-                buttons.forEach(btn => btn.classList.remove('active-category-btn'));
-                document.getElementById('btn-All').classList.add('active-category-btn');
-
-                const searchedChannels = allChannels.filter(ch => ch.name.toLowerCase().includes(query));
-                renderChannels(searchedChannels);
+                document.getElementById('categoryDropdown').value = 'All'; 
+                renderChannels(allChannels.filter(ch => ch.name.toLowerCase().includes(query)));
             } else {
-                filterCategory(lastUserCategory);
+                filterCategory(lastUserCategory); 
             }
         }
 
         function playVideo(name, url, clickedElement) {
-            const activeRows = document.querySelectorAll('.channel-row.active-channel');
-            activeRows.forEach(row => row.classList.remove('active-channel'));
-
+            document.querySelectorAll('.channel-row.active-channel').forEach(row => row.classList.remove('active-channel'));
             clickedElement.classList.add('active-channel');
-
-            document.getElementById('playingTitle').innerText = "এখন দেখছেন: " + name;
-            document.getElementById('playerSection').style.display = 'block';
+            document.getElementById('playingTitle').innerText = name;
             
-            if (!player) {
-                player = videojs('live-player');
-            }
-
-            player.src({
-                src: url,
-                type: 'application/x-mpegURL'
-            });
+            const pSection = document.getElementById('playerSection');
+            pSection.style.display = (window.innerWidth > 950) ? 'flex' : 'block';
+            
+            if (!player) player = videojs('live-player');
+            player.src({ src: url, type: 'application/x-mpegURL' });
             player.play();
             
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if(window.innerWidth <= 950) window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         window.onload = fetchPlaylist;
