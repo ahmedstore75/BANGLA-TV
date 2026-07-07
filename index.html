@@ -259,6 +259,8 @@
 
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; }
         .video-js { width: 100% !important; height: 100% !important; }
+        
+        /* ডাবল ট্যাপে ফুল স্ট্রেন্থ ইমপ্রুভড জুম */
         .video-js.forced-zoom video { object-fit: cover !important; }
 
         /* 🔍 ফিক্সড সার্চ ও ক্যাটাগরি জোন */
@@ -358,9 +360,9 @@
         .channel-right-action { display: flex; align-items: center; justify-content: flex-end; }
         .play-icon { color: var(--text-muted); font-size: 14px; opacity: 0; transform: translateX(-5px); transition: all 0.2s; }
         .channel-row:hover .play-icon { opacity: 1; transform: translateX(0); color: var(--brand-color); }
+        .channel-row.active-channel .play-icon { display: none !important; }
         .channel-live-badge { background: var(--brand-color); color: white; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 6px; display: none; }
 
-        .active-channel .play-icon { display: none !important; }
         .active-channel .channel-live-badge { display: inline-block !important; }
 
         .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; }
@@ -610,7 +612,6 @@
         function searchChannel() {
             const query = document.getElementById('searchBox').value.toLowerCase().trim();
             if (query !== '') {
-                currentSelectedCategory = 'All';
                 document.getElementById('categoryDropdown').value = 'All'; 
                 renderChannels(allChannels.filter(ch => ch.name.toLowerCase().includes(query)));
             } else {
