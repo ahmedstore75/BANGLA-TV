@@ -348,10 +348,17 @@
             overflow: hidden;
         }
 
+        /* 📺 স্ক্রিন ফিট করার মূল ফিক্স (১০০% ফুল স্ক্রিন স্ট্রেচ) */
         .video-js {
             background-color: #000 !important;
             width: 100% !important;
             height: 100% !important;
+        }
+
+        /* ভিডিও ট্যাগ জোরপূর্বক পুরো স্ক্রিনে ফিট করার জন্য */
+        .video-js video,
+        .video-js .vjs-tech {
+            object-fit: fill !important; 
         }
 
         .channel-list {
@@ -563,7 +570,7 @@
     <header>
         <div class="header-left">
             <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
-            <h1>এস এ লাইভ টিভি</h1>
+            <h1>... এস এ লাইভ টিভি ...</h1>
         </div>
         <div class="channel-count-badge" id="totalChannels">CH-0</div>
     </header>
@@ -773,7 +780,6 @@
             
             if (!player) {
                 player = videojs('live-player');
-                // ল্যান্ডস্কেপ ট্র্যাকিং স্ক্রিপ্ট (স্মার্ট ফুলস্ক্রিন ট্রিগার)
                 setupOrientationTrigger();
             }
             player.src({ src: url, type: 'application/x-mpegURL' });
@@ -782,22 +788,20 @@
             if(window.innerWidth <= 950) window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        /* 🔄 স্মার্ট ল্যান্ডস্কেপ ফুলস্ক্রিন হ্যান্ডলার (জাভাস্ক্রিপ্ট API বেসড) */
+        /* 🔄 স্মার্ট ল্যান্ডস্কেপ ফুলস্ক্রিন হ্যান্ডলার */
         function setupOrientationTrigger() {
             const orientationMatcher = window.matchMedia("(orientation: landscape)");
             
             function handleOrientationChange(m) {
-                if(window.innerWidth > 950) return; // পিসির জন্য দরকার নেই
+                if(window.innerWidth > 950) return; 
                 
                 const container = document.getElementById('videoContainer');
                 if (m.matches) {
-                    // স্ক্রিন ল্যান্ডস্কেপ হলে ক্লাস যুক্ত করবে এবং ফুলস্ক্রিন রিকোয়েস্ট করবে
                     document.body.classList.add('landscape-mode');
                     if (container.requestFullscreen) container.requestFullscreen();
                     else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
                     else if (container.msRequestFullscreen) container.msRequestFullscreen();
                 } else {
-                    // সোজা করলে ফুলস্ক্রিন এক্সিট করবে
                     document.body.classList.remove('landscape-mode');
                     if (document.exitFullscreen) document.exitFullscreen();
                     else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
@@ -805,14 +809,12 @@
                 }
             }
 
-            // ওরিয়েন্টেশন পরিবর্তনের লিসেনার
             try {
                 orientationMatcher.addEventListener("change", handleOrientationChange);
             } catch (e) {
-                orientationMatcher.addListener(handleOrientationChange); // ওল্ড ব্রাউজার সাপোর্ট
+                orientationMatcher.addListener(handleOrientationChange); 
             }
 
-            // ফুলস্ক্রিন ম্যানুয়ালি এক্সিট করলে যাতে লেআউট সোজা হয়ে যায়
             document.addEventListener('fullscreenchange', () => {
                 if (!document.fullscreenElement) {
                     document.body.classList.remove('landscape-mode');
