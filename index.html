@@ -333,14 +333,14 @@
             height: 100% !important;
         }
 
-        /* 📱 ফোন সোজা থাকলে প্লেয়ার স্বাভাবিক থাকবে (Contain) */
+        /* 📱 সোজা মোডে ভিডিও স্বাভাবিক থাকবে */
         .video-js video,
         .video-js .vjs-tech {
             object-fit: contain !important; 
             transition: transform 0.2s ease, object-fit 0.2s ease;
         }
 
-        /* 🔍 ম্যানুয়াল ডাবল টাচ করলে কভার ফিল হবে */
+        /* ম্যানুয়াল ডাবল টাচ জুম ক্লাস */
         .video-js.forced-zoom video,
         .video-js.forced-zoom .vjs-tech {
             object-fit: cover !important; 
@@ -449,39 +449,40 @@
             .channel-list { flex: 1; overflow-y: auto; }
         }
 
-        /* 🔄 শুধুমাত্র ল্যান্ডস্কেপ (স্ক্রিন ঘুরালে) ফুল স্ক্রিন এবং ফিট হবে */
-        body.landscape-mode header,
-        body.landscape-mode .controls-wrapper,
-        body.landscape-mode .playing-now-bar,
-        body.landscape-mode .main-content {
-            display: none !important;
-        }
+        /* 🔄 সিএসএস পিউর ল্যান্ডস্কেপ মোড (মোবাইল ঘোরানো হলেই এই স্টাইল রান হবে) */
+        @media (max-width: 950px) and (orientation: landscape) {
+            header, .controls-wrapper, .playing-now-bar, .main-content {
+                display: none !important;
+            }
 
-        body.landscape-mode .player-section {
-            width: 100vw !important;
-            height: 100vh !important;
-            position: fixed !important;
-            top: 0; left: 0;
-            border: none !important;
-            z-index: 999999 !important;
-            display: block !important;
-        }
+            body, html {
+                height: 100% !important;
+                width: 100% !important;
+                overflow: hidden !important;
+            }
 
-        body.landscape-mode .video-container {
-            width: 100vw !important;
-            height: 100vh !important;
-            aspect-ratio: auto !important;
-        }
+            .player-section, .video-container {
+                width: 100vw !important;
+                height: 100vh !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                border: none !important;
+                z-index: 9999999 !important;
+                display: block !important;
+                aspect-ratio: auto !important;
+            }
 
-        body.landscape-mode .video-js {
-            width: 100vw !important;
-            height: 100vh !important;
-        }
+            .video-js {
+                width: 100vw !important;
+                height: 100vh !important;
+            }
 
-        /* ল্যান্ডস্কেপ মোডে ভিডিও স্ক্রিন ফিট অবজেক্ট */
-        body.landscape-mode .video-js video,
-        body.landscape-mode .vjs-tech {
-            object-fit: fill !important; /* স্ক্রিনের সাথে পুরোপুরি ফিট হয়ে যাবে */
+            /* 🎯 এটিই স্ক্রিনকে ১০০% ফিট ও কভার করবে */
+            .video-js video,
+            .video-js .vjs-tech {
+                object-fit: fill !important; 
+            }
         }
     </style>
 </head>
@@ -785,8 +786,9 @@
                 handleClick: function() {
                     if(window.innerWidth > 950) return;
                     
+                    // ম্যানুয়ালি ক্লিক করলে ব্রাউজার ফুলস্ক্রিন রিকোয়েস্ট পাঠাবে
                     const container = document.getElementById('playerSection');
-                    if (!document.body.classList.contains('landscape-mode')) {
+                    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
                         if (container.requestFullscreen) container.requestFullscreen();
                         else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
                     } else {
@@ -800,43 +802,28 @@
             player.getChild('controlBar').addChild('RotateButton', {}, player.getChild('controlBar').children_.length - 1);
         }
 
-        /* 🔄 ওরিয়েন্টেশন ট্র্যাকিং - শুধুমাত্র স্ক্রিন ঘুরালে স্কিন ফিট হবে */
+        /* ওরিয়েন্টেশন ট্র্যাকিং */
         function setupOrientationTrigger() {
-            const orientationMatcher = window.matchMedia("(orientation: landscape)");
-            
-            function handleOrientationChange(m) {
-                if(window.innerWidth > 950) return; 
-                
-                const container = document.getElementById('playerSection');
-                if (m.matches) {
-                    document.body.classList.add('landscape-mode');
-                    setTimeout(() => {
-                        if (container.requestFullscreen) container.requestFullscreen();
-                        else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
-                    }, 50); 
+            // স্ক্রিন সাইজ ও রোটেশন ট্র্যাক করার নিরাপদ ইভেন্ট
+            window.addEventListener("resize", checkOrientation);
+            window.addEventListener("orientationchange", checkOrientation);
+
+            function checkOrientation() {
+                if(window.innerWidth > 950) return;
+
+                // যদি প্রস্থ উচ্চতার চেয়ে বেশি হয় তার মানে ফোন ঘুরানো হয়েছে (Landscape)
+                if (window.innerWidth > window.innerHeight) {
+                    document.body.style.setProperty('--orientation-status', 'landscape');
+                    // ভিডিও ফুল স্ক্রিন ক্লাসে রূপান্তরিত করার জন্য ১টি সেফটি ক্লাস পুশ করা হলো
+                    document.querySelector('.app-layout').parentElement.classList.add('landscape-mode');
                 } else {
-                    document.body.classList.remove('landscape-mode');
-                    if (document.exitFullscreen) document.exitFullscreen();
-                    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                    document.body.style.setProperty('--orientation-status', 'portrait');
+                    document.querySelector('.app-layout').parentElement.classList.remove('landscape-mode');
                 }
             }
-
-            try {
-                orientationMatcher.addEventListener("change", handleOrientationChange);
-            } catch (e) {
-                orientationMatcher.addListener(handleOrientationChange); 
-            }
-
-            const exitEvents = ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'];
-            exitEvents.forEach(evt => {
-                document.addEventListener(evt, () => {
-                    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-                        if (window.innerHeight > window.innerWidth) {
-                            document.body.classList.remove('landscape-mode');
-                        }
-                    }
-                });
-            });
+            
+            // ইনিশিয়াল চেক
+            checkOrientation();
         }
 
         window.onload = fetchPlaylist;
