@@ -101,18 +101,12 @@
             box-shadow: 0 0 15px var(--brand-glow);
         }
 
+        /* 🟥 লাল কালার হেডার টেক্সট */
         header h1 {
             font-size: 20px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff 0%, #9ca3af 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        [data-theme="light"] header h1 {
-            background: linear-gradient(135deg, #0f172a 0%, #475569 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--brand-color);
         }
 
         .channel-count-badge {
@@ -309,7 +303,7 @@
             font-size: 13px;
         }
 
-        /* 🎬 আল্ট্রা-মডার্ন সিনেমাটিক প্লেয়ার এরিয়া */
+        /* 🎬 ক্লাসিক ভিডিও প্লেয়ার এরিয়া (আপনার আগের লেআউট) */
         .player-section {
             background: #000;
             width: 100%;
@@ -450,10 +444,11 @@
             color: var(--text-muted);
         }
 
+        /* 🟥 লাল কালার চ্যানেল টেক্সট */
         .channel-name {
             font-size: 15px;
             font-weight: 600;
-            color: var(--text-color);
+            color: var(--brand-color);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -496,50 +491,13 @@
         .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-weight: 500; font-size: 14px; }
         #loading { text-align: center; font-size: 14px; color: var(--text-muted); margin-top: 60px; font-weight: 500; }
         
-        /* 🖥️ ডেক্সটপ ও ল্যাপটপ লেআউট স্পেশাল ডিজাইন */
+        /* 🖥️ ডেক্সটপ ও ল্যাপটপ লেআউট (প্লেয়ার আগের মতো স্ট্যান্ডার্ড স্টাইলে থাকবে) */
         @media (min-width: 951px) {
-            .app-layout { flex-direction: row; height: calc(100vh - 69px); }
-            
-            .player-section {
-                flex: 1.6;
-                display: none;
-                background: radial-gradient(circle at center, rgba(239, 68, 68, 0.04) 0%, #000 100%);
-                height: 100%;
-                border-bottom: none;
-                border-right: 1px solid var(--border-color);
-                padding: 24px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            
-            .playing-now-bar {
-                background: transparent;
-                border-bottom: none;
-                padding: 0 0 16px 0;
-                font-size: 14px;
-            }
-
-            .video-container {
-                width: 100%;
-                flex: 1;
-                aspect-ratio: auto;
-                border-radius: 16px;
-                border: 1px solid rgba(255, 255, 255, 0.05);
-                box-shadow: 0 30px 60px rgba(0,0,0,0.8);
-            }
-
-            .main-content {
-                flex: 1;
-                height: 100%;
-                overflow-y: auto;
-                padding: 24px;
-                display: flex;
-                flex-direction: column;
-            }
-            
+            .app-layout { flex-direction: column; height: auto; overflow: visible; }
+            .player-section { display: none; width: 100%; max-width: 960px; margin: 20px auto 0 auto; border-radius: 12px; overflow: hidden; }
+            .video-container { width: 100%; aspect-ratio: 16 / 9; }
+            .main-content { flex: none; width: 100%; max-width: 960px; margin: 0 auto; padding: 20px 0; }
             .controls-wrapper { margin-top: 0; }
-            .channel-list { flex: 1; overflow-y: auto; }
         }
 
         /* 📱 ল্যান্ডস্কেপ ও ফুলস্ক্রিন সিনেমা মোড */
@@ -609,11 +567,11 @@
     </header>
 
     <div class="app-layout">
-        <!-- প্রিমিয়াম প্লেয়ার উইন্ডো -->
+        <!-- ভিডিও প্লেয়ার এরিয়া (আগের পজিশন ও রেস্পন্সিভনেস) -->
         <div class="player-section" id="playerSection">
             <div class="playing-now-bar">
                 <span class="notice-live-dot"></span>
-                <span>এখন দেখছেন: <span id="playingTitle" style="color: var(--brand-color);">কোনো চ্যানেল সিলেক্ট করা নেই</span></span>
+                <span>এখন দেখছেন: <span id="playingTitle" style="color: var(--brand-color); font-weight: 700;">কোনো চ্যানেল সিলেক্ট করা নেই</span></span>
             </div>
             <div class="video-container" id="videoContainer">
                 <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
@@ -731,6 +689,7 @@
             document.getElementById('loading').style.display = 'none';
             document.getElementById('controlsWrapper').style.display = 'flex'; 
             
+            // অটো-প্লে অন ফার্স্ট চ্যানেল (অপশনাল বা বন্ধ রাখতে চাইলে কমেন্ট করতে পারেন)
             if (allChannels.length > 0 && window.innerWidth > 950) {
                 const firstRow = document.querySelector('.channel-row');
                 if(firstRow) firstRow.click();
@@ -807,7 +766,7 @@
             document.getElementById('playingTitle').innerText = name;
             
             const pSection = document.getElementById('playerSection');
-            pSection.style.display = (window.innerWidth > 950) ? 'flex' : 'block';
+            pSection.style.display = 'block';
             
             if (!player) {
                 player = videojs('live-player');
@@ -818,7 +777,7 @@
             player.src({ src: url, type: 'application/x-mpegURL' });
             player.play();
             
-            if(window.innerWidth <= 950) window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function setupForcedDoubleTapZoom() {
