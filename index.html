@@ -27,27 +27,27 @@
             --brand-hover: #dc2626;
             --brand-glow: rgba(239, 68, 68, 0.25);
             --bg-color: #030712;
-            --panel-bg: rgba(17, 24, 39, 0.7);
+            --panel-bg: rgba(17, 24, 39, 0.85);
             --text-color: #f3f4f6;
             --text-muted: #9ca3af;
             --input-bg: #1f2937;
-            --border-color: rgba(255, 255, 255, 0.06);
+            --border-color: rgba(255, 255, 255, 0.08);
             --card-bg: rgba(31, 41, 55, 0.4);
             --card-hover: rgba(239, 68, 68, 0.06);
-            --drawer-bg: rgba(3, 7, 18, 0.94);
+            --drawer-bg: rgba(3, 7, 18, 0.96);
             --glass-blur: blur(20px);
         }
 
         [data-theme="light"] {
             --bg-color: #f8fafc;
-            --panel-bg: rgba(255, 255, 255, 0.8);
+            --panel-bg: rgba(255, 255, 255, 0.9);
             --text-color: #0f172a;
             --text-muted: #64748b;
             --input-bg: #e2e8f0;
-            --border-color: rgba(0, 0, 0, 0.06);
+            --border-color: rgba(0, 0, 0, 0.08);
             --card-bg: rgba(255, 255, 255, 0.6);
             --card-hover: rgba(239, 68, 68, 0.04);
-            --drawer-bg: rgba(255, 255, 255, 0.96);
+            --drawer-bg: rgba(255, 255, 255, 0.98);
         }
 
         body {
@@ -67,7 +67,7 @@
             -webkit-backdrop-filter: var(--glass-blur);
             padding: 14px 24px;
             border-bottom: 1px solid var(--border-color);
-            z-index: 999;
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -80,10 +80,11 @@
             gap: 16px;
         }
 
+        /* 🔴 মেনু বাটন ডিফল্ট লাল */
         .menu-btn {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: var(--brand-color);
             font-size: 18px;
             width: 40px;
             height: 40px;
@@ -93,15 +94,15 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 10px var(--brand-glow);
         }
         .menu-btn:hover {
             background: var(--brand-color);
             color: white;
             border-color: transparent;
-            box-shadow: 0 0 15px var(--brand-glow);
+            box-shadow: 0 0 15px var(--brand-color);
         }
 
-        /* 🟥 লাল কালার হেডার টেক্সট */
         header h1 {
             font-size: 20px;
             font-weight: 700;
@@ -120,7 +121,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* 💎 সাইডবার ড্রয়ার (Netflix স্টাইল) */
+        /* 💎 সাইডবার ড্রয়ার (নিয়ন্ত্রণ কালারের ভেতরের আইটেম লাল) */
         .sidebar-drawer {
             position: fixed;
             top: 0;
@@ -149,13 +150,13 @@
         .drawer-header h2 {
             font-size: 18px;
             font-weight: 700;
-            color: var(--text-color);
+            color: var(--brand-color); /* শিরোনাম লাল */
         }
 
         .close-drawer-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: var(--brand-color);
             font-size: 14px;
             width: 34px;
             height: 34px;
@@ -167,8 +168,8 @@
             transition: all 0.2s;
         }
         .close-drawer-btn:hover {
-            background: rgba(239, 68, 68, 0.2);
-            color: var(--brand-color);
+            background: var(--brand-color);
+            color: white;
         }
 
         .drawer-menu-items {
@@ -180,43 +181,39 @@
             overflow-y: auto;
         }
 
+        /* 🔴 নিয়ন্ত্রণ প্যানেলের ভেতরের লেখা ও আইকন লাল থাকবে */
         .drawer-item {
             display: flex;
             align-items: center;
             gap: 16px;
             padding: 14px 16px;
-            color: var(--text-color);
+            color: var(--brand-color); /* টেক্সট লাল */
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
             cursor: pointer;
             border-radius: 10px;
-            border: 1px solid transparent;
+            border: 1px solid rgba(239, 68, 68, 0.1);
+            background: rgba(239, 68, 68, 0.03);
             transition: all 0.25s ease;
         }
         .drawer-item:hover {
-            background: var(--card-bg);
-            border-color: var(--border-color);
-            transform: translateX(4px);
+            background: rgba(239, 68, 68, 0.1);
+            border-color: var(--brand-color);
+            transform: translateX(6px);
         }
 
         .drawer-item .icon-box {
             width: 36px;
             height: 36px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-muted);
+            color: var(--brand-color); /* আইকন লাল */
             font-size: 15px;
-            transition: all 0.25s ease;
-        }
-        .drawer-item:hover .icon-box {
-            color: var(--brand-color);
-            background: rgba(239, 68, 68, 0.1);
-            border-color: rgba(239, 68, 68, 0.2);
         }
 
         .drawer-overlay {
@@ -232,93 +229,25 @@
         }
         .drawer-overlay.show { opacity: 1; pointer-events: auto; }
 
-        /* 🔍 কন্ট্রোল জোন (সার্চ ও ফিল্টার) */
-        .controls-wrapper {
-            background: var(--panel-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 12px;
-            display: none;
-            align-items: center;
-            gap: 12px;
-            margin-top: 16px;
-        }
-
-        .category-select-wrapper {
-            position: relative;
-            flex: 1;
-        }
-        .category-dropdown {
-            width: 100%;
-            padding: 11px 16px;
-            background-color: var(--input-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-color);
-            font-size: 13px;
-            font-weight: 500;
-            outline: none;
-            cursor: pointer;
-            appearance: none;
-            -webkit-appearance: none;
-        }
-        .category-select-wrapper::after {
-            content: "\f0d7";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            font-size: 12px;
-            color: var(--text-muted);
-            position: absolute;
-            right: 16px; top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-        }
-
-        .search-container {
-            flex: 1.2;
-            position: relative;
-        }
-        .search-input {
-            width: 100%;
-            padding: 11px 16px 11px 40px;
-            background-color: var(--input-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-color);
-            font-size: 13px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .search-input:focus {
-            border-color: rgba(239, 68, 68, 0.5);
-        }
-        .search-container::before {
-            content: "\f002";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            position: absolute;
-            left: 16px; top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
-        /* 🎬 ক্লাসিক ভিডিও প্লেয়ার এরিয়া (আপনার আগের লেআউট) */
+        /* 🎬 ডায়নামিক রাউন্ডেড ভিডিও প্লেয়ার এরিয়া */
         .player-section {
             background: #000;
-            width: 100%;
+            width: calc(100% - 24px);
+            margin: 12px auto 0 auto;
             position: relative;
             padding: 0;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid var(--border-color);
+            border-radius: 16px; /* ডায়নামিক রাউন্ড কর্নার */
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px var(--brand-glow);
+            border: 1px solid rgba(239, 68, 68, 0.15);
             display: none;
         }
 
         .playing-now-bar {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            padding: 14px 20px;
+            padding: 12px 16px;
             font-size: 13px;
             color: var(--text-color);
             font-weight: 600;
@@ -367,7 +296,88 @@
             width: 40px;
         }
 
-        /* 📺 প্রিমিয়াম চ্যানেল গ্রিড ও লিস্ট */
+        /* 🔍 ফিক্সড সার্চ ও ক্যাটাগরি জোন (উপরে উঠে যাবে না) */
+        .sticky-controls-container {
+            background: var(--bg-color);
+            padding: 12px 12px 4px 12px;
+            position: sticky;
+            top: 0;
+            z-index: 90;
+        }
+
+        .controls-wrapper {
+            background: var(--panel-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-select-wrapper {
+            position: relative;
+            flex: 1;
+        }
+        .category-dropdown {
+            width: 100%;
+            padding: 10px 14px;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-size: 13px;
+            font-weight: 500;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        .category-select-wrapper::after {
+            content: "\f0d7";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 12px;
+            color: var(--brand-color); /* ড্রপডাউন অ্যারো লাল */
+            position: absolute;
+            right: 14px; top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .search-container {
+            flex: 1.2;
+            position: relative;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px 14px 10px 36px;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-size: 13px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus {
+            border-color: rgba(239, 68, 68, 0.5);
+        }
+        .search-container::before {
+            content: "\f002";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 14px; top: 50%;
+            transform: translateY(-50%);
+            color: var(--brand-color); /* সার্চ আইকন লাল */
+            font-size: 13px;
+        }
+
+        /* 📺 অ্যাপ লেআউট */
         .app-layout {
             display: flex;
             flex-direction: column;
@@ -378,14 +388,14 @@
         .main-content {
             flex: 1;
             overflow-y: auto;
-            padding: 0 20px 20px 20px;
+            padding: 0 12px 20px 12px;
         }
 
         .channel-list {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            margin-top: 16px;
+            margin-top: 6px;
         }
 
         .channel-row {
@@ -444,7 +454,6 @@
             color: var(--text-muted);
         }
 
-        /* 🟥 লাল কালার চ্যানেল টেক্সট */
         .channel-name {
             font-size: 15px;
             font-weight: 600;
@@ -491,31 +500,36 @@
         .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-weight: 500; font-size: 14px; }
         #loading { text-align: center; font-size: 14px; color: var(--text-muted); margin-top: 60px; font-weight: 500; }
         
-        /* 🖥️ ডেক্সটপ ও ল্যাপটপ লেআউট (প্লেয়ার আগের মতো স্ট্যান্ডার্ড স্টাইলে থাকবে) */
+        /* 🖥️ ডেক্সটপ ও ল্যাপটপ লেআউট */
         @media (min-width: 951px) {
             .app-layout { flex-direction: column; height: auto; overflow: visible; }
-            .player-section { display: none; width: 100%; max-width: 960px; margin: 20px auto 0 auto; border-radius: 12px; overflow: hidden; }
+            .player-section { display: none; width: 100%; max-width: 960px; margin: 20px auto 0 auto; border-radius: 16px; overflow: hidden; }
             .video-container { width: 100%; aspect-ratio: 16 / 9; }
+            .sticky-controls-container { position: static; padding: 0; }
             .main-content { flex: none; width: 100%; max-width: 960px; margin: 0 auto; padding: 20px 0; }
             .controls-wrapper { margin-top: 0; }
         }
 
         /* 📱 ল্যান্ডস্কেপ ও ফুলস্ক্রিন সিনেমা মোড */
         @media (max-width: 950px) and (orientation: landscape) {
-            header, .controls-wrapper, .playing-now-bar, .main-content { display: none !important; }
+            header, .sticky-controls-container, .playing-now-bar, .main-content { display: none !important; }
             body, html { height: 100% !important; width: 100% !important; overflow: hidden !important; }
 
-            .player-section, .video-container {
+            .player-section {
                 width: 100vw !important;
                 height: 100vh !important;
                 position: fixed !important;
                 top: 0 !important; left: 0 !important;
                 border: none !important;
+                border-radius: 0 !important; /* ফুলস্ক্রিনে রাউন্ড অফ থাকবে */
+                margin: 0 !important;
                 z-index: 9999999 !important;
                 display: block !important;
                 aspect-ratio: auto !important;
                 padding: 0 !important;
+                box-shadow: none !important;
             }
+            .video-container { width: 100vw !important; height: 100vh !important; aspect-ratio: auto !important; }
             .video-js { width: 100vw !important; height: 100vh !important; }
             .video-js video { object-fit: fill !important; }
         }
@@ -567,7 +581,7 @@
     </header>
 
     <div class="app-layout">
-        <!-- ভিডিও প্লেয়ার এরিয়া (আগের পজিশন ও রেস্পন্সিভনেস) -->
+        <!-- ভিডিও প্লেয়ার এরিয়া (ডায়নামিক রাউন্ড কর্নার সহ) -->
         <div class="player-section" id="playerSection">
             <div class="playing-now-bar">
                 <span class="notice-live-dot"></span>
@@ -580,8 +594,8 @@
             </div>
         </div>
 
-        <!-- কন্টেন্ট হাব -->
-        <div class="main-content">
+        <!-- স্টিকি কন্ট্রোল জোন (সার্চ ও ফিল্টার ফিক্সড রাখার জন্য) -->
+        <div class="sticky-controls-container">
             <div class="controls-wrapper" id="controlsWrapper">
                 <div class="category-select-wrapper">
                     <select class="category-dropdown" id="categoryDropdown" onchange="filterCategory(this.value)">
@@ -592,8 +606,11 @@
                     <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেল সার্চ করুন..." oninput="searchChannel()">
                 </div>
             </div>
+        </div>
 
-            <div id="loading"><i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px;"></i> ক্লাউড সার্ভার থেকে চ্যানেল লোড হচ্ছে...</div>
+        <!-- কন্টেন্ট হাব -->
+        <div class="main-content">
+            <div id="loading"><i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px; color: var(--brand-color);"></i> ক্লাউড সার্ভার থেকে চ্যানেল লোড হচ্ছে...</div>
             <div class="channel-list" id="channelList"></div>
         </div>
     </div>
@@ -689,7 +706,6 @@
             document.getElementById('loading').style.display = 'none';
             document.getElementById('controlsWrapper').style.display = 'flex'; 
             
-            // অটো-প্লে অন ফার্স্ট চ্যানেল (অপশনাল বা বন্ধ রাখতে চাইলে কমেন্ট করতে পারেন)
             if (allChannels.length > 0 && window.innerWidth > 950) {
                 const firstRow = document.querySelector('.channel-row');
                 if(firstRow) firstRow.click();
