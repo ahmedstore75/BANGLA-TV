@@ -207,7 +207,7 @@
 
         .drawer-overlay.show { opacity: 1; pointer-events: auto; }
 
-        /* 🔄 কন্ট্রোল এরিয়া: ক্যাটাগরি ড্রপডাউন বামে এবং সার্চিং ডানে করার লেআউট */
+        /* কন্ট্রোল এরিয়া */
         .controls-wrapper {
             background-color: var(--panel-bg);
             border-bottom: 1px solid var(--border-color);
@@ -220,7 +220,6 @@
             z-index: 10;
         }
 
-        /* ক্যাটাগরি সাইজ ফিল্ডকে বড় করা হলো */
         .category-select-wrapper {
             position: relative;
             flex: 1; 
@@ -252,7 +251,6 @@
             pointer-events: none;
         }
 
-        /* সার্চ বক্স ডান পাশে ফিক্সড সাইজে স্থানান্তর */
         .search-container { 
             min-width: 140px;
             max-width: 170px;
@@ -335,20 +333,21 @@
             height: 100% !important;
         }
 
-        /* 📱 ডিফল্ট Portrait মোডে ভিডিও ফিটনেস */
+        /* 📱 ডিফল্ট ও জুম সিএসএস লজিক */
         .video-js video,
         .video-js .vjs-tech {
             object-fit: contain !important; 
-            transition: object-fit 0.2s ease;
+            transition: transform 0.2s ease, object-fit 0.2s ease;
         }
 
-        /* 🔍 ডাবল টাচ করলে জুম ইফেক্ট এর জন্য ক্লাস */
-        .video-js.double-tap-zoom video,
-        .video-js.double-tap-zoom .vjs-tech {
+        /* 🔍 জুম করার জন্য নতুন ক্লাস */
+        .video-js.forced-zoom video,
+        .video-js.forced-zoom .vjs-tech {
             object-fit: cover !important; 
+            transform: scale(1.02); /* ফুলস্ক্রিন ফিল করতে সামান্য স্কেল */
         }
 
-        /* 🔄 ল্যান্ডস্কেপে ১০০% ফুল স্ক্রিন ফিল */
+        /* ল্যান্ডস্কেপ ও ফুলস্ক্রিন মোড */
         body.landscape-mode .video-js video,
         body.landscape-mode .vjs-tech,
         .video-js.vjs-fullscreen video,
@@ -356,7 +355,6 @@
             object-fit: fill !important; 
         }
 
-        /* কাস্টম রোটেশন বাটন */
         .vjs-custom-rotate-button {
             cursor: pointer;
             font-size: 1.6em;
@@ -447,7 +445,6 @@
         .no-result { text-align: center; color: #ff3333; padding: 20px; font-weight: bold; }
         #loading { text-align: center; font-size: 16px; color: #ff3333; margin-top: 40px; font-weight: bold; }
 
-        /* ডেক্সটপ লেআউট */
         @media (min-width: 951px) {
             .app-layout { flex-direction: row; height: calc(100vh - 56px); }
             .player-section {
@@ -460,7 +457,6 @@
             .channel-list { flex: 1; overflow-y: auto; }
         }
 
-        /* মোবাইলের ফুলস্ক্রিন ল্যান্ডস্কেপ মোড */
         body.landscape-mode header,
         body.landscape-mode .controls-wrapper,
         body.landscape-mode .playing-now-bar,
@@ -535,6 +531,7 @@
                 <span class="notice-live-dot"></span>
                 <span>এখন দেখছেন: <span id="playingTitle" style="color: #ff3333;">কোনো চ্যানেল সিলেক্ট করা নেই</span></span>
             </div>
+            <!-- ডাবল টাচ লিজেনিং এরিয়া -->
             <div class="video-container" id="videoContainer">
                 <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
                     <p class="vjs-no-js">আপনার ব্রাউজারটি এই প্লেয়ারটি সাপোর্ট করছে না।</p>
@@ -544,7 +541,6 @@
 
         <!-- মেইন কনটেন্ট -->
         <div class="main-content">
-            <!-- 🔄 নতুন রিঅ্যারেঞ্জড কন্ট্রোল বার (ক্যাটাগরি প্রথমে, সার্চ পরে) -->
             <div class="controls-wrapper" id="controlsWrapper" style="padding-top: 15px; padding-bottom: 15px;">
                 <!-- ক্যাটাগরি অপশন (বাম দিকে) -->
                 <div class="category-select-wrapper">
@@ -552,9 +548,9 @@
                         <option value="All">All Categories</option>
                     </select>
                 </div>
-                <!-- সার্চিং অপশন (ডান দিকে) -->
+                <!-- সার্চিং অপশন (ডান দিকে - প্লেসহোল্ডার আপডেট করা হয়েছে) -->
                 <div class="search-container">
-                    <input type="text" class="search-input" id="searchBox" placeholder="সার্চিং..." oninput="searchChannel()">
+                    <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেল সার্চিং..." oninput="searchChannel()">
                 </div>
             </div>
 
@@ -738,7 +734,7 @@
                 player = videojs('live-player');
                 addCustomRotateButton(); 
                 setupOrientationTrigger();
-                setupDoubleTapZoom(); // 🔍 ডাবল টাচ জুম লিসেনার যুক্ত করা হলো
+                setupForcedDoubleTapZoom(); // 🔍 নতুন ডাবল টাচ ট্র্যাকার রান করা হলো
             }
             player.src({ src: url, type: 'application/x-mpegURL' });
             player.play();
@@ -746,36 +742,38 @@
             if(window.innerWidth <= 950) window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        /* 🔍 ডাবল টাচ জুম লজিক */
-        function setupDoubleTapZoom() {
-            const videoContainer = document.getElementById('videoContainer');
-            let lastTap = 0;
+        /* 🔍 একদম নিখুঁত ডাবল টাচ/ক্লিক জুম লজিক */
+        function setupForcedDoubleTapZoom() {
+            const container = document.getElementById('videoContainer');
+            let lastTapTime = 0;
 
-            videoContainer.addEventListener('touchend', function (e) {
-                const currentTime = new Date().getTime();
-                const tapLength = currentTime - lastTap;
+            // মোবাইলের জন্য টাচ ইভেন্ট লিসেনার
+            container.addEventListener('touchstart', function(e) {
+                const now = new Date().getTime();
+                const timespan = now - lastTapTime;
                 
-                if (tapLength < 300 && tapLength > 0) {
-                    // ডাবল টাচ সনাক্ত হয়েছে
-                    e.preventDefault();
-                    const el = document.getElementById('live-player');
-                    if (el) {
-                        el.classList.toggle('double-tap-zoom');
-                    }
+                if (timespan < 300 && timespan > 0) {
+                    e.preventDefault(); // ব্রাউজারের নিজস্ব জুম বন্ধ করবে
+                    toggleZoomState();
                 }
-                lastTap = currentTime;
+                lastTapTime = now;
+            }, { passive: false });
+
+            // পিসি বা মাউস ইউজারদের জন্য ডাবল ক্লিক লিসেনার
+            container.addEventListener('dblclick', function(e) {
+                e.preventDefault();
+                toggleZoomState();
             });
 
-            // ডেক্সটপ বা মাউস ইউজারদের জন্য ডাবল ক্লিক সেফটি
-            videoContainer.addEventListener('dblclick', function () {
-                const el = document.getElementById('live-player');
-                if (el) {
-                    el.classList.toggle('double-tap-zoom');
+            function toggleZoomState() {
+                const playerEl = document.getElementById('live-player');
+                if (playerEl) {
+                    playerEl.classList.toggle('forced-zoom');
                 }
-            });
+            }
         }
 
-        /* 🔄 কাস্টম রোটেশন বাটন */
+        /* কাস্টম রোটেশন বাটন */
         function addCustomRotateButton() {
             const Button = videojs.getComponent('Button');
             const RotateButton = videojs.extend(Button, {
