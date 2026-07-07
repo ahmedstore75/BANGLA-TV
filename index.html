@@ -237,7 +237,7 @@
             pointer-events: auto;
         }
 
-        /* সার্চ ও ক্যাটাগরি বার (স্টিকি) */
+        /* সার্চ ও ক্যাটাগরি বার */
         .controls-wrapper {
             background-color: var(--panel-bg);
             border-bottom: 1px solid var(--border-color);
@@ -348,14 +348,13 @@
             overflow: hidden;
         }
 
-        /* 📺 স্ক্রিন ফিট করার মূল ফিক্স (১০০% ফুল স্ক্রিন স্ট্রেচ) */
+        /* ভিডিও ১০০% স্ট্রেচ করার মূল ফিক্স */
         .video-js {
             background-color: #000 !important;
             width: 100% !important;
             height: 100% !important;
         }
 
-        /* ভিডিও ট্যাগ জোরপূর্বক পুরো স্ক্রিনে ফিট করার জন্য */
         .video-js video,
         .video-js .vjs-tech {
             object-fit: fill !important; 
@@ -507,7 +506,7 @@
             }
         }
 
-        /* 📱 মোবাইলের জন্য ফুলস্ক্রিন ল্যান্ডস্কেপ CSS ফিক্স */
+        /* মোবাইলের ফুলস্ক্রিন ল্যান্ডস্কেপ মোড */
         body.landscape-mode header,
         body.landscape-mode .controls-wrapper,
         body.landscape-mode .playing-now-bar,
@@ -539,7 +538,7 @@
 </head>
 <body>
 
-    <!-- 🚪 সাইডবার ড্রয়ার -->
+    <!-- সাইডবার ড্রয়ার -->
     <div class="drawer-overlay" id="drawerOverlay" onclick="toggleMenu()"></div>
     <div class="sidebar-drawer" id="sidebarDrawer">
         <div class="drawer-header">
@@ -566,11 +565,11 @@
         </div>
     </div>
 
-    <!-- 📺 হেডার এরিয়া -->
+    <!-- হেডার এরিয়া (ডট ডট রিমুভ করা হয়েছে) -->
     <header>
         <div class="header-left">
             <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
-            <h1>... এস এ লাইভ টিভি ...</h1>
+            <h1>এস এ লাইভ টিভি</h1>
         </div>
         <div class="channel-count-badge" id="totalChannels">CH-0</div>
     </header>
@@ -590,7 +589,7 @@
 
         <!-- মেইন কনটেন্ট -->
         <div class="main-content">
-            <!-- 🔍 সার্চ এবং ক্যাটাগরি বার (স্টিকি) -->
+            <!-- সার্চ এবং ক্যাটাগরি বার -->
             <div class="controls-wrapper" id="controlsWrapper" style="padding-top: 15px; padding-bottom: 15px;">
                 <div class="search-container">
                     <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেলের নাম লিখুন..." oninput="searchChannel()">
@@ -788,7 +787,7 @@
             if(window.innerWidth <= 950) window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        /* 🔄 স্মার্ট ল্যান্ডস্কেপ ফুলস্ক্রিন হ্যান্ডলার */
+        /* 🚀 ল্যাগ ছাড়া ইনস্ট্যান্ট ওরিয়েন্টেশন ফিক্স */
         function setupOrientationTrigger() {
             const orientationMatcher = window.matchMedia("(orientation: landscape)");
             
@@ -798,9 +797,13 @@
                 const container = document.getElementById('videoContainer');
                 if (m.matches) {
                     document.body.classList.add('landscape-mode');
-                    if (container.requestFullscreen) container.requestFullscreen();
-                    else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
-                    else if (container.msRequestFullscreen) container.msRequestFullscreen();
+                    
+                    // ব্রাউজারের ল্যাগ এড়াতে সাথে সাথে ফুলস্ক্রিন রিকোয়েস্ট পাঠানো
+                    setTimeout(() => {
+                        if (container.requestFullscreen) container.requestFullscreen();
+                        else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
+                        else if (container.msRequestFullscreen) container.msRequestFullscreen();
+                    }, 50); 
                 } else {
                     document.body.classList.remove('landscape-mode');
                     if (document.exitFullscreen) document.exitFullscreen();
@@ -815,15 +818,14 @@
                 orientationMatcher.addListener(handleOrientationChange); 
             }
 
-            document.addEventListener('fullscreenchange', () => {
-                if (!document.fullscreenElement) {
-                    document.body.classList.remove('landscape-mode');
-                }
-            });
-            document.addEventListener('webkitfullscreenchange', () => {
-                if (!document.webkitFullscreenElement) {
-                    document.body.classList.remove('landscape-mode');
-                }
+            // ম্যানুয়ালি ফুলস্ক্রিন এক্সিট ইভেন্ট হ্যান্ডল করা
+            const exitEvents = ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'];
+            exitEvents.forEach(evt => {
+                document.addEventListener(evt, () => {
+                    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+                        document.body.classList.remove('landscape-mode');
+                    }
+                });
             });
         }
 
