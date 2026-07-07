@@ -245,6 +245,9 @@
             display: none; /* প্লেলিস্ট লোড হলে জাভাস্ক্রিপ্ট দিয়ে flex করা হবে */
             align-items: center;
             gap: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .search-container {
@@ -312,7 +315,8 @@
         .main-content {
             flex: 1;
             overflow-y: auto;
-            padding: 15px;
+            padding: 0 15px 15px 15px; /* ফিক্সড স্টিকি বারের জন্য প্যাডিং অ্যাডজাস্টমেন্ট */
+            position: relative;
         }
 
         /* প্লেয়ার সেকশন */
@@ -354,6 +358,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-top: 15px; /* স্টিকি বারের পর সামান্য গ্যাপ */
         }
 
         .channel-row {
@@ -388,24 +393,6 @@
             gap: 15px;
             overflow: hidden;
             width: 85%;
-        }
-
-        .channel-number {
-            font-size: 14px;
-            color: #64748b;
-            font-weight: bold;
-            min-width: 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .active-channel .channel-number {
-            color: #ffffff !important;
-            background-color: #ff3333 !important;
-            box-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
         }
 
         .logo-wrapper {
@@ -503,7 +490,7 @@
                 flex: 1; 
                 height: 100%;
                 overflow-y: auto; 
-                padding-bottom: 20px;
+                padding: 0 15px 20px 15px;
                 display: flex;
                 flex-direction: column;
             }
@@ -597,10 +584,10 @@
             </div>
         </div>
 
-        <!-- মেইন কনটেন্ট (সার্চ অপশন এখন ভিডিও প্লেয়ারের নিচে) -->
+        <!-- মেইন কনটেন্ট (সার্চ অপশন এখন ভিডিও প্লেয়ারের নিচে এবং স্টিকি করা) -->
         <div class="main-content">
-            <!-- 🔍 সার্চ এবং ক্যাটাগরি বার -->
-            <div class="controls-wrapper" id="controlsWrapper" style="margin-bottom: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <!-- 🔍 সার্চ এবং ক্যাটাগরি বার (স্টিকি করা হয়েছে) -->
+            <div class="controls-wrapper" id="controlsWrapper" style="padding-top: 15px; padding-bottom: 15px;">
                 <div class="search-container">
                     <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেলের নাম লিখুন..." oninput="searchChannel()">
                 </div>
@@ -729,7 +716,6 @@
         function renderChannels(channels) {
             const listContainer = document.getElementById('channelList');
             listContainer.innerHTML = '';
-            let chCount = 1;
 
             if(channels.length === 0) {
                 listContainer.innerHTML = '<div class="no-result">কোনো চ্যানেল খুঁজে পাওয়া যায়নি!</div>';
@@ -745,9 +731,9 @@
                 const fallbackLetter = ch.name.charAt(0).toUpperCase();
                 const letterHtml = `<div class="channel-logo" style="display: ${ch.logo ? 'none' : 'flex'}">${fallbackLetter}</div>`;
 
+                // এখানে সিরিয়াল নাম্বার জেনারেট করার অংশটি পুরোপুরি বাদ দেওয়া হয়েছে
                 row.innerHTML = `
                     <div class="channel-left">
-                        <div class="channel-number">${chCount++}</div>
                         <div class="logo-wrapper">${logoHtml}${letterHtml}</div>
                         <span class="channel-live-badge">LIVE</span>
                         <div class="channel-name">${ch.name}</div>
