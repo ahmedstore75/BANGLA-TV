@@ -21,7 +21,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* কাস্টম স্ক্রলবার — প্রিমিয়াম ফিল */
+        /* কাস্টম স্ক্রলবার */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -162,7 +162,7 @@
         .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
         .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
 
-        /* 📢 প্রিমিয়াম ট্র্যান্ডি নোটিশ বার */
+        /* 📢 নোটিশ বার */
         .app-notice-bar {
             background: var(--notice-bg);
             border: 1px solid #ff3333; 
@@ -405,7 +405,7 @@
             100% { opacity: 0.6; }
         }
 
-        /* 💻 ল্যাপটপ এবং ডেক্সটপ প্রফেশনাল গ্রিড লেআউট (পারফেক্ট ৩ কলাম) */
+        /* 💻 ল্যাপটপ এবং ডেক্সটপ প্রফেশনাল গ্রিড লেআউট */
         @media (min-width: 951px) {
             body { height: 100vh; overflow: hidden; }
             .app-layout {
@@ -607,7 +607,9 @@
         let player; 
         let hlsBackupEngine = null;
         let isFirstInit = true; 
-        const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/refs/heads/main/mixiptvchannel.m3u';
+        const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/main/mixiptvchannel.m3u';
+        
+        // অল্টারনেটিভ শক্তিশালী CORS প্রক্সি মেকানিজম
         const fetchUrls = [
             githubUrl,
             'https://corsproxy.io/?' + encodeURIComponent(githubUrl),
@@ -687,7 +689,6 @@
             });
             
             updateNoticeMarquee(lang.noticeText);
-
             document.getElementById('searchBox').placeholder = lang.searchPlaceholder;
 
             const firstOption = document.querySelector('#categoryDropdown option[value="All"]');
@@ -708,15 +709,25 @@
                 document.getElementById('channelList').innerHTML = `<div class='no-result'>${languages[currentLang].noResult}</div>`;
                 return;
             }
+            
             try {
-                const response = await fetch(fetchUrls[currentUrlIndex]);
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 6000);
+
+                const response = await fetch(fetchUrls[currentUrlIndex], { signal: controller.signal });
+                clearTimeout(timeoutId);
+
                 if (!response.ok) throw new Error();
                 const textData = await response.text();
-                if(textData && textData.includes('#EXTM3U')) parseM3U(textData);
-                else throw new Error();
+                
+                if(textData && textData.includes('#EXTM3U')) {
+                    parseM3U(textData);
+                } else {
+                    throw new Error();
+                }
             } catch (err) {
                 currentUrlIndex++;
-                fetchPlaylist();
+                await fetchPlaylist();
             }
         }
 
@@ -910,4 +921,17 @@
                 const now = new Date().getTime();
                 if (now - lastTapTime < 300) {
                     e.preventDefault(); 
-                    const targetPlayer = document.getElementById('live-player
+                    const targetPlayer = document.getElementById('live-player');
+                    if(targetPlayer) targetPlayer.classList.toggle('forced-zoom');
+                }
+                lastTapTime = now;
+            });
+        }
+
+        window.onload = function() {
+            applyLanguageTranslations();
+            fetchPlaylist();
+        };
+    </script>
+</body>
+</html>
