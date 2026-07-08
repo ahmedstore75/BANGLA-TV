@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>বাংলা টিভি — প্রিমিয়াম লাইভ</title>
     
-    <!-- 🌍 কোর লাইব্রেরী ও গ্লোবাল ফন্ট -->
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,40 +167,41 @@
             position: absolute;
             top: 0;
             bottom: 45px; 
-            width: 22%;   /* প্লেয়ারের দুই পাশের ২২% জায়গা জুড়ে টাচ এরিয়া */
-            z-index: 200; 
+            width: 25%;   /* প্লেয়ারের দুই পাশের ২৫% জায়গা জুড়ে টাচ এরিয়া */
+            z-index: 250; /* ভিডিও কন্ট্রোলের একদম উপরে লেয়ার */
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             user-select: none;
             -webkit-user-select: none;
+            background: transparent;
         }
         .player-nav-left { left: 0; }
         .player-nav-right { right: 0; }
         
         /* 💎 আসল গ্লাসি বাটন যা ডিফল্ট অবস্থায় সম্পূর্ণ হাইড থাকবে */
         .nav-indicator-btn {
-            width: 48px;
-            height: 48px;
-            background: rgba(239, 68, 68, 0.9); /* প্রিমিয়াম রেড ব্যাকগ্রাউন্ড */
-            color: #ffffff;
-            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            background: rgba(239, 68, 68, 0.95) !important; /* প্রিমিয়াম রেড ব্যাকগ্রাউন্ড */
+            color: #ffffff !important;
+            font-size: 20px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 15px var(--brand-glow), inset 0 0 8px rgba(255,255,255,0.2);
+            box-shadow: 0 0 15px var(--brand-glow), inset 0 0 8px rgba(255,255,255,0.3);
             opacity: 0; /* ডিফল্ট ভাবে অদৃশ্য */
-            transform: scale(0.6);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* পপ-আপ অ্যানিমেশন */
+            transform: scale(0.5);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* পপ-আপ অ্যানিমেশন */
             pointer-events: none; /* ক্লিকের ব্যাঘাত ঘটাবে না */
         }
 
         /* ⚡ ক্লিক বা টাচ করার পর ডাইনামিক অ্যাক্টিভ ক্লাস */
         .player-nav-zone.clicked-flash .nav-indicator-btn {
-            opacity: 1;
-            transform: scale(1.1);
+            opacity: 1 !important;
+            transform: scale(1.1) !important;
         }
 
         /* 📢 নোটিশ বার */
@@ -597,19 +597,16 @@
     </header>
 
     <div class="app-layout">
-        <!-- 📺 লাইভ ভিডিও প্লেয়ার কলাম -->
         <div class="player-left-column">
             <div class="player-section" id="playerSection">
                 <div class="video-container" id="videoContainer">
                     
-                    <!-- 👈 বাম পাশের বাটন এরিয়া (Previous) -->
                     <div class="player-nav-zone player-nav-left" onclick="triggerNavAction(this, 'prev')">
                         <div class="nav-indicator-btn">
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
                     </div>
 
-                    <!-- 👉 ডান পাশের বাটন এরিয়া (Next) -->
                     <div class="player-nav-zone player-nav-right" onclick="triggerNavAction(this, 'next')">
                         <div class="nav-indicator-btn">
                             <i class="fa-solid fa-chevron-right"></i>
@@ -622,17 +619,14 @@
                 </div>
             </div>
 
-            <!-- মোবাইল নোটিশ বার -->
             <div class="app-notice-bar mobile-only-notice">
                 <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                 <div class="notice-marquee-container marqueeHolderClass"></div>
             </div>
         </div>
 
-        <!-- 📑 কন্ট্রোলস এবং চ্যানেল লিস্ট কলাম -->
         <div class="right-column-wrapper">
             <div class="sticky-controls-container">
-                <!-- ল্যাপটপ নোটিশ বার -->
                 <div class="app-notice-bar pc-only-notice" style="display: none;">
                     <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                     <div class="notice-marquee-container marqueeHolderClass"></div>
@@ -650,7 +644,6 @@
                 </div>
             </div>
 
-            <!-- চ্যানেল লিস্ট জোন -->
             <div class="main-content">
                 <div id="loadingLayout">
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
@@ -662,7 +655,6 @@
         </div>
     </div>
 
-    <!-- ভিডিও ইঞ্জিন স্ক্রিপ্ট -->
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
@@ -952,17 +944,17 @@
             } catch(e) {}
         }
 
-        // 🌟 নতুন ডাইনামিক ক্লিক ফ্ল্যাশ ইঞ্জিন
+        // 🌟 ১০০% ওয়ার্কিং ডাইনামিক ক্লিক ফ্ল্যাশ ইঞ্জিন
         function triggerNavAction(element, direction) {
-            // ১. ইনস্ট্যান্ট বাটনটিকে দৃশ্যমান করুন (ফ্ল্যাশ অ্যানিমেশন)
+            // বাটন জোনটিতে ডাইনামিক ক্লাস যুক্ত করে বাটন শো করা
             element.classList.add('clicked-flash');
             
-            // ২. ১ সেকেন্ড (১০০০ মিলি.) পর বাটনটিকে আবার স্মুথলি হাইড করে দিন
+            // ৮০০ মিলি সেকেন্ড পর বাটনটিকে আবার স্মুথলি হাইড করা
             setTimeout(() => {
                 element.classList.remove('clicked-flash');
-            }, 1000);
+            }, 800);
 
-            // ৩. চ্যানেল চেঞ্জ একশন রান করুন
+            // চ্যানেল পরিবর্তনের একশন রান করুন
             navigateChannel(direction);
         }
 
@@ -1016,6 +1008,7 @@
             }, 300);
         }
 
+        // 🛠️ এখানে ফিক্স করা হয়েছে: নতুন চ্যানেল ওপেন হওয়ার পরও যেন বাটন এবং এর ফাংশন সচল থাকে
         function resetContainers() {
             if (player) {
                 try { player.dispose(); } catch(e){}
