@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>বাংলা টিভি — প্রিমিয়াম লাইভ</title>
     
-    <!-- 🌍 কোর লাইব্রেরী ও গ্লোবাল ফন্ট -->
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,16 +158,43 @@
             transition: all 0.3s ease;
         }
 
-        /* 📱 সোয়াইপ জেনারেটর কন্টেইনার */
-        .video-container { 
-            position: relative; 
-            width: 100%; 
-            aspect-ratio: 16 / 9; 
-            background: #000; 
-            touch-action: pan-y;
-        }
+        .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
         .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
+
+        /* 👈 👉 অদৃশ্য নেভিগেশন টাচ জোন (চ্যানেল চেঞ্জার) */
+        .player-nav-zone {
+            position: absolute;
+            top: 0;
+            bottom: 45px; /* ভিডিও কন্ট্রোল বারের উপরে থাকবে যেন প্লে/পজ করতে সমস্যা না হয় */
+            width: 20%;   /* প্লেয়ারের দুই পাশের ২০% জায়গা জুড়েই ক্লিক কাজ করবে */
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0);
+            font-size: 24px;
+            transition: all 0.2s ease;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .player-nav-left {
+            left: 0;
+        }
+        .player-nav-right {
+            right: 0;
+        }
+        /* হোভার করলে হালকা ইঙ্গিত দেবে */
+        .player-nav-zone:hover {
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.6);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        .player-nav-zone:active {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--brand-color);
+        }
 
         /* 📢 নোটিশ বার */
         .app-notice-bar {
@@ -333,7 +359,7 @@
             overflow: hidden;
             width: 100%;
             max-width: 100%;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2; 1);
         }
         .channel-row:hover { 
             background: var(--card-hover); 
@@ -562,27 +588,32 @@
     </header>
 
     <div class="app-layout">
-        <!-- 📺 লাইভ ভিডিও প্লেয়ার কলাম -->
         <div class="player-left-column">
             <div class="player-section" id="playerSection">
                 <div class="video-container" id="videoContainer">
+                    
+                    <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+
+                    <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+
                     <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
                         <p class="vjs-no-js">Your browser does not support this player.</p>
                     </video>
                 </div>
             </div>
 
-            <!-- মোবাইল নোটিশ বার -->
             <div class="app-notice-bar mobile-only-notice">
                 <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                 <div class="notice-marquee-container marqueeHolderClass"></div>
             </div>
         </div>
 
-        <!-- 📑 কন্ট্রোলস এবং চ্যানেল লিস্ট কলাম -->
         <div class="right-column-wrapper">
             <div class="sticky-controls-container">
-                <!-- ল্যাপটপ নোটিশ বার -->
                 <div class="app-notice-bar pc-only-notice" style="display: none;">
                     <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                     <div class="notice-marquee-container marqueeHolderClass"></div>
@@ -600,7 +631,6 @@
                 </div>
             </div>
 
-            <!-- চ্যানেল লিস্ট জোন -->
             <div class="main-content">
                 <div id="loadingLayout">
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
@@ -612,7 +642,6 @@
         </div>
     </div>
 
-    <!-- ভিডিও ইঞ্জিন স্ক্রিপ্ট -->
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
@@ -630,8 +659,8 @@
 
         let currentUrlIndex = 0;
         let allChannels = [];
-        let displayedChannels = []; 
-        let activeChannelIndex = -1; 
+        let displayedChannels = []; // বর্তমানে স্ক্রিনে যে চ্যানেলগুলো দেখা যাচ্ছে (সার্চ/ক্যাটাগরি ফিল্টার করা)
+        let activeChannelIndex = -1; // বর্তমান সচল চ্যানেলের ইনডেক্স ট্র্যাকিং
         
         let currentSelectedCategory = 'All'; 
         let lastUserCategory = 'All'; 
@@ -645,7 +674,7 @@
                 telegramText: "টেলিগ্রাম চ্যানেল (লিংক)", facebookText: "ফেসবুক পেজ (সাপোর্ট)",
                 noChannel: "কোনো চ্যানেল সিলেক্ট করা নেই",
                 noticeBadge: "নোটিশ", 
-                noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্মার্ট সোয়াইপ ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। চ্যানেল পরিবর্তনে বামে/ডানে সোয়াইপ বা টিভি রিমোটের Left/Right Arrow বাটন ব্যবহার করুন।",
+                noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
                 searchPlaceholder: "চ্যানেল সার্চ করুন...", noResult: "কোনো চ্যানেল খুঁজে পাওয়া যায়নি!",
                 allCat: "সব ক্যাটাগরি"
             },
@@ -655,7 +684,7 @@
                 telegramText: "Telegram Channel (Link)", facebookText: "Facebook Page (Support)",
                 noChannel: "No channel selected",
                 noticeBadge: "Notice", 
-                noticeText: "Welcome to our server! Check your <b>Internet Connection</b> to avoid buffering. Swipe left/right or use TV remote Left/Right buttons to change channels.",
+                noticeText: "Welcome to our server! Check your <b>Internet Connection</b> to avoid buffering. For the best full-screen & buffering-free experience in browser, please use <b>\"Via Browser\"</b>. Refresh the playlist if channels fail.",
                 searchPlaceholder: "Search channel...", noResult: "No channels found!",
                 allCat: "All Categories"
             }
@@ -773,7 +802,7 @@
             document.getElementById('totalChannels').innerText = "CH-" + allChannels.length;
             populateCategoryDropdown(categories);
             
-            displayedChannels = [...allChannels]; 
+            displayedChannels = [...allChannels]; // শুরুতে সব চ্যানেলই থাকবে
             renderChannels(displayedChannels); 
             document.getElementById('loadingLayout').style.display = 'none';
             
@@ -787,7 +816,7 @@
         function initVideoPlayerEngine() {
             try {
                 player = videojs('live-player');
-                setupSwipeGestures();
+                setupForcedDoubleTapZoom();
 
                 player.on('error', function() {
                     if (isFirstInit) {
@@ -806,14 +835,20 @@
             if (player) { try { player.dispose(); }catch(e){} player = null; }
 
             const container = document.getElementById('videoContainer');
-            container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
+            
+            // রি-ইঞ্জেক্ট নেভিগেশন বাটনসহ প্লেয়ার
+            container.innerHTML = `
+                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
+            `;
             const videoElement = document.getElementById('live-player');
 
             if (Hls.isSupported()) {
                 hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
                 hlsBackupEngine.loadSource(channelObj.url);
                 hlsBackupEngine.attachMedia(videoElement);
-                setupSwipeGestures();
+                setupForcedDoubleTapZoom();
 
                 hlsBackupEngine.on(Hls.Events.ERROR, function(event, data) {
                     if (data.fatal) {
@@ -868,12 +903,14 @@
             });
         }
 
+        // ইনডেক্স অনুযায়ী নির্দিষ্ট চ্যানেল প্লে করার ফাংশন
         function playChannelAt(index) {
             if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
             
             activeChannelIndex = index;
             const ch = displayedChannels[index];
 
+            // UI আপডেট (অ্যাক্টিভ চ্যানেল হাইলাইট করা)
             document.querySelectorAll('.channel-row').forEach(row => row.classList.remove('active-channel'));
             const activeRow = document.querySelector(`.channel-row[data-index="${index}"]`);
             if (activeRow) {
@@ -885,7 +922,7 @@
             resetContainers();
 
             player = videojs('live-player');
-            setupSwipeGestures();
+            setupForcedDoubleTapZoom();
 
             player.on('error', function() {
                 switchToHlsBackup();
@@ -897,86 +934,20 @@
             } catch(e) {}
         }
 
+        // 👈 👉 দুই পাশে ক্লিকের নেভিগেশন লজিক Engine
         function navigateChannel(direction) {
             if (displayedChannels.length === 0) return;
             
             let nextIndex = activeChannelIndex;
             if (direction === 'next') {
                 nextIndex = activeChannelIndex + 1;
-                if (nextIndex >= displayedChannels.length) nextIndex = 0; 
+                if (nextIndex >= displayedChannels.length) nextIndex = 0; // লিস্ট শেষ হলে আবার ১ নাম্বারে যাবে
             } else if (direction === 'prev') {
                 nextIndex = activeChannelIndex - 1;
-                if (nextIndex < 0) nextIndex = displayedChannels.length - 1; 
+                if (nextIndex < 0) nextIndex = displayedChannels.length - 1; // শুরুতে থাকলে শেষ চ্যানেলে যাবে
             }
             
             playChannelAt(nextIndex);
-        }
-
-        // 🌟 সোয়াইপ গেশ্চার ইঞ্জিন
-        function setupSwipeGestures() {
-            const container = document.getElementById('videoContainer');
-            if (!container) return;
-
-            let touchStartX = 0;
-            let touchStartY = 0;
-            let touchEndX = 0;
-            let touchEndY = 0;
-            let isDragging = false;
-            const minSwipeDistance = 50; 
-
-            container.addEventListener('touchstart', function(e) {
-                touchStartX = e.changedTouches[0].screenX;
-                touchStartY = e.changedTouches[0].screenY;
-            }, { passive: true });
-
-            container.addEventListener('touchend', function(e) {
-                touchEndX = e.changedTouches[0].screenX;
-                touchEndY = e.changedTouches[0].screenY;
-                handleSwipeCheck();
-            }, { passive: true });
-
-            container.addEventListener('mousedown', function(e) {
-                touchStartX = e.screenX;
-                touchStartY = e.screenY;
-                isDragging = true;
-            });
-
-            container.addEventListener('mouseup', function(e) {
-                if (!isDragging) return;
-                touchEndX = e.screenX;
-                touchEndY = e.screenY;
-                isDragging = false;
-                handleSwipeCheck();
-            });
-
-            function handleSwipeCheck() {
-                const xDiff = touchEndX - touchStartX;
-                const yDiff = touchEndY - touchStartY;
-
-                if (Math.abs(xDiff) > Math.abs(yDiff)) {
-                    if (Math.abs(xDiff) > minSwipeDistance) {
-                        if (xDiff > 0) {
-                            navigateChannel('prev');
-                        } else {
-                            navigateChannel('next');
-                        }
-                    }
-                } else {
-                    if (Math.abs(yDiff) < 10 && Math.abs(xDiff) < 10) {
-                        handleDoubleTapZoom();
-                    }
-                }
-            }
-
-            let lastTap = 0;
-            function handleDoubleTapZoom() {
-                const now = new Date().getTime();
-                if (now - lastTap < 300) {
-                    const targetPlayer = document.getElementById('live-player');
-                    if(targetPlayer) targetPlayer.classList.toggle('forced-zoom');
-                }
-                lastTap = now;
-            }
         }
 
         function filterCategory(category) {
@@ -990,10 +961,11 @@
                 displayedChannels = allChannels.filter(ch => ch.category === category);
             }
             
-            activeChannelIndex = -1; 
+            activeChannelIndex = -1; // ফিল্টার চেঞ্জ হলে ট্র্যাকার রিসেট
             renderChannels(displayedChannels);
         }
 
+        // আল্ট্রা-স্মুথ ৩০০ মিলিসেকেন্ড ডেবাউন্সড সার্চ
         function searchChannel() {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
@@ -1024,29 +996,36 @@
                 hlsBackupEngine = null;
             }
             const container = document.getElementById('videoContainer');
-            container.innerHTML = `<video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>`;
+            container.innerHTML = `
+                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>
+            `;
         }
 
         function runNativeFallback(element, url, name) {
             if(hlsBackupEngine) { hlsBackupEngine.destroy(); hlsBackupEngine = null; }
             element.src = url;
             element.play().catch(e => {});
-            setupSwipeGestures();
+            setupForcedDoubleTapZoom();
         }
 
-        // 📺 অ্যান্ড্রয়েড টিভি রিমোট কন্ট্রোল ইঞ্জিন (ক্ষতি ছাড়াই যোগ করা হলো)
-        window.addEventListener('keydown', function(event) {
-            if (document.activeElement === document.getElementById('searchBox')) return;
-
-            switch(event.key) {
-                case 'ArrowLeft': 
-                    navigateChannel('prev');
-                    break;
-                case 'ArrowRight': 
-                    navigateChannel('next');
-                    break;
-            }
-        });
+        function setupForcedDoubleTapZoom() {
+            const container = document.getElementById('videoContainer');
+            let lastTapTime = 0;
+            container.addEventListener('touchstart', function(e) {
+                // যদি ক্লিকটি নেভিগেশন জোনে হয়, তবে জুম ইভেন্ট ইগনোর করবে
+                if (e.target.classList.contains('player-nav-zone') || e.target.closest('.player-nav-zone')) return;
+                
+                const now = new Date().getTime();
+                if (now - lastTapTime < 300) {
+                    e.preventDefault(); 
+                    const targetPlayer = document.getElementById('live-player');
+                    if(targetPlayer) targetPlayer.classList.toggle('forced-zoom');
+                }
+                lastTapTime = now;
+            });
+        }
 
         window.onload = function() {
             applyLanguageTranslations();
