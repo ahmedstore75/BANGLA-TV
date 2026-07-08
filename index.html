@@ -290,12 +290,13 @@
             -webkit-overflow-scrolling: touch;
         }
         
-        /* 💎 ওটিটি স্টাইল গ্রিড লেআউট (পাশাপাশি ২ কলাম) */
+        /* 💎 ওটিটি স্টাইল গ্রিড লেআউট (অটো-ফিট অপটিমাইজড যাতে স্ক্রিনের বাইরে না যায়) */
         .channel-list { 
             display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
             gap: 12px; 
-            margin-top: 8px; 
+            margin-top: 8px;
+            width: 100%;
         }
 
         /* 👑 প্রিমিয়াম ওটিটি কার্ড ডিজাইন */
@@ -314,6 +315,8 @@
             gap: 10px;
             cursor: pointer; 
             position: relative;
+            overflow: hidden;
+            width: 100%;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .channel-row:hover { 
@@ -336,9 +339,8 @@
             width: 100%; 
         }
         
-        /* লোগো সাইজ ও ফ্রেম মডার্ন করা হলো */
         .logo-wrapper {
-            width: 64px; height: 64px; flex-shrink: 0; background: rgba(255, 255, 255, 0.03);
+            width: 60px; height: 60px; flex-shrink: 0; background: rgba(255, 255, 255, 0.03);
             border-radius: 14px; border: 1px solid var(--border-color);
             padding: 6px; display: flex; align-items: center; justify-content: center;
             transition: transform 0.2s ease;
@@ -360,9 +362,8 @@
         .channel-row:hover .channel-name { color: var(--brand-color); }
         .channel-row.active-channel .channel-name { color: var(--brand-color); font-weight: 700; }
         
-        /* লাইভ ব্যাজ পজিশন কার্ডের উপরে কর্নারে শিফট করা হলো */
         .channel-right-action { position: absolute; top: 8px; right: 8px; }
-        .play-icon { display: none !important; } /* গ্রিড ভিউতে প্লে আইকন ক্লুটার কমায় */
+        .play-icon { display: none !important; } 
         
         .channel-live-badge { 
             background: var(--brand-color); 
@@ -377,16 +378,16 @@
         }
         .active-channel .channel-live-badge { display: inline-block !important; }
 
-        .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; grid-column: span 2; }
+        .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; grid-column: 1 / -1; }
         
         /* 🦴 কঙ্কাল লোডার গ্রিড স্টাইল */
-        #loadingLayout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        #loadingLayout { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; width: 100%; }
         .skeleton-item {
             background: var(--card-bg); border: 1px solid var(--border-color);
-            border-radius: 16px; padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px;
+            border-radius: 16px; padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%;
         }
         .skeleton-left { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; }
-        .skeleton-logo { width: 64px; height: 64px; background: var(--skeleton-bg); border-radius: 14px; animation: pulse-sk 1.5s infinite ease-in-out; }
+        .skeleton-logo { width: 60px; height: 60px; background: var(--skeleton-bg); border-radius: 14px; animation: pulse-sk 1.5s infinite ease-in-out; }
         .skeleton-text { width: 70%; height: 14px; background: var(--skeleton-bg); border-radius: 4px; animation: pulse-sk 1.5s infinite ease-in-out; }
         .skeleton-right { display: none; }
 
@@ -475,11 +476,9 @@
                 height: 100%; 
             }
 
-            /* ডেক্সটপে ৩টি করে কলাম থাকবে */
             .channel-list, #loadingLayout { 
-                grid-template-columns: repeat(3, 1fr); 
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
             }
-            .no-result { grid-column: span 3; }
             .channel-name { font-size: 14px; }
         }
 
@@ -610,7 +609,7 @@
             bn: {
                 appTitle: "বাংলা টিভি", panelTitle: "নিয়ন্ত্রণ প্যানেল", toggleText: "Language: English",
                 themeText: "থিম পরিবর্তন (Light/Dark)", refreshText: "প্লেলিস্ট রিফ্রেশ করুন",
-                telegramText: "টেলিগ্রাম চ্যানেল (লিংক)", facebookText: "ফেসবুক পেজ (সাপোর্ট)",
+                telegramText: "টেলিগ্রাম চ্যানেল (লিংক)", facebookText: "ফেসবुक পেজ (সাপোর্ট)",
                 noChannel: "কোনো চ্যানেল সিলেক্ট করা নেই",
                 noticeBadge: "নোটিশ", 
                 noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
