@@ -55,7 +55,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow: hidden; /* পুরো বডির মেইন স্ক্রলিং লকড */
+            overflow: hidden;
             transition: background-color 0.3s, color 0.3s;
         }
 
@@ -109,21 +109,21 @@
         .drawer-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .drawer-overlay.show { opacity: 1; pointer-events: auto; }
 
-        /* 📺 ভিডিও প্লেয়ার এরিয়া (মোবাইলে স্টিকি এবং চমৎকার রাউন্ড শেপ) */
+        /* 📺 ভিডিও প্লেয়ার এরিয়া (চার কোণাই নিখুঁতভাবে রাউন্ড করা) */
         .player-section {
             background: #000 !important; 
-            width: 100% !important;
+            width: calc(100% - 24px) !important; /* ডানে বামে সামান্য গ্যাপ দেওয়া হয়েছে */
+            margin: 12px auto 0 auto !important; /* ওপরে এবং নিচে সুন্দর মার্জিন */
             position: sticky !important;
-            top: 0 !important;
+            top: 12px !important;
             z-index: 95 !important;
-            /* নিচের দুই কোণা রাউন্ড করার চমৎকার ডিজাইন */
-            border-bottom-left-radius: 20px !important;
-            border-bottom-right-radius: 20px !important;
+            
+            /* 🌟 চারকোনা সম্পূর্ণ রাউন্ড করার ম্যাজিক */
+            border-radius: 18px !important; 
             overflow: hidden !important;
+            
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 15px var(--brand-glow) !important;
-            border-bottom: 2px solid rgba(239, 68, 68, 0.4) !important; 
-            border-left: 1px solid var(--border-color) !important;
-            border-right: 1px solid var(--border-color) !important;
+            border: 1px solid rgba(239, 68, 68, 0.3) !important; 
             display: block !important;
         }
 
@@ -198,7 +198,7 @@
             overflow: hidden;
         }
 
-        /* শুধুমাত্র নিচের এই অংশটুকু স্ক্রল হবে */
+        /* শুধুমাত্র চ্যানেল লিস্ট স্ক্রল হবে */
         .main-content { 
             flex: 1; 
             padding: 0 12px 20px 12px; 
@@ -244,7 +244,6 @@
                 padding: 20px; flex: 1; height: calc(100vh - 70px);
                 max-width: 1600px; margin: 0 auto; width: 100%; overflow: hidden;
             }
-            /* ল্যাপটপে চার কোণাই সমান রাউন্ড থাকবে */
             .player-section { width: 100% !important; margin: 0 !important; position: static !important; display: flex !important; flex-direction: column; height: fit-content; align-self: start; border-radius: 16px !important; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important; border: 1px solid rgba(239, 68, 68, 0.15) !important; }
             .right-column-wrapper { display: flex; flex-direction: column; overflow: hidden; height: 100%; background: var(--panel-bg); backdrop-filter: var(--glass-blur); border: 1px solid var(--border-color); border-radius: 16px; }
             .sticky-controls-container { position: static; padding: 16px; border-bottom: 1px solid var(--border-color); background: transparent; }
@@ -256,7 +255,7 @@
         /* 📱 ল্যান্ডস্কেপ মোড (মোবাইল কাত করলে ফুলস্ক্রিন) */
         @media (max-width: 950px) and (orientation: landscape) {
             header, .sticky-controls-container, .playing-now-bar, .main-content { display: none !important; }
-            .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0 !important; margin: 0; z-index: 9999999; display: block !important; }
+            .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0 !important; margin: 0 !important; z-index: 9999999; display: block !important; }
             .video-container, .video-js, .native-player-style { width: 100vw !important; height: 100vh !important; }
             .video-js video, .native-player-style { object-fit: fill !important; }
         }
@@ -299,7 +298,7 @@
     </header>
 
     <div class="app-layout">
-        <!-- 📺 ভিডিও প্লেয়ার এরিয়া (ওপরে স্টিকি এবং চমৎকার রাউন্ড শেপ) -->
+        <!-- 📺 ভিডিও প্লেয়ার এরিয়া (চার কোণাই নিখুঁত রাউন্ড করা) -->
         <div class="player-section" id="playerSection">
             <div class="playing-now-bar">
                 <span class="notice-live-dot"></span>
@@ -312,7 +311,7 @@
             </div>
         </div>
 
-        <!-- 📑 কন্ট্রোলস এবং চ্যানেল লিস্টের সমন্বিত কন্টেইনার -->
+        <!-- 📑 কন্ট্রোলস এবং চ্যানেল লিস্ট -->
         <div class="right-column-wrapper">
             <div class="sticky-controls-container">
                 <div class="controls-wrapper" id="controlsWrapper">
@@ -327,7 +326,7 @@
                 </div>
             </div>
 
-            <!-- শুধুমাত্র এই অংশ স্ক্রল হবে -->
+            <!-- শুধুমাত্র চ্যানেল লিস্ট স্ক্রল হবে -->
             <div class="main-content">
                 <div id="loading"><i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px; color: var(--brand-color);"></i> ক্লাউড সার্ভার থেকে চ্যানেল লোড হচ্ছে...</div>
                 <div class="channel-list" id="channelList"></div>
