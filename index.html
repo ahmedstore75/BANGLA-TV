@@ -71,6 +71,7 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
         }
 
         .header-left { display: flex; align-items: center; gap: 16px; }
@@ -109,22 +110,19 @@
         .drawer-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .drawer-overlay.show { opacity: 1; pointer-events: auto; }
 
-        /* 📺 ভিডিও প্লেয়ার এরিয়া (চার কোণাই নিখুঁতভাবে রাউন্ড করা) */
+        /* 📺 ভিডিও প্লেয়ার এরিয়া (৪টি কোণাই সম্পূর্ণ চমৎকার রাউন্ড) */
         .player-section {
             background: #000 !important; 
-            width: calc(100% - 24px) !important; /* ডানে বামে সামান্য গ্যাপ দেওয়া হয়েছে */
-            margin: 12px auto 0 auto !important; /* ওপরে এবং নিচে সুন্দর মার্জিন */
-            position: sticky !important;
-            top: 12px !important;
+            width: calc(100% - 24px) !important;
+            margin: 12px auto 6px auto !important;
+            position: relative !important;
             z-index: 95 !important;
-            
-            /* 🌟 চারকোনা সম্পূর্ণ রাউন্ড করার ম্যাজিক */
             border-radius: 18px !important; 
             overflow: hidden !important;
-            
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 15px var(--brand-glow) !important;
             border: 1px solid rgba(239, 68, 68, 0.3) !important; 
             display: block !important;
+            flex-shrink: 0;
         }
 
         .playing-now-bar {
@@ -148,11 +146,9 @@
 
         /* 🔍 সার্চ ও ক্যাটাগরি জোন */
         .sticky-controls-container { 
-            padding: 14px 12px 10px 12px; 
-            position: sticky; 
-            top: 0; 
-            z-index: 90; 
+            padding: 8px 12px; 
             background: var(--bg-color);
+            flex-shrink: 0;
         }
         .controls-wrapper {
             background: var(--panel-bg); backdrop-filter: var(--glass-blur);
@@ -201,7 +197,7 @@
         /* শুধুমাত্র চ্যানেল লিস্ট স্ক্রল হবে */
         .main-content { 
             flex: 1; 
-            padding: 0 12px 20px 12px; 
+            padding: 4px 12px 20px 12px; 
             overflow-y: auto; 
             -webkit-overflow-scrolling: touch;
         }
