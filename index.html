@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>বাংলা টিভি</title>
     
+    <!-- 🌍 কোর লাইব্রেরী ও গ্লোবাল ফন্ট -->
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,7 +115,7 @@
         .drawer-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .drawer-overlay.show { opacity: 1; pointer-events: auto; }
 
-        /* 📺 মোবাইল ভিডিও প্লেয়ার এরিয়া */
+        /* 📺 ভিডিও প্লেয়ার এরিয়া */
         .player-left-column {
             display: flex;
             flex-direction: column;
@@ -204,6 +205,9 @@
             padding: 6px 12px; 
             background: var(--bg-color);
             flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
         .controls-wrapper {
             background: var(--panel-bg); backdrop-filter: var(--glass-blur);
@@ -294,13 +298,8 @@
         .skeleton-logo { width: 48px; height: 48px; background: var(--skeleton-bg); border-radius: 10px; animation: pulse-sk 1.5s infinite ease-in-out; }
         .skeleton-text { width: 120px; height: 16px; background: var(--skeleton-bg); border-radius: 4px; animation: pulse-sk 1.5s infinite ease-in-out; }
         .skeleton-right { width: 30px; height: 16px; background: var(--skeleton-bg); border-radius: 4px; animation: pulse-sk 1.5s infinite ease-in-out; }
-        @keyframes pulse-sk {
-            0% { opacity: 0.5; }
-            50% { opacity: 1; }
-            100% { opacity: 0.5; }
-        }
 
-        /* 💻 ল্যাপটপ এবং ডেক্সটপ প্রফেশনাল গ্রিড লেআউট (ফিক্সড সংস্করণ) */
+        /* 💻 ল্যাপটপ এবং ডেক্সটপ প্রফেশনাল গ্রিড লেআউট (নোটিশ বার ডানপাশে ফিক্স) */
         @media (min-width: 951px) {
             body { height: 100vh; overflow: hidden; }
             .app-layout {
@@ -316,33 +315,25 @@
                 overflow: hidden;
             }
             
-            /* বামপাশের কলাম স্ট্রাকচার ফিক্স */
             .player-left-column {
-                display: flex !important;
-                flex-direction: column !important;
+                display: block !important;
                 width: 100% !important;
-                height: 100% !important;
-                overflow: hidden;
+                height: auto !important;
             }
 
             .player-section { 
                 width: 100% !important; 
                 margin: 0 !important; 
-                position: static !important; 
-                display: flex !important; 
-                flex-direction: column; 
-                height: fit-content; 
                 border-radius: 16px !important; 
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important; 
                 border: 1px solid rgba(239, 68, 68, 0.15) !important; 
             }
             
-            .app-notice-bar { 
-                margin: 16px 0 0 0 !important; 
-                width: 100% !important;
+            /* ল্যাপটপে ভিডিওর নিচের নোটিশ হাইড হবে, কারণ এটি ডানপাশে চলে গেছে */
+            .player-left-column .app-notice-bar { 
+                display: none !important; 
             }
             
-            /* ডানপাশের কলাম স্ট্রাকচার ফিক্স */
             .right-column-wrapper { 
                 display: flex; 
                 flex-direction: column; 
@@ -359,6 +350,16 @@
                 padding: 16px; 
                 border-bottom: 1px solid var(--border-color); 
                 background: transparent; 
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+
+            /* ল্যাপটপে কন্ট্রোলসের ভেতরে থাকা নোটিশ বার ভিজিবল হবে */
+            .sticky-controls-container .app-notice-bar {
+                display: flex !important;
+                margin: 0 !important;
+                width: 100% !important;
             }
             
             .controls-wrapper { 
@@ -427,6 +428,7 @@
     </header>
 
     <div class="app-layout">
+        <!-- 📺 বামপাশের কলাম: শুধু ভিডিও প্লেয়ার (মোবাইলে নোটিশ নিচে শো করবে) -->
         <div class="player-left-column">
             <div class="player-section" id="playerSection">
                 <div class="playing-now-bar">
@@ -440,14 +442,22 @@
                 </div>
             </div>
 
-            <div class="app-notice-bar">
-                <span class="notice-badge" id="langNoticeBadge">নোটিশ</span>
-                <div class="notice-marquee-container" id="marqueeHolder"></div>
+            <!-- মোবাইল নোটিশ বার (ল্যাপটপে সিএসএস দিয়ে হাইড করা হয়েছে) -->
+            <div class="app-notice-bar mobile-only-notice">
+                <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
+                <div class="notice-marquee-container marqueeHolderClass"></div>
             </div>
         </div>
 
+        <!-- 📑 ডানপাশের কলাম: নোটিশ বার, কন্ট্রোলস এবং চ্যানেল লিস্ট -->
         <div class="right-column-wrapper">
             <div class="sticky-controls-container">
+                <!-- ল্যাপটপ নোটিশ বার (সার্চ ও ক্যাটাগরির ঠিক ওপরে বসানো হয়েছে) -->
+                <div class="app-notice-bar pc-only-notice" style="display: none;">
+                    <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
+                    <div class="notice-marquee-container marqueeHolderClass"></div>
+                </div>
+
                 <div class="controls-wrapper" id="controlsWrapper">
                     <div class="category-select-wrapper">
                         <select class="category-dropdown" id="categoryDropdown" onchange="filterCategory(this.value)">
@@ -460,9 +470,9 @@
                 </div>
             </div>
 
+            <!-- চ্যানেল লিস্ট জোন -->
             <div class="main-content">
                 <div id="loadingLayout">
-                    <div class="skeleton-item" style="margin-bottom:10px;"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
                     <div class="skeleton-item" style="margin-bottom:10px;"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
                     <div class="skeleton-item" style="margin-bottom:10px;"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
                     <div class="skeleton-item" style="margin-bottom:10px;"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
@@ -472,6 +482,7 @@
         </div>
     </div>
 
+    <!-- ভিডিও ইঞ্জিন স্ক্রিপ্ট -->
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
@@ -535,8 +546,10 @@
         }
 
         function updateNoticeMarquee(text) {
-            const holder = document.getElementById('marqueeHolder');
-            holder.innerHTML = `<marquee behavior="scroll" direction="left" scrollamount="4" loop="infinite">${text}</marquee>`;
+            const holders = document.querySelectorAll('.marqueeHolderClass');
+            holders.forEach(holder => {
+                holder.innerHTML = `<marquee behavior="scroll" direction="left" scrollamount="4" loop="infinite">${text}</marquee>`;
+            });
         }
 
         function applyLanguageTranslations() {
@@ -549,7 +562,10 @@
             document.getElementById('langTelegramText').innerText = lang.telegramText;
             document.getElementById('langFacebookText').innerText = lang.facebookText;
             document.getElementById('langNowPlaying').innerText = lang.nowPlaying;
-            document.getElementById('langNoticeBadge').innerText = lang.noticeBadge;
+            
+            document.querySelectorAll('.langNoticeBadgeClass').forEach(badge => {
+                badge.innerText = lang.noticeBadge;
+            });
             
             updateNoticeMarquee(lang.noticeText);
 
