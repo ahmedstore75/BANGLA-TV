@@ -36,9 +36,8 @@
             --drawer-bg: rgba(3, 7, 18, 0.96);
             --glass-blur: blur(20px);
             --skeleton-bg: #1f2937;
-            /* 🔴 নোটিশের টেক্সট ও বর্ডার কালার ভেরিয়েবল */
+            /* 🔴 নোটিশের টেক্সট কালার ভেরিয়েবল */
             --notice-text-color: #ff3333; 
-            --notice-border-color: #ff3333;
         }
 
         [data-theme="light"] {
@@ -53,7 +52,6 @@
             --drawer-bg: rgba(255, 255, 255, 0.98);
             --skeleton-bg: #e2e8f0;
             --notice-text-color: #dc2626; 
-            --notice-border-color: #dc2626;
         }
 
         body {
@@ -152,10 +150,10 @@
         .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
         .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
 
-        /* 📢 প্রিমিয়াম চিকন নোটিশ বার (লাল চিকন বর্ডার যোগ করা হয়েছে) */
+        /* 📢 প্রিমিয়াম চিকন নোটিশ বার (ডাইনামিক কালার চেঞ্জিং বর্ডার) */
         .app-notice-bar {
-            background: rgba(239, 68, 68, 0.08);
-            border: 1px solid var(--notice-border-color); /* 🔴 এখানে চারদিক দিয়ে লাল চিকন বর্ডার দেওয়া হয়েছে */
+            background: rgba(239, 68, 68, 0.05);
+            border: 1.5px solid #ff3333; /* ডিফল্ট বর্ডার */
             margin: 0 12px 4px 12px;
             padding: 6px 10px;
             border-radius: 6px;
@@ -164,8 +162,20 @@
             gap: 8px;
             font-size: 12px;
             flex-shrink: 0;
-            box-shadow: 0 0 8px rgba(255, 51, 51, 0.15); /* হালকা লাল গ্লো ইফেক্ট */
+            
+            /* ⏳ বর্ডারের কালার অনবরত পরিবর্তনের এনিমেশন ট্র্যাকিং */
+            animation: borderRainbow 8s infinite linear;
         }
+
+        /* 🌈 বর্ডার কালার পরিবর্তনের CSS এনিমেশন রুলস */
+        @keyframes borderRainbow {
+            0% { border-color: #ff3333; box-shadow: 0 0 6px rgba(255, 51, 51, 0.2); }      /* লাল */
+            25% { border-color: #0070f3; box-shadow: 0 0 6px rgba(0, 112, 243, 0.2); }     /* নীল */
+            50% { border-color: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.2); }    /* সবুজ */
+            75% { border-color: #7928ca; box-shadow: 0 0 6px rgba(121, 40, 202, 0.2); }    /* বেগুনি */
+            100% { border-color: #ff3333; box-shadow: 0 0 6px rgba(255, 51, 51, 0.2); }    /* পুনরায় লাল */
+        }
+
         .notice-badge {
             background: var(--brand-color);
             color: white;
