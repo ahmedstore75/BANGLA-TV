@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>বাংলা টিভি — প্রিমিয়াম লাইভ</title>
     
+    <!-- 🌍 কোর লাইব্রেরী ও গ্লোবাল ফন্ট -->
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,39 +163,45 @@
         .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
         .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
 
-        /* 👈 👉 মোবাইল ও ল্যাপটপে বাটন সবসময় দৃশ্যমান রাখার আল্ট্রা-ইউআই মেকানিজম */
+        /* 👈 👉 অদৃশ্য নেভিগেশন টাচ জোন (ক্লিক করলেই কেবল বাটন জ্বলবে) */
         .player-nav-zone {
             position: absolute;
             top: 0;
-            bottom: 45px; /* ভিডিও প্রোগ্রেস বারের উপরে থাকবে */
-            width: 45px;  /* টাচ জোন সাইজ ফিক্সড করা হলো */
-            z-index: 200; /* ভিডিও কন্ট্রোলের উপরে নিয়ে আসা হলো */
+            bottom: 45px; 
+            width: 22%;   /* প্লেয়ারের দুই পাশের ২২% জায়গা জুড়ে টাচ এরিয়া */
+            z-index: 200; 
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(255, 255, 255, 0.65); /* মোবাইলেও আইকনটি সবসময় আবছা দেখা যাবে */
-            font-size: 18px;
-            background: rgba(0, 0, 0, 0.35); /* বাটনের ব্যাকগ্রাউন্ড বডি */
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             user-select: none;
             -webkit-user-select: none;
         }
-        .player-nav-left {
-            left: 8px;
-            border-radius: 0 10px 10px 0;
-        }
-        .player-nav-right {
-            right: 8px;
-            border-radius: 10px 0 0 10px;
-        }
+        .player-nav-left { left: 0; }
+        .player-nav-right { right: 0; }
         
-        /* ল্যাপটপ হোভার এবং মোবাইল টাচ ইফেক্ট */
-        .player-nav-zone:hover, .player-nav-zone:active {
-            background: rgba(239, 68, 68, 0.8); /* ক্লিক/টাচ করলে ব্র্যান্ড কালার হাইলাইট হবে */
+        /* 💎 আসল গ্লাসি বাটন যা ডিফল্ট অবস্থায় সম্পূর্ণ হাইড থাকবে */
+        .nav-indicator-btn {
+            width: 48px;
+            height: 48px;
+            background: rgba(239, 68, 68, 0.9); /* প্রিমিয়াম রেড ব্যাকগ্রাউন্ড */
             color: #ffffff;
-            font-size: 20px;
-            box-shadow: 0 0 12px var(--brand-glow);
+            font-size: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px var(--brand-glow), inset 0 0 8px rgba(255,255,255,0.2);
+            opacity: 0; /* ডিফল্ট ভাবে অদৃশ্য */
+            transform: scale(0.6);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* পপ-আপ অ্যানিমেশন */
+            pointer-events: none; /* ক্লিকের ব্যাঘাত ঘটাবে না */
+        }
+
+        /* ⚡ ক্লিক বা টাচ করার পর ডাইনামিক অ্যাক্টিভ ক্লাস */
+        .player-nav-zone.clicked-flash .nav-indicator-btn {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         /* 📢 নোটিশ বার */
@@ -473,12 +480,6 @@
             .player-left-column .app-notice-bar { 
                 display: none !important; 
             }
-
-            /* ডেক্সটপে বাটনগুলোর সাইড বড় ও আরো আকর্ষণীয় দেখাবে */
-            .player-nav-zone {
-                width: 55px;
-                font-size: 22px;
-            }
             
             .right-column-wrapper { 
                 display: flex; 
@@ -551,7 +552,6 @@
             .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0 !important; margin: 0 !important; z-index: 9999999; display: block !important; }
             .video-container, .video-js, .native-player-style { width: 100vw !important; height: 100vh !important; }
             .video-js video, .native-player-style { object-fit: fill !important; }
-            /* ল্যান্ডস্কেপে অ্যারো বাটন হাইড থাকবে যেন ফুল স্ক্রিন দেখতে সমস্যা না হয় */
             .player-nav-zone { display: none !important; } 
         }
     </style>
@@ -597,16 +597,23 @@
     </header>
 
     <div class="app-layout">
+        <!-- 📺 লাইভ ভিডিও প্লেয়ার কলাম -->
         <div class="player-left-column">
             <div class="player-section" id="playerSection">
                 <div class="video-container" id="videoContainer">
                     
-                    <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')">
-                        <i class="fa-solid fa-chevron-left"></i>
+                    <!-- 👈 বাম পাশের বাটন এরিয়া (Previous) -->
+                    <div class="player-nav-zone player-nav-left" onclick="triggerNavAction(this, 'prev')">
+                        <div class="nav-indicator-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
                     </div>
 
-                    <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')">
-                        <i class="fa-solid fa-chevron-right"></i>
+                    <!-- 👉 ডান পাশের বাটন এরিয়া (Next) -->
+                    <div class="player-nav-zone player-nav-right" onclick="triggerNavAction(this, 'next')">
+                        <div class="nav-indicator-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
                     </div>
 
                     <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
@@ -615,14 +622,17 @@
                 </div>
             </div>
 
+            <!-- মোবাইল নোটিশ বার -->
             <div class="app-notice-bar mobile-only-notice">
                 <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                 <div class="notice-marquee-container marqueeHolderClass"></div>
             </div>
         </div>
 
+        <!-- 📑 কন্ট্রোলস এবং চ্যানেল লিস্ট কলাম -->
         <div class="right-column-wrapper">
             <div class="sticky-controls-container">
+                <!-- ল্যাপটপ নোটিশ বার -->
                 <div class="app-notice-bar pc-only-notice" style="display: none;">
                     <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                     <div class="notice-marquee-container marqueeHolderClass"></div>
@@ -640,6 +650,7 @@
                 </div>
             </div>
 
+            <!-- চ্যানেল লিস্ট জোন -->
             <div class="main-content">
                 <div id="loadingLayout">
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
@@ -651,6 +662,7 @@
         </div>
     </div>
 
+    <!-- ভিডিও ইঞ্জিন স্ক্রিপ্ট -->
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
@@ -846,8 +858,8 @@
             const container = document.getElementById('videoContainer');
             
             container.innerHTML = `
-                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="player-nav-zone player-nav-left" onclick="triggerNavAction(this, 'prev')"><div class="nav-indicator-btn"><i class="fa-solid fa-chevron-left"></i></div></div>
+                <div class="player-nav-zone player-nav-right" onclick="triggerNavAction(this, 'next')"><div class="nav-indicator-btn"><i class="fa-solid fa-chevron-right"></i></div></div>
                 <video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
             `;
             const videoElement = document.getElementById('live-player');
@@ -940,6 +952,20 @@
             } catch(e) {}
         }
 
+        // 🌟 নতুন ডাইনামিক ক্লিক ফ্ল্যাশ ইঞ্জিন
+        function triggerNavAction(element, direction) {
+            // ১. ইনস্ট্যান্ট বাটনটিকে দৃশ্যমান করুন (ফ্ল্যাশ অ্যানিমেশন)
+            element.classList.add('clicked-flash');
+            
+            // ২. ১ সেকেন্ড (১০০০ মিলি.) পর বাটনটিকে আবার স্মুথলি হাইড করে দিন
+            setTimeout(() => {
+                element.classList.remove('clicked-flash');
+            }, 1000);
+
+            // ৩. চ্যানেল চেঞ্জ একশন রান করুন
+            navigateChannel(direction);
+        }
+
         function navigateChannel(direction) {
             if (displayedChannels.length === 0) return;
             
@@ -1001,8 +1027,8 @@
             }
             const container = document.getElementById('videoContainer');
             container.innerHTML = `
-                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="player-nav-zone player-nav-left" onclick="triggerNavAction(this, 'prev')"><div class="nav-indicator-btn"><i class="fa-solid fa-chevron-left"></i></div></div>
+                <div class="player-nav-zone player-nav-right" onclick="triggerNavAction(this, 'next')"><div class="nav-indicator-btn"><i class="fa-solid fa-chevron-right"></i></div></div>
                 <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>
             `;
         }
