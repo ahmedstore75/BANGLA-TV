@@ -36,7 +36,6 @@
             --glass-blur: blur(20px);
         }
 
-        /* ☀️ লাইট থিম মোড */
         [data-theme="light"] {
             --bg-color: #f1f5f9;
             --panel-bg: rgba(255, 255, 255, 0.85);
@@ -73,126 +72,54 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
+        .header-left { display: flex; align-items: center; gap: 16px; }
 
-        /* 🌈 মেনু বাটন */
         .menu-btn {
             background: linear-gradient(135deg, #ff007f, #7928ca, #0070f3);
-            border: none;
-            color: white;
-            font-size: 16px;
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none; color: white; font-size: 16px; width: 40px; height: 40px;
+            border-radius: 12px; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 15px rgba(121, 40, 202, 0.4);
         }
         .menu-btn:hover { transform: scale(1.05) rotate(5deg); }
 
-        header h1 {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: var(--brand-color);
-        }
-
-        .channel-count-badge {
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--brand-color);
-            font-size: 12px;
-            font-weight: 600;
-            padding: 6px 14px;
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 99px;
-        }
+        header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; color: var(--brand-color); }
+        .channel-count-badge { background: rgba(239, 68, 68, 0.1); color: var(--brand-color); font-size: 12px; font-weight: 600; padding: 6px 14px; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 99px; }
 
         /* 💎 সাইডবার ড্রয়ার */
         .sidebar-drawer {
-            position: fixed;
-            top: 0; left: -320px;
-            width: 320px; height: 100vh;
-            background: var(--drawer-bg);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            box-shadow: 20px 0 50px rgba(0, 0, 0, 0.4);
-            z-index: 10000;
-            transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            display: flex; flex-direction: column;
-            border-right: 1px solid var(--border-color);
+            position: fixed; top: 0; left: -320px; width: 320px; height: 100vh;
+            background: var(--drawer-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+            box-shadow: 20px 0 50px rgba(0, 0, 0, 0.4); z-index: 10000;
+            transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1); display: flex; flex-direction: column; border-right: 1px solid var(--border-color);
         }
         .sidebar-drawer.open { left: 0; }
-
-        .drawer-header {
-            padding: 24px;
-            border-bottom: 1px solid var(--border-color);
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .drawer-header h2 {
-            font-size: 18px; font-weight: 700;
-            background: linear-gradient(45deg, #ff3366, #ff007f);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-
-        .close-drawer-btn {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: var(--brand-color);
-            font-size: 14px; width: 34px; height: 34px;
-            border-radius: 50%; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-        }
-
-        .drawer-menu-items {
-            padding: 24px 16px; display: flex; flex-direction: column; gap: 12px;
-        }
-
-        .drawer-item {
-            display: flex; align-items: center; gap: 16px;
-            padding: 14px 16px; color: var(--text-color);
-            font-size: 14px; font-weight: 600; text-decoration: none;
-            cursor: pointer; border-radius: 12px;
-            border: 1px solid var(--border-color);
-            background: rgba(255, 255, 255, 0.02);
-            transition: all 0.25s ease;
-        }
+        .drawer-header { padding: 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+        .drawer-header h2 { font-size: 18px; font-weight: 700; background: linear-gradient(45deg, #ff3366, #ff007f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .close-drawer-btn { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: var(--brand-color); font-size: 14px; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .drawer-menu-items { padding: 24px 16px; display: flex; flex-direction: column; gap: 12px; }
+        .drawer-item { display: flex; align-items: center; gap: 16px; padding: 14px 16px; color: var(--text-color); font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border-radius: 12px; border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02); transition: all 0.25s ease; }
         .drawer-item:hover { transform: translateX(6px); background: rgba(255, 255, 255, 0.05); }
-
-        .drawer-item .icon-box {
-            width: 38px; height: 38px; border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 16px; color: white;
-        }
-
+        .drawer-item .icon-box { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; }
         .theme-item .icon-box { background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
         .refresh-item .icon-box { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
         .telegram-item .icon-box { background: linear-gradient(135deg, #0088cc, #006699); box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3); }
         .facebook-item .icon-box { background: linear-gradient(135deg, #1877f2, #0d5bf2); box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3); }
-
-        .drawer-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px);
-            z-index: 9999; opacity: 0; pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
+        .drawer-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .drawer-overlay.show { opacity: 1; pointer-events: auto; }
 
-        /* 🎬 ভিডিও প্লেয়ার এরিয়া (মোবাইল এবং ল্যাপটপ দুই জায়গাতেই স্থায়ী লক) */
+        /* 🎬 ভিডিও প্লেয়ার এরিয়া (মোবাইল এবং ল্যাপটপ দুই জায়গাতেই স্থায়ী ফিক্সড লক) */
         .player-section {
-            background: #000; width: calc(100% - 24px);
-            margin: 12px auto 0 auto; position: relative;
-            border-radius: 16px; overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px var(--brand-glow);
-            border: 1px solid rgba(239, 68, 68, 0.15); 
-            display: block !important; /* কোনো স্ক্রিপ্ট এটিকে হাইড করতে পারবে না */
+            background: #000 !important; 
+            width: calc(100% - 24px) !important;
+            margin: 12px auto 0 auto !important; 
+            position: relative !important;
+            border-radius: 16px !important; 
+            overflow: hidden !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px var(--brand-glow) !important;
+            border: 1px solid rgba(239, 68, 68, 0.15) !important; 
+            display: block !important; /* স্ক্রিন থেকে কোনোভাবেই গায়েব হবে না */
+            min-height: 210px; /* খালি থাকলেও মোবাইল স্ক্রিনে জায়গা ধরে রাখবে */
         }
 
         .playing-now-bar {
@@ -280,63 +207,20 @@
         .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; }
         #loading { text-align: center; font-size: 14px; color: var(--text-muted); margin-top: 60px; }
         
-        /* 💻 ল্যাপটপ এবং বড় স্ক্রিনের জন্য বিশেষ টু-কলাম গ্রিড লেআউট */
+        /* 💻 ল্যাপটপ লেআউট গ্রিড */
         @media (min-width: 951px) {
-            body {
-                height: 100vh;
-                overflow: hidden;
-            }
+            body { height: 100vh; overflow: hidden; }
             .app-layout {
-                display: grid;
-                grid-template-columns: 1.6fr 1.1fr;
-                gap: 20px;
-                padding: 20px;
-                flex: 1;
-                height: calc(100vh - 70px);
-                max-width: 1600px;
-                margin: 0 auto;
-                width: 100%;
-                overflow: hidden;
+                display: grid; grid-template-columns: 1.6fr 1.1fr; gap: 20px;
+                padding: 20px; flex: 1; height: calc(100vh - 70px);
+                max-width: 1600px; margin: 0 auto; width: 100%; overflow: hidden;
             }
-            .player-section {
-                width: 100%;
-                margin: 0;
-                display: flex !important;
-                flex-direction: column;
-                height: fit-content;
-                align-self: start;
-            }
-            .right-column-wrapper {
-                display: flex;
-                flex-direction: column;
-                overflow: hidden;
-                height: 100%;
-                background: var(--panel-bg);
-                backdrop-filter: var(--glass-blur);
-                border: 1px solid var(--border-color);
-                border-radius: 16px;
-            }
-            .sticky-controls-container {
-                position: static;
-                padding: 16px;
-                border-bottom: 1px solid var(--border-color);
-            }
-            .controls-wrapper {
-                display: flex !important;
-                background: transparent;
-                border: none;
-                padding: 0;
-            }
-            .main-content {
-                max-width: 100%;
-                margin: 0;
-                padding: 16px;
-                overflow-y: auto;
-                height: 100%;
-            }
-            #loading {
-                margin-top: 30px;
-            }
+            .player-section { width: 100% !important; margin: 0 !important; display: flex !important; flex-direction: column; height: fit-content; align-self: start; min-height: auto; }
+            .right-column-wrapper { display: flex; flex-direction: column; overflow: hidden; height: 100%; background: var(--panel-bg); backdrop-filter: var(--glass-blur); border: 1px solid var(--border-color); border-radius: 16px; }
+            .sticky-controls-container { position: static; padding: 16px; border-bottom: 1px solid var(--border-color); }
+            .controls-wrapper { display: flex !important; background: transparent; border: none; padding: 0; }
+            .main-content { max-width: 100%; margin: 0; padding: 16px; overflow-y: auto; height: 100%; }
+            #loading { margin-top: 30px; }
         }
 
         /* 📱 ল্যান্ডস্কেপ ফুলস্ক্রিন ফিক্স */
@@ -424,6 +308,7 @@
     <script>
         let player; 
         let hlsBackupEngine = null;
+        let isFirstInit = true; // প্রথমবার সোর্স ছাড়া ক্র্যাশ আটকানোর ফ্ল্যাগ
         const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/refs/heads/main/mixiptvchannel.m3u';
         const fetchUrls = [
             githubUrl,
@@ -505,10 +390,61 @@
             document.getElementById('loading').style.display = 'none';
             document.getElementById('controlsWrapper').style.display = 'flex'; 
             
+            // প্লেয়ার কোর ইঞ্জিন ইনিশিয়ালাইজেশন (সোর্স ছাড়া ক্র্যাশ প্রুফ রান)
+            initVideoPlayerEngine();
+
             // ল্যাপটপে থাকলে অটো ১ম চ্যানেল চলবে
             if (allChannels.length > 0 && window.innerWidth > 950) {
                 const firstRow = document.querySelector('.channel-row');
                 if(firstRow) firstRow.click();
+            }
+        }
+
+        function initVideoPlayerEngine() {
+            try {
+                player = videojs('live-player');
+                setupForcedDoubleTapZoom();
+
+                // এরর হ্যান্ডলারে প্রথম রান চেক করার লজিক ফিক্স
+                player.on('error', function() {
+                    if (isFirstInit) {
+                        isFirstInit = false;
+                        return; // কোনো সোর্স না থাকলে প্রথমবার ক্র্যাশ স্কিপ করবে
+                    }
+                    console.log("ইঞ্জিন ১ ফেইল! ইঞ্জিন ২ (Hls.js) ট্রাই করা হচ্ছে...");
+                    switchToHlsBackup();
+                });
+            } catch(e) { console.log("ইনিশিয়াল ইঞ্জিন বুট এরর স্কিপড"); }
+        }
+
+        function switchToHlsBackup() {
+            const currentActiveRow = document.querySelector('.channel-row.active-channel');
+            if(!currentActiveRow) return;
+
+            if (player) { try { player.dispose(); }catch(e){} player = null; }
+
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
+            const videoElement = document.getElementById('live-player');
+
+            // গ্লোবাল ফাংশন থেকে ইউআরএল রিকভারি লজিক
+            const chName = document.getElementById('playingTitle').innerText;
+            const channelObj = allChannels.find(c => c.name === chName);
+            if(!channelObj) return;
+
+            if (Hls.isSupported()) {
+                hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
+                hlsBackupEngine.loadSource(channelObj.url);
+                hlsBackupEngine.attachMedia(videoElement);
+                setupForcedDoubleTapZoom();
+
+                hlsBackupEngine.on(Hls.Events.ERROR, function(event, data) {
+                    if (data.fatal) {
+                        runNativeFallback(videoElement, channelObj.url, channelObj.name);
+                    }
+                });
+            } else {
+                runNativeFallback(videoElement, channelObj.url, channelObj.name);
             }
         }
 
@@ -588,6 +524,7 @@
         }
 
         function playVideo(name, url, clickedElement) {
+            isFirstInit = false; // ইউজার ক্লিক করা মাত্রই সোর্স চেকিং একটিভ হবে
             document.querySelectorAll('.channel-row.active-channel').forEach(row => row.classList.remove('active-channel'));
             if(clickedElement) clickedElement.classList.add('active-channel');
             
@@ -598,28 +535,8 @@
             player = videojs('live-player');
             setupForcedDoubleTapZoom();
 
-            // 🔄 ৩-স্তর বিশিষ্ট ফলব্যাক/ব্যাকআপ প্লেয়ার লজিক
             player.on('error', function() {
-                if (player) { player.dispose(); player = null; }
-
-                const container = document.getElementById('videoContainer');
-                container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
-                const videoElement = document.getElementById('live-player');
-
-                if (Hls.isSupported()) {
-                    hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
-                    hlsBackupEngine.loadSource(url);
-                    hlsBackupEngine.attachMedia(videoElement);
-                    setupForcedDoubleTapZoom();
-
-                    hlsBackupEngine.on(Hls.Events.ERROR, function(event, data) {
-                        if (data.fatal) {
-                            runNativeFallback(videoElement, url, name);
-                        }
-                    });
-                } else {
-                    runNativeFallback(videoElement, url, name);
-                }
+                switchToHlsBackup();
             });
 
             try {
