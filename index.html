@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>বাংলা টিভি</title>
     
-    <!-- 🌍 কোর লাইব্রেরী ও গ্লোবাল ফন্ট -->
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -279,10 +278,63 @@
         .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; }
         #loading { text-align: center; font-size: 14px; color: var(--text-muted); margin-top: 60px; }
         
+        /* 💻 ল্যাপটপ এবং বড় স্ক্রিনের জন্য বিশেষ টু-কলাম গ্রিড লেআউট */
         @media (min-width: 951px) {
-            .player-section { width: 100%; max-width: 960px; margin: 20px auto 0 auto; }
-            .sticky-controls-container { position: static; padding: 0; }
-            .main-content { max-width: 960px; margin: 0 auto; padding: 20px 0; }
+            body {
+                height: 100vh;
+                overflow: hidden;
+            }
+            .app-layout {
+                display: grid;
+                grid-template-columns: 1.6fr 1.1fr; /* বামে বড় স্ক্রিনে প্লেয়ার, ডানে কন্ট্রোল ও লিস্ট */
+                gap: 20px;
+                padding: 20px;
+                flex: 1;
+                height: calc(100vh - 70px); /* হেডার বাদ দিয়ে সম্পূর্ণ উচ্চতা */
+                max-width: 1600px;
+                margin: 0 auto;
+                width: 100%;
+            }
+            .player-section {
+                width: 100%;
+                margin: 0;
+                display: flex !important; /* ল্যাপটপে প্রথম থেকেই প্লেয়ার জোন ভিজিবল থাকবে */
+                flex-direction: column;
+                height: fit-content;
+                align-self: start;
+            }
+            /* ডান পাশের কলামের স্ক্রলিং কন্টেইনার */
+            .right-column-wrapper {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                height: 100%;
+                background: var(--panel-bg);
+                backdrop-filter: var(--glass-blur);
+                border: 1px solid var(--border-color);
+                border-radius: 16px;
+            }
+            .sticky-controls-container {
+                position: static;
+                padding: 16px;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .controls-wrapper {
+                display: flex !important;
+                background: transparent;
+                border: none;
+                padding: 0;
+            }
+            .main-content {
+                max-width: 100%;
+                margin: 0;
+                padding: 16px;
+                overflow-y: auto; /* শুধুমাত্র চ্যানেল লিস্ট স্ক্রল করবে */
+                height: 100%;
+            }
+            #loading {
+                margin-top: 30px;
+            }
         }
 
         @media (max-width: 950px) and (orientation: landscape) {
@@ -342,26 +394,27 @@
             </div>
         </div>
 
-        <div class="sticky-controls-container">
-            <div class="controls-wrapper" id="controlsWrapper">
-                <div class="category-select-wrapper">
-                    <select class="category-dropdown" id="categoryDropdown" onchange="filterCategory(this.value)">
-                        <option value="All">All Categories</option>
-                    </select>
-                </div>
-                <div class="search-container">
-                    <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেল সার্চ করুন..." oninput="searchChannel()">
+        <div class="right-column-wrapper">
+            <div class="sticky-controls-container">
+                <div class="controls-wrapper" id="controlsWrapper">
+                    <div class="category-select-wrapper">
+                        <select class="category-dropdown" id="categoryDropdown" onchange="filterCategory(this.value)">
+                            <option value="All">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেল সার্চ করুন..." oninput="searchChannel()">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="main-content">
-            <div id="loading"><i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px; color: var(--brand-color);"></i> ক্লাউড সার্ভার থেকে চ্যানেল লোড হচ্ছে...</div>
-            <div class="channel-list" id="channelList"></div>
+            <div class="main-content">
+                <div id="loading"><i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px; color: var(--brand-color);"></i> ক্লাউড সার্ভার থেকে চ্যানেল লোড হচ্ছে...</div>
+                <div class="channel-list" id="channelList"></div>
+            </div>
         </div>
     </div>
 
-    <!-- ভিডিও ইঞ্জিন স্ক্রিপ্ট (ভিডিও.জেএস এবং এইচএলএস ব্যাকআপ ইঞ্জিন) -->
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
@@ -574,7 +627,11 @@
             } catch(e) {
                 console.log("প্লেব্যাক ট্রাই এক্সেপশন");
             }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // শুধু মোবাইল ভিউতে স্মুথ স্ক্রল হবে, ল্যাপটপে স্থির থাকবে
+            if (window.innerWidth <= 950) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
 
         function runNativeFallback(element, url, name) {
