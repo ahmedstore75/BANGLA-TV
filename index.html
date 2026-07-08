@@ -136,19 +136,9 @@
             display: block !important;
         }
 
+        /* 🚫 "এখন দেখছেন" বার হাইড করা হয়েছে */
         .playing-now-bar {
-            background: rgba(0, 0, 0, 0.8); padding: 10px 16px;
-            font-size: 13px; display: flex; align-items: center; gap: 12px;
-        }
-
-        .notice-live-dot {
-            width: 8px; height: 8px; background-color: var(--brand-color);
-            border-radius: 50%; animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+            display: none !important;
         }
 
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
@@ -200,42 +190,42 @@
             width: 100%;
         }
 
-        /* 🔍 সার্চ ও ক্যাটাগরি জোন */
+        /* 🔍 সার্চ ও ক্যাটাগরি জোন (চিকন ও কম্প্যাক্ট করা হয়েছে) */
         .sticky-controls-container { 
-            padding: 6px 12px; 
+            padding: 4px 12px; 
             background: var(--bg-color);
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
         .controls-wrapper {
             background: var(--panel-bg); backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--border-color); border-radius: 12px;
-            padding: 8px; display: flex; align-items: center; gap: 8px;
+            border: 1px solid var(--border-color); border-radius: 10px;
+            padding: 4px; display: flex; align-items: center; gap: 6px;
         }
 
         .category-select-wrapper { position: relative; flex: 1; }
         .category-dropdown {
-            width: 100%; padding: 10px 12px; background-color: var(--input-bg);
-            border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color);
+            width: 100%; padding: 6px 10px; background-color: var(--input-bg);
+            border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-color);
             font-size: 12px; font-weight: 500; outline: none; cursor: pointer; appearance: none;
         }
         .category-select-wrapper::after {
             content: "\f0d7"; font-family: "Font Awesome 6 Free"; font-weight: 900;
-            position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
             color: var(--brand-color); pointer-events: none;
         }
 
         .search-container { flex: 1.2; position: relative; }
         .search-input {
-            width: 100%; padding: 10px 12px 10px 32px; background-color: var(--input-bg);
-            border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color);
+            width: 100%; padding: 6px 10px 6px 28px; background-color: var(--input-bg);
+            border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-color);
             font-size: 12px; outline: none;
         }
         .search-container::before {
             content: "\f002"; font-family: "Font Awesome 6 Free"; font-weight: 900;
-            position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--brand-color);
+            position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--brand-color);
         }
 
         /* 📺 লেআউট স্ট্রাকচার */
@@ -299,7 +289,7 @@
         .skeleton-text { width: 120px; height: 16px; background: var(--skeleton-bg); border-radius: 4px; animation: pulse-sk 1.5s infinite ease-in-out; }
         .skeleton-right { width: 30px; height: 16px; background: var(--skeleton-bg); border-radius: 4px; animation: pulse-sk 1.5s infinite ease-in-out; }
 
-        /* 💻 ল্যাপটপ এবং ডেক্সটপ প্রফেশনাল গ্রিড লেআউট (নোটিশ বার ডানপাশে ফিক্স) */
+        /* 💻 ল্যাপটপ এবং ডেক্সটপ প্রফেশনাল গ্রিড লেআউট */
         @media (min-width: 951px) {
             body { height: 100vh; overflow: hidden; }
             .app-layout {
@@ -329,7 +319,6 @@
                 border: 1px solid rgba(239, 68, 68, 0.15) !important; 
             }
             
-            /* ল্যাপটপে ভিডিওর নিচের নোটিশ হাইড হবে, কারণ এটি ডানপাশে চলে গেছে */
             .player-left-column .app-notice-bar { 
                 display: none !important; 
             }
@@ -347,15 +336,14 @@
             
             .sticky-controls-container { 
                 position: static; 
-                padding: 16px; 
+                padding: 12px; 
                 border-bottom: 1px solid var(--border-color); 
                 background: transparent; 
                 display: flex !important;
                 flex-direction: column !important;
-                gap: 12px !important;
+                gap: 8px !important;
             }
 
-            /* ল্যাপটপে কন্ট্রোলসের ভেতরে থাকা নোটিশ বার ভিজিবল হবে */
             .sticky-controls-container .app-notice-bar {
                 display: flex !important;
                 margin: 0 !important;
@@ -428,12 +416,13 @@
     </header>
 
     <div class="app-layout">
-        <!-- 📺 বামপাশের কলাম: শুধু ভিডিও প্লেয়ার (মোবাইলে নোটিশ নিচে শো করবে) -->
+        <!-- 📺 বামপাশের কলাম: শুধু ভিডিও প্লেয়ার -->
         <div class="player-left-column">
             <div class="player-section" id="playerSection">
-                <div class="playing-now-bar">
-                    <span class="notice-live-dot"></span>
-                    <span><span id="langNowPlaying">এখন দেখছেন:</span> <span id="playingTitle" style="color: var(--brand-color); font-weight: 700;">কোনো চ্যানেল সিলেক্ট করা নেই</span></span>
+                <!-- ব্যাকএন্ড রেফারেন্সের জন্য এই অংশটি ব্যাকগ্রাউন্ডে হিডেন রাখা হয়েছে -->
+                <div class="playing-now-bar" style="display: none !important;">
+                    <span id="langNowPlaying"></span>
+                    <span id="playingTitle">কোনো চ্যানেল সিলেক্ট করা নেই</span>
                 </div>
                 <div class="video-container" id="videoContainer">
                     <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
@@ -442,7 +431,7 @@
                 </div>
             </div>
 
-            <!-- মোবাইল নোটিশ বার (ল্যাপটপে সিএসএস দিয়ে হাইড করা হয়েছে) -->
+            <!-- মোবাইল নোটিশ বার -->
             <div class="app-notice-bar mobile-only-notice">
                 <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                 <div class="notice-marquee-container marqueeHolderClass"></div>
@@ -452,7 +441,7 @@
         <!-- 📑 ডানপাশের কলাম: নোটিশ বার, কন্ট্রোলস এবং চ্যানেল লিস্ট -->
         <div class="right-column-wrapper">
             <div class="sticky-controls-container">
-                <!-- ল্যাপটপ নোটিশ বার (সার্চ ও ক্যাটাগরির ঠিক ওপরে বসানো হয়েছে) -->
+                <!-- ল্যাপটপ নোটিশ বার -->
                 <div class="app-notice-bar pc-only-notice" style="display: none;">
                     <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
                     <div class="notice-marquee-container marqueeHolderClass"></div>
@@ -509,7 +498,7 @@
                 themeText: "থিম পরিবর্তন (Light/Dark)", refreshText: "প্লেলিস্ট রিফ্রেশ করুন",
                 telegramText: "টেলিগ্রাম চ্যানেল (লিংক)", facebookText: "ফেসবুক পেজ (সাপোর্ট)",
                 nowPlaying: "এখন দেখছেন:", noChannel: "কোনো চ্যানেল সিলেক্ট করা নেই",
-                noticeBadge: "নোটিশ", noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার ইন্টারনেট কানেকশন চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই \"ভিয়া ব্রাউজার\" (Via Browser) ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
+                noticeBadge: "নোটিশ", noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার internet কানেকশন চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই \"ভিয়া ব্রাউজার\" (Via Browser) ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
                 searchPlaceholder: "চ্যানেল সার্চ করুন...", noResult: "কোনো চ্যানেল খুঁজে পাওয়া যায়নি!",
                 allCat: "সব ক্যাটাগরি"
             },
