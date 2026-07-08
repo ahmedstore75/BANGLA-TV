@@ -206,7 +206,7 @@
             border-radius: 50%; animation: pulse 2s infinite;
         }
         @keyframes pulse {
-            0 { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
             70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
         }
@@ -300,7 +300,7 @@
             .player-section {
                 width: 100%;
                 margin: 0;
-                display: flex !important;
+                display: flex; /* ল্যাপটপে সব সময় ভিজিবল থাকবে */
                 flex-direction: column;
                 height: fit-content;
                 align-self: start;
@@ -340,7 +340,7 @@
 
         @media (max-width: 950px) and (orientation: landscape) {
             header, .sticky-controls-container, .playing-now-bar, .main-content { display: none !important; }
-            .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0; margin: 0; z-index: 9999999; display: block; }
+            .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0; margin: 0; z-index: 9999999; display: block !important; }
             .video-container, .video-js, .native-player-style { width: 100vw !important; height: 100vh !important; }
             .video-js video, .native-player-style { object-fit: fill !important; }
         }
