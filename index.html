@@ -166,8 +166,8 @@
         .player-nav-zone {
             position: absolute;
             top: 0;
-            bottom: 45px; /* ভিডিও কন্ট্রোল বারের উপরে থাকবে যেন প্লে/পজ করতে সমস্যা না হয় */
-            width: 20%;   /* প্লেয়ারের দুই পাশের ২০% জায়গা জুড়েই ক্লিক কাজ করবে */
+            bottom: 45px;
+            width: 20%;   
             z-index: 10;
             cursor: pointer;
             display: flex;
@@ -179,13 +179,8 @@
             user-select: none;
             -webkit-user-select: none;
         }
-        .player-nav-left {
-            left: 0;
-        }
-        .player-nav-right {
-            right: 0;
-        }
-        /* হোভার করলে হালকা ইঙ্গিত দেবে */
+        .player-nav-left { left: 0; }
+        .player-nav-right { right: 0; }
         .player-nav-zone:hover {
             background: rgba(0, 0, 0, 0.2);
             color: rgba(255, 255, 255, 0.6);
@@ -359,7 +354,7 @@
             overflow: hidden;
             width: 100%;
             max-width: 100%;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2; 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .channel-row:hover { 
             background: var(--card-hover); 
@@ -535,6 +530,7 @@
                 width: 58px; height: 58px;
             }
             .no-result { grid-column: span 3; }
+            .loading-message-text { grid-column: span 3 !important; }
             .channel-name { font-size: 13.5px; }
         }
 
@@ -633,6 +629,10 @@
 
             <div class="main-content">
                 <div id="loadingLayout">
+                    <!-- লোডিং টেক্সট মেসেজ এরিয়া -->
+                    <div class="loading-message-text" id="langLoadingText" style="grid-column: span 2; text-align: center; font-weight: 600; color: var(--brand-color); padding: 10px 0; font-size: 14px;">
+                        <i class="fa-solid fa-spinner fa-spin"></i> সার্ভার থেকে চ্যানেল লোড হচ্ছে, দয়া করে অপেক্ষা করুন...
+                    </div>
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
@@ -642,6 +642,7 @@
         </div>
     </div>
 
+    <script src="https://vjs.zenczen.net/8.3.0/video.js"></script>
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
@@ -659,8 +660,8 @@
 
         let currentUrlIndex = 0;
         let allChannels = [];
-        let displayedChannels = []; // বর্তমানে স্ক্রিনে যে চ্যানেলগুলো দেখা যাচ্ছে (সার্চ/ক্যাটাগরি ফিল্টার করা)
-        let activeChannelIndex = -1; // বর্তমান সচল চ্যানেলের ইনডেক্স ট্র্যাকিং
+        let displayedChannels = []; 
+        let activeChannelIndex = -1; 
         
         let currentSelectedCategory = 'All'; 
         let lastUserCategory = 'All'; 
@@ -676,7 +677,8 @@
                 noticeBadge: "নোটিশ", 
                 noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
                 searchPlaceholder: "চ্যানেল সার্চ করুন...", noResult: "কোনো চ্যানেল খুঁজে পাওয়া যায়নি!",
-                allCat: "সব ক্যাটাগরি"
+                allCat: "সব ক্যাটাগরি",
+                loadingText: "সার্ভার থেকে চ্যানেল লোড হচ্ছে, দয়া করে অপেক্ষা করুন..."
             },
             en: {
                 appTitle: "Bangla TV", panelTitle: "Control Panel", toggleText: "ভাষা: বাংলা",
@@ -686,7 +688,8 @@
                 noticeBadge: "Notice", 
                 noticeText: "Welcome to our server! Check your <b>Internet Connection</b> to avoid buffering. For the best full-screen & buffering-free experience in browser, please use <b>\"Via Browser\"</b>. Refresh the playlist if channels fail.",
                 searchPlaceholder: "Search channel...", noResult: "No channels found!",
-                allCat: "All Categories"
+                allCat: "All Categories",
+                loadingText: "Loading channels from server, please wait..."
             }
         };
 
@@ -737,6 +740,9 @@
 
             const firstOption = document.querySelector('#categoryDropdown option[value="All"]');
             if(firstOption) firstOption.innerText = lang.allCat;
+
+            const loadingEl = document.getElementById('langLoadingText');
+            if(loadingEl) loadingEl.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ` + lang.loadingText;
         }
 
         function refreshPlaylist() {
@@ -802,7 +808,7 @@
             document.getElementById('totalChannels').innerText = "CH-" + allChannels.length;
             populateCategoryDropdown(categories);
             
-            displayedChannels = [...allChannels]; // শুরুতে সব চ্যানেলই থাকবে
+            displayedChannels = [...allChannels]; 
             renderChannels(displayedChannels); 
             document.getElementById('loadingLayout').style.display = 'none';
             
@@ -836,7 +842,6 @@
 
             const container = document.getElementById('videoContainer');
             
-            // রি-ইঞ্জেক্ট নেভিগেশন বাটনসহ প্লেয়ার
             container.innerHTML = `
                 <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
                 <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
@@ -903,14 +908,12 @@
             });
         }
 
-        // ইনডেক্স অনুযায়ী নির্দিষ্ট চ্যানেল প্লে করার ফাংশন
         function playChannelAt(index) {
             if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
             
             activeChannelIndex = index;
             const ch = displayedChannels[index];
 
-            // UI আপডেট (অ্যাক্টিভ চ্যানেল হাইলাইট করা)
             document.querySelectorAll('.channel-row').forEach(row => row.classList.remove('active-channel'));
             const activeRow = document.querySelector(`.channel-row[data-index="${index}"]`);
             if (activeRow) {
@@ -934,17 +937,16 @@
             } catch(e) {}
         }
 
-        // 👈 👉 দুই পাশে ক্লিকের নেভিগেশন লজিক Engine
         function navigateChannel(direction) {
             if (displayedChannels.length === 0) return;
             
             let nextIndex = activeChannelIndex;
             if (direction === 'next') {
                 nextIndex = activeChannelIndex + 1;
-                if (nextIndex >= displayedChannels.length) nextIndex = 0; // লিস্ট শেষ হলে আবার ১ নাম্বারে যাবে
+                if (nextIndex >= displayedChannels.length) nextIndex = 0; 
             } else if (direction === 'prev') {
                 nextIndex = activeChannelIndex - 1;
-                if (nextIndex < 0) nextIndex = displayedChannels.length - 1; // শুরুতে থাকলে শেষ চ্যানেলে যাবে
+                if (nextIndex < 0) nextIndex = displayedChannels.length - 1; 
             }
             
             playChannelAt(nextIndex);
@@ -961,11 +963,10 @@
                 displayedChannels = allChannels.filter(ch => ch.category === category);
             }
             
-            activeChannelIndex = -1; // ফিল্টার চেঞ্জ হলে ট্র্যাকার রিসেট
+            activeChannelIndex = -1; 
             renderChannels(displayedChannels);
         }
 
-        // আল্ট্রা-স্মুথ ৩০০ মিলিসেকেন্ড ডেবাউন্সড সার্চ
         function searchChannel() {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
@@ -1014,7 +1015,6 @@
             const container = document.getElementById('videoContainer');
             let lastTapTime = 0;
             container.addEventListener('touchstart', function(e) {
-                // যদি ক্লিকটি নেভিগেশন জোনে হয়, তবে জুম ইভেন্ট ইগনোর করবে
                 if (e.target.classList.contains('player-nav-zone') || e.target.closest('.player-nav-zone')) return;
                 
                 const now = new Date().getTime();
