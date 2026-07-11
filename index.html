@@ -156,7 +156,6 @@
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .video-js, .native-player-style, #clappr-player { width: 100% !important; height: 100% !important; }
         
-        /* 💎 ক্রপ না করে যেকোনো ডিভাইসে স্ক্রিন ফিট রাখার জন্য CSS প্রোপার্টি 💎 */
         .video-container video, 
         .video-js video, 
         #clappr-player video, 
@@ -414,22 +413,6 @@
         .active-channel .channel-live-badge { display: inline-block !important; }
 
         .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; grid-column: span 2; }
-        
-        #loadingLayout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; width: 100%; }
-        .skeleton-item {
-            background: var(--card-bg); border: 1px solid var(--border-color);
-            border-radius: 14px; padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%;
-        }
-        .skeleton-left { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
-        .skeleton-logo { width: 54px; height: 54px; background: var(--skeleton-bg); border-radius: 12px; animation: pulse-sk 1.5s infinite ease-in-out; }
-        .skeleton-text { width: 65%; height: 12px; background: var(--skeleton-bg); border-radius: 4px; animation: pulse-sk 1.5s infinite ease-in-out; }
-        .skeleton-right { display: none; }
-
-        @keyframes pulse-sk {
-            0% { opacity: 0.6; }
-            50% { opacity: 1; }
-            100% { opacity: 0.6; }
-        }
 
         @media (min-width: 951px) {
             body { height: 100vh; overflow: hidden; }
@@ -514,7 +497,7 @@
                 width: 100%;
             }
 
-            .channel-list, #loadingLayout { 
+            .channel-list { 
                 grid-template-columns: repeat(3, 1fr); 
                 gap: 12px;
             }
@@ -526,7 +509,6 @@
                 width: 58px; height: 58px;
             }
             .no-result { grid-column: span 3; }
-            .loading-message-text { grid-column: span 3 !important; }
             .channel-name { font-size: 13.5px; }
         }
 
@@ -621,14 +603,6 @@
             </div>
 
             <div class="main-content">
-                <div id="loadingLayout">
-                    <div class="loading-message-text" id="langLoadingText" style="grid-column: span 2; text-align: center; font-weight: 600; color: var(--brand-color); padding: 10px 0; font-size: 14px;">
-                        <i class="fa-solid fa-spinner fa-spin"></i> সার্ভার থেকে চ্যানেল লোড হচ্ছে, দয়া করে অপেক্ষা করুন...
-                    </div>
-                    <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
-                    <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
-                    <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
-                </div>
                 <div class="channel-list" id="channelList"></div>
             </div>
         </div>
@@ -671,8 +645,7 @@
                 noticeBadge: "নোটিশ", 
                 noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
                 searchPlaceholder: "চ্যানেল সার্চ করুন...", noResult: "কোনো চ্যানেল খুঁজে পাওয়া যায়নি!",
-                allCat: "সব ক্যাটাগরি",
-                loadingText: "সার্ভার থেকে চ্যানেল লোড হচ্ছে, দয়া করে অপেক্ষা করুন..."
+                allCat: "সব ক্যাটাগরি"
             },
             en: {
                 appTitle: "Bangla TV", panelTitle: "Control Panel", toggleText: "ভাষা: বাংলা",
@@ -682,8 +655,7 @@
                 noticeBadge: "Notice", 
                 noticeText: "Welcome to our server! Check your <b>Internet Connection</b> to avoid buffering. For the best full-screen & buffering-free experience in browser, please use <b>\"Via Browser\"</b>. Refresh the playlist if channels fail.",
                 searchPlaceholder: "Search channel...", noResult: "No channels found!",
-                allCat: "All Categories",
-                loadingText: "Loading channels from server, please wait..."
+                allCat: "All Categories"
             }
         };
 
@@ -734,14 +706,10 @@
 
             const firstOption = document.querySelector('#categoryDropdown option[value="All"]');
             if(firstOption) firstOption.innerText = lang.allCat;
-
-            const loadingEl = document.getElementById('langLoadingText');
-            if(loadingEl) loadingEl.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ` + lang.loadingText;
         }
 
         function refreshPlaylist() {
             toggleMenu();
-            document.getElementById('loadingLayout').style.display = 'grid';
             document.getElementById('channelList').innerHTML = '';
             currentUrlIndex = 0;
             fetchPlaylist();
@@ -749,7 +717,6 @@
 
         async function fetchPlaylist() {
             if (currentUrlIndex >= fetchUrls.length) {
-                document.getElementById('loadingLayout').style.display = 'none';
                 document.getElementById('channelList').innerHTML = `<div class='no-result'>${languages[currentLang].noResult}</div>`;
                 return;
             }
@@ -804,14 +771,12 @@
             
             displayedChannels = [...allChannels]; 
             renderChannels(displayedChannels); 
-            document.getElementById('loadingLayout').style.display = 'none';
             
             if (displayedChannels.length > 0 && window.innerWidth > 950) {
                 playChannelAt(0);
             }
         }
 
-        // 🚀 মূল প্লেয়ার ফাংশন: এখন ১ নম্বরে Video.js রান করবে
         function playChannelAt(index) {
             if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
             
@@ -828,18 +793,16 @@
             isFirstInit = false; 
             resetContainers();
 
-            // ১. প্রথম পছন্দ: Video.js প্লেয়ার মাউন্ট করা
             const container = document.getElementById('player-mount-point');
             container.innerHTML = `<video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>`;
             
             player = videojs('live-player', {
-                fluid: true, // ভিডিওকে রেসপনসিভ রাখবে
+                fluid: true, 
                 aspectRatio: '16:9'
             });
 
             player.on('error', function() {
-                console.log("Video.js Error! Switching to Clappr Player...");
-                switchToClappr(ch.url); // Video.js ফেইল করলে ২ নম্বরে Clappr-এ যাবে
+                switchToClappr(ch.url);
             });
 
             try {
@@ -850,7 +813,6 @@
             }
         }
 
-        // ২. দ্বিতীয় পছন্দ (ব্যাকআপ): Clappr Player
         function switchToClappr(streamUrl) {
             if (player) { try { player.dispose(); } catch(e){} player = null; }
             
@@ -870,8 +832,7 @@
                     language: currentLang,
                     events: {
                         onError: function(e) {
-                            console.log("Clappr Error! Switching to Hls.js Native Engine...");
-                            switchToHlsBackup(streamUrl); // Clappr ফেইল করলে ৩ নম্বরে Hls.js Native-এ যাবে
+                            switchToHlsBackup(streamUrl);
                         }
                     }
                 });
@@ -880,7 +841,6 @@
             }
         }
 
-        // ৩. তৃতীয় পছন্দ (সর্বশেষ ব্যাকআপ): Hls.js / Native Player
         function switchToHlsBackup(streamUrl) {
             if (clapprPlayerInstance) { try { clapprPlayerInstance.destroy(); } catch(e){} clapprPlayerInstance = null; }
             
