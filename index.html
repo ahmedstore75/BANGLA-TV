@@ -155,7 +155,15 @@
 
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .video-js, .native-player-style, #clappr-player { width: 100% !important; height: 100% !important; }
-        .video-js.forced-zoom video, .forced-zoom, #clappr-player video { object-fit: cover !important; }
+        
+        /* 💎 ক্রপ না করে যেকোনো ডিভাইসে স্ক্রিন ফিট রাখার জন্য CSS প্রোপার্টি 💎 */
+        .video-container video, 
+        .video-js video, 
+        #clappr-player video, 
+        .native-player-style,
+        .vjs-tech { 
+            object-fit: contain !important; 
+        }
 
         .player-nav-zone {
             position: absolute;
@@ -526,7 +534,7 @@
             header, .sticky-controls-container, .main-content, .app-notice-bar { display: none !important; }
             .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0 !important; margin: 0 !important; z-index: 9999999; display: block !important; }
             .video-container, .video-js, .native-player-style, #clappr-player { width: 100vw !important; height: 100vh !important; }
-            .video-js video, .native-player-style, #clappr-player video { object-fit: fill !important; }
+            .video-js video, .native-player-style, #clappr-player video { object-fit: contain !important; }
         }
     </style>
 </head>
@@ -626,14 +634,14 @@
         </div>
     </div>
 
+    <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clappr-rtmp-plugin@latest/dist/clappr-rtmp-plugin.min.js"></script>
-    <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
     <script>
-        let clapprPlayerInstance = null;
         let player = null; 
+        let clapprPlayerInstance = null;
         let hlsBackupEngine = null;
         let isFirstInit = true; 
         const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/main/mixiptvchannel.m3u';
@@ -803,7 +811,7 @@
             }
         }
 
-        // মূল প্লেয়ার ফাংশন: এখন সবার আগে ১ নম্বরে Hls.js/Native রান করবে
+        // 🚀 মূল প্লেয়ার ফাংশন: এখন ১ নম্বরে Video.js রান করবে
         function playChannelAt(index) {
             if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
             
@@ -820,38 +828,31 @@
             isFirstInit = false; 
             resetContainers();
 
-            // ১. প্রথম পছন্দ: Hls.js / Native Player দিয়ে শুরু
+            // ১. প্রথম পছন্দ: Video.js প্লেয়ার মাউন্ট করা
             const container = document.getElementById('player-mount-point');
-            container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
-            const videoElement = document.getElementById('live-player');
+            container.innerHTML = `<video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>`;
+            
+            player = videojs('live-player', {
+                fluid: true, // ভিডিওকে রেসপনসিভ রাখবে
+                aspectRatio: '16:9'
+            });
 
-            if (Hls.isSupported()) {
-                hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
-                hlsBackupEngine.loadSource(ch.url);
-                hlsBackupEngine.attachMedia(videoElement);
-                setupForcedDoubleTapZoom();
+            player.on('error', function() {
+                console.log("Video.js Error! Switching to Clappr Player...");
+                switchToClappr(ch.url); // Video.js ফেইল করলে ২ নম্বরে Clappr-এ যাবে
+            });
 
-                hlsBackupEngine.on(Hls.Events.ERROR, function(event, data) {
-                    if (data.fatal) {
-                        console.log("Hls.js Engine Error! Switching to Clappr...");
-                        switchToClappr(ch.url); // Hls.js ফেইল করলে ২ নম্বর Clappr-এ যাবে
-                    }
-                });
-            } else if (videoElement.canPlayType('application/x-mpegURL') || videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-                // অ্যাপল ডিভাইস বা সাফারি ব্রাউজারের নিজস্ব নেটিভ প্লেব্যাক
-                videoElement.src = ch.url;
-                videoElement.play().catch(e => {
-                    switchToClappr(ch.url);
-                });
-                setupForcedDoubleTapZoom();
-            } else {
+            try {
+                player.src({ src: ch.url, type: 'application/x-mpegURL' });
+                player.play();
+            } catch(e) {
                 switchToClappr(ch.url);
             }
         }
 
         // ২. দ্বিতীয় পছন্দ (ব্যাকআপ): Clappr Player
         function switchToClappr(streamUrl) {
-            if (hlsBackupEngine) { hlsBackupEngine.destroy(); hlsBackupEngine = null; }
+            if (player) { try { player.dispose(); } catch(e){} player = null; }
             
             const container = document.getElementById('player-mount-point');
             container.innerHTML = `<div id="clappr-player" style="width:100%; height:100%;"></div>`;
@@ -869,35 +870,32 @@
                     language: currentLang,
                     events: {
                         onError: function(e) {
-                            console.log("Clappr Error! Switching to VideoJS...");
-                            switchToVideoJs(streamUrl); // Clappr ফেইল করলে ৩ নম্বর Video.js-এ যাবে
+                            console.log("Clappr Error! Switching to Hls.js Native Engine...");
+                            switchToHlsBackup(streamUrl); // Clappr ফেইল করলে ৩ নম্বরে Hls.js Native-এ যাবে
                         }
                     }
                 });
-                setupForcedDoubleTapZoom();
             } catch(e) {
-                switchToVideoJs(streamUrl);
+                switchToHlsBackup(streamUrl);
             }
         }
 
-        // ৩. তৃতীয় পছন্দ (সর্বশেষ ব্যাকআপ): Video.js Player
-        function switchToVideoJs(streamUrl) {
+        // ৩. তৃতীয় পছন্দ (সর্বশেষ ব্যাকআপ): Hls.js / Native Player
+        function switchToHlsBackup(streamUrl) {
             if (clapprPlayerInstance) { try { clapprPlayerInstance.destroy(); } catch(e){} clapprPlayerInstance = null; }
             
             const container = document.getElementById('player-mount-point');
-            container.innerHTML = `<video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>`;
-            
-            player = videojs('live-player');
-            setupForcedDoubleTapZoom();
+            container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
+            const videoElement = document.getElementById('live-player');
 
-            player.on('error', function() {
-                console.log("All players failed for this stream.");
-            });
-
-            try {
-                player.src({ src: streamUrl, type: 'application/x-mpegURL' });
-                player.play();
-            } catch(e) {}
+            if (Hls.isSupported()) {
+                hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
+                hlsBackupEngine.loadSource(streamUrl);
+                hlsBackupEngine.attachMedia(videoElement);
+            } else if (videoElement.canPlayType('application/x-mpegURL') || videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                videoElement.src = streamUrl;
+                videoElement.play().catch(e => console.log("All players failed."));
+            }
         }
 
         function populateCategoryDropdown(categories) {
@@ -1002,36 +1000,20 @@
         }
 
         function resetContainers() {
-            if (hlsBackupEngine) {
-                hlsBackupEngine.destroy();
-                hlsBackupEngine = null;
+            if (player) {
+                try { player.dispose(); } catch(e){}
+                player = null;
             }
             if (clapprPlayerInstance) {
                 try { clapprPlayerInstance.destroy(); } catch(e){}
                 clapprPlayerInstance = null;
             }
-            if (player) {
-                try { player.dispose(); } catch(e){}
-                player = null;
+            if (hlsBackupEngine) {
+                hlsBackupEngine.destroy();
+                hlsBackupEngine = null;
             }
             const container = document.getElementById('player-mount-point');
             container.innerHTML = '';
-        }
-
-        function setupForcedDoubleTapZoom() {
-            const container = document.getElementById('videoContainer');
-            let lastTapTime = 0;
-            container.addEventListener('touchstart', function(e) {
-                if (e.target.classList.contains('player-nav-zone') || e.target.closest('.player-nav-zone')) return;
-                
-                const now = new Date().getTime();
-                if (now - lastTapTime < 300) {
-                    e.preventDefault(); 
-                    const targetPlayer = document.querySelector('#videoContainer video, #clappr-player video');
-                    if(targetPlayer) targetPlayer.classList.toggle('forced-zoom');
-                }
-                lastTapTime = now;
-            });
         }
 
         window.onload = function() {
