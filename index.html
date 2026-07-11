@@ -20,10 +20,19 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
-        ::-webkit-scrollbar-thumb { background: rgba(239, 68, 68, 0.3); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--brand-color); }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(239, 68, 68, 0.3);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--brand-color);
+        }
 
         :root {
             --brand-color: #ef4444;
@@ -38,7 +47,28 @@
             --card-hover: rgba(239, 68, 68, 0.08);
             --drawer-bg: rgba(3, 7, 18, 0.96);
             --glass-blur: blur(24px);
+            --skeleton-bg: #1f2937;
+            --notice-bg: rgba(239, 68, 68, 0.05);
+            --notice-text-color: #ffffff; 
+            --notice-highlight: #ffdd44; 
             --box-shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f8fafc;
+            --panel-bg: rgba(255, 255, 255, 0.75);
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --input-bg: #ffffff;
+            --border-color: rgba(0, 0, 0, 0.05);
+            --card-bg: rgba(0, 0, 0, 0.02);
+            --card-hover: rgba(239, 68, 68, 0.05);
+            --drawer-bg: rgba(255, 255, 255, 0.98);
+            --skeleton-bg: #e2e8f0;
+            --notice-bg: rgba(15, 23, 42, 0.05);
+            --notice-text-color: #1e293b; 
+            --notice-highlight: #dc2626;  
+            --box-shadow-premium: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
         }
 
         body {
@@ -48,6 +78,7 @@
             flex-direction: column;
             height: 100vh;
             overflow: hidden;
+            transition: background-color 0.4s, color 0.4s;
         }
 
         header {
@@ -66,15 +97,47 @@
         }
 
         .header-left { display: flex; align-items: center; gap: 16px; }
+
         .menu-btn {
             background: linear-gradient(135deg, #ff007f, #7928ca, #0070f3);
             border: none; color: white; font-size: 16px; width: 40px; height: 40px;
             border-radius: 12px; cursor: pointer; display: flex; align-items: center;
-            justify-content: center; transition: all 0.3s ease;
+            justify-content: center; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(121, 40, 202, 0.4);
         }
+        .menu-btn:hover { transform: scale(1.05) rotate(5deg); }
 
-        header h1 { font-size: 20px; font-weight: 700; color: var(--brand-color); }
+        header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; color: var(--brand-color); text-shadow: 0 0 10px var(--brand-glow); }
         .channel-count-badge { background: rgba(239, 68, 68, 0.1); color: var(--brand-color); font-size: 12px; font-weight: 600; padding: 6px 14px; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 99px; }
+
+        .sidebar-drawer {
+            position: fixed; top: 0; left: -320px; width: 320px; height: 100vh;
+            background: var(--drawer-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+            box-shadow: 20px 0 50px rgba(0, 0, 0, 0.4); z-index: 10000;
+            transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1); display: flex; flex-direction: column; border-right: 1px solid var(--border-color);
+        }
+        .sidebar-drawer.open { left: 0; }
+        .drawer-header { padding: 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+        .drawer-header h2 { font-size: 18px; font-weight: 700; background: linear-gradient(45deg, #ff3366, #ff007f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .close-drawer-btn { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: var(--brand-color); font-size: 14px; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .drawer-menu-items { padding: 24px 16px; display: flex; flex-direction: column; gap: 12px; }
+        .drawer-item { display: flex; align-items: center; gap: 16px; padding: 14px 16px; color: var(--text-color); font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border-radius: 12px; border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02); transition: all 0.25s ease; }
+        .drawer-item:hover { transform: translateX(6px); background: rgba(255, 255, 255, 0.05); }
+        .drawer-item .icon-box { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; }
+        .theme-item .icon-box { background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+        .lang-item .icon-box { background: linear-gradient(135deg, #3b82f6, #1d4ed8); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
+        .refresh-item .icon-box { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+        .telegram-item .icon-box { background: linear-gradient(135deg, #0088cc, #006699); box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3); }
+        .facebook-item .icon-box { background: linear-gradient(135deg, #1877f2, #0d5bf2); box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3); }
+        .drawer-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .drawer-overlay.show { opacity: 1; pointer-events: auto; }
+
+        .player-left-column {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex-shrink: 0;
+        }
 
         .player-section {
             background: #000 !important; 
@@ -87,101 +150,421 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px var(--brand-glow) !important;
             border: 1px solid rgba(239, 68, 68, 0.25) !important; 
             display: block !important;
+            transition: all 0.3s ease;
         }
 
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
-        .video-js, #clappr-player { width: 100% !important; height: 100% !important; }
-        
-        .video-container video, 
-        .video-js video, 
-        #clappr-player video, 
-        .vjs-tech { 
-            object-fit: contain !important; 
-            width: 100% !important;
-            height: 100% !important;
-        }
-
-        .player-section.fullscreen-mode {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100vw !important;
-            height: 100vh !important;
-            margin: 0 !important;
-            border: none !important;
-            border-radius: 0 !important;
-            z-index: 9999999 !important;
-        }
-        .player-section.fullscreen-mode .video-container,
-        .player-section.fullscreen-mode .video-js,
-        .player-section.fullscreen-mode #clappr-player {
-            width: 100vw !important;
-            height: 100vh !important;
-        }
+        .video-js, .native-player-style, #clappr-player { width: 100% !important; height: 100% !important; }
+        .video-js.forced-zoom video, .forced-zoom, #clappr-player video { object-fit: cover !important; }
 
         .player-nav-zone {
-            position: absolute; top: 0; bottom: 45px; width: 20%; z-index: 100;
-            cursor: pointer; display: flex; align-items: center; justify-content: center;
-            color: rgba(255, 255, 255, 0); font-size: 24px; transition: all 0.2s ease;
+            position: absolute;
+            top: 0;
+            bottom: 45px;
+            width: 20%;   
+            z-index: 100;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0);
+            font-size: 24px;
+            transition: all 0.2s ease;
+            user-select: none;
+            -webkit-user-select: none;
         }
         .player-nav-left { left: 0; }
         .player-nav-right { right: 0; }
-        .player-nav-zone:hover { background: rgba(0, 0, 0, 0.2); color: rgba(255, 255, 255, 0.6); }
+        .player-nav-zone:hover {
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.6);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        .player-nav-zone:active {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--brand-color);
+        }
 
-        .app-layout { display: flex; flex-direction: column; flex: 1; overflow: hidden; width: 100%; }
-        .right-column-wrapper { display: flex; flex-direction: column; flex: 1; overflow: hidden; width: 100%; }
-        .main-content { flex: 1; padding: 4px 12px 20px 12px; overflow-y: auto; overflow-x: hidden; width: 100%; }
+        .app-notice-bar {
+            background: var(--notice-bg);
+            border: 1px solid #ff3333; 
+            margin: 0 12px 6px 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            flex-shrink: 0;
+            animation: borderRainbow 8s infinite linear;
+        }
+
+        @keyframes borderRainbow {
+            0% { border-color: rgba(255, 51, 51, 0.4); box-shadow: 0 0 6px rgba(255, 51, 51, 0.1); }      
+            25% { border-color: rgba(0, 112, 243, 0.4); box-shadow: 0 0 6px rgba(0, 112, 243, 0.1); }     
+            50% { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 0 6px rgba(16, 185, 129, 0.1); }    
+            75% { border-color: rgba(121, 40, 202, 0.4); box-shadow: 0 0 6px rgba(121, 40, 202, 0.1); }    
+            100% { border-color: rgba(255, 51, 51, 0.4); box-shadow: 0 0 6px rgba(255, 51, 51, 0.1); }    
+        }
+
+        .notice-badge {
+            background: var(--brand-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px var(--brand-glow);
+        }
         
-        .channel-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 4px; width: 100%; }
-        .channel-row { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 8px; cursor: pointer; position: relative; width: 100%; transition: all 0.25s ease; }
-        .channel-row:hover { background: var(--card-hover); border-color: rgba(239, 68, 68, 0.35); transform: translateY(-2px); outline: 3px solid #ffdd44 !important; }
-        .channel-row.active-channel { background: rgba(239, 68, 68, 0.12); border-color: var(--brand-color); box-shadow: 0 0 14px var(--brand-glow); }
-        .channel-left { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
-        .logo-wrapper { width: 54px; height: 54px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid var(--border-color); padding: 5px; display: flex; align-items: center; justify-content: center; }
+        .notice-marquee-container {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .app-notice-bar marquee { 
+            color: var(--notice-text-color) !important; 
+            font-weight: 500; 
+            width: 100%;
+            letter-spacing: 0.2px;
+        }
+        .app-notice-bar b, .app-notice-bar strong {
+            color: var(--notice-highlight) !important;
+            font-weight: 700;
+        }
+
+        .sticky-controls-container { 
+            padding: 4px 12px; 
+            background: var(--bg-color);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+        }
+        .controls-wrapper {
+            background: var(--panel-bg); 
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--border-color); 
+            border-radius: 12px;
+            padding: 5px; 
+            display: flex; 
+            align-items: center; 
+            gap: 6px;
+            box-shadow: var(--box-shadow-premium);
+            width: 100%;
+        }
+
+        .category-select-wrapper { position: relative; flex: 1; }
+        .category-dropdown {
+            width: 100%; padding: 8px 12px; background-color: var(--input-bg);
+            border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color);
+            font-size: 12px; font-weight: 500; outline: none; cursor: pointer; appearance: none;
+            transition: all 0.3s ease;
+        }
+        .category-dropdown:focus {
+            border-color: var(--brand-color);
+            box-shadow: 0 0 10px var(--brand-glow);
+        }
+        .category-select-wrapper::after {
+            content: "\f0d7"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+            position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+            color: var(--brand-color); pointer-events: none;
+        }
+
+        .search-container { flex: 1.1; position: relative; }
+        .search-input {
+            width: 100%; padding: 8px 12px 8px 32px; background-color: var(--input-bg);
+            border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color);
+            font-size: 12px; outline: none; transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            border-color: var(--brand-color);
+            box-shadow: 0 0 10px var(--brand-glow);
+        }
+        .search-container::before {
+            content: "\f002"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+            position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--brand-color);
+        }
+
+        .app-layout { 
+            display: flex; 
+            flex-direction: column; 
+            flex: 1; 
+            overflow: hidden; 
+            width: 100%;
+        }
+        
+        .right-column-wrapper { 
+            display: flex; 
+            flex-direction: column; 
+            flex: 1;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .main-content { 
+            flex: 1; 
+            padding: 4px 12px 20px 12px; 
+            overflow-y: auto; 
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+        }
+        
+        .channel-list { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 8px; 
+            margin-top: 4px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .channel-row {
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 14px; 
+            padding: 10px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            text-align: center;
+            gap: 8px;
+            cursor: pointer; 
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .channel-row:hover, .channel-row:focus { 
+            background: var(--card-hover); 
+            border-color: rgba(239, 68, 68, 0.35); 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 16px rgba(239, 68, 68, 0.15);
+            outline: 3px solid #ffdd44 !important;
+        }
+        .channel-row.active-channel { 
+            background: rgba(239, 68, 68, 0.12); 
+            border-color: var(--brand-color); 
+            box-shadow: 0 0 14px var(--brand-glow);
+        }
+
+        .channel-left { 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            gap: 6px; 
+            width: 100%; 
+            max-width: 100%;
+        }
+        
+        .logo-wrapper {
+            width: 54px; height: 54px; flex-shrink: 0; background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px; border: 1px solid var(--border-color);
+            padding: 5px; display: flex; align-items: center; justify-content: center;
+            transition: transform 0.2s ease;
+        }
+        .channel-row:hover .logo-wrapper { transform: scale(1.04); }
         .channel-logo { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
         .channel-fallback-logo { font-size: 20px; color: var(--text-muted); }
-        .channel-name { font-size: 12px; font-weight: 600; color: var(--text-color); width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        
+        .channel-name { 
+            font-size: 12px; 
+            font-weight: 600; 
+            color: var(--text-color); 
+            width: 100%;
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+            padding: 0 2px;
+        }
+        .channel-row:hover .channel-name { color: var(--brand-color); }
+        .channel-row.active-channel .channel-name { color: var(--brand-color); font-weight: 700; }
+        
         .channel-right-action { position: absolute; top: 6px; right: 6px; }
-        .channel-live-badge { background: var(--brand-color); color: white; font-size: 8px; font-weight: 800; padding: 1px 5px; border-radius: 4px; display: none; }
+        
+        .channel-live-badge { 
+            background: var(--brand-color); 
+            color: white; 
+            font-size: 8px; 
+            font-weight: 800; 
+            padding: 1px 5px; 
+            border-radius: 4px; 
+            display: none; 
+            letter-spacing: 0.5px; 
+            box-shadow: 0 0 6px var(--brand-glow); 
+        }
         .active-channel .channel-live-badge { display: inline-block !important; }
 
+        .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; grid-column: span 2; }
+        
+        #loadingLayout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; width: 100%; }
+        .skeleton-item {
+            background: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 14px; padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%;
+        }
+        .skeleton-left { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
+        .skeleton-logo { width: 54px; height: 54px; background: var(--skeleton-bg); border-radius: 12px; animation: pulse-sk 1.5s infinite ease-in-out; }
+        .skeleton-text { width: 65%; height: 12px; background: var(--skeleton-bg); border-radius: 4px; animation: pulse-sk 1.5s infinite ease-in-out; }
+        .skeleton-right { display: none; }
+
+        @keyframes pulse-sk {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
         @media (min-width: 951px) {
-            .app-layout { display: grid; grid-template-columns: 1.55fr 1.05fr; gap: 20px; padding: 20px; flex: 1; height: calc(100vh - 70px); max-width: 1550px; margin: 0 auto; width: 100%; overflow: hidden; }
-            .player-left-column { display: block !important; width: 100% !important; }
-            .player-section { width: 100% !important; margin: 0 !important; border-radius: 20px !important; }
-            .right-column-wrapper { display: flex; flex-direction: column; overflow: hidden; height: 100%; background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 20px; width: 100%; }
-            .main-content { padding: 16px; height: 100%; width: 100%; }
-            .channel-list { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-            .logo-wrapper { width: 58px; height: 58px; }
+            body { height: 100vh; overflow: hidden; }
+            .app-layout {
+                display: grid; 
+                grid-template-columns: 1.55fr 1.05fr; 
+                gap: 20px;
+                padding: 20px; 
+                flex: 1; 
+                height: calc(100vh - 70px);
+                max-width: 1550px; 
+                margin: 0 auto; 
+                width: 100%; 
+                overflow: hidden;
+            }
+            
+            .player-left-column {
+                display: block !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .player-section { 
+                width: 100% !important; 
+                margin: 0 !important; 
+                border-radius: 20px !important; 
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important; 
+                border: 1px solid rgba(239, 68, 68, 0.2) !important; 
+            }
+            
+            .player-left-column .app-notice-bar { 
+                display: none !important; 
+            }
+            
+            .right-column-wrapper { 
+                display: flex; 
+                flex-direction: column; 
+                overflow: hidden; 
+                height: 100%; 
+                background: var(--panel-bg); 
+                backdrop-filter: var(--glass-blur); 
+                -webkit-backdrop-filter: var(--glass-blur);
+                border: 1px solid var(--border-color); 
+                border-radius: 20px; 
+                box-shadow: var(--box-shadow-premium);
+                width: 100%;
+            }
+            
+            .sticky-controls-container { 
+                position: static; 
+                padding: 16px; 
+                border-bottom: 1px solid var(--border-color); 
+                background: transparent; 
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 10px !important;
+                width: 100%;
+            }
+
+            .sticky-controls-container .app-notice-bar {
+                display: flex !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            
+            .controls-wrapper { 
+                display: flex !important; 
+                background: transparent; 
+                border: none; 
+                padding: 0; 
+                box-shadow: none;
+                width: 100%;
+            }
+            
+            .main-content { 
+                max-width: 100%; 
+                margin: 0; 
+                padding: 16px; 
+                overflow-y: auto; 
+                overflow-x: hidden;
+                height: 100%; 
+                width: 100%;
+            }
+
+            .channel-list, #loadingLayout { 
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 12px;
+            }
+            .channel-row {
+                padding: 14px 10px;
+                border-radius: 16px;
+            }
+            .logo-wrapper {
+                width: 58px; height: 58px;
+            }
+            .no-result { grid-column: span 3; }
+            .loading-message-text { grid-column: span 3 !important; }
             .channel-name { font-size: 13.5px; }
         }
 
         @media (max-width: 950px) and (orientation: landscape) {
-            header, .main-content { display: none !important; }
-            .player-section { 
-                width: 100vw !important; 
-                height: 100vh !important; 
-                position: fixed !important; 
-                top: 0; left: 0; 
-                border: none !important; 
-                border-radius: 0 !important; 
-                margin: 0 !important; 
-                z-index: 9999999; 
-                display: block !important; 
-            }
-            .video-container, .video-js, #clappr-player { width: 100vw !important; height: 100vh !important; }
-            .video-js video, #clappr-player video, .vjs-tech { 
-                object-fit: contain !important; 
-                width: 100vw !important; 
-                height: 100vh !important; 
-            }
+            header, .sticky-controls-container, .main-content, .app-notice-bar { display: none !important; }
+            .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0 !important; margin: 0 !important; z-index: 9999999; display: block !important; }
+            .video-container, .video-js, .native-player-style, #clappr-player { width: 100vw !important; height: 100vh !important; }
+            .video-js video, .native-player-style, #clappr-player video { object-fit: fill !important; }
         }
     </style>
 </head>
 <body>
 
+    <div class="drawer-overlay" id="drawerOverlay" onclick="toggleMenu()"></div>
+    <div class="sidebar-drawer" id="sidebarDrawer">
+        <div class="drawer-header">
+            <h2 id="langPanelTitle">নিয়ন্ত্রণ প্যানেল</h2>
+            <button class="close-drawer-btn" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-menu-items">
+            <div class="drawer-item lang-item" onclick="toggleLanguage()">
+                <div class="icon-box"><i class="fa-solid fa-language"></i></div>
+                <span id="langToggleText">Language: English</span>
+            </div>
+            <div class="drawer-item theme-item" onclick="toggleTheme()">
+                <div class="icon-box"><i class="fa-solid fa-circle-half-stroke"></i></div>
+                <span id="langThemeText">থিম পরিবর্তন (Light/Dark)</span>
+            </div>
+            <div class="drawer-item refresh-item" onclick="refreshPlaylist()">
+                <div class="icon-box"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <span id="langRefreshText">প্লেলিস্ট রিফ্রেশ করুন</span>
+            </div>
+            <a href="https://t.me/banglatvlivefree" target="_blank" class="drawer-item telegram-item">
+                <div class="icon-box"><i class="fa-brands fa-telegram"></i></div>
+                <span id="langTelegramText">টেলিগ্রাম চ্যানেল (লিংক)</span>
+            </a>
+            <a href="https://www.facebook.com/ahmed.bd.fb" target="_blank" class="drawer-item facebook-item">
+                <div class="icon-box"><i class="fa-brands fa-facebook-messenger"></i></div>
+                <span id="langFacebookText">ফেসবুক পেজ (সাপোর্ট)</span>
+            </a>
+        </div>
+    </div>
+
     <header>
         <div class="header-left">
+            <button class="menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
             <h1 id="langAppTitle">বাংলা টিভি</h1>
         </div>
         <div class="channel-count-badge" id="totalChannels">CH-0</div>
@@ -191,31 +574,69 @@
         <div class="player-left-column">
             <div class="player-section" id="playerSection">
                 <div class="video-container" id="videoContainer">
+                    
                     <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
+
                     <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
-                    <div id="player-mount-point"></div>
+
+                    <div id="clappr-player"></div>
                 </div>
+            </div>
+
+            <div class="app-notice-bar mobile-only-notice">
+                <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
+                <div class="notice-marquee-container marqueeHolderClass"></div>
             </div>
         </div>
 
         <div class="right-column-wrapper">
+            <div class="sticky-controls-container">
+                <div class="app-notice-bar pc-only-notice" style="display: none;">
+                    <span class="notice-badge langNoticeBadgeClass">নোটিশ</span>
+                    <div class="notice-marquee-container marqueeHolderClass"></div>
+                </div>
+
+                <div class="controls-wrapper" id="controlsWrapper">
+                    <div class="category-select-wrapper">
+                        <select class="category-dropdown" id="categoryDropdown" onchange="filterCategory(this.value)">
+                            <option value="All">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেল সার্চ করুন..." oninput="searchChannel()">
+                    </div>
+                </div>
+            </div>
+
             <div class="main-content">
+                <div id="loadingLayout">
+                    <div class="loading-message-text" id="langLoadingText" style="grid-column: span 2; text-align: center; font-weight: 600; color: var(--brand-color); padding: 10px 0; font-size: 14px;">
+                        <i class="fa-solid fa-spinner fa-spin"></i> সার্ভার থেকে চ্যানেল লোড হচ্ছে, দয়া করে অপেক্ষা করুন...
+                    </div>
+                    <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
+                    <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
+                    <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
+                </div>
                 <div class="channel-list" id="channelList"></div>
             </div>
         </div>
     </div>
 
-    <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clappr-rtmp-plugin@latest/dist/clappr-rtmp-plugin.min.js"></script>
+
+    <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
     <script>
-        let player = null; 
         let clapprPlayerInstance = null;
+        let player = null; 
+        let hlsBackupEngine = null;
+        let isFirstInit = true; 
         const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/main/mixiptvchannel.m3u';
         
         const fetchUrls = [
@@ -226,15 +647,121 @@
 
         let currentUrlIndex = 0;
         let allChannels = [];
+        let displayedChannels = []; 
         let activeChannelIndex = -1; 
+        
+        let currentSelectedCategory = 'All'; 
+        let lastUserCategory = 'All'; 
+        let searchTimeout;
+        let currentLang = localStorage.getItem('bdTvLang') || 'bn';
+        
+        const languages = {
+            bn: {
+                appTitle: "বাংলা টিভি", panelTitle: "নিয়ন্ত্রণ প্যানেল", toggleText: "Language: English",
+                themeText: "থিম পরিবর্তন (Light/Dark)", refreshText: "প্লেলিস্ট রিফ্রেশ করুন",
+                telegramText: "টেলিগ্রাম চ্যানেল (লিংক)", facebookText: "ফেসবুক পেজ (সাপোর্ট)",
+                noChannel: "কোনো চ্যানেল সিলেক্ট করা নেই",
+                noticeBadge: "নোটিশ", 
+                noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
+                searchPlaceholder: "চ্যানেল সার্চ করুন...", noResult: "কোনো চ্যানেল খুঁজে পাওয়া যায়নি!",
+                allCat: "সব ক্যাটাগরি",
+                loadingText: "সার্ভার থেকে চ্যানেল লোড হচ্ছে, দয়া করে অপেক্ষা করুন..."
+            },
+            en: {
+                appTitle: "Bangla TV", panelTitle: "Control Panel", toggleText: "ভাষা: বাংলা",
+                themeText: "Change Theme (Light/Dark)", refreshText: "Refresh Playlist",
+                telegramText: "Telegram Channel (Link)", facebookText: "Facebook Page (Support)",
+                noChannel: "No channel selected",
+                noticeBadge: "Notice", 
+                noticeText: "Welcome to our server! Check your <b>Internet Connection</b> to avoid buffering. For the best full-screen & buffering-free experience in browser, please use <b>\"Via Browser\"</b>. Refresh the playlist if channels fail.",
+                searchPlaceholder: "Search channel...", noResult: "No channels found!",
+                allCat: "All Categories",
+                loadingText: "Loading channels from server, please wait..."
+            }
+        };
+
+        function toggleMenu() {
+            document.getElementById('sidebarDrawer').classList.toggle('open');
+            document.getElementById('drawerOverlay').classList.toggle('show');
+        }
+
+        function toggleTheme() {
+            if (document.body.getAttribute('data-theme') === 'light') {
+                document.body.removeAttribute('data-theme');
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+            }
+            toggleMenu();
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'bn' ? 'en' : 'bn';
+            localStorage.setItem('bdTvLang', currentLang);
+            applyLanguageTranslations();
+            toggleMenu();
+        }
+
+        function updateNoticeMarquee(text) {
+            const holders = document.querySelectorAll('.marqueeHolderClass');
+            holders.forEach(holder => {
+                holder.innerHTML = `<marquee behavior="scroll" direction="left" scrollamount="4" loop="infinite">${text}</marquee>`;
+            });
+        }
+
+        function applyLanguageTranslations() {
+            const lang = languages[currentLang];
+            document.getElementById('langAppTitle').innerText = lang.appTitle;
+            document.getElementById('langPanelTitle').innerText = lang.panelTitle;
+            document.getElementById('langToggleText').innerText = lang.toggleText;
+            document.getElementById('langThemeText').innerText = lang.themeText;
+            document.getElementById('langRefreshText').innerText = lang.refreshText;
+            document.getElementById('langTelegramText').innerText = lang.telegramText;
+            document.getElementById('langFacebookText').innerText = lang.facebookText;
+            
+            document.querySelectorAll('.langNoticeBadgeClass').forEach(badge => {
+                badge.innerText = lang.noticeBadge;
+            });
+            
+            updateNoticeMarquee(lang.noticeText);
+            document.getElementById('searchBox').placeholder = lang.searchPlaceholder;
+
+            const firstOption = document.querySelector('#categoryDropdown option[value="All"]');
+            if(firstOption) firstOption.innerText = lang.allCat;
+
+            const loadingEl = document.getElementById('langLoadingText');
+            if(loadingEl) loadingEl.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ` + lang.loadingText;
+        }
+
+        function refreshPlaylist() {
+            toggleMenu();
+            document.getElementById('loadingLayout').style.display = 'grid';
+            document.getElementById('channelList').innerHTML = '';
+            currentUrlIndex = 0;
+            fetchPlaylist();
+        }
 
         async function fetchPlaylist() {
-            if (currentUrlIndex >= fetchUrls.length) return;
+            if (currentUrlIndex >= fetchUrls.length) {
+                document.getElementById('loadingLayout').style.display = 'none';
+                document.getElementById('channelList').innerHTML = `<div class='no-result'>${languages[currentLang].noResult}</div>`;
+                return;
+            }
+            
             try {
-                const response = await fetch(fetchUrls[currentUrlIndex]);
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 6000);
+
+                const response = await fetch(fetchUrls[currentUrlIndex], { signal: controller.signal });
+                clearTimeout(timeoutId);
+
                 if (!response.ok) throw new Error();
                 const textData = await response.text();
-                parseM3U(textData);
+                
+                if(textData && textData.includes('#EXTM3U')) {
+                    parseM3U(textData);
+                } else {
+                    throw new Error();
+                }
             } catch (err) {
                 currentUrlIndex++;
                 await fetchPlaylist();
@@ -244,32 +771,44 @@
         function parseM3U(data) {
             const lines = data.split('\n');
             allChannels = [];
-            let currentName = ''; let currentLogo = '';
+            let categories = new Set();
+            let currentName = ''; let currentLogo = ''; let currentGroup = 'Uncategorized';
 
             lines.forEach(line => {
                 line = line.trim();
                 if (line.startsWith('#EXTINF:')) {
                     const logoMatch = line.match(/tvg-logo="([^"]+)"/);
                     currentLogo = logoMatch ? logoMatch[1] : '';
+                    const groupMatch = line.match(/group-title="([^"]+)"/);
+                    currentGroup = groupMatch ? groupMatch[1] : 'Uncategorized';
                     const nameParts = line.split(',');
                     currentName = nameParts[nameParts.length - 1].trim();
                 } else if (line.startsWith('http')) {
                     if (currentName) {
-                        allChannels.push({ name: currentName, logo: currentLogo, url: line });
+                        allChannels.push({ name: currentName, logo: currentLogo, category: currentGroup, url: line });
+                        if(currentGroup !== 'Uncategorized') categories.add(currentGroup);
                     }
                     currentName = ''; currentLogo = '';
                 }
             });
 
             document.getElementById('totalChannels').innerText = "CH-" + allChannels.length;
-            renderChannels(allChannels); 
-            if (allChannels.length > 0 && window.innerWidth > 950) playChannelAt(0);
+            populateCategoryDropdown(categories);
+            
+            displayedChannels = [...allChannels]; 
+            renderChannels(displayedChannels); 
+            document.getElementById('loadingLayout').style.display = 'none';
+            
+            if (displayedChannels.length > 0 && window.innerWidth > 950) {
+                playChannelAt(0);
+            }
         }
 
         function playChannelAt(index) {
-            if (allChannels.length === 0 || index < 0 || index >= allChannels.length) return;
+            if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
+            
             activeChannelIndex = index;
-            const ch = allChannels[index];
+            const ch = displayedChannels[index];
 
             document.querySelectorAll('.channel-row').forEach(row => row.classList.remove('active-channel'));
             const activeRow = document.querySelector(`.channel-row[data-index="${index}"]`);
@@ -278,69 +817,126 @@
                 activeRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
 
+            isFirstInit = false; 
             resetContainers();
-            const container = document.getElementById('player-mount-point');
-            container.innerHTML = `<video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>`;
-            
-            player = videojs('live-player', { fluid: true, aspectRatio: '16:9' });
-            player.on('error', () => switchToClappr(ch.url));
 
-            try {
-                player.src({ src: ch.url, type: 'application/x-mpegURL' });
-                player.play();
-                setTimeout(handleScreenResize, 300);
-            } catch(e) {
-                switchToClappr(ch.url);
-            }
-        }
-
-        function switchToClappr(streamUrl) {
-            resetContainers();
-            const container = document.getElementById('player-mount-point');
-            container.innerHTML = `<div id="clappr-player"></div>`;
+            // ১. প্রথম লেয়ার: Clappr Player দিয়ে প্লে করার চেষ্টা
             try {
                 clapprPlayerInstance = new Clappr.Player({
-                    source: streamUrl, parentId: "#clappr-player",
-                    preload: 'auto', autoPlay: true, controls: true,
-                    width: '100%', height: '100%'
+                    source: ch.url,
+                    parentId: "#clappr-player",
+                    preload: 'auto',
+                    autoPlay: true,
+                    controls: true,
+                    width: '100%',
+                    height: '100%',
+                    strings: {
+                        'bn': { 'live': 'লাইভ', 'back_to_live': 'লাইভে ফিরুন' }
+                    },
+                    language: currentLang,
+                    events: {
+                        onError: function(e) {
+                            console.log("Clappr Error, falling back to VideoJS...");
+                            switchToVideoJs(ch.url);
+                        }
+                    }
                 });
-                setTimeout(handleScreenResize, 300);
-            } catch(e) {}
-        }
-
-        function handleScreenResize() {
-            const isLandscape = window.innerWidth > window.innerHeight;
-            const playerSec = document.getElementById('playerSection');
-            
-            if (isLandscape && window.innerWidth <= 950) {
-                if (playerSec) {
-                    playerSec.classList.add('fullscreen-mode');
-                    if (playerSec.requestFullscreen) playerSec.requestFullscreen().catch(() => {});
-                }
-                if (player) {
-                    player.fluid(false);
-                    player.dimensions(window.innerWidth, window.innerHeight);
-                }
-            } else {
-                if (playerSec) playerSec.classList.remove('fullscreen-mode');
-                if (document.fullscreenElement) {
-                    if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
-                }
-                if (player) player.fluid(true);
+                setupForcedDoubleTapZoom();
+            } catch(e) {
+                switchToVideoJs(ch.url);
             }
         }
 
-        window.addEventListener('resize', handleScreenResize);
-        window.addEventListener('orientationchange', () => setTimeout(handleScreenResize, 250));
+        // ২. দ্বিতীয় লেয়ার: Clappr ফেইল করলে Video.js-এ ব্যাকআপ
+        function switchToVideoJs(streamUrl) {
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = `
+                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>
+            `;
+            
+            player = videojs('live-player');
+            setupForcedDoubleTapZoom();
+
+            player.on('error', function() {
+                console.log("VideoJS Error, falling back to Native HLS...");
+                switchToHlsBackup();
+            });
+
+            try {
+                player.src({ src: streamUrl, type: 'application/x-mpegURL' });
+                player.play();
+            } catch(e) {
+                switchToHlsBackup();
+            }
+        }
+
+        // ৩. তৃতীয় লেয়ার: Video.js ফেইল করলে Hls.js Native প্লেয়ারে ব্যাকআপ
+        function switchToHlsBackup() {
+            if (activeChannelIndex === -1 || displayedChannels.length === 0) return;
+            const channelObj = displayedChannels[activeChannelIndex];
+
+            if (player) { try { player.dispose(); }catch(e){} player = null; }
+
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = `
+                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
+            `;
+            const videoElement = document.getElementById('live-player');
+
+            if (Hls.isSupported()) {
+                hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
+                hlsBackupEngine.loadSource(channelObj.url);
+                hlsBackupEngine.attachMedia(videoElement);
+                setupForcedDoubleTapZoom();
+
+                hlsBackupEngine.on(Hls.Events.ERROR, function(event, data) {
+                    if (data.fatal) {
+                        runNativeFallback(videoElement, channelObj.url, channelObj.name);
+                    }
+                });
+            } else {
+                runNativeFallback(videoElement, channelObj.url, channelObj.name);
+            }
+        }
+
+        function populateCategoryDropdown(categories) {
+            const dropdown = document.getElementById('categoryDropdown');
+            dropdown.innerHTML = `<option value="All">${languages[currentLang].allCat}</option>`;
+            categories.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat; option.innerText = cat;
+                dropdown.appendChild(option);
+            });
+        }
 
         function renderChannels(channels) {
             const listContainer = document.getElementById('channelList');
             listContainer.innerHTML = '';
+
+            if(channels.length === 0) {
+                listContainer.innerHTML = `<div class="no-result">${languages[currentLang].noResult}</div>`;
+                return;
+            }
+
             channels.forEach((ch, index) => {
                 const row = document.createElement('div');
                 row.className = 'channel-row';
                 row.setAttribute('data-index', index);
-                row.onclick = () => playChannelAt(index);
+                row.setAttribute('tabindex', '0'); 
+                
+                if (index === activeChannelIndex) row.classList.add('active-channel');
+                
+                row.onclick = function() { playChannelAt(index); };
+                
+                row.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        playChannelAt(index);
+                    }
+                });
 
                 let logoHtml = ch.logo ? `<img class="channel-logo" src="${ch.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : '';
                 const fallbackHtml = `<div class="channel-fallback-logo" style="display: ${ch.logo ? 'none' : 'flex'}"><i class="fa-solid fa-tv"></i></div>`;
@@ -350,32 +946,112 @@
                         <div class="logo-wrapper">${logoHtml}${fallbackHtml}</div>
                         <div class="channel-name">${ch.name}</div>
                     </div>
-                    <div class="channel-right-action"><span class="channel-live-badge">LIVE</span></div>
+                    <div class="channel-right-action">
+                        <span class="channel-live-badge">LIVE</span>
+                    </div>
                 `;
                 listContainer.appendChild(row);
             });
         }
 
         function navigateChannel(direction) {
-            if (allChannels.length === 0) return;
+            if (displayedChannels.length === 0) return;
+            
             let nextIndex = activeChannelIndex;
             if (direction === 'next') {
                 nextIndex = activeChannelIndex + 1;
-                if (nextIndex >= allChannels.length) nextIndex = 0; 
-            } else {
+                if (nextIndex >= displayedChannels.length) nextIndex = 0; 
+            } else if (direction === 'prev') {
                 nextIndex = activeChannelIndex - 1;
-                if (nextIndex < 0) nextIndex = allChannels.length - 1; 
+                if (nextIndex < 0) nextIndex = displayedChannels.length - 1; 
             }
+            
             playChannelAt(nextIndex);
         }
 
-        function resetContainers() {
-            if (player) { try { player.dispose(); } catch(e){} player = null; }
-            if (clapprPlayerInstance) { try { clapprPlayerInstance.destroy(); } catch(e){} clapprPlayerInstance = null; }
-            document.getElementById('player-mount-point').innerHTML = '';
+        function filterCategory(category) {
+            currentSelectedCategory = category; 
+            if (document.getElementById('searchBox').value === '') lastUserCategory = category;
+            document.getElementById('categoryDropdown').value = category;
+
+            if (category === 'All') {
+                displayedChannels = [...allChannels];
+            } else {
+                displayedChannels = allChannels.filter(ch => ch.category === category);
+            }
+            
+            activeChannelIndex = -1; 
+            renderChannels(displayedChannels);
         }
 
-        window.onload = () => { fetchPlaylist(); };
+        function searchChannel() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const query = document.getElementById('searchBox').value.toLowerCase().trim();
+                if (query !== '') {
+                    document.getElementById('categoryDropdown').value = 'All'; 
+                    displayedChannels = allChannels.filter(ch => ch.name.toLowerCase().includes(query));
+                } else {
+                    if (lastUserCategory === 'All') {
+                        displayedChannels = [...allChannels];
+                    } else {
+                        displayedChannels = allChannels.filter(ch => ch.category === lastUserCategory);
+                    }
+                    document.getElementById('categoryDropdown').value = lastUserCategory;
+                }
+                activeChannelIndex = -1;
+                renderChannels(displayedChannels);
+            }, 300);
+        }
+
+        function resetContainers() {
+            if (clapprPlayerInstance) {
+                try { clapprPlayerInstance.destroy(); } catch(e){}
+                clapprPlayerInstance = null;
+            }
+            if (player) {
+                try { player.dispose(); } catch(e){}
+                player = null;
+            }
+            if (hlsBackupEngine) {
+                hlsBackupEngine.destroy();
+                hlsBackupEngine = null;
+            }
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = `
+                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <div id="clappr-player"></div>
+            `;
+        }
+
+        function runNativeFallback(element, url, name) {
+            if(hlsBackupEngine) { hlsBackupEngine.destroy(); hlsBackupEngine = null; }
+            element.src = url;
+            element.play().catch(e => {});
+            setupForcedDoubleTapZoom();
+        }
+
+        function setupForcedDoubleTapZoom() {
+            const container = document.getElementById('videoContainer');
+            let lastTapTime = 0;
+            container.addEventListener('touchstart', function(e) {
+                if (e.target.classList.contains('player-nav-zone') || e.target.closest('.player-nav-zone')) return;
+                
+                const now = new Date().getTime();
+                if (now - lastTapTime < 300) {
+                    e.preventDefault(); 
+                    const targetPlayer = document.querySelector('#videoContainer video, #clappr-player video');
+                    if(targetPlayer) targetPlayer.classList.toggle('forced-zoom');
+                }
+                lastTapTime = now;
+            });
+        }
+
+        window.onload = function() {
+            applyLanguageTranslations();
+            fetchPlaylist();
+        };
     </script>
 </body>
 </html>
