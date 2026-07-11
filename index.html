@@ -94,6 +94,31 @@
             box-shadow: var(--box-shadow-premium);
             flex-shrink: 0;
             width: 100%;
+            position: relative;
+        }
+
+        /* স্টাইলিশ টপ লোডিং প্রগ্রেস বার */
+        .top-loading-bar {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, var(--brand-color), #ff007f, var(--brand-color), transparent);
+            background-size: 200% 100%;
+            animation: loadingMove 1.5s infinite linear;
+            z-index: 1001;
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+        .top-loading-bar.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes loadingMove {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
 
         .header-left { display: flex; align-items: center; gap: 16px; }
@@ -323,6 +348,7 @@
             width: 100%;
         }
         
+        /* চ্যানেল লিস্টের ইনিশিয়াল স্মুথ ব্লার ইফেক্ট */
         .channel-list { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
@@ -330,6 +356,15 @@
             margin-top: 4px;
             width: 100%;
             max-width: 100%;
+            filter: blur(8px);
+            opacity: 0.3;
+            transition: filter 0.6s cubic-bezier(0.1, 1, 0.1, 1), opacity 0.6s ease;
+        }
+        
+        /* প্লেলিস্ট লোড সম্পন্ন হলে এই ক্লাস যুক্ত হবে */
+        .channel-list.loaded {
+            filter: blur(0px);
+            opacity: 1;
         }
 
         .channel-row {
@@ -359,10 +394,19 @@
             box-shadow: 0 6px 16px rgba(239, 68, 68, 0.15);
             outline: 3px solid #ffdd44 !important;
         }
+        
+        /* অ্যাক্টিভ চ্যানেলের জন্য প্রিমিয়াম পালস অ্যানিমেশন */
         .channel-row.active-channel { 
             background: rgba(239, 68, 68, 0.12); 
             border-color: var(--brand-color); 
             box-shadow: 0 0 14px var(--brand-glow);
+            animation: activePulse 2s infinite ease-in-out;
+        }
+
+        @keyframes activePulse {
+            0% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.3); border-color: rgba(239, 68, 68, 0.6); }
+            50% { box-shadow: 0 0 18px rgba(239, 68, 68, 0.6); border-color: rgba(239, 68, 68, 1); }
+            100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.3); border-color: rgba(239, 68, 68, 0.6); }
         }
 
         .channel-left { 
@@ -553,6 +597,7 @@
     </div>
 
     <header>
+        <div class="top-loading-bar" id="topLoadingBar"></div>
         <div class="header-left">
             <button class="menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
             <h1 id="langAppTitle">বাংলা টিভি</h1>
@@ -710,6 +755,9 @@
 
         function refreshPlaylist() {
             toggleMenu();
+            // রিফ্রেশ করার সময় লোডিং বার এবং ব্লার আবার সচল হবে
+            document.getElementById('topLoadingBar').classList.remove('hide');
+            document.getElementById('channelList').classList.remove('loaded');
             document.getElementById('channelList').innerHTML = '';
             currentUrlIndex = 0;
             fetchPlaylist();
@@ -717,6 +765,7 @@
 
         async function fetchPlaylist() {
             if (currentUrlIndex >= fetchUrls.length) {
+                document.getElementById('topLoadingBar').classList.add('hide');
                 document.getElementById('channelList').innerHTML = `<div class='no-result'>${languages[currentLang].noResult}</div>`;
                 return;
             }
@@ -771,13 +820,16 @@
             
             displayedChannels = [...allChannels]; 
             renderChannels(displayedChannels); 
+
+            // লোড হওয়ার পর টপ লোডিং বার লুকিয়ে ফেলা এবং লিস্টের ব্লার দূর করা
+            document.getElementById('topLoadingBar').classList.add('hide');
+            document.getElementById('channelList').classList.add('loaded');
             
             if (displayedChannels.length > 0 && window.innerWidth > 950) {
                 playChannelAt(0);
             }
         }
 
-        // ১ম প্লেয়ার: Video.js চালু করার ফাংশন
         function playChannelAt(index) {
             if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
             
@@ -802,7 +854,6 @@
                 aspectRatio: '16:9'
             });
 
-            // Video.js কাজ না করলে ২য় প্লেয়ার (Hls.js / Native) এ নিয়ে যাবে
             player.on('error', function() {
                 switchToHlsBackup(ch.url);
             });
@@ -815,7 +866,6 @@
             }
         }
 
-        // ২য় প্লেয়ার: Hls.js / Native Player চালু করার ফাংশন
         function switchToHlsBackup(streamUrl) {
             if (player) { try { player.dispose(); } catch(e){} player = null; }
             
@@ -823,7 +873,6 @@
             container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
             const videoElement = document.getElementById('live-player');
 
-            // ভিডিও কোনো কারণে লোড বা প্লে না হতে পারলে ৩য়/লাস্ট প্লেয়ার (Clappr) এ নিয়ে যাবে
             videoElement.onerror = function() {
                 switchToClappr(streamUrl);
             };
@@ -848,7 +897,6 @@
             }
         }
 
-        // ৩য় ও লাস্ট প্লেয়ার: Clappr Player চালু করার ফাংশন
         function switchToClappr(streamUrl) {
             if (hlsBackupEngine) { try { hlsBackupEngine.destroy(); } catch(e){} hlsBackupEngine = null; }
             
@@ -868,12 +916,12 @@
                     language: currentLang,
                     events: {
                         onError: function(e) {
-                            console.log("সবগুলো প্লেয়ারই এই লিংকটি চালাতে ব্যর্থ হয়েছে।");
+                            console.log("All players failed.");
                         }
                     }
                 });
             } catch(e) {
-                console.log("Clappr লোড হতে সমস্যা হয়েছে।");
+                console.log("Clappr error.");
             }
         }
 
