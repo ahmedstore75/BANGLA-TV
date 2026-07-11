@@ -777,6 +777,7 @@
             }
         }
 
+        // ১ম প্লেয়ার: Video.js চালু করার ফাংশন
         function playChannelAt(index) {
             if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
             
@@ -801,20 +802,55 @@
                 aspectRatio: '16:9'
             });
 
+            // Video.js কাজ না করলে ২য় প্লেয়ার (Hls.js / Native) এ নিয়ে যাবে
             player.on('error', function() {
-                switchToClappr(ch.url);
+                switchToHlsBackup(ch.url);
             });
 
             try {
                 player.src({ src: ch.url, type: 'application/x-mpegURL' });
                 player.play();
             } catch(e) {
-                switchToClappr(ch.url);
+                switchToHlsBackup(ch.url);
             }
         }
 
-        function switchToClappr(streamUrl) {
+        // ২য় প্লেয়ার: Hls.js / Native Player চালু করার ফাংশন
+        function switchToHlsBackup(streamUrl) {
             if (player) { try { player.dispose(); } catch(e){} player = null; }
+            
+            const container = document.getElementById('player-mount-point');
+            container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
+            const videoElement = document.getElementById('live-player');
+
+            // ভিডিও কোনো কারণে লোড বা প্লে না হতে পারলে ৩য়/লাস্ট প্লেয়ার (Clappr) এ নিয়ে যাবে
+            videoElement.onerror = function() {
+                switchToClappr(streamUrl);
+            };
+
+            if (Hls.isSupported()) {
+                hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
+                hlsBackupEngine.loadSource(streamUrl);
+                hlsBackupEngine.attachMedia(videoElement);
+                
+                hlsBackupEngine.on(Hls.Events.ERROR, function (event, data) {
+                    if (data.fatal) {
+                        switchToClappr(streamUrl);
+                    }
+                });
+            } else if (videoElement.canPlayType('application/x-mpegURL') || videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                videoElement.src = streamUrl;
+                videoElement.play().catch(e => {
+                    switchToClappr(streamUrl);
+                });
+            } else {
+                switchToClappr(streamUrl);
+            }
+        }
+
+        // ৩য় ও লাস্ট প্লেয়ার: Clappr Player চালু করার ফাংশন
+        function switchToClappr(streamUrl) {
+            if (hlsBackupEngine) { try { hlsBackupEngine.destroy(); } catch(e){} hlsBackupEngine = null; }
             
             const container = document.getElementById('player-mount-point');
             container.innerHTML = `<div id="clappr-player" style="width:100%; height:100%;"></div>`;
@@ -832,29 +868,12 @@
                     language: currentLang,
                     events: {
                         onError: function(e) {
-                            switchToHlsBackup(streamUrl);
+                            console.log("সবগুলো প্লেয়ারই এই লিংকটি চালাতে ব্যর্থ হয়েছে।");
                         }
                     }
                 });
             } catch(e) {
-                switchToHlsBackup(streamUrl);
-            }
-        }
-
-        function switchToHlsBackup(streamUrl) {
-            if (clapprPlayerInstance) { try { clapprPlayerInstance.destroy(); } catch(e){} clapprPlayerInstance = null; }
-            
-            const container = document.getElementById('player-mount-point');
-            container.innerHTML = `<video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>`;
-            const videoElement = document.getElementById('live-player');
-
-            if (Hls.isSupported()) {
-                hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
-                hlsBackupEngine.loadSource(streamUrl);
-                hlsBackupEngine.attachMedia(videoElement);
-            } else if (videoElement.canPlayType('application/x-mpegURL') || videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-                videoElement.src = streamUrl;
-                videoElement.play().catch(e => console.log("All players failed."));
+                console.log("Clappr লোড হতে সমস্যা হয়েছে।");
             }
         }
 
