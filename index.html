@@ -180,7 +180,7 @@
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .video-js, #clappr-player { width: 100% !important; height: 100% !important; }
         
-        /* আসল স্কিন ফিট ইমেজের মতcontain প্রপার্টি */
+        /* স্ট্রেইট ফিক্স: ভিডিওর আসল অ্যাসপেক্ট রেশিও ঠিক রেখে কোনো ক্রপ ছাড়া ফিট করার সিএসএস */
         .video-container video, 
         .video-js video, 
         #clappr-player video, 
@@ -554,7 +554,7 @@
             .channel-name { font-size: 13.5px; }
         }
 
-        /* ল্যান্ডস্কেপ মোড সেটিংস */
+        /* ল্যান্ডস্কেপ মিডিয়া কুয়েরি নিশ্চিত করা হলো */
         @media (max-width: 950px) and (orientation: landscape) {
             header, .sticky-controls-container, .main-content, .app-notice-bar { display: none !important; }
             .player-section { 
@@ -875,7 +875,7 @@
                 player.src({ src: ch.url, type: 'application/x-mpegURL' });
                 player.play();
                 
-                // রোটেট করার সময় ডাইমেনশন আপডেট করার জন্য ট্রিগার
+                // স্ক্রিন ওরিয়েন্টেশন সাইজ ট্রিগার
                 setTimeout(handleScreenResize, 300);
             } catch(e) {
                 switchToClappr(ch.url);
@@ -909,34 +909,42 @@
                     }
                 });
                 
-                // ক্ল্যাপ্র প্লেয়ারের জন্য রিসাইজ ট্রিগার
                 setTimeout(handleScreenResize, 300);
             } catch(e) {
                 console.log("Clappr Init Error.");
             }
         }
 
-        // স্ক্রিন রোটেট করলে প্লেয়ার সাইজ রেশিও রিয়েলটাইম ফিক্স করার জন্য আপনার মূল কোডের লজিক
+        // মূল কোডের লজিক যেখানে ভিডিওর অবজেক্ট ফিট প্রোপার্টিকে ফোর্স করা হচ্ছে
         function handleScreenResize() {
-            if (window.innerWidth > window.innerHeight) {
-                // ল্যান্ডস্কেপ (রোটেট) মোড
+            const isLandscape = window.innerWidth > window.innerHeight;
+            
+            if (isLandscape && window.innerWidth <= 950) {
+                // ল্যান্ডস্কেপ মোডে ভিডিও ডাইমেনশন ফোর্স করা হচ্ছে কোনো ক্রপ ছাড়া
                 if (player) {
                     player.fluid(false);
-                    player.width(window.innerWidth);
-                    player.height(window.innerHeight);
+                    player.dimensions(window.innerWidth, window.innerHeight);
                 }
+                
+                // ভিডিও এলিমেন্ট ডিরেক্ট রেশিও রিয়েলটাইম ফিক্স
+                const videoElements = document.querySelectorAll('video, .vjs-tech');
+                videoElements.forEach(el => {
+                    el.style.setProperty('object-fit', 'contain', 'important');
+                    el.style.setProperty('width', '100vw', 'important');
+                    el.style.setProperty('height', '100vh', 'important');
+                });
             } else {
-                // পোর্ট্রেট মোড
+                // পোর্ট্রেট মোডে রেগুলার ফ্লুইড ১৬:৯ রেশিও
                 if (player) {
                     player.fluid(true);
                 }
             }
         }
 
-        // রিয়েলটাইম ওরিয়েন্টেশন বা উইন্ডো চেঞ্জ ডিটেকশন লিসেনার
+        // উইন্ডো সাইজ এবং ওরিয়েন্টেশন চেঞ্জ লিসেনার রিয়েলটাইম ফিক্স নিশ্চিত করতে
         window.addEventListener('resize', handleScreenResize);
         window.addEventListener('orientationchange', () => {
-            setTimeout(handleScreenResize, 200);
+            setTimeout(handleScreenResize, 250);
         });
 
         function populateCategoryDropdown(categories) {
