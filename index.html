@@ -500,14 +500,13 @@
 
         @media(max-width: 576px) {
             .sidebar {
-                display: none; /* Hide Sidebar on mobile for simple UI */
+                display: none;
             }
             .search-container {
                 width: 160px;
             }
         }
 
-        /* VideoJS Custom Engine Skin Triggers */
         .video-js {
             width: 100% !important;
             height: 100% !important;
@@ -562,16 +561,15 @@
             </div>
         </header>
 
-        <!-- Main Workspace splits into Player State and Playlist Panel -->
+        <!-- Main Workspace Layout -->
         <div class="workspace">
             
             <!-- Left Workspace Box: Player Stage Frame -->
             <section class="stage-panel">
                 <div class="video-container" id="videoContainerBox">
-                    <!-- Standard Tech Video Layer -->
                     <video id="coreVideoPlayer" controls autoplay playsinline></video>
                     
-                    <!-- Player Engine Micro Loader Screen Overlay -->
+                    <!-- Loading Overlay (Unchanged Design) -->
                     <div class="player-loader-overlay" id="playerFallbackLoader">
                         <div class="spinner-ring"></div>
                         <div class="loader-status-text" id="loaderStatusMsg">ইঞ্জিন লোড হচ্ছে...</div>
@@ -603,7 +601,7 @@
                     <h2 id="langDeckTitle">চ্যানেল সমূহ</h2>
                 </div>
                 <div class="deck-scroll-zone" id="playlistDeckWrapper">
-                    <!-- Cards injection container target via async script core -->
+                    <!-- Cards injection container -->
                 </div>
             </section>
 
@@ -611,27 +609,24 @@
     </main>
 </div>
 
-<!-- Video.js Standard Module Script Injection -->
+<!-- Video.js Script Injection -->
 <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 
 <script>
-    // System Architecture Configurations & Remote Playlist Repository Targets
     const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/main/mixiptvchannel.m3u';
     
-    // Core Application Memory States Space Definition Variables
     let rawChannelsDatabase = [];
     let displayedChannels = [];
     let activeChannelIndex = -1;
     let currentLanguage = 'bn';
     
-    // Core Playback Fallback Micro-Engine State Machine Architecture
-    let currentPlayerEngineMode = 0; // Modes Scale: 0 = Video.js Layer, 1 = HlsJS Core, 2 = Native Core Element HTML5
+    // Core Engine Fallback Architecture (0 = Video.js, 1 = Hls.js, 2 = Native)
+    let currentPlayerEngineMode = 0; 
     let videoJsInstance = null;
     let hlsInstance = null;
     let fallbackCycleActive = false;
-    let loadingTimeout = null; // টাইমার ট্র্যাকিং ভেরিয়েবল
+    let loadingTimeout = null; // ৫ সেকেন্ড ট্র্যাকিং টাইম-আউট টাইমার
     
-    // UI Local Language Translation Object Context Mapping
     const localizationDictionary = {
         bn: {
             searchPlaceholder: "চ্যানেল খুঁজুন...",
@@ -657,7 +652,6 @@
         }
     };
 
-    // DOM Target Nodes Binding References Mapping
     const videoElement = document.getElementById('coreVideoPlayer');
     const searchBar = document.getElementById('searchBar');
     const playlistDeckWrapper = document.getElementById('playlistDeckWrapper');
@@ -671,20 +665,17 @@
     const playerFallbackLoader = document.getElementById('playerFallbackLoader');
     const loaderStatusMsg = document.getElementById('loaderStatusMsg');
 
-    // Setup Video Intercept Target Listeners to Detect Hardware Failures
+    // ইন্টারফেস বা ইন্টারনাল মেকানিজমে বিন্দুমাত্র হাত না দিয়ে শুধু লোডিং ডিটেক্টর যুক্ত করা হয়েছে
     videoElement.addEventListener('error', function() {
-        if(activeChannelIndex !== -1) {
-            handlePlayerFallbackLoop();
-        }
+        if(activeChannelIndex !== -1) handlePlayerFallbackLoop();
     });
 
-    // ৫ সেকেন্ড লোডিং/বাফারিং ডিটেক্টর সেটআপ (ডিজাইন অক্ষুণ্ণ রেখে)
     videoElement.addEventListener('waiting', function() {
         if (activeChannelIndex === -1) return;
         if (loadingTimeout) clearTimeout(loadingTimeout);
         loadingTimeout = setTimeout(function() {
             handlePlayerFallbackLoop();
-        }, 5000);
+        }, 5000); // ঠিক ৫ সেকেন্ড বাফারিং বা লোডিং এ আটকে থাকলে অটো পরবর্তী ইঞ্জিনে শিফট হবে
     });
 
     videoElement.addEventListener('playing', function() {
@@ -695,7 +686,6 @@
         if (loadingTimeout) { clearTimeout(loadingTimeout); loadingTimeout = null; }
     });
 
-    // Fallback Machine Loop Module - Executes Engine State Changes (0 -> 1 -> 2 -> 0)
     function handlePlayerFallbackLoop() {
         if (activeChannelIndex === -1 || displayedChannels.length === 0) return;
         
@@ -704,10 +694,8 @@
         
         const currentTargetStreamUrl = displayedChannels[activeChannelIndex].url;
         updateLoaderOverlayUI();
-        
         destroyActiveEngines();
         
-        // Engine Selector Switch Node Controller
         setTimeout(() => {
             if (currentPlayerEngineMode === 0) {
                 switchToVideoJsPlayer(currentTargetStreamUrl);
@@ -738,7 +726,7 @@
         if (videoJsInstance) {
             videoJsInstance.dispose();
             videoJsInstance = null;
-            // Restore native video element framework structure parameters inside container box node target
+            
             const restoredVideoTag = document.createElement('video');
             restoredVideoTag.id = 'coreVideoPlayer';
             restoredVideoTag.controls = true;
@@ -746,11 +734,9 @@
             restoredVideoTag.style.width = '100%';
             restoredVideoTag.style.height = '100%';
             
-            // Re-bind native intercept listeners onto restored target element block node space
             restoredVideoTag.addEventListener('error', function() {
                 if(activeChannelIndex !== -1) handlePlayerFallbackLoop();
             });
-            
             restoredVideoTag.addEventListener('waiting', function() {
                 if (activeChannelIndex === -1) return;
                 if (loadingTimeout) clearTimeout(loadingTimeout);
@@ -776,7 +762,6 @@
         }
     }
 
-    // Engine Mode 0 Deployment Logic Core: Video.js Engine Initialization
     function switchToVideoJsPlayer(streamUrl) {
         const nativeVidEl = document.getElementById('coreVideoPlayer');
         nativeVidEl.className = 'video-js vjs-default-skin';
@@ -789,10 +774,9 @@
         });
         
         videoJsInstance.ready(function() {
-            videoJsInstance.play().catch(err => console.log("VideoJS Execution Blocked AutoPlay Intercept Profile"));
+            videoJsInstance.play().catch(err => console.log("VideoJS Autoplay block bypass"));
         });
 
-        // VideoJS specific loaders intercept triggers
         videoJsInstance.on('waiting', function() {
             if (loadingTimeout) clearTimeout(loadingTimeout);
             loadingTimeout = setTimeout(function() {
@@ -810,7 +794,6 @@
         });
     }
 
-    // Engine Mode 1 Deployment Logic Core: Hls.js Library Integration
     function switchToHlsBackup(streamUrl) {
         const nativeVidEl = document.getElementById('coreVideoPlayer');
         if (Hls.isSupported()) {
@@ -818,13 +801,11 @@
             hlsInstance.loadSource(streamUrl);
             hlsInstance.attachMedia(nativeVidEl);
             hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
-                nativeVidEl.play().catch(err => console.log("HLS System Pipeline Play Intercept Defended"));
+                nativeVidEl.play().catch(err => console.log("HLS Pipeline play capture"));
             });
             
             hlsInstance.on(Hls.Events.ERROR, function(event, data) {
-                if (data.fatal) {
-                    handlePlayerFallbackLoop();
-                }
+                if (data.fatal) handlePlayerFallbackLoop();
             });
 
             nativeVidEl.onplaying = function() {
@@ -835,23 +816,19 @@
         }
     }
 
-    // Engine Mode 2 Deployment Logic Core: HTML5 Native Playback Engine Execution
     function switchToNativePlayer(streamUrl) {
         const nativeVidEl = document.getElementById('coreVideoPlayer');
         nativeVidEl.src = streamUrl;
         nativeVidEl.load();
         nativeVidEl.play().then(() => {
             dismissLoaderOverlayUI();
-        }).catch(err => {
-            console.log("Native Stream Player Init Context Pipeline Exception Caught.");
-        });
+        }).catch(err => console.log("Native context execution handled"));
         
         nativeVidEl.onplaying = function() {
             dismissLoaderOverlayUI();
         };
     }
 
-    // Core Stream Boot Controller Logic - Triggers execution of a channel index from database array block
     function bootSelectedChannelPipeline(targetIndex) {
         if (targetIndex < 0 || targetIndex >= displayedChannels.length) return;
         
@@ -880,7 +857,6 @@
         switchToVideoJsPlayer(channelRecord.url);
     }
 
-    // M3U Remote Database Compilation Parser System Component Block Engine
     async function loadM3uDatabaseAsyncStream() {
         try {
             playlistDeckWrapper.innerHTML = `
@@ -890,7 +866,7 @@
                 </div>`;
                 
             const responseDataStream = await fetch(githubUrl);
-            if (!responseDataStream.ok) throw new Error("Network Response Flag Fault Exception Blocked System Compilation Request");
+            if (!responseDataStream.ok) throw new Error("Fetch runtime network exception");
             const rawM3uTextData = await responseDataStream.text();
             
             parseM3uDatasetStructure(rawM3uTextData);
@@ -930,7 +906,7 @@
                 if (commaSeparatorSplitsIndex !== -1) {
                     currentMetadataObject.name = currentLineText.substring(commaSeparatorSplitsIndex + 1).trim();
                 } else {
-                    currentMetadataObject.name = "Unknown Live Station Channel Record";
+                    currentMetadataObject.name = "Unknown Live Station Channel";
                 }
             } else if (currentLineText.startsWith('http') && currentMetadataObject) {
                 currentMetadataObject.url = currentLineText;
@@ -940,7 +916,6 @@
         }
     }
 
-    // UI Rendering Engine Layer for Playlist Channel Deck Grid Cards
     function renderPlaylistDeckCardsUI() {
         playlistDeckWrapper.innerHTML = '';
         if (displayedChannels.length === 0) {
@@ -983,7 +958,6 @@
         playlistDeckWrapper.appendChild(virtualDOMFragmentBlock);
     }
 
-    // Intercept Text Typing Inside Search Bar to filter Station Targets instantly
     searchBar.addEventListener('input', function(eventProperty) {
         const parsedSearchQueryText = eventProperty.target.value.toLowerCase().trim();
         
@@ -997,7 +971,6 @@
         renderPlaylistDeckCardsUI();
     });
 
-    // UI Interactions Event Handler Registrations
     drawerToggleBtn.addEventListener('click', () => {
         appSidebar.classList.toggle('expanded');
     });
@@ -1005,15 +978,12 @@
     fullscreenToggleBtn.addEventListener('click', () => {
         const activeContainerTargetBox = document.getElementById('videoContainerBox');
         if (!document.fullscreenElement) {
-            activeContainerTargetBox.requestFullscreen().catch(fullscreenExceptionErr => {
-                console.error(`Fullscreen Engine Request Refused Profile Exception: ${fullscreenExceptionErr.message}`);
-            });
+            activeContainerTargetBox.requestFullscreen().catch(err => console.error(err.message));
         } else {
             document.exitFullscreen();
         }
     });
 
-    // Language Toggle Module Routine Interface Component Execution Block Engine Space
     langToggleBtn.addEventListener('click', () => {
         currentLanguage = currentLanguage === 'bn' ? 'en' : 'bn';
         langToggleBtn.innerText = currentLanguage === 'bn' ? 'EN' : 'BN';
@@ -1030,7 +1000,6 @@
         }
     });
 
-    // Boot Routine Entry Point Strategy Trigger Command Core Execution Phase
     document.addEventListener('DOMContentLoaded', () => {
         loadM3uDatabaseAsyncStream();
     });
