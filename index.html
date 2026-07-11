@@ -129,7 +129,7 @@
 
         .player-left-column { display: flex; flex-direction: column; width: 100%; flex-shrink: 0; }
 
-        /* প্লেয়ার সেকশনের মূল স্টাইলিং */
+        /* আপনার আসল কোডের মূল প্লেয়ার কন্টেইনার সিএসএস */
         .player-section {
             background: #000 !important; 
             width: calc(100% - 24px) !important;
@@ -146,7 +146,7 @@
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .video-js, #clappr-player { width: 100% !important; height: 100% !important; }
         
-        /* আপনার দেওয়া কোডের মূল অবজেক্ট-ফিট প্রোপার্টি যা স্ক্রিন ফিট নিশ্চিত করে */
+        /* স্ক্রিন ফিট রাখার জন্য অবজেক্ট-ফিট এবং ১০০% ডাইমেনশন */
         .video-container video, 
         .video-js video, 
         #clappr-player video, 
@@ -156,7 +156,7 @@
             height: 100% !important;
         }
 
-        /* আপনার আগের কোড থেকে আনা রিয়েলটাইম ফুল-স্কিন ক্লাস মোড */
+        /* আপনার আগের আসল কোডের ফুল-স্ক্রিন ক্লাস লজিক */
         .player-section.fullscreen-mode {
             position: fixed !important;
             top: 0 !important;
@@ -248,7 +248,7 @@
             .no-result { grid-column: span 3; }
         }
 
-        /* আপনার আগের কোডের হুবহু সেই মূল মোবাইল ল্যান্ডস্কেপ ওভাররাইড মোড */
+        /* আপনার আগের আসল কোডের হুবহু সেই মূল মোবাইল ল্যান্ডস্কেপ ওভাররাইড মোড */
         @media (max-width: 950px) and (orientation: landscape) {
             header, .sticky-controls-container, .main-content, .app-notice-bar { display: none !important; }
             .player-section { 
@@ -550,7 +550,7 @@
             } catch(e) { console.log("Clappr Error."); }
         }
 
-        /* আপনার আগের কোড থেকে আনা অরিজিনাল স্ক্রিন ফিট এবং ওরিয়েন্টেশন হ্যান্ডলার */
+        /* আপনার আগের আসল কোডের হুবহু সেই নিখুঁত স্ক্রিন রিসাইজ ও ওরিয়েন্টেশন মেকানিজম */
         function handleScreenResize() {
             const isLandscape = window.innerWidth > window.innerHeight;
             const playerSec = document.getElementById('playerSection');
@@ -565,7 +565,8 @@
                     player.fluid(false);
                     player.dimensions(window.innerWidth, window.innerHeight);
                 }
-                // ভিডিও এলিমেন্টকে স্ট্রেচ বা ক্রপ না করে ১০০% স্ক্রিন ফিট করা
+                
+                // ভিডিওর মূল রেজোলিউশন না বিগড়ে কালো অংশ দূর করে ১০০% ফিট করা
                 document.querySelectorAll('video, .vjs-tech, #clappr-player video').forEach(el => {
                     el.style.setProperty('object-fit', 'contain', 'important');
                     el.style.setProperty('width', '100vw', 'important');
