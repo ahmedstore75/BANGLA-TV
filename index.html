@@ -154,15 +154,15 @@
         }
 
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
-        .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
-        .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
+        .video-js, .native-player-style, #clappr-player { width: 100% !important; height: 100% !important; }
+        .video-js.forced-zoom video, .forced-zoom, #clappr-player video { object-fit: cover !important; }
 
         .player-nav-zone {
             position: absolute;
             top: 0;
             bottom: 45px;
             width: 20%;   
-            z-index: 10;
+            z-index: 100;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -350,7 +350,7 @@
             border-color: rgba(239, 68, 68, 0.35); 
             transform: translateY(-2px); 
             box-shadow: 0 6px 16px rgba(239, 68, 68, 0.15);
-            outline: 3px solid #ffdd44 !important; /* টিভি স্ক্রিনে রিমোট ফোকাস চেনার জন্য */
+            outline: 3px solid #ffdd44 !important;
         }
         .channel-row.active-channel { 
             background: rgba(239, 68, 68, 0.12); 
@@ -525,8 +525,8 @@
         @media (max-width: 950px) and (orientation: landscape) {
             header, .sticky-controls-container, .main-content, .app-notice-bar { display: none !important; }
             .player-section { width: 100vw !important; height: 100vh !important; position: fixed !important; top: 0; left: 0; border: none; border-radius: 0 !important; margin: 0 !important; z-index: 9999999; display: block !important; }
-            .video-container, .video-js, .native-player-style { width: 100vw !important; height: 100vh !important; }
-            .video-js video, .native-player-style { object-fit: fill !important; }
+            .video-container, .video-js, .native-player-style, #clappr-player { width: 100vw !important; height: 100vh !important; }
+            .video-js video, .native-player-style, #clappr-player video { object-fit: fill !important; }
         }
     </style>
 </head>
@@ -583,9 +583,7 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
 
-                    <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline>
-                        <p class="vjs-no-js">Your browser does not support this player.</p>
-                    </video>
+                    <div id="clappr-player"></div>
                 </div>
             </div>
 
@@ -628,17 +626,21 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clappr-rtmp-plugin@latest/dist/clappr-rtmp-plugin.min.js"></script>
+
     <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
     <script>
-        let player; 
+        let clapprPlayerInstance = null;
+        let player = null; 
         let hlsBackupEngine = null;
         let isFirstInit = true; 
         const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/main/mixiptvchannel.m3u';
         
         const fetchUrls = [
-            'https://corsproxy.io/?' + encodeURIComponent(githubUrl), // টিভির জন্য প্রক্সি প্রথমে দেওয়া ভালো
+            'https://corsproxy.io/?' + encodeURIComponent(githubUrl),
             githubUrl,
             'https://api.allorigins.win/raw?url=' + encodeURIComponent(githubUrl)
         ];
@@ -797,28 +799,80 @@
             renderChannels(displayedChannels); 
             document.getElementById('loadingLayout').style.display = 'none';
             
-            initVideoPlayerEngine();
-
             if (displayedChannels.length > 0 && window.innerWidth > 950) {
                 playChannelAt(0);
             }
         }
 
-        function initVideoPlayerEngine() {
-            try {
-                player = videojs('live-player');
-                setupForcedDoubleTapZoom();
+        function playChannelAt(index) {
+            if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
+            
+            activeChannelIndex = index;
+            const ch = displayedChannels[index];
 
-                player.on('error', function() {
-                    if (isFirstInit) {
-                        isFirstInit = false;
-                        return; 
+            document.querySelectorAll('.channel-row').forEach(row => row.classList.remove('active-channel'));
+            const activeRow = document.querySelector(`.channel-row[data-index="${index}"]`);
+            if (activeRow) {
+                activeRow.classList.add('active-channel');
+                activeRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            isFirstInit = false; 
+            resetContainers();
+
+            // ১. প্রথম লেয়ার: Clappr Player দিয়ে প্লে করার চেষ্টা
+            try {
+                clapprPlayerInstance = new Clappr.Player({
+                    source: ch.url,
+                    parentId: "#clappr-player",
+                    preload: 'auto',
+                    autoPlay: true,
+                    controls: true,
+                    width: '100%',
+                    height: '100%',
+                    strings: {
+                        'bn': { 'live': 'লাইভ', 'back_to_live': 'লাইভে ফিরুন' }
+                    },
+                    language: currentLang,
+                    events: {
+                        onError: function(e) {
+                            console.log("Clappr Error, falling back to VideoJS...");
+                            switchToVideoJs(ch.url);
+                        }
                     }
-                    switchToHlsBackup();
                 });
-            } catch(e) {}
+                setupForcedDoubleTapZoom();
+            } catch(e) {
+                switchToVideoJs(ch.url);
+            }
         }
 
+        // ২. দ্বিতীয় লেয়ার: Clappr ফেইল করলে Video.js-এ ব্যাকআপ
+        function switchToVideoJs(streamUrl) {
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = `
+                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
+                <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>
+            `;
+            
+            player = videojs('live-player');
+            setupForcedDoubleTapZoom();
+
+            player.on('error', function() {
+                console.log("VideoJS Error, falling back to Native HLS...");
+                switchToHlsBackup();
+            });
+
+            try {
+                player.src({ src: streamUrl, type: 'application/x-mpegURL' });
+                player.play();
+            } catch(e) {
+                switchToHlsBackup();
+            }
+        }
+
+        // ৩. তৃতীয় লেয়ার: Video.js ফেইল করলে Hls.js Native প্লেয়ারে ব্যাকআপ
         function switchToHlsBackup() {
             if (activeChannelIndex === -1 || displayedChannels.length === 0) return;
             const channelObj = displayedChannels[activeChannelIndex];
@@ -826,7 +880,6 @@
             if (player) { try { player.dispose(); }catch(e){} player = null; }
 
             const container = document.getElementById('videoContainer');
-            
             container.innerHTML = `
                 <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
                 <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
@@ -873,13 +926,12 @@
                 const row = document.createElement('div');
                 row.className = 'channel-row';
                 row.setAttribute('data-index', index);
-                row.setAttribute('tabindex', '0'); // টিভির রিমোট দিয়ে সিলেক্ট করার জন্য
+                row.setAttribute('tabindex', '0'); 
                 
                 if (index === activeChannelIndex) row.classList.add('active-channel');
                 
                 row.onclick = function() { playChannelAt(index); };
                 
-                // রিমোটে 'OK/Enter' চাপলে যেন প্লে হয়
                 row.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter') {
                         playChannelAt(index);
@@ -900,35 +952,6 @@
                 `;
                 listContainer.appendChild(row);
             });
-        }
-
-        function playChannelAt(index) {
-            if (displayedChannels.length === 0 || index < 0 || index >= displayedChannels.length) return;
-            
-            activeChannelIndex = index;
-            const ch = displayedChannels[index];
-
-            document.querySelectorAll('.channel-row').forEach(row => row.classList.remove('active-channel'));
-            const activeRow = document.querySelector(`.channel-row[data-index="${index}"]`);
-            if (activeRow) {
-                activeRow.classList.add('active-channel');
-                activeRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-
-            isFirstInit = false; 
-            resetContainers();
-
-            player = videojs('live-player');
-            setupForcedDoubleTapZoom();
-
-            player.on('error', function() {
-                switchToHlsBackup();
-            });
-
-            try {
-                player.src({ src: ch.url, type: 'application/x-mpegURL' });
-                player.play();
-            } catch(e) {}
         }
 
         function navigateChannel(direction) {
@@ -982,6 +1005,10 @@
         }
 
         function resetContainers() {
+            if (clapprPlayerInstance) {
+                try { clapprPlayerInstance.destroy(); } catch(e){}
+                clapprPlayerInstance = null;
+            }
             if (player) {
                 try { player.dispose(); } catch(e){}
                 player = null;
@@ -994,7 +1021,7 @@
             container.innerHTML = `
                 <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
                 <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
-                <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>
+                <div id="clappr-player"></div>
             `;
         }
 
@@ -1014,7 +1041,7 @@
                 const now = new Date().getTime();
                 if (now - lastTapTime < 300) {
                     e.preventDefault(); 
-                    const targetPlayer = document.getElementById('live-player');
+                    const targetPlayer = document.querySelector('#videoContainer video, #clappr-player video');
                     if(targetPlayer) targetPlayer.classList.toggle('forced-zoom');
                 }
                 lastTapTime = now;
