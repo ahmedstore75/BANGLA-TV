@@ -629,7 +629,7 @@
     let videoJsInstance = null;
     let hlsInstance = null;
     let fallbackCycleActive = false;
-    let loadingTimeout = null; // ৫ সেকেন্ড লোডিং টাইম-আউট টাইমার ভেরিয়েবল
+    let loadingTimeout = null; // টাইমার ট্র্যাকিং ভেরিয়েবল
     
     // UI Local Language Translation Object Context Mapping
     const localizationDictionary = {
@@ -671,41 +671,28 @@
     const playerFallbackLoader = document.getElementById('playerFallbackLoader');
     const loaderStatusMsg = document.getElementById('loaderStatusMsg');
 
-    // Setup Video Intercept Target Listeners to Detect Hardware Failures and Buffering
-    // ভিডিও এরর হলে সরাসরি পরের ইঞ্জিনে শিফট করার লিসেনার
+    // Setup Video Intercept Target Listeners to Detect Hardware Failures
     videoElement.addEventListener('error', function() {
         if(activeChannelIndex !== -1) {
             handlePlayerFallbackLoop();
         }
     });
 
-    // ৫ সেকেন্ড লোডিং/বাফারিং টাইম-আউট লজিক ইন্টিগ্রেশন
+    // ৫ সেকেন্ড লোডিং/বাফারিং ডিটেক্টর সেটআপ (ডিজাইন অক্ষুণ্ণ রেখে)
     videoElement.addEventListener('waiting', function() {
         if (activeChannelIndex === -1) return;
-        
-        // আগের কোনো রানিং টাইমার থাকলে তা রিসেট করা হচ্ছে
         if (loadingTimeout) clearTimeout(loadingTimeout);
-        
-        // ৫ সেকেন্ডের টাইমার স্টার্ট (৫০০০ মিলি-সেকেন্ড)
         loadingTimeout = setTimeout(function() {
-            console.log("ইঞ্জিন মোড " + currentPlayerEngineMode + " এ ৫ সেকেন্ডের বেশি লোড হচ্ছে। পরের ইঞ্জিনে শিফট করা হচ্ছে...");
-            handlePlayerFallbackLoop(); 
+            handlePlayerFallbackLoop();
         }, 5000);
     });
 
-    // ভিডিও সঠিকভাবে চলতে শুরু করলে বা ইউজার পজ করলে টাইমার ক্লিয়ার করার লিসেনার
     videoElement.addEventListener('playing', function() {
-        if (loadingTimeout) {
-            clearTimeout(loadingTimeout);
-            loadingTimeout = null;
-        }
+        if (loadingTimeout) { clearTimeout(loadingTimeout); loadingTimeout = null; }
     });
 
     videoElement.addEventListener('pause', function() {
-        if (loadingTimeout) {
-            clearTimeout(loadingTimeout);
-            loadingTimeout = null;
-        }
+        if (loadingTimeout) { clearTimeout(loadingTimeout); loadingTimeout = null; }
     });
 
     // Fallback Machine Loop Module - Executes Engine State Changes (0 -> 1 -> 2 -> 0)
@@ -713,8 +700,6 @@
         if (activeChannelIndex === -1 || displayedChannels.length === 0) return;
         
         fallbackCycleActive = true;
-        
-        // Circular Loop লজিক: ০, ১, ২ এর পর আবার ০ তে ফিরে আসবে
         currentPlayerEngineMode = (currentPlayerEngineMode + 1) % 3;
         
         const currentTargetStreamUrl = displayedChannels[activeChannelIndex].url;
@@ -748,11 +733,7 @@
     }
 
     function destroyActiveEngines() {
-        // ৫ সেকেন্ডের রানিং টাইমার থাকলে তা মুছে ফেলা হচ্ছে নতুন ইঞ্জিন চালুর আগে
-        if (loadingTimeout) {
-            clearTimeout(loadingTimeout);
-            loadingTimeout = null;
-        }
+        if (loadingTimeout) { clearTimeout(loadingTimeout); loadingTimeout = null; }
 
         if (videoJsInstance) {
             videoJsInstance.dispose();
@@ -770,7 +751,6 @@
                 if(activeChannelIndex !== -1) handlePlayerFallbackLoop();
             });
             
-            // রিস্টোর করা ভিডিও ট্যাগটিতেও বাফারিং লিসেনার যুক্ত করা হলো
             restoredVideoTag.addEventListener('waiting', function() {
                 if (activeChannelIndex === -1) return;
                 if (loadingTimeout) clearTimeout(loadingTimeout);
@@ -812,7 +792,7 @@
             videoJsInstance.play().catch(err => console.log("VideoJS Execution Blocked AutoPlay Intercept Profile"));
         });
 
-        // VideoJS Specific Buffering/Error Handlers
+        // VideoJS specific loaders intercept triggers
         videoJsInstance.on('waiting', function() {
             if (loadingTimeout) clearTimeout(loadingTimeout);
             loadingTimeout = setTimeout(function() {
@@ -826,7 +806,6 @@
         });
 
         videoJsInstance.on('error', function() {
-            videojs.log("VideoJS Engine Pipeline Error Detected.");
             handlePlayerFallbackLoop();
         });
     }
@@ -844,17 +823,14 @@
             
             hlsInstance.on(Hls.Events.ERROR, function(event, data) {
                 if (data.fatal) {
-                    console.log("Fatal HLS System Engine Pipeline Intercept Exception. Moving Mode Target Loop.");
                     handlePlayerFallbackLoop();
                 }
             });
-            
-            // HLS মোডে লোডিং স্ক্রিন সরানোর ট্রিপ টার্গেট
+
             nativeVidEl.onplaying = function() {
                 dismissLoaderOverlayUI();
             };
         } else {
-            // If Hls framework compilation layer component object execution throws structural fault, escape directly to Native Mode Layer
             switchToNativePlayer(streamUrl);
         }
     }
@@ -882,7 +858,6 @@
         activeChannelIndex = targetIndex;
         const channelRecord = displayedChannels[targetIndex];
         
-        // Update Workspace Control Dock Metadata Presentation Elements Contexts mapping UI dynamically
         currentStationTitle.innerText = channelRecord.name;
         currentStationGenre.innerText = channelRecord.group || "LIVE STREAM STATION";
         
@@ -892,19 +867,16 @@
             currentStationLogo.innerHTML = `<i class="fa-solid fa-satellite-dish" style="color: var(--text-muted)"></i>`;
         }
         
-        // Reset player engine selection index state pointer configurations back to initial core index value zero target mapping
         currentPlayerEngineMode = 0;
         updateLoaderOverlayUI();
         destroyActiveEngines();
         
-        // Render UI Active Cards highlight adjustments framework operations loop
         const allRenderedCardsElements = playlistDeckWrapper.querySelectorAll('.channel-card');
         allRenderedCardsElements.forEach((cardNode, nodeIdx) => {
             if (nodeIdx === targetIndex) cardNode.classList.add('active');
             else cardNode.classList.remove('active');
         });
         
-        // Run VideoJS initialization core routine procedure block context map
         switchToVideoJsPlayer(channelRecord.url);
     }
 
@@ -941,7 +913,6 @@
     function parseM3uDatasetStructure(rawText) {
         const textLinesArray = rawText.split(/\r?\n/);
         rawChannelsDatabase = [];
-        
         let currentMetadataObject = null;
         
         for (let i = 0; i < textLinesArray.length; i++) {
@@ -949,8 +920,6 @@
             
             if (currentLineText.startsWith('#EXTINF:')) {
                 currentMetadataObject = {};
-                
-                // Regex extraction routines matching M3U metadata properties mappings attributes profiles
                 const logoMatchPattern = currentLineText.match(/tvg-logo="([^"]+)"/i);
                 const groupMatchPattern = currentLineText.match(/group-title="([^"]+)"/i);
                 
@@ -971,7 +940,7 @@
         }
     }
 
-    // UI Rendering Engine Layer for Playlist Channel Deck Grid Cards Cards Blocks Injections
+    // UI Rendering Engine Layer for Playlist Channel Deck Grid Cards
     function renderPlaylistDeckCardsUI() {
         playlistDeckWrapper.innerHTML = '';
         if (displayedChannels.length === 0) {
@@ -1028,7 +997,7 @@
         renderPlaylistDeckCardsUI();
     });
 
-    // UI Interactions Event Handler Registrations Core Blocks Mappings
+    // UI Interactions Event Handler Registrations
     drawerToggleBtn.addEventListener('click', () => {
         appSidebar.classList.toggle('expanded');
     });
@@ -1050,7 +1019,6 @@
         langToggleBtn.innerText = currentLanguage === 'bn' ? 'EN' : 'BN';
         
         const langPackageScope = localizationDictionary[currentLanguage];
-        
         searchBar.placeholder = langPackageScope.searchPlaceholder;
         document.getElementById('langTvText').innerText = langPackageScope.tvText;
         document.getElementById('langFacebookText').innerText = langPackageScope.facebookText;
