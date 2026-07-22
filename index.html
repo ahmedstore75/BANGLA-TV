@@ -170,7 +170,6 @@
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
         
-        /* নতুন সাইজিং ক্লাসের CSS সমূহ */
         .video-js.vjs-size-original video, .vjs-size-original { object-fit: contain !important; }
         .video-js.vjs-size-fit video, .vjs-size-fit { object-fit: fill !important; }
         .video-js.vjs-size-stretch video, .vjs-size-stretch, .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
@@ -277,9 +276,8 @@
             width: 100%;
         }
 
-        /* ড্রপডাউনগুলোর জন্য কমন স্টাইল */
         .category-select-wrapper, .size-select-wrapper { position: relative; flex: 1; }
-        .size-select-wrapper { flex: 0.8; } /* সাইজ ফিল্টারের উইডথ একটু ছোট */
+        .size-select-wrapper { flex: 0.8; }
 
         .category-dropdown, .size-dropdown {
             width: 100%; padding: 8px 12px; background-color: var(--input-bg);
@@ -671,7 +669,6 @@
                         </select>
                     </div>
 
-                    <!-- নতুন সাইজ পরিবর্তন করার ড্রপডাউন -->
                     <div class="size-select-wrapper">
                         <select class="size-dropdown" id="videoSizeDropdown" onchange="changeVideoSize(this.value)">
                             <option value="original">Original</option>
@@ -707,7 +704,7 @@
         let player; 
         let hlsBackupEngine = null;
         let isFirstInit = true; 
-        let currentVideoSize = 'fit'; // ডিফল্ট সাইজ 'Full Fit'
+        let currentVideoSize = 'fit'; 
         
         const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/main/mixiptvchannel.m3u';
         
@@ -782,13 +779,35 @@
             toggleMenu();
         }
 
-        /* ভিডিও সাইজ পরিবর্তন করার ফাংশন */
+        /* ভিডিও সাইজ পরিবর্তন এবং অটো রোটেট করার ফাংশন */
         function changeVideoSize(size) {
             currentVideoSize = size;
             const targetPlayer = document.getElementById('live-player');
             if (targetPlayer) {
                 targetPlayer.classList.remove('vjs-size-original', 'vjs-size-fit', 'vjs-size-stretch', 'forced-zoom');
                 targetPlayer.classList.add('vjs-size-' + size);
+            }
+
+            // মোবাইল স্ক্রিন অটো রোটেট লজিক
+            const playerElem = document.getElementById('playerSection') || targetPlayer;
+            if (size === 'fit' || size === 'stretch') {
+                if (playerElem.requestFullscreen) {
+                    playerElem.requestFullscreen().then(() => {
+                        if (screen.orientation && screen.orientation.lock) {
+                            screen.orientation.lock('landscape').catch(() => {});
+                        }
+                    }).catch(() => {});
+                } else if (playerElem.webkitRequestFullscreen) {
+                    playerElem.webkitRequestFullscreen();
+                }
+            } else if (size === 'original') {
+                if (document.exitFullscreen && document.fullscreenElement) {
+                    document.exitFullscreen().then(() => {
+                        if (screen.orientation && screen.orientation.unlock) {
+                            screen.orientation.unlock();
+                        }
+                    }).catch(() => {});
+                }
             }
         }
 
