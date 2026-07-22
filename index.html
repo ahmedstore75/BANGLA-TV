@@ -133,16 +133,42 @@
         .drawer-menu-items { padding: 24px 16px; display: flex; flex-direction: column; gap: 12px; }
         .drawer-item { display: flex; align-items: center; gap: 16px; padding: 14px 16px; color: var(--text-color); font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border-radius: 12px; border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02); transition: all 0.25s ease; }
         .drawer-item:hover { transform: translateX(6px); background: rgba(255, 255, 255, 0.05); }
-        .drawer-item .icon-box { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; }
+        .drawer-item .icon-box { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; flex-shrink: 0; }
         
         .fav-item .icon-box { background: linear-gradient(135deg, #ec4899, #be185d); box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3); }
         .recent-item .icon-box { background: linear-gradient(135deg, #8b5cf6, #6d28d9); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); }
 
+        .size-item .icon-box { background: linear-gradient(135deg, #06b6d4, #0891b2); box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
         .theme-item .icon-box { background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
         .lang-item .icon-box { background: linear-gradient(135deg, #3b82f6, #1d4ed8); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
         .refresh-item .icon-box { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
         .telegram-item .icon-box { background: linear-gradient(135deg, #0088cc, #006699); box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3); }
         .facebook-item .icon-box { background: linear-gradient(135deg, #1877f2, #0d5bf2); box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3); }
+        
+        /* ড্রয়ার সাইজ রো এবং স্লিম সিলেক্ট বাটন */
+        .drawer-item-row { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            width: 100%; 
+            gap: 10px; 
+        }
+        .drawer-select-slim {
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .drawer-select-slim:focus {
+            border-color: var(--brand-color);
+        }
+
         .drawer-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .drawer-overlay.show { opacity: 1; pointer-events: auto; }
 
@@ -276,20 +302,19 @@
             width: 100%;
         }
 
-        .category-select-wrapper, .size-select-wrapper { position: relative; flex: 1; }
-        .size-select-wrapper { flex: 0.8; }
+        .category-select-wrapper { position: relative; flex: 1; }
 
-        .category-dropdown, .size-dropdown {
+        .category-dropdown {
             width: 100%; padding: 8px 12px; background-color: var(--input-bg);
             border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color);
             font-size: 12px; font-weight: 500; outline: none; cursor: pointer; appearance: none;
             transition: all 0.3s ease;
         }
-        .category-dropdown:focus, .size-dropdown:focus {
+        .category-dropdown:focus {
             border-color: var(--brand-color);
             box-shadow: 0 0 10px var(--brand-glow);
         }
-        .category-select-wrapper::after, .size-select-wrapper::after {
+        .category-select-wrapper::after {
             content: "\f0d7"; font-family: "Font Awesome 6 Free"; font-weight: 900;
             position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
             color: var(--brand-color); pointer-events: none;
@@ -603,6 +628,19 @@
                 <span id="langRecentText">সাম্প্রতিক প্লে</span>
             </div>
             
+            <!-- স্লিম ড্রপডাউন সহ ডানপাশে বসানো ভিডিও সাইজ অপশন -->
+            <div class="drawer-item size-item">
+                <div class="icon-box"><i class="fa-solid fa-expand"></i></div>
+                <div class="drawer-item-row">
+                    <span id="langSizeLabel">ভিডিও সাইজ</span>
+                    <select class="drawer-select-slim" id="videoSizeDropdown" onchange="changeVideoSize(this.value)">
+                        <option value="original">Original</option>
+                        <option value="fit" selected>Full Fit</option>
+                        <option value="stretch">Stretch</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="drawer-item lang-item" onclick="toggleLanguage()">
                 <div class="icon-box"><i class="fa-solid fa-language"></i></div>
                 <span id="langToggleText">Language: English</span>
@@ -617,11 +655,11 @@
             </div>
             <a href="https://t.me/banglatvlivefree" target="_blank" class="drawer-item telegram-item">
                 <div class="icon-box"><i class="fa-brands fa-telegram"></i></div>
-                <span id="langTelegramText">টেলিগ্রাম চ্যানেল (লিংক)</span>
+                <span id="langTelegramText">টেলিগ্রাম (সাপোর্ট)</span>
             </a>
             <a href="https://www.facebook.com/ahmed.bd.fb" target="_blank" class="drawer-item facebook-item">
                 <div class="icon-box"><i class="fa-brands fa-facebook-messenger"></i></div>
-                <span id="langFacebookText">ফেসবুক পেজ (সাপোর্ট)</span>
+                <span id="langFacebookText">ফেসবুক (সাপোর্ট)</span>
             </a>
         </div>
     </div>
@@ -670,14 +708,6 @@
                     <div class="category-select-wrapper">
                         <select class="category-dropdown" id="categoryDropdown" onchange="filterCategory(this.value)">
                             <option value="All">All Categories</option>
-                        </select>
-                    </div>
-
-                    <div class="size-select-wrapper">
-                        <select class="size-dropdown" id="videoSizeDropdown" onchange="changeVideoSize(this.value)">
-                            <option value="original">Original</option>
-                            <option value="fit" selected>Full Fit</option>
-                            <option value="stretch">Stretch</option>
                         </select>
                     </div>
 
@@ -736,9 +766,9 @@
         const languages = {
             bn: {
                 appTitle: "বাংলা টিভি", panelTitle: "নিয়ন্ত্রণ প্যানেল", toggleText: "Language: English",
-                favText: "প্রিয় চ্যানেল", recentText: "সাম্প্রতিক প্লে",
+                favText: "প্রিয় চ্যানেল", recentText: "সাম্প্রতিক প্লে", sizeLabel: "ভিডিও সাইজ",
                 themeText: "থিম পরিবর্তন (Light/Dark)", refreshText: "প্লেলিস্ট রিফ্রেশ করুন",
-                telegramText: "টেলিগ্রাম চ্যানেল (লিংক)", facebookText: "ফেসবুক পেজ (সাপোর্ট)",
+                telegramText: "টেলিগ্রাম (সাপোর্ট)", facebookText: "ফেসবুক (সাপোর্ট)",
                 noChannel: "কোনো চ্যানেল সিলেক্ট করা নেই",
                 noticeBadge: "নোটিশ", 
                 noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
@@ -749,9 +779,9 @@
             },
             en: {
                 appTitle: "Bangla TV", panelTitle: "Control Panel", toggleText: "ভাষা: বাংলা",
-                favText: "Favorite Channels", recentText: "Recently Played",
+                favText: "Favorite Channels", recentText: "Recently Played", sizeLabel: "Video Size",
                 themeText: "Change Theme (Light/Dark)", refreshText: "Refresh Playlist",
-                telegramText: "Telegram Channel (Link)", facebookText: "Facebook Page (Support)",
+                telegramText: "Telegram (Support)", facebookText: "Facebook (Support)",
                 noChannel: "No channel selected",
                 noticeBadge: "Notice", 
                 noticeText: "Welcome to our server! Check your <b>Internet Connection</b> to avoid buffering. For the best full-screen & buffering-free experience in browser, please use <b>\"Via Browser\"</b>. Refresh the playlist if channels fail.",
@@ -814,6 +844,7 @@
             document.getElementById('langPanelTitle').innerText = lang.panelTitle;
             document.getElementById('langFavText').innerText = lang.favText;
             document.getElementById('langRecentText').innerText = lang.recentText;
+            document.getElementById('langSizeLabel').innerText = lang.sizeLabel;
             document.getElementById('langToggleText').innerText = lang.toggleText;
             document.getElementById('langThemeText').innerText = lang.themeText;
             document.getElementById('langRefreshText').innerText = lang.refreshText;
