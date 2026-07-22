@@ -99,22 +99,32 @@
         .header-left { display: flex; align-items: center; gap: 16px; }
 
         .menu-btn {
-            background: linear-gradient(135deg, #ff007f, #7928ca, #0070f3);
+            background: #ef4444;
             border: none; color: white; font-size: 16px; width: 40px; height: 40px;
             border-radius: 12px; cursor: pointer; display: flex; align-items: center;
             justify-content: center; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(121, 40, 202, 0.4);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
         }
-        .menu-btn:hover { transform: scale(1.05) rotate(5deg); }
+        .menu-btn:hover { transform: scale(1.05) rotate(5deg); background: #dc2626; }
 
         header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; color: var(--brand-color); text-shadow: 0 0 10px var(--brand-glow); }
-        .channel-count-badge { background: rgba(239, 68, 68, 0.1); color: var(--brand-color); font-size: 12px; font-weight: 600; padding: 6px 14px; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 99px; }
+        
+        .channel-count-badge { 
+            background: transparent; 
+            color: var(--brand-color); 
+            font-size: 12px; 
+            font-weight: 600; 
+            padding: 6px 14px; 
+            border: none; 
+            border-radius: 99px; 
+        }
 
         .sidebar-drawer {
             position: fixed; top: 0; left: -320px; width: 320px; height: 100vh;
             background: var(--drawer-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
             box-shadow: 20px 0 50px rgba(0, 0, 0, 0.4); z-index: 10000;
             transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1); display: flex; flex-direction: column; border-right: 1px solid var(--border-color);
+            overflow-y: auto;
         }
         .sidebar-drawer.open { left: 0; }
         .drawer-header { padding: 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
@@ -124,6 +134,10 @@
         .drawer-item { display: flex; align-items: center; gap: 16px; padding: 14px 16px; color: var(--text-color); font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border-radius: 12px; border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02); transition: all 0.25s ease; }
         .drawer-item:hover { transform: translateX(6px); background: rgba(255, 255, 255, 0.05); }
         .drawer-item .icon-box { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; }
+        
+        .fav-item .icon-box { background: linear-gradient(135deg, #ec4899, #be185d); box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3); }
+        .recent-item .icon-box { background: linear-gradient(135deg, #8b5cf6, #6d28d9); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); }
+
         .theme-item .icon-box { background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
         .lang-item .icon-box { background: linear-gradient(135deg, #3b82f6, #1d4ed8); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
         .refresh-item .icon-box { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
@@ -155,7 +169,11 @@
 
         .video-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .video-js, .native-player-style { width: 100% !important; height: 100% !important; }
-        .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
+        
+        /* নতুন সাইজিং ক্লাসের CSS সমূহ */
+        .video-js.vjs-size-original video, .vjs-size-original { object-fit: contain !important; }
+        .video-js.vjs-size-fit video, .vjs-size-fit { object-fit: fill !important; }
+        .video-js.vjs-size-stretch video, .vjs-size-stretch, .video-js.forced-zoom video, .forced-zoom { object-fit: cover !important; }
 
         .player-nav-zone {
             position: absolute;
@@ -259,20 +277,23 @@
             width: 100%;
         }
 
-        .category-select-wrapper { position: relative; flex: 1; }
-        .category-dropdown {
+        /* ড্রপডাউনগুলোর জন্য কমন স্টাইল */
+        .category-select-wrapper, .size-select-wrapper { position: relative; flex: 1; }
+        .size-select-wrapper { flex: 0.8; } /* সাইজ ফিল্টারের উইডথ একটু ছোট */
+
+        .category-dropdown, .size-dropdown {
             width: 100%; padding: 8px 12px; background-color: var(--input-bg);
             border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color);
             font-size: 12px; font-weight: 500; outline: none; cursor: pointer; appearance: none;
             transition: all 0.3s ease;
         }
-        .category-dropdown:focus {
+        .category-dropdown:focus, .size-dropdown:focus {
             border-color: var(--brand-color);
             box-shadow: 0 0 10px var(--brand-glow);
         }
-        .category-select-wrapper::after {
+        .category-select-wrapper::after, .size-select-wrapper::after {
             content: "\f0d7"; font-family: "Font Awesome 6 Free"; font-weight: 900;
-            position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
             color: var(--brand-color); pointer-events: none;
         }
 
@@ -390,8 +411,28 @@
         .channel-row:hover .channel-name { color: var(--brand-color); }
         .channel-row.active-channel .channel-name { color: var(--brand-color); font-weight: 700; }
         
-        .channel-right-action { position: absolute; top: 6px; right: 6px; }
-        
+        .channel-right-action { position: absolute; top: 6px; right: 6px; display: flex; align-items: center; gap: 4px; }
+        .fav-star-btn {
+            background: rgba(0,0,0,0.4);
+            border: none;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 11px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 2;
+        }
+        .fav-star-btn.is-fav {
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.2);
+        }
+        .fav-star-btn:hover { transform: scale(1.15); }
+
         .channel-live-badge { 
             background: var(--brand-color); 
             color: white; 
@@ -407,7 +448,6 @@
 
         .no-result { text-align: center; color: var(--text-muted); padding: 40px; font-size: 14px; grid-column: span 2; }
         
-        /* প্রিমিয়াম শিমার স্কেলিটন লোডার ডিজাইন */
         #loadingLayout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; width: 100%; }
         .skeleton-item {
             background: var(--card-bg); border: 1px solid var(--border-color);
@@ -552,6 +592,15 @@
             <button class="close-drawer-btn" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="drawer-menu-items">
+            <div class="drawer-item fav-item" onclick="showFavoriteChannels()">
+                <div class="icon-box"><i class="fa-solid fa-star"></i></div>
+                <span id="langFavText">প্রিয় চ্যানেল</span>
+            </div>
+            <div class="drawer-item recent-item" onclick="showRecentChannels()">
+                <div class="icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <span id="langRecentText">সাম্প্রতিক প্লে</span>
+            </div>
+            
             <div class="drawer-item lang-item" onclick="toggleLanguage()">
                 <div class="icon-box"><i class="fa-solid fa-language"></i></div>
                 <span id="langToggleText">Language: English</span>
@@ -621,6 +670,16 @@
                             <option value="All">All Categories</option>
                         </select>
                     </div>
+
+                    <!-- নতুন সাইজ পরিবর্তন করার ড্রপডাউন -->
+                    <div class="size-select-wrapper">
+                        <select class="size-dropdown" id="videoSizeDropdown" onchange="changeVideoSize(this.value)">
+                            <option value="original">Original</option>
+                            <option value="fit" selected>Full Fit</option>
+                            <option value="stretch">Stretch</option>
+                        </select>
+                    </div>
+
                     <div class="search-container">
                         <input type="text" class="search-input" id="searchBox" placeholder="চ্যানেল সার্চ করুন..." oninput="searchChannel()">
                     </div>
@@ -629,7 +688,6 @@
 
             <div class="main-content">
                 <div id="loadingLayout">
-                    <!-- লোডিং টেক্সট অপশনটি সম্পূর্ণ রিমুভ করা হয়েছে -->
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
                     <div class="skeleton-item"><div class="skeleton-left"><div class="skeleton-logo"></div><div class="skeleton-text"></div></div><div class="skeleton-right"></div></div>
@@ -649,6 +707,8 @@
         let player; 
         let hlsBackupEngine = null;
         let isFirstInit = true; 
+        let currentVideoSize = 'fit'; // ডিফল্ট সাইজ 'Full Fit'
+        
         const githubUrl = 'https://raw.githubusercontent.com/ahmedstore75/Iptvbdlive/main/mixiptvchannel.m3u';
         
         const fetchUrls = [
@@ -669,26 +729,35 @@
 
         let currentPlayerEngineMode = 0; 
         
+        let favoriteChannels = JSON.parse(localStorage.getItem('bdTvFavorites')) || [];
+        let recentChannels = JSON.parse(localStorage.getItem('bdTvRecents')) || [];
+
         const languages = {
             bn: {
                 appTitle: "বাংলা টিভি", panelTitle: "নিয়ন্ত্রণ প্যানেল", toggleText: "Language: English",
+                favText: "প্রিয় চ্যানেল", recentText: "সাম্প্রতিক প্লে",
                 themeText: "থিম পরিবর্তন (Light/Dark)", refreshText: "প্লেলিস্ট রিফ্রেশ করুন",
                 telegramText: "টেলিগ্রাম চ্যানেল (লিংক)", facebookText: "ফেসবুক পেজ (সাপোর্ট)",
                 noChannel: "কোনো চ্যানেল সিলেক্ট করা নেই",
                 noticeBadge: "নোটিশ", 
                 noticeText: "আমাদের সার্ভারে স্বাগতম! বাফারিং সমস্যা এড়াতে আপনার <b>Internet কানেকশন</b> চেক করুন। ব্রাউজারে ফুল-স্ক্রিন ও বাফারিংহীন সেরা অভিজ্ঞতার জন্য অবশ্যই <b>\"ভিয়া ব্রাউজার\" (Via Browser)</b> ব্যবহার করুন। কোনো চ্যানেল না চললে প্লেলিস্ট রিফ্রেশ করুন।",
                 searchPlaceholder: "চ্যানেল সার্চ করুন...", noResult: "কোনো চ্যানেল খুঁজে পাওয়া যায়নি!",
-                allCat: "সব ক্যাটাগরি"
+                allCat: "সব ক্যাটাগরি",
+                favCat: "প্রিয় চ্যানেলসমূহ",
+                recentCat: "সাম্প্রতিক প্লে"
             },
             en: {
                 appTitle: "Bangla TV", panelTitle: "Control Panel", toggleText: "ভাষা: বাংলা",
+                favText: "Favorite Channels", recentText: "Recently Played",
                 themeText: "Change Theme (Light/Dark)", refreshText: "Refresh Playlist",
                 telegramText: "Telegram Channel (Link)", facebookText: "Facebook Page (Support)",
                 noChannel: "No channel selected",
                 noticeBadge: "Notice", 
                 noticeText: "Welcome to our server! Check your <b>Internet Connection</b> to avoid buffering. For the best full-screen & buffering-free experience in browser, please use <b>\"Via Browser\"</b>. Refresh the playlist if channels fail.",
                 searchPlaceholder: "Search channel...", noResult: "No channels found!",
-                allCat: "All Categories"
+                allCat: "All Categories",
+                favCat: "Favorite Channels",
+                recentCat: "Recently Played"
             }
         };
 
@@ -713,6 +782,24 @@
             toggleMenu();
         }
 
+        /* ভিডিও সাইজ পরিবর্তন করার ফাংশন */
+        function changeVideoSize(size) {
+            currentVideoSize = size;
+            const targetPlayer = document.getElementById('live-player');
+            if (targetPlayer) {
+                targetPlayer.classList.remove('vjs-size-original', 'vjs-size-fit', 'vjs-size-stretch', 'forced-zoom');
+                targetPlayer.classList.add('vjs-size-' + size);
+            }
+        }
+
+        function applyCurrentSizeClass() {
+            const targetPlayer = document.getElementById('live-player');
+            if (targetPlayer) {
+                targetPlayer.classList.remove('vjs-size-original', 'vjs-size-fit', 'vjs-size-stretch', 'forced-zoom');
+                targetPlayer.classList.add('vjs-size-' + currentVideoSize);
+            }
+        }
+
         function updateNoticeMarquee(text) {
             const holders = document.querySelectorAll('.marqueeHolderClass');
             holders.forEach(holder => {
@@ -724,6 +811,8 @@
             const lang = languages[currentLang];
             document.getElementById('langAppTitle').innerText = lang.appTitle;
             document.getElementById('langPanelTitle').innerText = lang.panelTitle;
+            document.getElementById('langFavText').innerText = lang.favText;
+            document.getElementById('langRecentText').innerText = lang.recentText;
             document.getElementById('langToggleText').innerText = lang.toggleText;
             document.getElementById('langThemeText').innerText = lang.themeText;
             document.getElementById('langRefreshText').innerText = lang.refreshText;
@@ -818,6 +907,7 @@
         function initVideoPlayerEngine() {
             try {
                 player = videojs('live-player');
+                applyCurrentSizeClass();
                 setupForcedDoubleTapZoom();
 
                 player.on('error', function() {
@@ -850,6 +940,7 @@
             resetContainers();
 
             player = videojs('live-player');
+            applyCurrentSizeClass();
             setupForcedDoubleTapZoom();
 
             player.on('error', function() {
@@ -875,6 +966,7 @@
                 <video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
             `;
             const videoElement = document.getElementById('live-player');
+            applyCurrentSizeClass();
 
             if (Hls.isSupported()) {
                 hlsBackupEngine = new Hls({ maxLoadingDelay: 4 });
@@ -909,6 +1001,7 @@
                 <video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
             `;
             const videoElement = document.getElementById('live-player');
+            applyCurrentSizeClass();
             
             videoElement.src = channelObj.url;
             setupForcedDoubleTapZoom();
@@ -928,6 +1021,41 @@
                 option.value = cat; option.innerText = cat;
                 dropdown.appendChild(option);
             });
+        }
+
+        function toggleFavorite(event, url) {
+            event.stopPropagation();
+            const index = favoriteChannels.indexOf(url);
+            if (index > -1) {
+                favoriteChannels.splice(index, 1);
+            } else {
+                favoriteChannels.push(url);
+            }
+            localStorage.setItem('bdTvFavorites', JSON.stringify(favoriteChannels));
+            renderChannels(displayedChannels);
+        }
+
+        function addToRecents(channelObj) {
+            recentChannels = recentChannels.filter(ch => ch.url !== channelObj.url);
+            recentChannels.unshift(channelObj);
+            if(recentChannels.length > 20) recentChannels.pop(); 
+            localStorage.setItem('bdTvRecents', JSON.stringify(recentChannels));
+        }
+
+        function showFavoriteChannels() {
+            toggleMenu();
+            document.getElementById('searchBox').value = '';
+            displayedChannels = allChannels.filter(ch => favoriteChannels.includes(ch.url));
+            activeChannelIndex = -1;
+            renderChannels(displayedChannels);
+        }
+
+        function showRecentChannels() {
+            toggleMenu();
+            document.getElementById('searchBox').value = '';
+            displayedChannels = [...recentChannels];
+            activeChannelIndex = -1;
+            renderChannels(displayedChannels);
         }
 
         function renderChannels(channels) {
@@ -957,6 +1085,8 @@
 
                 let logoHtml = ch.logo ? `<img class="channel-logo" src="${ch.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : '';
                 const fallbackHtml = `<div class="channel-fallback-logo" style="display: ${ch.logo ? 'none' : 'flex'}"><i class="fa-solid fa-tv"></i></div>`;
+                
+                const isFav = favoriteChannels.includes(ch.url);
 
                 row.innerHTML = `
                     <div class="channel-left">
@@ -964,6 +1094,9 @@
                         <div class="channel-name">${ch.name}</div>
                     </div>
                     <div class="channel-right-action">
+                        <button class="fav-star-btn ${isFav ? 'is-fav' : ''}" onclick="toggleFavorite(event, '${ch.url}')">
+                            <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-star"></i>
+                        </button>
                         <span class="channel-live-badge">LIVE</span>
                     </div>
                 `;
@@ -977,6 +1110,8 @@
             activeChannelIndex = index;
             const ch = displayedChannels[index];
 
+            addToRecents(ch);
+
             document.querySelectorAll('.channel-row').forEach(row => row.classList.remove('active-channel'));
             const activeRow = document.querySelector(`.channel-row[data-index="${index}"]`);
             if (activeRow) {
@@ -989,6 +1124,7 @@
             resetContainers();
 
             player = videojs('live-player');
+            applyCurrentSizeClass();
             setupForcedDoubleTapZoom();
 
             player.on('error', function() {
