@@ -435,7 +435,6 @@
         .channel-row:hover .channel-name { color: var(--brand-color); }
         .channel-row.active-channel .channel-name { color: var(--brand-color); font-weight: 700; }
         
-        /* 🚀 পরিবর্তন: স্টার বাটনটিকে একদম বাম সাইডে ও ওপরের কোণায় নিয়ে আসা হয়েছে */
         .fav-star-btn {
             position: absolute;
             top: 6px;
@@ -460,7 +459,6 @@
         }
         .fav-star-btn:hover { transform: scale(1.15); }
 
-        /* LIVE ব্যাজকে ডান সাইডের ওপরের কোণায় রাখা হয়েছে */
         .channel-live-badge { 
             position: absolute;
             top: 6px;
@@ -509,9 +507,6 @@
             100% { background-position: -200% 0; }
         }
 
-        /* -------------------------------------------------------------
-           ল্যান্ডস্কেপ মোড (মোবাইল এবং বড় স্ক্রিন উভয়ের জন্য ডেস্কটপ ভিউ)
-        ------------------------------------------------------------- */
         @media (min-width: 951px), (max-width: 950px) and (orientation: landscape) {
             body { height: 100vh; overflow: hidden; }
             header { padding: 8px 16px; }
@@ -661,11 +656,11 @@
                 <div class="icon-box"><i class="fa-solid fa-arrows-rotate"></i></div>
                 <span id="langRefreshText">প্লেলিস্ট রিফ্রেশ করুন</span>
             </div>
-            <a href="https://t.me/banglatvlivefree" target="_blank" class="drawer-item telegram-item">
+            <a href="https://t.me/banglatvlivefree" target="_blank" rel="noopener" class="drawer-item telegram-item">
                 <div class="icon-box"><i class="fa-brands fa-telegram"></i></div>
                 <span id="langTelegramText">টেলিগ্রাম (সাপোর্ট)</span>
             </a>
-            <a href="https://www.facebook.com/ahmed.bd.fb" target="_blank" class="drawer-item facebook-item">
+            <a href="https://www.facebook.com/ahmed.bd.fb" target="_blank" rel="noopener" class="drawer-item facebook-item">
                 <div class="icon-box"><i class="fa-brands fa-facebook-messenger"></i></div>
                 <span id="langFacebookText">ফেসবুক (সাপোর্ট)</span>
             </a>
@@ -743,7 +738,7 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
     <script>
-        let player; 
+        let player = null; 
         let hlsBackupEngine = null;
         let isFirstInit = true; 
         let currentVideoSize = 'fit'; 
@@ -763,7 +758,7 @@
         
         let currentSelectedCategory = 'All'; 
         let lastUserCategory = 'All'; 
-        let searchTimeout;
+        let searchTimeout = null;
         let currentLang = localStorage.getItem('bdTvLang') || 'bn';
 
         let currentPlayerEngineMode = 0; 
@@ -823,11 +818,7 @@
 
         function changeVideoSize(size) {
             currentVideoSize = size;
-            const targetPlayer = document.getElementById('live-player');
-            if (targetPlayer) {
-                targetPlayer.classList.remove('vjs-size-original', 'vjs-size-fit', 'vjs-size-stretch', 'forced-zoom');
-                targetPlayer.classList.add('vjs-size-' + size);
-            }
+            applyCurrentSizeClass();
         }
 
         function applyCurrentSizeClass() {
@@ -974,7 +965,6 @@
         }
 
         function switchToVideoJsPlayer() {
-            if (hlsBackupEngine) { hlsBackupEngine.destroy(); hlsBackupEngine = null; }
             const channelObj = displayedChannels[activeChannelIndex];
             resetContainers();
 
@@ -993,17 +983,9 @@
         }
 
         function switchToHlsBackup() {
-            if (player) { try { player.dispose(); }catch(e){} player = null; }
-            if (hlsBackupEngine) { hlsBackupEngine.destroy(); hlsBackupEngine = null; }
+            resetContainers();
             
             const channelObj = displayedChannels[activeChannelIndex];
-            const container = document.getElementById('videoContainer');
-            
-            container.innerHTML = `
-                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
-                <video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
-            `;
             const videoElement = document.getElementById('live-player');
             applyCurrentSizeClass();
 
@@ -1028,17 +1010,9 @@
         }
 
         function switchToNativePlayer() {
-            if (player) { try { player.dispose(); }catch(e){} player = null; }
-            if (hlsBackupEngine) { hlsBackupEngine.destroy(); hlsBackupEngine = null; }
+            resetContainers();
 
             const channelObj = displayedChannels[activeChannelIndex];
-            const container = document.getElementById('videoContainer');
-            
-            container.innerHTML = `
-                <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
-                <video id="live-player" class="native-player-style" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
-            `;
             const videoElement = document.getElementById('live-player');
             applyCurrentSizeClass();
             
@@ -1097,7 +1071,6 @@
             renderChannels(displayedChannels);
         }
 
-        /* 🚀 চ্যানেল রেন্ডারিং অপটিমাইজেশন (স্টার বাটন সরাসরি লেফটে পজিশন করা) */
         function renderChannels(channels) {
             const listContainer = document.getElementById('channelList');
             listContainer.innerHTML = '';
@@ -1115,7 +1088,7 @@
                 
                 if (index === activeChannelIndex) row.classList.add('active-channel');
                 
-                row.onclick = function() { playChannelAt(index); };
+                row.addEventListener('click', function() { playChannelAt(index); });
                 
                 row.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter') {
@@ -1123,7 +1096,7 @@
                     }
                 });
 
-                let logoHtml = ch.logo ? `<img class="channel-logo" src="${ch.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : '';
+                let logoHtml = ch.logo ? `<img class="channel-logo" src="${ch.logo}" alt="${ch.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : '';
                 const fallbackHtml = `<div class="channel-fallback-logo" style="display: ${ch.logo ? 'none' : 'flex'}"><i class="fa-solid fa-tv"></i></div>`;
                 
                 const isFav = favoriteChannels.includes(ch.url);
@@ -1235,10 +1208,14 @@
                 hlsBackupEngine = null;
             }
             const container = document.getElementById('videoContainer');
+            
+            const isNative = currentPlayerEngineMode !== 0;
+            const videoClass = isNative ? 'native-player-style' : 'video-js vjs-default-skin vjs-big-play-centered';
+            
             container.innerHTML = `
                 <div class="player-nav-zone player-nav-left" onclick="navigateChannel('prev')"><i class="fa-solid fa-chevron-left"></i></div>
                 <div class="player-nav-zone player-nav-right" onclick="navigateChannel('next')"><i class="fa-solid fa-chevron-right"></i></div>
-                <video id="live-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline></video>
+                <video id="live-player" class="${videoClass}" controls ${isNative ? 'autoplay' : ''} preload="auto" playsinline></video>
             `;
         }
 
