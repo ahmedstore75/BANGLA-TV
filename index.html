@@ -352,7 +352,6 @@
             width: 100%;
         }
 
-        /* 🚀 পারফর্মেন্স ফিক্স: contain দিয়ে রেন্ডারিং অপটিমাইজেশন */
         .main-content { 
             flex: 1; 
             padding: 4px 12px 20px 12px; 
@@ -372,7 +371,6 @@
             max-width: 100%;
         }
 
-        /* 🚀 পারফর্মেন্স ফিক্স: অতিরিক্ত ভারী ব্লার বাদ দিয়ে স্মুথ ট্রানজিশন ও হার্ডওয়্যার অ্যাক্সিলারেশন */
         .channel-row {
             background: var(--card-bg); 
             border: 1px solid var(--border-color);
@@ -437,8 +435,11 @@
         .channel-row:hover .channel-name { color: var(--brand-color); }
         .channel-row.active-channel .channel-name { color: var(--brand-color); font-weight: 700; }
         
-        .channel-right-action { position: absolute; top: 6px; right: 6px; display: flex; align-items: center; gap: 4px; }
+        /* 🚀 পরিবর্তন: স্টার বাটনটিকে একদম বাম সাইডে ও ওপরের কোণায় নিয়ে আসা হয়েছে */
         .fav-star-btn {
+            position: absolute;
+            top: 6px;
+            left: 6px;
             background: rgba(0,0,0,0.4);
             border: none;
             color: rgba(255, 255, 255, 0.4);
@@ -459,7 +460,11 @@
         }
         .fav-star-btn:hover { transform: scale(1.15); }
 
+        /* LIVE ব্যাজকে ডান সাইডের ওপরের কোণায় রাখা হয়েছে */
         .channel-live-badge { 
+            position: absolute;
+            top: 6px;
+            right: 6px;
             background: var(--brand-color); 
             color: white; 
             font-size: 8px; 
@@ -469,6 +474,7 @@
             display: none; 
             letter-spacing: 0.5px; 
             box-shadow: 0 0 6px var(--brand-glow); 
+            z-index: 2;
         }
         .active-channel .channel-live-badge { display: inline-block !important; }
 
@@ -631,7 +637,6 @@
                 <span id="langRecentText">সাম্প্রতিক প্লে</span>
             </div>
             
-            <!-- স্লিম ড্রপডাউন সহ ডানপাশে বসানো ভিডিও সাইজ অপশন -->
             <div class="drawer-item size-item">
                 <div class="icon-box"><i class="fa-solid fa-expand"></i></div>
                 <div class="drawer-item-row">
@@ -816,7 +821,6 @@
             toggleMenu();
         }
 
-        /* ভিডিও সাইজ পরিবর্তন করার ফাংশন */
         function changeVideoSize(size) {
             currentVideoSize = size;
             const targetPlayer = document.getElementById('live-player');
@@ -1093,6 +1097,7 @@
             renderChannels(displayedChannels);
         }
 
+        /* 🚀 চ্যানেল রেন্ডারিং অপটিমাইজেশন (স্টার বাটন সরাসরি লেফটে পজিশন করা) */
         function renderChannels(channels) {
             const listContainer = document.getElementById('channelList');
             listContainer.innerHTML = '';
@@ -1124,15 +1129,13 @@
                 const isFav = favoriteChannels.includes(ch.url);
 
                 row.innerHTML = `
+                    <button class="fav-star-btn ${isFav ? 'is-fav' : ''}" onclick="toggleFavorite(event, '${ch.url}')">
+                        <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-star"></i>
+                    </button>
+                    <span class="channel-live-badge">LIVE</span>
                     <div class="channel-left">
                         <div class="logo-wrapper">${logoHtml}${fallbackHtml}</div>
                         <div class="channel-name">${ch.name}</div>
-                    </div>
-                    <div class="channel-right-action">
-                        <button class="fav-star-btn ${isFav ? 'is-fav' : ''}" onclick="toggleFavorite(event, '${ch.url}')">
-                            <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-star"></i>
-                        </button>
-                        <span class="channel-live-badge">LIVE</span>
                     </div>
                 `;
                 listContainer.appendChild(row);
