@@ -1,62 +1,59 @@
 import requests
 import json
-import re
 
-def fetch_and_generate_playlists():
-    # Tapmad এর মূল API Endpoints
-    api_url = "https://backend-api.tapmad.com/api/getMobileAppSettings/V1/en/web"
+def generate_playlist():
+    # ১. আপনার প্রদানকৃত নেটওয়ার্ক লগ থেকে সংগৃহীত নির্দিষ্ট API লিঙ্কসমূহ
+    target_apis = [
+        {"name": "Tapmad Web Settings", "url": "https://backend-api.tapmad.com/api/getMobileAppSettings/V1/en/web", "logo": "https://d34080pnh6e62j.cloudfront.net/images/channels/ChannelFeaturedAppthumb/1788571269540x302.jpg"},
+        {"name": "User Preference Header", "url": "https://backend-api.tapmad.com/api/getUserPrefernceHeader", "logo": "https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1786009775_1600x2130.jpg"},
+        {"name": "Legal Contact Data", "url": "https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/contact.json?slug=contact", "logo": "https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1786524277_1600x2130.jpg"},
+        {"name": "Legal FAQs Data", "url": "https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/faqs.json?slug=faqs", "logo": "https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1787662644_1600x2130.jpg"},
+        {"name": "Legal About Data", "url": "https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/about.json?slug=about", "logo": "https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandCategorythumb/1788551903_324x432-vod-copy.jpg"},
+        {"name": "Google Translate Log API", "url": "https://translate.googleapis.com/element/log?format=json&hasfast=true&authuser=0", "logo": "https://www.gstatic.com/images/branding/product/2x/translate_24dp.png"},
+        {"name": "Branch IO Analytics Pageview", "url": "https://api2.branch.io/v1/pageview", "logo": "https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512398_324x432-vod.jpg"},
+        {"name": "Branch IO Analytics Open", "url": "https://api2.branch.io/v1/open", "logo": "https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512129_324x432-vod.jpg"}
+    ]
+
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Accept": "application/json"
     }
 
-    try:
-        response = requests.get(api_url, headers=headers, timeout=15)
-        response.raise_for_status()
-        res_data = response.json()
-    except Exception as e:
-        print(f"❌ API Request Error: {e}")
-        res_data = {}
-
-    # ১. সম্পূর্ণ API রেজাল্ট JSON ফাইলে সেভ
-    with open("playlist.json", "w", encoding="utf-8") as jf:
-        json.dump(res_data, jf, indent=4, ensure_ascii=False)
-    print("✅ playlist.json আপডেট হয়েছে")
-
-    # ২. API এর ভেতর থাকা সমস্ত URL (ছবি, ব্যানার, ক্যাটাগরি, স্ট্রিম) এক্সট্র্যাক্ট করা
+    fetched_json_data = {}
     m3u_lines = ["#EXTM3U\n"]
-    extracted_urls = set()
 
-    # JSON টেক্সট থেকে সব HTTP/HTTPS লিঙ্ক খুঁজে বের করা
-    json_str = json.dumps(res_data)
-    urls = re.findall(r'https?://[^\s"\'<>]+', json_str)
+    print("🔄 এপিআই থেকে ডেটা লোড করা হচ্ছে...")
 
-    count = 1
-    for url in urls:
-        # ব্যাকস্ল্যাশ ক্লিন করা
-        clean_url = url.replace("\\", "")
-        
-        if clean_url not in extracted_urls:
-            extracted_urls.add(clean_url)
-            
-            # ফাইলের ধরন বা নাম নির্ধারণ
-            if ".jpg" in clean_url or ".png" in clean_url or ".webp" in clean_url:
-                title = f"Media/Banner Image {count}"
-                group = "Images"
-            elif ".m3u8" in clean_url or ".mp4" in clean_url:
-                title = f"Live Stream {count}"
-                group = "Streams"
+    # ২. প্রতিটা API-তে হিট করে লাইভ রেসপন্স সংগ্রহ করা
+    for item in target_apis:
+        api_name = item["name"]
+        api_url = item["url"]
+        logo_url = item["logo"]
+
+        try:
+            res = requests.get(api_url, headers=headers, timeout=8)
+            if res.status_code == 200:
+                try:
+                    fetched_json_data[api_name] = res.json()
+                except Exception:
+                    fetched_json_data[api_name] = {"status_code": 200, "response_text": "Non-JSON or binary data response"}
             else:
-                title = f"API Resource {count}"
-                group = "API"
+                fetched_json_data[api_name] = {"status_code": res.status_code}
+        except Exception as e:
+            fetched_json_data[api_name] = {"error": str(e)}
 
-            m3u_lines.append(f'#EXTINF:-1 group-title="{group}",{title}\n{clean_url}\n')
-            count += 1
+        # M3U৮ ফরম্যাটে লোগো সহ লাইন তৈরি
+        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{logo_url}" group-title="Tapmad APIs",{api_name}\n{api_url}\n')
 
-    # ৩. M3U ফাইল সেভ
+    # ৩. playlist.json ফাইল সেভ
+    with open("playlist.json", "w", encoding="utf-8") as jf:
+        json.dump(fetched_json_data, jf, indent=4, ensure_ascii=False)
+    print("✅ playlist.json সফলভাবে আপডেট হয়েছে")
+
+    # ৪. playlist.m3u ফাইল সেভ
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print(f"✅ playlist.m3u আপডেট হয়েছে (মোট লিঙ্ক: {len(extracted_urls)})")
+    print("✅ playlist.m3u সফলভাবে লোগো সহ সেভ হয়েছে")
 
 if __name__ == "__main__":
-    fetch_and_generate_playlists()
+    generate_playlist()
