@@ -3,7 +3,7 @@ import json
 import re
 
 def clean_channel_name(name):
-    # ব্র্যাকেট (), [], {} এবং ভেতরের লেখা মুছে ফেলা
+    # ফার্স্ট ব্র্যাকেট (), থার্ড ব্র্যাকেট [] এবং তাদের ভেতরের সব লেখা মুছে ফেলা
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
 
@@ -11,7 +11,7 @@ def get_channel_priority(channel):
     name = channel['name'].lower()
     category = channel['category'].lower()
 
-    # ১. বাংলাদেশী চ্যানেল (কঠোরভাবে সবার উপরে থাকবে)
+    # ১. বাংলাদেশী চ্যানেল (১ নম্বর স্থানে থাকবে)
     bd_keywords = [
         'btv', 'somoy', 'channel i', 'ekattor', 'jamuna', 'rtv', 'atn', 'ntv', 
         'independent', 'bangla vision', 'dbc', 'deepto', 'asian tv', 'desh tv', 
@@ -21,8 +21,8 @@ def get_channel_priority(channel):
     if any(k in name for k in bd_keywords) or 'bangladesh' in category:
         return 1
 
-    # ২. স্পোর্টস চ্যানেল
-    sports_keywords = ['sport', 'sports', 't sports', 'tsports', 'star sports', 'sony ten', 'willow', 'ptv sports', 'astro', 'cricket', 'football', 'eurosport', 'ten sports']
+    # ২. স্পোর্টস চ্যানেল (বাংলাদেশ, ইন্ডিয়া বা পাকিস্তানের অধীনস্থ)
+    sports_keywords = ['sport', 'sports', 't sports', 'tsports', 'star sports', 'sony ten', 'willow', 'ptv sports', 'ten sports', 'geo super']
     if any(k in name for k in sports_keywords) or 'sports' in category:
         return 2
 
@@ -32,28 +32,35 @@ def get_channel_priority(channel):
         return 3
 
     # ৪. ইন্ডিয়ান টিভি চ্যানেল
-    indian_keywords = ['zee', 'star', 'sony', 'colors', 'aaj tak', 'ndtv', 'india', 'sab', 'bindass', 'pogo', 'hungama', 'discovery india']
+    indian_keywords = ['zee', 'star', 'sony', 'colors', 'aaj tak', 'ndtv', 'india', 'sab', 'bindass', 'pogo', 'hungama', 'discovery india', 'sun tv']
     if any(k in name for k in indian_keywords) or 'india' in category:
         return 4
 
-    # ৫. অন্যান্য আন্তর্জাতিক চ্যানেল
-    return 5
+    # ৫. পাকিস্তানি চ্যানেল
+    pak_keywords = ['geo', 'ary', 'hum', 'ptv', 'express', 'dunya', 'samaa', 'bol', 'a-plus', 'pakistan']
+    if any(k in name for k in pak_keywords) or 'pakistan' in category:
+        return 5
 
-def fetch_multi_source_channels():
-    # চ্যানেল সংখ্যা বাড়াতে একাধিক ফ্রি এপিআই / প্লেলিস্ট সোর্স
+    # ফিল্টারের বাইরে থাকা যেকোনো চ্যানেল ব্লক হবে
+    return 99
+
+def fetch_specific_country_channels():
+    # শুধুমাত্র বাংলাদেশ, ইন্ডিয়া এবং পাকিস্তানের অফিশিয়াল প্লেলিস্ট সোর্স
     sources = [
-        "https://iptv-org.github.io/iptv/languages/ben.m3u", # বাংলা চ্যানেল সোর্স
-        "https://iptv-org.github.io/iptv/index.m3u"          # গ্লোবাল ফ্রি চ্যানেল সোর্স (চ্যানেল সংখ্যা বাড়াবে)
+        "https://iptv-org.github.io/iptv/languages/ben.m3u", # বাংলা চ্যানেল
+        "https://iptv-org.github.io/iptv/countries/bd.m3u",  # বাংলাদেশ
+        "https://iptv-org.github.io/iptv/countries/in.m3u",  # ইন্ডিয়া
+        "https://iptv-org.github.io/iptv/countries/pk.m3u"   # পাকিস্তান
     ]
     
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 একাধিক এপিআই সোর্স থেকে ডাটা ফেচ করা হচ্ছে...")
+    print("🔄 শুধুমাত্র BD, IN এবং PK চ্যানেল লোড করা হচ্ছে...")
 
     channels = []
-    seen_urls = set()  # ইউনিক স্ট্রিমিং লিঙ্ক রাখার জন্য
+    seen_urls = set()  # ডুপ্লিকেট ইউআরএল ফিল্টার করার জন্য
 
     for url in sources:
         try:
@@ -75,7 +82,7 @@ def fetch_multi_source_channels():
                     stream_url = lines[i + 1].strip()
                     i += 1
 
-                # ডুপ্লিকেট লিঙ্ক ফিল্টারিং
+                # এক স্ট্রিম লিঙ্ক দুইবার আসবে না
                 if stream_url and stream_url not in seen_urls:
                     raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
                     clean_name = clean_channel_name(raw_name)
@@ -86,7 +93,6 @@ def fetch_multi_source_channels():
                     group_match = re.search(r'group-title="([^"]*)"', info_line)
                     category = group_match.group(1) if group_match else "General"
 
-                    # শুধু বাংলা, স্পোর্টস ও প্রিমিয়াম ক্যাটাগরির সাথে ম্যাচ হলে নিবে (যাতে অপ্রয়োজনীয় বিদেশী চ্যানেল বেশি না জমে)
                     ch_obj = {
                         "name": clean_name,
                         "logo": logo,
@@ -96,16 +102,16 @@ def fetch_multi_source_channels():
                     
                     priority = get_channel_priority(ch_obj)
                     
-                    # প্রথম ৫ প্রকার ক্যাটাগরির যেকোনো একটিতে পড়লে তা প্লেলিস্টে যোগ হবে
-                    if priority <= 4 or "ben" in url:
+                    # শুধুমাত্র BD, IN, PK এবং স্পোর্টস চ্যানেল রাখা হবে (অন্যান্য দেশ বাদ)
+                    if priority != 99:
                         channels.append(ch_obj)
                         seen_urls.add(stream_url)
             i += 1
 
-    # সিরিয়াল অনুযায়ী সুনির্দিষ্ট সর্টিং (BD -> Sports -> Kolkata -> India -> Others)
+    # সিরিয়াল অনুযায়ী সাজানো (BD -> Sports -> Kolkata -> India -> Pakistan)
     channels.sort(key=get_channel_priority)
 
-    # M3U ফরম্যাটিং
+    # M3U জেনারেট করা
     m3u_lines = ["#EXTM3U\n"]
     for ch in channels:
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{ch["name"]}\n{ch["stream_url"]}\n')
@@ -124,7 +130,7 @@ def fetch_multi_source_channels():
     # ২. playlist.m3u সেভ করা
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print("✅ playlist.m3u আপডেট করা হয়েছে")
+    print("✅ playlist.m3u সফলভাবে সেভ করা হয়েছে")
 
 if __name__ == "__main__":
-    fetch_multi_source_channels()
+    fetch_specific_country_channels()
