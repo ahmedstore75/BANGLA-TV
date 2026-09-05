@@ -1,11 +1,7 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/23/BTV_World_Logo.png" group-title="Bangla TV",BTV World Live
-https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/btvworld-org.stream/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/bn/0/03/Channel_i.png" group-title="Bangla TV",Channel i Live
-https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/channeli-org.stream/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e0/Somoy_TV_Logo.png" group-title="News",Somoy News Live
-https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/somoytv-org.stream/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://mux.com/assets/favicon.png" group-title="Test Streams",Test HLS Stream 1
-https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c5/Big_buck_bunny_poster_big.jpg" group-title="Movies",Big Buck Bunny HD Stream
-https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1787662644_1600x2130.jpg" group-title="API Endpoints",Tapmad FAQs Data
+https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/faqs.json?slug=faqs
+#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512129_324x432-vod.jpg" group-title="API Endpoints",Branch IO Analytics Open
+https://api2.branch.io/v1/open
+#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512398_324x432-vod.jpg" group-title="API Endpoints",Branch IO Analytics Pageview
+https://api2.branch.io/v1/pageview
