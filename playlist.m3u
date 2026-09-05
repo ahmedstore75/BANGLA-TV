@@ -1,7 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1787662644_1600x2130.jpg" group-title="API Endpoints",Tapmad FAQs Data
-https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/faqs.json?slug=faqs
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512129_324x432-vod.jpg" group-title="API Endpoints",Branch IO Analytics Open
-https://api2.branch.io/v1/open
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512398_324x432-vod.jpg" group-title="API Endpoints",Branch IO Analytics Pageview
-https://api2.branch.io/v1/pageview
+#EXTINF:-1 tvg-logo="https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x95285" group-title="JagoBD Live",Jagobd.com
+https://www.jagobd.com

@@ -1,16 +1,11 @@
 {
-    "Tapmad FAQs Data": {
-        "pageProps": {
-            "slug": "faqs"
-        },
-        "__N_SSG": true
-    },
-    "Branch IO Analytics Open": {
-        "status_code": 400,
-        "msg": "Response non-200"
-    },
-    "Branch IO Analytics Pageview": {
-        "status_code": 400,
-        "msg": "Response non-200"
-    }
+    "source": "https://www.jagobd.com/",
+    "total_channels": 1,
+    "channels": [
+        {
+            "name": "Jagobd.com",
+            "logo": "https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x95285",
+            "page_url": "https://www.jagobd.com"
+        }
+    ]
 }
