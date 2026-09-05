@@ -1,16 +1,22 @@
 {
     "Tapmad FAQs Data": {
-        "pageProps": {
-            "slug": "faqs"
-        },
-        "__N_SSG": true
+        "status": "success",
+        "status_code": 200,
+        "data": {
+            "pageProps": {
+                "slug": "faqs"
+            },
+            "__N_SSG": true
+        }
     },
     "Branch IO Analytics Open": {
+        "status": "error",
         "status_code": 400,
-        "msg": "Failed to load"
+        "msg": "Server responded with non-200 code"
     },
     "Branch IO Analytics Pageview": {
+        "status": "error",
         "status_code": 400,
-        "msg": "Failed to load"
+        "msg": "Server responded with non-200 code"
     }
 }
