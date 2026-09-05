@@ -1,22 +1,36 @@
 {
-    "Tapmad FAQs Data": {
-        "status": "success",
-        "status_code": 200,
-        "data": {
-            "pageProps": {
-                "slug": "faqs"
-            },
-            "__N_SSG": true
+    "status": "success",
+    "total_channels": 5,
+    "data": [
+        {
+            "name": "BTV World Live",
+            "url": "https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/btvworld-org.stream/playlist.m3u8",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/23/BTV_World_Logo.png",
+            "category": "Bangla TV"
+        },
+        {
+            "name": "Channel i Live",
+            "url": "https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/channeli-org.stream/playlist.m3u8",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/0/03/Channel_i.png",
+            "category": "Bangla TV"
+        },
+        {
+            "name": "Somoy News Live",
+            "url": "https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/somoytv-org.stream/playlist.m3u8",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Somoy_TV_Logo.png",
+            "category": "News"
+        },
+        {
+            "name": "Test HLS Stream 1",
+            "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+            "logo": "https://mux.com/assets/favicon.png",
+            "category": "Test Streams"
+        },
+        {
+            "name": "Big Buck Bunny HD Stream",
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Big_buck_bunny_poster_big.jpg",
+            "category": "Movies"
         }
-    },
-    "Branch IO Analytics Open": {
-        "status": "error",
-        "status_code": 400,
-        "msg": "Server responded with non-200 code"
-    },
-    "Branch IO Analytics Pageview": {
-        "status": "error",
-        "status_code": 400,
-        "msg": "Server responded with non-200 code"
-    }
+    ]
 }
