@@ -1,4 +1,4 @@
-name: Auto Update JagoBD API Playlist
+name: Auto Fetch IPTV API
 
 on:
   schedule:
@@ -23,12 +23,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Fetch Data and Save
+      - name: Run Script to Fetch Data
         run: python main.py
 
-      - name: Commit and Push
+      - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add playlist.json playlist.m3u
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update JagoBD API data" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update channels from API" && git push)
