@@ -1,62 +1,73 @@
 import requests
 import json
 
-def generate_live_playlist():
-    # সরাসরি ভিডিও চলে এমন টেস্ট ও লাইভ স্ট্রিম লিংক (লোগো সহ)
-    channels_data = [
+def fetch_and_save():
+    # আপনার দেওয়া ৩টি নির্দিষ্ট API লিঙ্ক
+    api_list = [
         {
-            "name": "BTV World Live",
-            "url": "https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/btvworld-org.stream/playlist.m3u8",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/23/BTV_World_Logo.png",
-            "category": "Bangla TV"
+            "name": "Tapmad FAQs Data",
+            "url": "https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/faqs.json?slug=faqs",
+            "logo": "https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1787662644_1600x2130.jpg"
         },
         {
-            "name": "Channel i Live",
-            "url": "https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/channeli-org.stream/playlist.m3u8",
-            "logo": "https://upload.wikimedia.org/wikipedia/bn/0/03/Channel_i.png",
-            "category": "Bangla TV"
+            "name": "Branch IO Analytics Open",
+            "url": "https://api2.branch.io/v1/open",
+            "logo": "https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512129_324x432-vod.jpg"
         },
         {
-            "name": "Somoy News Live",
-            "url": "https://bd-no-relay.jagobd.com/c3VydmVyX3RpbWU9OS8yLzIwMjQgODo1OToyOSBBTSZpZD0zODcmY2hlY2tzdW09ZmI4NGU1N2Q4MDc2ZmM1NDkyZWVkYWZmZGM1NDljNGI=/somoytv-org.stream/playlist.m3u8",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Somoy_TV_Logo.png",
-            "category": "News"
-        },
-        {
-            "name": "Test HLS Stream 1",
-            "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-            "logo": "https://mux.com/assets/favicon.png",
-            "category": "Test Streams"
-        },
-        {
-            "name": "Big Buck Bunny HD Stream",
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Big_buck_bunny_poster_big.jpg",
-            "category": "Movies"
+            "name": "Branch IO Analytics Pageview",
+            "url": "https://api2.branch.io/v1/pageview",
+            "logo": "https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512398_324x432-vod.jpg"
         }
     ]
 
-    print("🔄 ভিডিও স্ট্রিম ও লোগো ডাটা প্রসেস করা হচ্ছে...")
-
-    # ১. সম্পূর্ণ চ্যানেল ডাটা JSON ফাইল হিসেবে তৈরি
-    json_output = {
-        "status": "success",
-        "total_channels": len(channels_data),
-        "data": channels_data
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json",
+        "Content-Type": "application/json"
     }
 
-    with open("playlist.json", "w", encoding="utf-8") as jf:
-        json.dump(json_output, jf, indent=4, ensure_ascii=False)
-    print("✅ playlist.json আপডেট করা হয়েছে")
-
-    # ২. আসল M3U৮ প্লেলিস্ট ফাইল তৈরি
+    all_responses = {}
     m3u_lines = ["#EXTM3U\n"]
-    for ch in channels_data:
-        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{ch["name"]}\n{ch["url"]}\n')
 
+    print("🔄 এপিআই লিঙ্কগুলো থেকে ডাটা কালেক্ট করা হচ্ছে...")
+
+    for item in api_list:
+        name = item["name"]
+        url = item["url"]
+        logo = item["logo"]
+
+        try:
+            # লিঙ্ক থেকে লাইভ ডাটা ফেচ করা
+            if "branch.io" in url:
+                res = requests.post(url, json={}, headers=headers, timeout=10)
+            else:
+                res = requests.get(url, headers=headers, timeout=10)
+
+            # এপিআই ডাটা সেভ করা
+            if res.status_code == 200:
+                try:
+                    all_responses[name] = res.json()
+                except Exception:
+                    all_responses[name] = {"raw_response": res.text}
+            else:
+                all_responses[name] = {"status_code": res.status_code, "msg": "Response non-200"}
+
+        except Exception as e:
+            all_responses[name] = {"error": str(e)}
+
+        # M3U প্লেলিস্ট লাইনে যুক্ত করা
+        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{logo}" group-title="API Endpoints",{name}\n{url}\n')
+
+    # ১. playlist.json ফাইলে আপনার দেওয়া ৩টি এপিআই-এর সম্পূর্ণ ডাটা সেভ
+    with open("playlist.json", "w", encoding="utf-8") as jf:
+        json.dump(all_responses, jf, indent=4, ensure_ascii=False)
+    print("✅ playlist.json আপডেট হয়েছে")
+
+    # ২. playlist.m3u ফাইলে এপিআই লিঙ্কগুলো সেভ
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print("✅ playlist.m3u আপডেট করা হয়েছে")
+    print("✅ playlist.m3u আপডেট হয়েছে")
 
 if __name__ == "__main__":
-    generate_live_playlist()
+    fetch_and_save()
