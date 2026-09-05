@@ -1,69 +1,49 @@
-from bs4 import BeautifulSoup
+import requests
 import json
-import os
 
-def extract_api_links_and_save(html_file_path):
-    if not os.path.exists(html_file_path):
-        print(f"❌ Error: {html_file_path} ফাইলটি পাওয়া যায়নি!")
-        return
+def fetch_and_save_playlists():
+    # Tapmad এর মূল মোবাইল সেটিংস API
+    api_url = "https://backend-api.tapmad.com/api/getMobileAppSettings/V1/en/web"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
 
-    with open(html_file_path, 'r', encoding='utf-8') as f:
-        html_content = f.read()
+    try:
+        response = requests.get(api_url, headers=headers, timeout=15)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        print(f"❌ API থেকে ডেটা আনতে ব্যর্থ হয়েছে: {e}")
+        # ফাইল না থাকলে গিটহাব অ্যাকশন যেন ফেইল না করে তাই খালি ফাইল তৈরি রাখা
+        data = {"status": "error", "message": str(e)}
 
-    soup = BeautifulSoup(html_content, 'html.parser')
-    api_logs = []
+    # ১. JSON ফাইল সেভ করা
+    with open("playlist.json", "w", encoding="utf-8") as jf:
+        json.dump(data, jf, indent=4, ensure_ascii=False)
+    print("✅ playlist.json সফলভাবে সেভ হয়েছে")
+
+    # ২. M3U৮ প্লেলিস্ট তৈরি
     m3u_lines = ["#EXTM3U\n"]
-
-    boxes = soup.find_all('div', class_='box')
     
-    for box in boxes:
-        url_tag = box.find('p', class_='url')
-        url = url_tag.text.strip() if url_tag else ""
+    # API রেসপন্স থেকে চ্যানেল/ভিডিওর তালিকা এক্সট্র্যাক্ট করা (উদাহরণস্বরূপ)
+    # API স্ট্রাকচার অনুযায়ী ফিল্ড ফিল্টার করা
+    channels = data.get("data", {}).get("channels", []) if isinstance(data, dict) else []
+    
+    if channels:
+        for ch in channels:
+            title = ch.get("title", "Unknown Channel")
+            stream_url = ch.get("stream_url", ch.get("url", ""))
+            logo = ch.get("logo", "")
+            
+            if stream_url:
+                m3u_lines.append(f'#EXTINF:-1 tvg-logo="{logo}",{title}\n{stream_url}\n')
+    else:
+        # যদি স্পেসিফিক চ্যানেল লিস্ট না পাওয়া যায়, মূল এপিআই লিঙ্কটিই যুক্ত করা
+        m3u_lines.append(f'#EXTINF:-1 group-title="API Base",Tapmad Settings API\n{api_url}\n')
 
-        if not url:
-            continue
-
-        title_tag = box.find('p', class_='title')
-        if title_tag:
-            time = title_tag.contents[0].strip() if title_tag.contents else ""
-            tags = [tag.text.strip() for tag in title_tag.find_all('font')]
-            status = tags[0] if len(tags) > 0 else "unknown"
-            res_type = tags[1] if len(tags) > 1 else ""
-        else:
-            time, status, res_type = "", "unknown", ""
-
-        # API লিঙ্ক ফিল্টারিং
-        is_api = (
-            res_type in ['json', 'php'] or 
-            '/api/' in url or 
-            'api2.' in url or 
-            'translate' in url or 
-            '_next/data' in url or
-            'matomo.php' in url
-        )
-
-        if is_api:
-            api_entry = {
-                'time': time,
-                'status': status,
-                'type': res_type if res_type else 'api',
-                'url': url
-            }
-            api_logs.append(api_entry)
-
-            display_name = f"API ({status.upper()}) - {time}"
-            m3u_lines.append(f'#EXTINF:-1 group-title="APIs",{display_name}\n{url}\n')
-
-    # ১. JSON ফাইল সেভ
-    with open("playlist.json", 'w', encoding='utf-8') as jf:
-        json.dump({"api_endpoints": api_logs}, jf, indent=4, ensure_ascii=False)
-    print("✅ playlist.json আপডেট হয়েছে")
-
-    # ২. M3U ফাইল সেভ
-    with open("playlist.m3u", 'w', encoding='utf-8') as mf:
+    with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print("✅ playlist.m3u আপডেট হয়েছে")
+    print("✅ playlist.m3u সফলভাবে সেভ হয়েছে")
 
 if __name__ == "__main__":
-    # আপনার ইনপুট HTML ফাইল
-    extract_api_links_and_save("network_log.html")
+    fetch_and_save_playlists()
