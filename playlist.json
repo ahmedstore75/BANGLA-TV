@@ -1,131 +1,16 @@
 {
-    "Tapmad Web Settings": {
-        "Response": {
-            "responseCode": 1,
-            "status": "Success",
-            "message": "Data Returned Successfully"
-        },
-        "AppSettings": {
-            "PlatformId": 3,
-            "AddsVideoUrl": null,
-            "AppSettingShowBannerAd": 0,
-            "AppSettingVersion": "1.0.0",
-            "AppSettingVersionTv": null,
-            "AppSettingPlatform": "web",
-            "AppSettingIsFeaturedPageFixed": 0,
-            "AppSettingShowBannerOnPlayer": 0,
-            "AppSettingPlayerBannerRefreshRate": null,
-            "AppSettingNonPlayerBannerRefreshRate": null,
-            "AppSettingShowAdx": false,
-            "AppSettingShowFeaturedScreenBanner": false,
-            "AppSettingFeaturedScreenBanner": "<html><head></head><body style=\"margin: 0; padding: 0;\"><script async src=\"https://securepubads.g.doubleclick.net/tag/js/gpt.js\"></script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot('/28379801/MobileBannerAppPlayerPage', [320, 50], 'div-gpt-ad-1594796822481-0').addService(googletag.pubads());googletag.enableServices();});</script><!-- /28379801/MobileBannerAppPlayerPage --><div id='div-gpt-ad-1594796822481-0' style='width: 320px; height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1594796822481-0'); });</script></div></body></html>",
-            "AppSettingShowDetailScreenBanner": false,
-            "AppSettingDetailScreenBanner": "<html><head></head><body style=\"margin: 0; padding: 0;\"><script async src=\"https://securepubads.g.doubleclick.net/tag/js/gpt.js\"></script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot('/28379801/MobileBannerAppPlayerPage', [320, 50], 'div-gpt-ad-1594796822481-0').addService(googletag.pubads());googletag.enableServices();});</script><!-- /28379801/MobileBannerAppPlayerPage --><div id='div-gpt-ad-1594796822481-0' style='width: 320px; height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1594796822481-0'); });</script></div></body></html>",
-            "AppSettingShowPlayerScreenBanner": false,
-            "AppSettingPlayerScreenBanner": "<html><head></head><body style=\"margin: 0; padding: 0;\"><script async src=\"https://securepubads.g.doubleclick.net/tag/js/gpt.js\"></script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot('/28379801/MobileBannerAppPlayerPage', [320, 50], 'div-gpt-ad-1594796822481-0').addService(googletag.pubads());googletag.enableServices();});</script><!-- /28379801/MobileBannerAppPlayerPage --><div id='div-gpt-ad-1594796822481-0' style='width: 320px; height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1594796822481-0'); });</script></div></body></html>",
-            "MoblinkAppSettingFeaturedScreenBanner": null,
-            "MoblinkAppSettingDetailScreenBanner": null,
-            "MoblinkAppSettingPlayerScreenBanner": null,
-            "MoblinkAppSettingShowPlayerScreenBanner": false,
-            "MoblinkAppSettingShowFeaturedScreenBanner": false,
-            "MoblinkAppSettingShowDetailScreenBanner": false,
-            "AppNexus": false,
-            "AppNexusMobileBanner": null,
-            "AppNexusMrecBanner": null,
-            "IsVidoAdds": false,
-            "IsGames": false,
-            "IsTapShop": true,
-            "InsertialsBanner": true,
-            "IsAdmobEnable": false,
-            "Tabsub": 1,
-            "IsInternationalAdds": false,
-            "InternationalVideoUrl": null,
-            "IntBannerHomeUrl": null,
-            "IntBannerDetailUrl": null,
-            "IntBannerPlayerUrl": null,
-            "IsHomePageBannerAdds": 1,
-            "IsMidRollAdds": 1,
-            "MidRolls": null,
-            "MrecBanner": null,
-            "ApkIp": "39.44.217.70",
-            "IsSports": true,
-            "contentCategoryId": 0,
-            "IsHideMenus": false,
-            "SeoTitle": null,
-            "CountryCode": "US",
-            "CountryShortCode": 1,
-            "numMaxLength": 10,
-            "countryFlag": "http://api.hostip.info/images/flags/us.gif"
-        },
-        "SideBarMenus": [
-            {
-                "MenuId": 1,
-                "MenuName": "Home",
-                "MenuDisplyOrder": 1,
-                "IsCategories": false,
-                "contentCategoryId": 0,
-                "SeoTitle": null
-            },
-            {
-                "MenuId": 6,
-                "MenuName": "About",
-                "MenuDisplyOrder": 7,
-                "IsCategories": false,
-                "contentCategoryId": 0,
-                "SeoTitle": null
-            }
-        ],
-        "bottomBarMenus": []
-    },
-    "User Preference Header": {
-        "Response": {
-            "responseCode": 1,
-            "status": "Success",
-            "message": "Data Returned Successfully"
-        },
-        "prefernceData": [
-            {
-                "headerId": 1,
-                "headerName": "Sports",
-                "hasChildren": true,
-                "levelId": 1,
-                "formatName": "format"
-            },
-            {
-                "headerId": 2,
-                "headerName": "Entertainment",
-                "hasChildren": true,
-                "levelId": 1,
-                "formatName": "format"
-            }
-        ],
-        "headerName": "What excites you the most?"
-    },
-    "Legal Contact Data": {
-        "pageProps": {
-            "slug": "contact"
-        },
-        "__N_SSG": true
-    },
-    "Legal FAQs Data": {
+    "Tapmad FAQs Data": {
         "pageProps": {
             "slug": "faqs"
         },
         "__N_SSG": true
     },
-    "Legal About Data": {
-        "pageProps": {
-            "slug": "about"
-        },
-        "__N_SSG": true
-    },
-    "Google Translate Log API": {
-        "status_code": 400
+    "Branch IO Analytics Open": {
+        "status_code": 400,
+        "msg": "Failed to load"
     },
     "Branch IO Analytics Pageview": {
-        "status_code": 404
-    },
-    "Branch IO Analytics Open": {
-        "status_code": 404
+        "status_code": 400,
+        "msg": "Failed to load"
     }
 }

@@ -1,17 +1,7 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/channels/ChannelFeaturedAppthumb/1788571269540x302.jpg" group-title="Tapmad APIs",Tapmad Web Settings
-https://backend-api.tapmad.com/api/getMobileAppSettings/V1/en/web
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1786009775_1600x2130.jpg" group-title="Tapmad APIs",User Preference Header
-https://backend-api.tapmad.com/api/getUserPrefernceHeader
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1786524277_1600x2130.jpg" group-title="Tapmad APIs",Legal Contact Data
-https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/contact.json?slug=contact
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1787662644_1600x2130.jpg" group-title="Tapmad APIs",Legal FAQs Data
+#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/contentCategorythumb/1787662644_1600x2130.jpg" group-title="API Endpoints",Tapmad FAQs Data
 https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/faqs.json?slug=faqs
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandCategorythumb/1788551903_324x432-vod-copy.jpg" group-title="Tapmad APIs",Legal About Data
-https://www.tapmad.com/_next/data/3Zz7jRQ_anY5T5QAB07XG/legal-center/bd/about.json?slug=about
-#EXTINF:-1 tvg-logo="https://www.gstatic.com/images/branding/product/2x/translate_24dp.png" group-title="Tapmad APIs",Google Translate Log API
-https://translate.googleapis.com/element/log?format=json&hasfast=true&authuser=0
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512398_324x432-vod.jpg" group-title="Tapmad APIs",Branch IO Analytics Pageview
-https://api2.branch.io/v1/pageview
-#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512129_324x432-vod.jpg" group-title="Tapmad APIs",Branch IO Analytics Open
+#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512129_324x432-vod.jpg" group-title="API Endpoints",Branch IO Analytics Open
 https://api2.branch.io/v1/open
+#EXTINF:-1 tvg-logo="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1788512398_324x432-vod.jpg" group-title="API Endpoints",Branch IO Analytics Pageview
+https://api2.branch.io/v1/pageview
