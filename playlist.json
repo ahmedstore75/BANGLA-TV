@@ -1,10 +1,12 @@
 {
-    "source": "https://www.jagobd.com/",
+    "status": "success",
+    "source": "https://www.jagobd.com",
     "total_channels": 1,
     "channels": [
         {
             "name": "Jagobd.com",
             "logo": "https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x95285",
+            "stream_url": "https://www.jagobd.com",
             "page_url": "https://www.jagobd.com"
         }
     ]
