@@ -1,7 +1,9 @@
 import requests
 import json
+import re
 
-def fetch_and_parse_tapmad():
+def fetch_and_generate_playlists():
+    # Tapmad এর মূল API Endpoints
     api_url = "https://backend-api.tapmad.com/api/getMobileAppSettings/V1/en/web"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -13,48 +15,48 @@ def fetch_and_parse_tapmad():
         response.raise_for_status()
         res_data = response.json()
     except Exception as e:
-        print(f"❌ API Request Failed: {e}")
+        print(f"❌ API Request Error: {e}")
         res_data = {}
 
-    # ১. সম্পূর্ণ API রেসপন্স JSON ফাইলে সেভ
+    # ১. সম্পূর্ণ API রেজাল্ট JSON ফাইলে সেভ
     with open("playlist.json", "w", encoding="utf-8") as jf:
         json.dump(res_data, jf, indent=4, ensure_ascii=False)
-    print("✅ playlist.json সফলভাবে আপডেট হয়েছে")
+    print("✅ playlist.json আপডেট হয়েছে")
 
-    # ২. M3U৮ প্লেলিস্ট তৈরি (API Structure পার্স করা)
+    # ২. API এর ভেতর থাকা সমস্ত URL (ছবি, ব্যানার, ক্যাটাগরি, স্ট্রিম) এক্সট্র্যাক্ট করা
     m3u_lines = ["#EXTM3U\n"]
-    items_found = 0
+    extracted_urls = set()
 
-    # নেস্টেড JSON থেকে মিডিয়া বা চ্যানেল ডেটা এক্সট্র্যাক্ট করা
-    def extract_items(data):
-        nonlocal items_found
-        if isinstance(data, dict):
-            # চ্যানেল বা মিডিয়া আইটেম চেক
-            name = data.get("title") or data.get("name") or data.get("channel_name")
-            stream_url = data.get("stream_url") or data.get("video_url") or data.get("url") or data.get("hls_url")
-            logo = data.get("logo") or data.get("image") or data.get("thumbnail") or ""
+    # JSON টেক্সট থেকে সব HTTP/HTTPS লিঙ্ক খুঁজে বের করা
+    json_str = json.dumps(res_data)
+    urls = re.findall(r'https?://[^\s"\'<>]+', json_str)
 
-            if name and stream_url and isinstance(stream_url, str) and stream_url.startswith("http"):
-                m3u_lines.append(f'#EXTINF:-1 tvg-logo="{logo}",{name}\n{stream_url}\n')
-                items_found += 1
+    count = 1
+    for url in urls:
+        # ব্যাকস্ল্যাশ ক্লিন করা
+        clean_url = url.replace("\\", "")
+        
+        if clean_url not in extracted_urls:
+            extracted_urls.add(clean_url)
+            
+            # ফাইলের ধরন বা নাম নির্ধারণ
+            if ".jpg" in clean_url or ".png" in clean_url or ".webp" in clean_url:
+                title = f"Media/Banner Image {count}"
+                group = "Images"
+            elif ".m3u8" in clean_url or ".mp4" in clean_url:
+                title = f"Live Stream {count}"
+                group = "Streams"
+            else:
+                title = f"API Resource {count}"
+                group = "API"
 
-            for key, val in data.items():
-                extract_items(val)
+            m3u_lines.append(f'#EXTINF:-1 group-title="{group}",{title}\n{clean_url}\n')
+            count += 1
 
-        elif isinstance(data, list):
-            for item in data:
-                extract_items(item)
-
-    # API থেকে স্ট্রিম ডেটা খোঁজা
-    extract_items(res_data)
-
-    # যদি স্ট্রিম লিংক না থাকে, তবে এপিআই এর অন্তর্গত অন্যান্য গুরুত্বপূর্ণ ইউআরএল যুক্ত করবে
-    if items_found == 0:
-        m3u_lines.append('#EXTINF:-1 group-title="Base API",Tapmad Settings API\nhttps://backend-api.tapmad.com/api/getMobileAppSettings/V1/en/web\n')
-
+    # ৩. M3U ফাইল সেভ
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print(f"✅ playlist.m3u আপডেট হয়েছে (মোট আইটেম: {items_found})")
+    print(f"✅ playlist.m3u আপডেট হয়েছে (মোট লিঙ্ক: {len(extracted_urls)})")
 
 if __name__ == "__main__":
-    fetch_and_parse_tapmad()
+    fetch_and_generate_playlists()
