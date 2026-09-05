@@ -1,8 +1,8 @@
 {
     "status": "success",
-    "source": "https://www.jagobd.com",
+    "provider": "JagoBD API Service",
     "total_channels": 1,
-    "channels": [
+    "data": [
         {
             "name": "Jagobd.com",
             "logo": "https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x95285",
