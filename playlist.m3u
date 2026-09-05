@@ -1,0 +1,3 @@
+#EXTM3U
+#EXTINF:-1 group-title="API Base",Tapmad Settings API
+https://backend-api.tapmad.com/api/getMobileAppSettings/V1/en/web
