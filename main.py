@@ -7,22 +7,35 @@ def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
 
-def is_telugu_channel(channel):
+def is_excluded_channel(channel):
     name = channel['name'].lower()
     category = channel['category'].lower()
     
-    # তেলেগু চ্যানেল চেনার জন্য নির্দিষ্ট কিউয়ার্ড (ব্লকলিস্ট)
+    # তেলেগু চ্যানেল চেনার কিউয়ার্ড
     telugu_keywords = [
         'telugu', 'gemini tv', 'gemini movies', 'gemini music', 'gemini comedy',
         'etv telugu', 'etv plus', 'etv cinema', 'etv life', 'etv abhirami',
-        'sakshi', 'v6 news', 'tv9 telugu', 'nTV telugu', 't news', '10tv',
+        'sakshi', 'v6 news', 'tv9 telugu', 'ntv telugu', 't news', '10tv',
         'abn andhra jyothi', 'bhakthi tv', 'svbc', 'raj news telugu', 'mahaa news',
-        'hMTV', 'prime9 news', 'studio n', 'cvr news', 'tollywood'
+        'hmtv', 'prime9 news', 'studio n', 'cvr news', 'tollywood'
     ]
 
-    # যদি ক্যাটাগরি বা নামের মধ্যে তেলেগু চিহ্নিত হয়
-    if 'telugu' in category or any(k in name for k in telugu_keywords):
+    # তামিল চ্যানেল চেনার কিউয়ার্ড
+    tamil_keywords = [
+        'tamil', 'sun tv', 'sun music', 'sun news', 'vijay tv', 'star vijay',
+        'kalignar', 'jaya tv', 'polimer', 'zee tamil', 'colors tamil', 'raj tv',
+        'thanthi tv', 'news7 tamil', 'puthiya thalaimurai', 'vendhar tv', 'captain tv',
+        'vasanth tv', 'seithigal', 'mk tv', 'j invasion', 'tamizh'
+    ]
+
+    # ক্যাটাগরি বা নামের মধ্যে তেলেগু বা তামিল লেখা থাকলে True রিটার্ন করবে (বাদ যাবে)
+    if 'telugu' in category or 'tamil' in category:
         return True
+    if any(k in name for k in telugu_keywords):
+        return True
+    if any(k in name for k in tamil_keywords):
+        return True
+
     return False
 
 def get_channel_priority(channel):
@@ -50,7 +63,7 @@ def get_channel_priority(channel):
         return 3
 
     # ৪. ইন্ডিয়ান টিভি চ্যানেল
-    indian_keywords = ['zee', 'star', 'sony', 'colors', 'aaj tak', 'ndtv', 'india', 'sab', 'bindass', 'pogo', 'hungama', 'discovery', 'sun tv']
+    indian_keywords = ['zee', 'star', 'sony', 'colors', 'aaj tak', 'ndtv', 'india', 'sab', 'bindass', 'pogo', 'hungama', 'discovery']
     if any(k in name for k in indian_keywords) or 'india' in category:
         return 4
 
@@ -61,7 +74,7 @@ def get_channel_priority(channel):
 
     return 6
 
-def fetch_channels_without_telugu():
+def fetch_channels():
     # চ্যানেল সোর্সসমূহ
     sources = [
         "https://iptv-org.github.io/iptv/languages/ben.m3u",
@@ -74,7 +87,7 @@ def fetch_channels_without_telugu():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 তেলেগু চ্যানেল ফিল্টার করে বাকি ডাটা লোড করা হচ্ছে...")
+    print("🔄 তেলেগু ও তামিল চ্যানেল বাদ দিয়ে ডাটা লোড করা হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -116,13 +129,13 @@ def fetch_channels_without_telugu():
                         "stream_url": stream_url
                     }
 
-                    # তেলেগু চ্যানেল হলে বাদ দেওয়া হবে
-                    if not is_telugu_channel(ch_obj):
+                    # তেলেগু ও তামিল চ্যানেল না হলে লিস্টে যোগ হবে
+                    if not is_excluded_channel(ch_obj):
                         channels.append(ch_obj)
                         seen_urls.add(stream_url)
             i += 1
 
-    # সিরিয়াল অনুযায়ী সর্টিং
+    # সিরিয়াল অনুযায়ী সাজানো
     channels.sort(key=get_channel_priority)
 
     # M3U জেনারেট করা
@@ -147,4 +160,4 @@ def fetch_channels_without_telugu():
     print("✅ playlist.m3u সফলতা সহকারে সেভ হয়েছে")
 
 if __name__ == "__main__":
-    fetch_channels_without_telugu()
+    fetch_channels()
