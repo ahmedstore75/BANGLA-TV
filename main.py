@@ -7,6 +7,10 @@ def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
 
+def normalize_text(text):
+    # স্পেস ও স্পেশাল ক্যারেক্টার ছাড়া শুধু অক্ষর তুলনা করার জন্য
+    return re.sub(r'[^a-zA-Z0-9]', '', text).lower()
+
 def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
@@ -17,57 +21,65 @@ def is_excluded_channel(channel):
         return True
     return False
 
-def get_channel_priority(channel):
+def categorize_and_prioritize(channel):
     group = channel['group'].lower()
     name = channel['name'].lower()
+    norm_name = normalize_text(name)
 
-    # ১. বাংলাদেশ (পপুলার চ্যানেলগুলো আগে)
+    # ১. বাংলাদেশ (পপুলার চ্যানেলগুলো সবার উপরে)
     if 'bangladesh' in group or channel.get('source_country') == 'bd':
         if not any(ex in name for ex in ['abp', 'uk', 'india', 'sangeet bangla', 'hope channel']):
             bd_popular = [
-                'somoy', 'ekattor', 'jamuna', 'channel i', 'ntv', 'atn bangla', 'rtv', 
+                'somoy', 'ekattor', 'jamuna', 'channel i', 'ntv', 'atn bangla', 'atn news', 'rtv', 
                 'independent', 'banglavision', 'dbc news', 'channel 24', 'gtv', 'gazi tv', 
-                'deepto', 'maasranga', 'nagorik', 'boishakhi', 'btv'
+                'deepto', 'maasranga', 'nagorik', 'boishakhi', 'btv', 'titas tv', 'bengal tv'
             ]
-            if any(pop in name for pop in bd_popular):
-                return (1, 0)
-            return (1, 1)
+            sub_p = 0 if any(normalize_text(pop) in norm_name for pop in bd_popular) else 1
+            return (1, sub_p, "Bangladeshi TV")
 
-    # ২. স্পোর্টস (পপুলার চ্যানেলগুলো আগে)
-    if 'sports' in group or any(k in name for k in ['t sports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'dd sports']):
-        sports_popular = ['t sports', 'tsports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow']
-        if any(pop in name for pop in sports_popular):
-            return (2, 0)
-        return (2, 1)
+    # ২. স্পোর্টস (পপুলার স্পোর্টস চ্যানেলগুলো উপরে)
+    sports_keywords = ['sport', 'sports', 'cricket', 'kabaddi']
+    if any(k in group for k in sports_keywords) or any(k in name for k in ['t sports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'dd sports', 'astro arena']):
+        sports_popular = ['t sports', 'tsports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'dd sports']
+        sub_p = 0 if any(normalize_text(pop) in norm_name for pop in sports_popular) else 1
+        return (2, sub_p, "Sports Channels")
 
-    # ৩. কলকাতা/পশ্চিমবঙ্গ (পপুলার চ্যানেলগুলো আগে)
-    if 'kolkata' in group or 'west bengal' in group or 'bangla' in group or any(k in name for k in ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla']):
-        kolkata_popular = ['star jalsha', 'zee bangla', 'abp ananda', 'colors bangla', 'sony aath', 'zee 24 ghanta', 'sangeet bangla']
-        if any(pop in name for pop in kolkata_popular):
-            return (3, 0)
-        return (3, 1)
+    # ৩. কলকাতা বাংলা (পপুলার চ্যানেলগুলো উপরে)
+    if 'kolkata' in group or 'west bengal' in group or any(k in name for k in ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta']):
+        kolkata_popular = ['star jalsha', 'zee bangla', 'abp ananda', 'colors bangla', 'sony aath', 'zee 24 ghanta', 'sangeet bangla', 'news18 bangla', 'tv9 bangla']
+        sub_p = 0 if any(normalize_text(pop) in norm_name for pop in kolkata_popular) else 1
+        return (3, sub_p, "Kolkata Bangla")
 
-    # ৪. ইন্ডিয়ান পপুলার, মুভি ও ভোজপুরি চ্যানেল
+    # ৪. কিডস
+    if 'kid' in group or 'animation' in group or any(k in name for k in ['pogo', 'hungama', 'cartoon network', 'nick', 'disney', 'sonic']):
+        return (4, 0, "Kids Channels")
+
+    # ৫. ডকুমেন্টারি
+    if 'documentary' in group or any(k in name for k in ['discovery', 'national geographic', 'nat geo', 'history tv', 'animal planet']):
+        return (5, 0, "Documentary")
+
+    # ৬. মিউজিক
+    if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4u music', 'sangeet bangla']):
+        return (6, 0, "Music Channels")
+
+    # ৭. ইন্ডিয়ান পপুলার ও মুভি চ্যানেল (সকল বড় ব্র্যান্ডের চ্যানেল)
     if 'india' in group or channel.get('source_country') == 'in':
         indian_popular = [
-            'star plus', 'sony entertainment', 'colors', 'zee tv', 'sab tv', 'star bharat',
+            'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
             'aaj tak', 'ndtv', 'india today', 'star movies', 'mnx', 'hbo', 'movies now', 
             'sony pix', 'wb', 'star gold', 'sony max', 'zee cinema', 'goldmines', 'goldmine',
-            'b4u movies', 'b4u bhojpuri', 'bhojpuri cinema', 'zee anmol', 'pogo', 
-            'hungama', 'discovery', 'national geographic'
+            'b4u movies', 'b4u bhojpuri', 'bhojpuri cinema', 'zee anmol', 'colors cineplex'
         ]
-        if any(pop in name for pop in indian_popular):
-            return (4, 0)
-        return (4, 1)
+        sub_p = 0 if any(normalize_text(pop) in norm_name for pop in indian_popular) else 1
+        return (7, sub_p, "Indian Channels")
 
-    # ৫. পাকিস্তান (পপুলার চ্যানেলগুলো আগে)
+    # ৮. পাকিস্তান
     if 'pakistan' in group or channel.get('source_country') == 'pk':
         pak_popular = ['geo tv', 'ary digital', 'hum tv', 'ptv sports', 'geo news', 'ary news', 'samaa']
-        if any(pop in name for pop in pak_popular):
-            return (5, 0)
-        return (5, 1)
+        sub_p = 0 if any(normalize_text(pop) in norm_name for pop in pak_popular) else 1
+        return (8, sub_p, "Pakistani Channels")
 
-    return (6, 0)
+    return (7, 2, "Indian Channels")
 
 def fetch_channels_by_group():
     sources = [
@@ -81,7 +93,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 Goldmines, B4U, Bhojpuri Cinema সহ পপুলার চ্যানেল সাজানো হচ্ছে...")
+    print("🔄 নিখুঁত পপুলারিটি চেকিং সহ ক্যাটাগরি তৈরি হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -129,27 +141,14 @@ def fetch_channels_by_group():
                         seen_urls.add(stream_url)
             i += 1
 
-    # সর্টিং ফিল্টার প্রয়োগ
-    channels.sort(key=get_channel_priority)
+    # সর্টিং (প্রথম মান ক্যাটাগরি, দ্বিতীয় মান পপুলারিটি: ০ মানে পপুলার চ্যানেল, ১ মানে সাধারণ)
+    channels.sort(key=lambda x: categorize_and_prioritize(x)[:2])
 
     m3u_lines = ["#EXTM3U\n"]
     json_channels = []
 
     for ch in channels:
-        p, sub_p = get_channel_priority(ch)
-        
-        if p == 1:
-            display_group = "Bangladeshi TV"
-        elif p == 2:
-            display_group = "Sports Channels"
-        elif p == 3:
-            display_group = "Kolkata Bangla"
-        elif p == 4:
-            display_group = "Indian Channels"
-        elif p == 5:
-            display_group = "Pakistani Channels"
-        else:
-            display_group = ch["group"]
+        p, sub_p, display_group = categorize_and_prioritize(ch)
 
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
         
@@ -160,15 +159,13 @@ def fetch_channels_by_group():
             "stream_url": ch["stream_url"]
         })
 
-    # ১. playlist.json সেভ
     with open("playlist.json", "w", encoding="utf-8") as jf:
         json.dump({"status": "success", "total_channels": len(json_channels), "channels": json_channels}, jf, indent=4, ensure_ascii=False)
 
-    # ২. playlist.m3u সেভ
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সফলভাবে {len(json_channels)} টি চ্যানেল সেভ করা হয়েছে!")
+    print(f"✅ সফলভাবে সর্বমোট {len(json_channels)} টি চ্যানেল পপুলার অগ্রাধিকার অনুযায়ী সেভ করা হয়েছে!")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
