@@ -3,96 +3,67 @@ import json
 import re
 
 def clean_channel_name(name):
-    # ব্র্যাকেট (), [], {} এবং ভেতরের নাম মুছে পরিষ্কার নাম তৈরি করা
+    # ব্র্যাকেট (), [], {} এবং ভেতরের লেখা মুছে পরিষ্কার নাম তৈরি করা
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
 
 def is_excluded_channel(channel):
     name = channel['name'].lower()
-    category = channel['category'].lower()
+    group = channel['group'].lower()
     
-    # তেলেগু চ্যানেল চেনার কিউয়ার্ড
-    telugu_keywords = [
-        'telugu', 'gemini tv', 'gemini movies', 'gemini music', 'gemini comedy',
-        'etv telugu', 'etv plus', 'etv cinema', 'etv life', 'etv abhirami',
-        'sakshi', 'v6 news', 'tv9 telugu', 'ntv telugu', 't news', '10tv',
-        'abn andhra jyothi', 'bhakthi tv', 'svbc', 'raj news telugu', 'mahaa news',
-        'hmtv', 'prime9 news', 'studio n', 'cvr news', 'tollywood'
-    ]
-
-    # তামিল চ্যানেল চেনার কিউয়ার্ড
-    tamil_keywords = [
-        'tamil', 'sun tv', 'sun music', 'sun news', 'vijay tv', 'star vijay',
-        'kalignar', 'jaya tv', 'polimer', 'zee tamil', 'colors tamil', 'raj tv',
-        'thanthi tv', 'news7 tamil', 'puthiya thalaimurai', 'vendhar tv', 'captain tv',
-        'vasanth tv', 'seithigal', 'mk tv', 'j invasion', 'tamizh'
-    ]
-
-    # ক্যাটাগরি বা নামের মধ্যে তেলেগু বা তামিল লেখা থাকলে True রিটার্ন করবে (বাদ যাবে)
-    if 'telugu' in category or 'tamil' in category:
+    # তেলেগু ও তামিল ফিল্টারিং
+    excluded = ['telugu', 'tamil', 'gemini', 'vijay', 'sun tv', 'kalignar', 'etv telugu', 'sakshi']
+    if any(k in group for k in ['telugu', 'tamil']) or any(k in name for k in excluded):
         return True
-    if any(k in name for k in telugu_keywords):
-        return True
-    if any(k in name for k in tamil_keywords):
-        return True
-
     return False
 
 def get_channel_priority(channel):
+    group = channel['group'].lower()
     name = channel['name'].lower()
-    category = channel['category'].lower()
 
-    # ১. বাংলাদেশী চ্যানেল (সবার উপরে)
-    bd_keywords = [
-        'btv', 'somoy', 'channel i', 'ekattor', 'jamuna', 'rtv', 'atn', 'ntv', 
-        'independent', 'bangla vision', 'dbc', 'deepto', 'asian tv', 'desh tv', 
-        'nagorik', 'boishakhi', 'maasranga', 'bijoy', 'gtv', 'gazitv', 'bangladesh',
-        'duronto', 'saatv', 'sangeet bangla', 'news24', 'channel 24', 'mohana', 'channel9'
-    ]
-    if any(k in name for k in bd_keywords) or 'bangladesh' in category:
-        return 1
+    # ১. বাংলাদেশ (গ্রুপ টাইটেল বা সোর্স অনুযায়ী)
+    if 'bangladesh' in group or channel.get('source_country') == 'bd':
+        # ABP Ananda, Sangeet Bangla বা UK ভার্সন ফিল্টার
+        if not any(ex in name for ex in ['abp', 'uk', 'india', 'sangeet bangla', 'hope channel']):
+            return 1
 
-    # ২. স্পোর্টস চ্যানেল
-    sports_keywords = ['sport', 'sports', 't sports', 'tsports', 'star sports', 'sony ten', 'willow', 'ptv sports', 'ten sports', 'geo super', 'cric']
-    if any(k in name for k in sports_keywords) or 'sports' in category:
+    # ২. স্পোর্টস (গ্রুপ টাইটেল 'sports' হলে)
+    if 'sports' in group or any(k in name for k in ['t sports', 'star sports', 'sony sports', 'ten sports', 'ptv sports', 'willow']):
         return 2
 
-    # ৩. কলকাতা বাংলা চ্যানেল
-    kolkata_keywords = ['star jalsha', 'zee bangla', 'colors bangla', 'sony aath', 'rupashi bangla', 'sangeet bangla', 'news18 bangla', 'tv9 bangla', 'khabor 365', 'calcutta', 'kolkata']
-    if any(k in name for k in kolkata_keywords):
+    # ৩. কলকাতা/পশ্চিমবঙ্গ বাংলা চ্যানেল
+    if 'kolkata' in group or 'west bengal' in group or 'bangla' in group or any(k in name for k in ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla']):
         return 3
 
-    # ৪. ইন্ডিয়ান টিভি চ্যানেল
-    indian_keywords = ['zee', 'star', 'sony', 'colors', 'aaj tak', 'ndtv', 'india', 'sab', 'bindass', 'pogo', 'hungama', 'discovery']
-    if any(k in name for k in indian_keywords) or 'india' in category:
+    # ৪. ইন্ডিয়া (জাতীয়/অন্যান্য)
+    if 'india' in group or channel.get('source_country') == 'in':
         return 4
 
-    # ৫. পাকিস্তানি চ্যানেল
-    pak_keywords = ['geo', 'ary', 'hum', 'ptv', 'express', 'dunya', 'samaa', 'bol', 'a-plus', 'pakistan']
-    if any(k in name for k in pak_keywords) or 'pakistan' in category:
+    # ৫. পাকিস্তান
+    if 'pakistan' in group or channel.get('source_country') == 'pk':
         return 5
 
     return 6
 
-def fetch_channels():
-    # চ্যানেল সোর্সসমূহ
+def fetch_channels_by_group():
+    # সুনির্দিষ্ট কান্ট্রি সোর্স
     sources = [
-        "https://iptv-org.github.io/iptv/languages/ben.m3u",
-        "https://iptv-org.github.io/iptv/countries/bd.m3u",
-        "https://iptv-org.github.io/iptv/countries/in.m3u",
-        "https://iptv-org.github.io/iptv/countries/pk.m3u"
+        ("https://iptv-org.github.io/iptv/countries/bd.m3u", "bd"),
+        ("https://iptv-org.github.io/iptv/languages/ben.m3u", "ben"),
+        ("https://iptv-org.github.io/iptv/countries/in.m3u", "in"),
+        ("https://iptv-org.github.io/iptv/countries/pk.m3u", "pk")
     ]
     
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 তেলেগু ও তামিল চ্যানেল বাদ দিয়ে ডাটা লোড করা হচ্ছে...")
+    print("🔄 Group-Title ফিল্টার করে চ্যানেল সাজানো হচ্ছে...")
 
     channels = []
     seen_urls = set()
 
-    for url in sources:
+    for url, country_code in sources:
         try:
             response = requests.get(url, headers=headers, timeout=15)
             if response.status_code != 200:
@@ -119,45 +90,64 @@ def fetch_channels():
                     logo_match = re.search(r'tvg-logo="([^"]*)"', info_line)
                     logo = logo_match.group(1) if logo_match else ""
 
+                    # group-title এক্সট্র্যাক্ট করা
                     group_match = re.search(r'group-title="([^"]*)"', info_line)
-                    category = group_match.group(1) if group_match else "General"
+                    group = group_match.group(1) if group_match else "General"
 
                     ch_obj = {
                         "name": clean_name if clean_name else raw_name,
                         "logo": logo,
-                        "category": category,
-                        "stream_url": stream_url
+                        "group": group,
+                        "stream_url": stream_url,
+                        "source_country": country_code
                     }
 
-                    # তেলেগু ও তামিল চ্যানেল না হলে লিস্টে যোগ হবে
                     if not is_excluded_channel(ch_obj):
                         channels.append(ch_obj)
                         seen_urls.add(stream_url)
             i += 1
 
-    # সিরিয়াল অনুযায়ী সাজানো
+    # সর্টিং অগ্রাধিকার
     channels.sort(key=get_channel_priority)
 
-    # M3U জেনারেট করা
+    # M3U আউটপুট (গ্রুপ টাইটেল সহ সেভ হবে)
     m3u_lines = ["#EXTM3U\n"]
+    json_channels = []
+
     for ch in channels:
-        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{ch["name"]}\n{ch["stream_url"]}\n')
+        p = get_channel_priority(ch)
+        # গ্রুপ টাইটেল পুনর্নির্ধারণ যাতে প্লেয়ারে সুন্দর দেখায়
+        if p == 1:
+            display_group = "Bangladeshi TV"
+        elif p == 2:
+            display_group = "Sports Channels"
+        elif p == 3:
+            display_group = "Kolkata Bangla"
+        elif p == 4:
+            display_group = "Indian Channels"
+        elif p == 5:
+            display_group = "Pakistani Channels"
+        else:
+            display_group = ch["group"]
+
+        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
+        
+        json_channels.append({
+            "name": ch["name"],
+            "logo": ch["logo"],
+            "group": display_group,
+            "stream_url": ch["stream_url"]
+        })
 
     # ১. playlist.json সেভ
-    json_data = {
-        "status": "success",
-        "total_channels": len(channels),
-        "channels": channels
-    }
-
     with open("playlist.json", "w", encoding="utf-8") as jf:
-        json.dump(json_data, jf, indent=4, ensure_ascii=False)
-    print(f"✅ playlist.json আপডেট করা হয়েছে (মোট চ্যানেল: {len(channels)})")
+        json.dump({"status": "success", "total_channels": len(json_channels), "channels": json_channels}, jf, indent=4, ensure_ascii=False)
 
     # ২. playlist.m3u সেভ
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print("✅ playlist.m3u সফলতা সহকারে সেভ হয়েছে")
+
+    print(f"✅ সফলভাবে {len(json_channels)} টি চ্যানেল গ্রুপ ট্যাগ সহ সেভ করা হয়েছে!")
 
 if __name__ == "__main__":
-    fetch_channels()
+    fetch_channels_by_group()
