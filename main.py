@@ -69,25 +69,26 @@ def categorize_and_prioritize(channel):
         return (5, 0, "Documentary")
 
     # ৬. মিউজিক
-    if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4u music']):
+    if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom']):
         return (6, 0, "Music Channels")
 
-    # ৭. ইন্ডিয়ান ফিল্টারড চ্যানেল
+    # ৭. ইন্ডিয়ান ফিল্টারড চ্যানেল (B4U নেটওয়ার্কের সকল চ্যানেলসহ)
     indian_allowlist = [
         'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
         'star movies', 'mnx', 'hbo', 'movies now', 'sony pix', 'wb', 
-        'star gold', 'sony max', 'zee cinema', 'goldmines', 'b4u movies', 
-        'b4u bhojpuri', 'bhojpuri cinema', 'zee anmol', 'colors cineplex', 
+        'star gold', 'sony max', 'zee cinema', 'goldmines', 
+        'b4u movies', 'b4u music', 'b4u bhojpuri', 'b4u kadak', 'b4u plus',
+        'bhojpuri cinema', 'zee anmol', 'colors cineplex', 
         'aaj tak', 'ndtv', 'india today', 'dd national', 'dd news', 'dangal'
     ]
-    if 'india' in group or channel.get('source_country') == 'in':
+    if 'india' in group or channel.get('source_country') == 'in' or 'b4u' in norm_name:
         is_allowed = any(normalize_text(allow) in norm_name for allow in indian_allowlist)
         if is_allowed:
             return (7, 0, "Indian Channels")
         else:
             return None
 
-    # ৮. পাকিস্তান ফিল্টারড চ্যানেল (শুধু পপুলারগুলোই থাকবে)
+    # ৮. পাকিস্তান ফিল্টারড চ্যানেল
     pak_allowlist = [
         'geo tv', 'geo news', 'geo kahani', 'ary digital', 'ary news', 'ary zindagi', 
         'hum tv', 'hum news', 'ptv sports', 'ptv news', 'ptv home', 'samaa', 
@@ -98,7 +99,7 @@ def categorize_and_prioritize(channel):
         if is_allowed:
             return (8, 0, "Pakistani Channels")
         else:
-            return None  # বাকি সব আজেবাজে পাকিস্তানি চ্যানেল বাদ
+            return None
 
     return None
 
@@ -114,7 +115,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 ইন্ডিয়ান ও পাকিস্তানি আজেবাজে চ্যানেল বাদ দিয়ে মূল প্লেলিস্ট সেভ করা হচ্ছে...")
+    print("🔄 B4U চ্যানেলগুলো পপুলার সেকশনে যুক্ত করা হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -187,7 +188,7 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সম্পূর্ণ পরিচ্ছন্ন প্লেলিস্ট তৈরি সম্পন্ন! মোট চ্যানেল সংখ্যা: {len(json_channels)}")
+    print(f"✅ B4U চ্যানেলসহ মোট {len(json_channels)} টি চ্যানেল প্লেলিস্টে সেভ করা হয়েছে!")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
