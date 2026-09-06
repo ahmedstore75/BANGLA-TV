@@ -1,6 +1,6 @@
 {
     "status": "success",
-    "total_channels": 209,
+    "total_channels": 210,
     "channels": [
         {
             "name": "ATN Bangla",
@@ -925,6 +925,12 @@
             "logo": "https://i.imgur.com/NwOQUDp.png",
             "group": "Indian Channels",
             "stream_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8"
+        },
+        {
+            "name": "B4U Kadak",
+            "logo": "https://dtil.tmsimg.com/assets/s142695_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Channels",
+            "stream_url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8"
         },
         {
             "name": "B4U Movies",
