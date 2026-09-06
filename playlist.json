@@ -1,6 +1,7 @@
 {
-    "status": "success",
+    "playlist_name": "Ahmed Store",
     "total_channels": 367,
+    "status": "success",
     "channels": [
         {
             "name": "ATN Bangla",
