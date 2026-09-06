@@ -393,6 +393,186 @@
             "stream_url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8"
         },
         {
+            "name": "B4U Movies",
+            "logo": "https://i.imgur.com/M9kMFJl.png",
+            "group": "Indian Movies",
+            "stream_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "Colors Cineplex Bollywood",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_BOLLYWOOD/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://202.70.146.135:8000/play/a058/index.m3u8"
+        },
+        {
+            "name": "Colors Cineplex HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_HD/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://66.102.126.10:8000/play/a076/index.m3u8"
+        },
+        {
+            "name": "Goldmines",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "Goldmines Bollywood",
+            "logo": "https://i.imgur.com/6mNQ9mM.png",
+            "group": "Indian Movies",
+            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8"
+        },
+        {
+            "name": "Sony Max",
+            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Movies",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/max.m3u8"
+        },
+        {
+            "name": "Sony Max 1",
+            "logo": "https://dtil.tmsimg.com/assets/s179440_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Movies",
+            "stream_url": "http://103.159.180.34:5001/live/3418.m3u8"
+        },
+        {
+            "name": "Sony Max 2",
+            "logo": "https://i.imgur.com/gqUYk6C.png",
+            "group": "Indian Movies",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/max2.m3u8"
+        },
+        {
+            "name": "Sony Max HD",
+            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Movies",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/maxhd.m3u8"
+        },
+        {
+            "name": "Star Gold 2",
+            "logo": "https://i.imgur.com/G0ZfzZr.png",
+            "group": "Indian Movies",
+            "stream_url": "http://66.102.126.10:8000/play/a00g/index.m3u8"
+        },
+        {
+            "name": "Star Gold 2 HD",
+            "logo": "https://i.imgur.com/G0ZfzZr.png",
+            "group": "Indian Movies",
+            "stream_url": "http://66.102.126.10:8000/play/a077/index.m3u8"
+        },
+        {
+            "name": "Star Gold HD",
+            "logo": "https://i.imgur.com/xC460sj.png",
+            "group": "Indian Movies",
+            "stream_url": "http://66.102.126.10:8000/play/a00f/index.m3u8"
+        },
+        {
+            "name": "Star Gold Romance",
+            "logo": "https://i.imgur.com/gSWv9U3.png",
+            "group": "Indian Movies",
+            "stream_url": "http://66.102.126.10:8000/play/a00r/index.m3u8"
+        },
+        {
+            "name": "Star Gold Select HD",
+            "logo": "https://i.imgur.com/U7eiuqv.png",
+            "group": "Indian Movies",
+            "stream_url": "http://149.71.34.166:8000/play/a01d/index.m3u8"
+        },
+        {
+            "name": "Zee Cinema",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
+            "group": "Indian Movies",
+            "stream_url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8"
+        },
+        {
+            "name": "Zee Cinema HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://103.72.101.252:8080/live/165.m3u8"
+        },
+        {
+            "name": "Khushboo Bangla",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "https://cdn-4.pishow.tv/live/1473/master.m3u8"
+        },
+        {
+            "name": "&pictures",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002FYK4V.png?lock=720x540",
+            "group": "Indian Movies",
+            "stream_url": "https://tvsen3.aynaott.com/jzT482XQ/index.m3u8"
+        },
+        {
+            "name": "B4U Bhojpuri",
+            "logo": "https://i.imgur.com/NwOQUDp.png",
+            "group": "Indian Movies",
+            "stream_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8"
+        },
+        {
+            "name": "B4U Kadak",
+            "logo": "https://dtil.tmsimg.com/assets/s142695_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Movies",
+            "stream_url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "Bhojpuri Cinema",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHOJPURI_CINEMA/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8"
+        },
+        {
+            "name": "MNX",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://59.103.38.46:8000/play/a052/index.m3u8"
+        },
+        {
+            "name": "MNX HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://149.71.34.166:8000/play/a05u/index.m3u8"
+        },
+        {
+            "name": "Movies Now +",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://149.71.34.166:8000/play/a05t/index.m3u8"
+        },
+        {
+            "name": "Movies Now HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://103.161.153.165:8000/play/mnh/index.m3u8"
+        },
+        {
+            "name": "Sony Pix HD",
+            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
+            "group": "Indian Movies",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/pixhd.m3u8"
+        },
+        {
+            "name": "Star Movies HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://66.102.126.10:8000/play/a021/index.m3u8"
+        },
+        {
+            "name": "Star Movies Select HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://66.102.126.10:8000/play/a020/index.m3u8"
+        },
+        {
+            "name": "Zee Classic",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LOGO_HD/LOGO_HD_image.png",
+            "group": "Indian Movies",
+            "stream_url": "http://103.72.101.252:8080/live/1691.m3u8"
+        },
+        {
+            "name": "Zee South Flix",
+            "logo": "https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zsouthflix.png",
+            "group": "Indian Movies",
+            "stream_url": "https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8"
+        },
+        {
             "name": "ABP Ananda",
             "logo": "https://dtil.tmsimg.com/assets/s142518_ld_h15_aa.png?lock=720x540",
             "group": "Kolkata Bangla",
@@ -921,22 +1101,10 @@
             "stream_url": "https://cdn-1.pishow.tv/live/1211/master.m3u8"
         },
         {
-            "name": "&pictures",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002FYK4V.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://tvsen3.aynaott.com/jzT482XQ/index.m3u8"
-        },
-        {
             "name": "&TV HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDTV/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Channels",
             "stream_url": "http://202.70.146.135:8000/play/a06c/index.m3u8"
-        },
-        {
-            "name": "&xplor HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDXPLOR_HD/images/LOGO_HD/LOGO_HD_image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a028/index.m3u8"
         },
         {
             "name": "Aadinath TV",
@@ -1041,34 +1209,10 @@
             "stream_url": "http://d1msejlow1t3l4.cloudfront.net/fta/ayushtv/playlist.m3u8"
         },
         {
-            "name": "B4U Bhojpuri",
-            "logo": "https://i.imgur.com/NwOQUDp.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8"
-        },
-        {
-            "name": "B4U Kadak",
-            "logo": "https://dtil.tmsimg.com/assets/s142695_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "B4U Movies",
-            "logo": "https://i.imgur.com/M9kMFJl.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
-        },
-        {
             "name": "Bhakthi TV",
             "logo": "https://upload.wikimedia.org/wikipedia/en/6/61/Bhakthi_TV_logo.jpg",
             "group": "Indian Channels",
             "stream_url": "https://cdn-1.pishow.tv/live/397/master.m3u8"
-        },
-        {
-            "name": "Bhojpuri Cinema",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHOJPURI_CINEMA/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8"
         },
         {
             "name": "BIG TV",
@@ -1117,18 +1261,6 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18Prime.png",
             "group": "Indian Channels",
             "stream_url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8"
-        },
-        {
-            "name": "Colors Cineplex Bollywood",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_BOLLYWOOD/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://202.70.146.135:8000/play/a058/index.m3u8"
-        },
-        {
-            "name": "Colors Cineplex HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_HD/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a076/index.m3u8"
         },
         {
             "name": "Colors HD",
@@ -1249,18 +1381,6 @@
             "logo": "https://i.imgur.com/ArRZRM3.png",
             "group": "Indian Channels",
             "stream_url": "http://cdn6.live247stream.com/gaundapunjab/tv/playlist.m3u8"
-        },
-        {
-            "name": "Goldmines",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "Goldmines Bollywood",
-            "logo": "https://i.imgur.com/6mNQ9mM.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8"
         },
         {
             "name": "GoodNews TV",
@@ -1455,12 +1575,6 @@
             "stream_url": "https://kcltv.livebox.co.in/kclhls/live.m3u8"
         },
         {
-            "name": "Khushboo Bangla",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-4.pishow.tv/live/1473/master.m3u8"
-        },
-        {
             "name": "Kolkata TV",
             "logo": "https://dtil.tmsimg.com/assets/s143271_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
@@ -1545,34 +1659,10 @@
             "stream_url": "https://mntv.livebox.co.in/mntvhls/live.m3u8"
         },
         {
-            "name": "MNX",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://59.103.38.46:8000/play/a052/index.m3u8"
-        },
-        {
-            "name": "MNX HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://149.71.34.166:8000/play/a05u/index.m3u8"
-        },
-        {
             "name": "Moon TV",
             "logo": "https://i.imgur.com/3l25EZI.png",
             "group": "Indian Channels",
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/moontv/playlist.m3u8"
-        },
-        {
-            "name": "Movies Now +",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://149.71.34.166:8000/play/a05t/index.m3u8"
-        },
-        {
-            "name": "Movies Now HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.161.153.165:8000/play/mnh/index.m3u8"
         },
         {
             "name": "Nagaland TV",
@@ -1905,82 +1995,10 @@
             "stream_url": "http://38.96.178.205/SONYHD/index.m3u8"
         },
         {
-            "name": "Sony Max",
-            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/max.m3u8"
-        },
-        {
-            "name": "Sony Max 1",
-            "logo": "https://dtil.tmsimg.com/assets/s179440_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "http://103.159.180.34:5001/live/3418.m3u8"
-        },
-        {
-            "name": "Sony Max 2",
-            "logo": "https://i.imgur.com/gqUYk6C.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/max2.m3u8"
-        },
-        {
-            "name": "Sony Max HD",
-            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/maxhd.m3u8"
-        },
-        {
-            "name": "Sony Pix HD",
-            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/pixhd.m3u8"
-        },
-        {
             "name": "Star Bharat",
             "logo": "https://i.imgur.com/Q8ajPij.png",
             "group": "Indian Channels",
             "stream_url": "http://103.253.18.58:8000/play/a00u"
-        },
-        {
-            "name": "Star Gold 2",
-            "logo": "https://i.imgur.com/G0ZfzZr.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a00g/index.m3u8"
-        },
-        {
-            "name": "Star Gold 2 HD",
-            "logo": "https://i.imgur.com/G0ZfzZr.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a077/index.m3u8"
-        },
-        {
-            "name": "Star Gold HD",
-            "logo": "https://i.imgur.com/xC460sj.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a00f/index.m3u8"
-        },
-        {
-            "name": "Star Gold Romance",
-            "logo": "https://i.imgur.com/gSWv9U3.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a00r/index.m3u8"
-        },
-        {
-            "name": "Star Gold Select HD",
-            "logo": "https://i.imgur.com/U7eiuqv.png",
-            "group": "Indian Channels",
-            "stream_url": "http://149.71.34.166:8000/play/a01d/index.m3u8"
-        },
-        {
-            "name": "Star Movies HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a021/index.m3u8"
-        },
-        {
-            "name": "Star Movies Select HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a020/index.m3u8"
         },
         {
             "name": "StarPlus HD",
@@ -2137,24 +2155,6 @@
             "logo": "https://yettelevision.com/assets/images/logo/channel_1.png",
             "group": "Indian Channels",
             "stream_url": "https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8"
-        },
-        {
-            "name": "Zee Cinema",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8"
-        },
-        {
-            "name": "Zee Cinema HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.72.101.252:8080/live/165.m3u8"
-        },
-        {
-            "name": "Zee South Flix",
-            "logo": "https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zsouthflix.png",
-            "group": "Indian Channels",
-            "stream_url": "https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8"
         },
         {
             "name": "Zee TV HD",
