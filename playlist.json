@@ -1,6 +1,6 @@
 {
     "status": "success",
-    "total_channels": 170,
+    "total_channels": 181,
     "channels": [
         {
             "name": "ATN Bangla",
@@ -99,6 +99,18 @@
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSHUBHSANDESH/index.m3u8"
         },
         {
+            "name": "Sony Sports Ten 5",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 5 HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8"
+        },
+        {
             "name": "Star Sports Select 1 HD",
             "logo": "https://i.imgur.com/Mh9tKPx.png",
             "category": "Sports",
@@ -121,6 +133,54 @@
             "logo": "https://papaji.freetvindia.com/media/kabaddi_24x7.png",
             "category": "Sports",
             "stream_url": "http://180.188.254.253/live/KABADDI24X7.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 1",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten1.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 1 HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten1hd.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 2",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten2.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 2 HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten2hd.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 3 Hindi",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten3.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 3 Hindi HD",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 4",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025T4PV.png?lock=720x540",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten4.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 4 Telugu",
+            "logo": "https://dtil.tmsimg.com/assets/s149166_ld_h15_aa.png?lock=720x540",
+            "category": "Sports",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten4hd.m3u8"
         },
         {
             "name": "Sports Squad Haryana",
@@ -234,7 +294,7 @@
             "name": "Sony Aath",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_8/images/LOGO_HD/image.png",
             "category": "Entertainment",
-            "stream_url": "http://103.165.93.31:8095/sonyAath/index.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/aath.m3u8"
         },
         {
             "name": "Star Jalsha",
@@ -270,7 +330,7 @@
             "name": "Sony Yay!",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_YAY/images/LOGO_HD/image.png",
             "category": "Animation;Kids",
-            "stream_url": "http://103.165.93.31:8095/sonyYay/index.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/yay.m3u8"
         },
         {
             "name": "Zee 24 Ghanta",
@@ -369,12 +429,6 @@
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3H1STINDIANEWS/index.m3u8"
         },
         {
-            "name": "Gospel TV India",
-            "logo": "https://i.ibb.co/xhbZvzt/cropped-final-logo-300x127.png",
-            "category": "Religious",
-            "stream_url": "https://server.livelegitpro.in:9899/gospeltv/index.m3u8"
-        },
-        {
             "name": "Hungama TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png",
             "category": "Kids",
@@ -391,12 +445,6 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/India_Daily_24x7.png",
             "category": "News",
             "stream_url": "https://indiadaily.ottlive.co.in/indiadailylive/index.m3u8"
-        },
-        {
-            "name": "India News Madhya Pradesh/Chhattisgarh",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/India_News_MP.png",
-            "category": "News",
-            "stream_url": "https://livetv.newsx.com/itv/itvnetwork7/playlist.m3u8"
         },
         {
             "name": "India Today",
@@ -513,6 +561,12 @@
             "stream_url": "https://rt-india.rttv.com/dvr/rtindia/playlist.m3u8"
         },
         {
+            "name": "Sony BBC Earth HD",
+            "logo": "https://dtil.tmsimg.com/assets/s143800_ld_h15_aa.png?lock=720x540",
+            "category": "Documentary",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/bbcearthhd.m3u8"
+        },
+        {
             "name": "Sony Entertainment Television HD",
             "logo": "https://dtil.tmsimg.com/assets/s159096_ld_h15_aa.png?lock=720x540",
             "category": "Entertainment",
@@ -522,13 +576,13 @@
             "name": "Sony Marathi",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_MARATHI/images/LOGO_HD/image.png",
             "category": "Entertainment",
-            "stream_url": "https://sl.vodep39240327.workers.dev/channel/SONY+MARATHI.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/marathi.m3u8"
         },
         {
             "name": "Sony Max",
             "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
             "category": "Movies",
-            "stream_url": "http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=156013&extension=ts&play_token=slNi06NyY0"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/max.m3u8"
         },
         {
             "name": "Sony Max 1",
@@ -540,25 +594,37 @@
             "name": "Sony Max 2",
             "logo": "https://i.imgur.com/gqUYk6C.png",
             "category": "Movies",
-            "stream_url": "http://149.71.34.166:8000/play/a00z/index.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/max2.m3u8"
+        },
+        {
+            "name": "Sony Max HD",
+            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
+            "category": "Movies",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/maxhd.m3u8"
         },
         {
             "name": "Sony Pal",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_PAL/images/LOGO_HD/image.png",
             "category": "Entertainment",
-            "stream_url": "http://59.103.38.46:8000/play/a0ac/index.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/pal.m3u8"
         },
         {
             "name": "Sony Pix HD",
             "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
             "category": "Movies",
-            "stream_url": "https://sl.vodep39240327.workers.dev/channel/SONY+PIX+HD.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/pixhd.m3u8"
+        },
+        {
+            "name": "Sony SAB HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png",
+            "category": "Entertainment",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/sabhd.m3u8"
         },
         {
             "name": "Sony Wah",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_WAH/images/LOGO_HD/image.png",
             "category": "Movies",
-            "stream_url": "https://sl.vodep39240327.workers.dev/channel/SONY+WAH.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/wah.m3u8"
         },
         {
             "name": "Star Bharat",
