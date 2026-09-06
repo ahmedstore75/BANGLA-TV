@@ -483,6 +483,30 @@
             "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/master.m3u8"
         },
         {
+            "name": "MNX",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "http://59.103.38.46:8000/play/a052/index.m3u8"
+        },
+        {
+            "name": "MNX HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "http://149.71.34.166:8000/play/a05u/index.m3u8"
+        },
+        {
+            "name": "Movies Now +",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "http://149.71.34.166:8000/play/a05t/index.m3u8"
+        },
+        {
+            "name": "Movies Now HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "http://103.161.153.165:8000/play/mnh/index.m3u8"
+        },
+        {
             "name": "NDTV 24x7",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_24X7/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -549,6 +573,12 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/maxhd.m3u8"
         },
         {
+            "name": "Sony Pix HD",
+            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
+            "group": "Indian Channels",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/pixhd.m3u8"
+        },
+        {
             "name": "Star Bharat",
             "logo": "https://i.imgur.com/Q8ajPij.png",
             "group": "Indian Channels",
@@ -583,6 +613,18 @@
             "logo": "https://i.imgur.com/U7eiuqv.png",
             "group": "Indian Channels",
             "stream_url": "http://149.71.34.166:8000/play/a01d/index.m3u8"
+        },
+        {
+            "name": "Star Movies HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "http://66.102.126.10:8000/play/a021/index.m3u8"
+        },
+        {
+            "name": "Star Movies Select HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "http://66.102.126.10:8000/play/a020/index.m3u8"
         },
         {
             "name": "Super Hungama",
@@ -2295,34 +2337,10 @@
             "stream_url": "https://mntv.livebox.co.in/mntvhls/live.m3u8"
         },
         {
-            "name": "MNX",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://59.103.38.46:8000/play/a052/index.m3u8"
-        },
-        {
-            "name": "MNX HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://149.71.34.166:8000/play/a05u/index.m3u8"
-        },
-        {
             "name": "Moon TV",
             "logo": "https://i.imgur.com/3l25EZI.png",
             "group": "Indian Channels",
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/moontv/playlist.m3u8"
-        },
-        {
-            "name": "Movies Now +",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://149.71.34.166:8000/play/a05t/index.m3u8"
-        },
-        {
-            "name": "Movies Now HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.161.153.165:8000/play/mnh/index.m3u8"
         },
         {
             "name": "Mr. Bean Animated",
@@ -3195,12 +3213,6 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/pal.m3u8"
         },
         {
-            "name": "Sony Pix HD",
-            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/pixhd.m3u8"
-        },
-        {
             "name": "Sony SAB HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -3241,18 +3253,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s143826_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
             "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8"
-        },
-        {
-            "name": "Star Movies HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a021/index.m3u8"
-        },
-        {
-            "name": "Star Movies Select HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a020/index.m3u8"
         },
         {
             "name": "Star Pravah HD",
