@@ -3,7 +3,7 @@ import json
 import re
 
 def clean_channel_name(name):
-    # ব্র্যাকেট (), [], {} এবং ভেতরের লেখা মুছে পরিষ্কার নাম তৈরি করা
+    # ব্র্যাকেট (), [], {} এবং ভেতরের লেখা মুছে নাম পরিষ্কার করা
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
 
@@ -21,32 +21,53 @@ def get_channel_priority(channel):
     group = channel['group'].lower()
     name = channel['name'].lower()
 
-    # ১. বাংলাদেশ (গ্রুপ টাইটেল বা সোর্স অনুযায়ী)
+    # ১. বাংলাদেশ (পপুলার চ্যানেলগুলো আগে)
     if 'bangladesh' in group or channel.get('source_country') == 'bd':
-        # ABP Ananda, Sangeet Bangla বা UK ভার্সন ফিল্টার
         if not any(ex in name for ex in ['abp', 'uk', 'india', 'sangeet bangla', 'hope channel']):
-            return 1
+            bd_popular = [
+                'somoy', 'ekattor', 'jamuna', 'channel i', 'ntv', 'atn bangla', 'rtv', 
+                'independent', 'banglavision', 'dbc news', 'channel 24', 'gtv', 'gazi tv', 
+                'deepto', 'maasranga', 'nagorik', 'boishakhi', 'btv'
+            ]
+            if any(pop in name for pop in bd_popular):
+                return (1, 0)
+            return (1, 1)
 
-    # ২. স্পোর্টস (গ্রুপ টাইটেল 'sports' হলে)
-    if 'sports' in group or any(k in name for k in ['t sports', 'star sports', 'sony sports', 'ten sports', 'ptv sports', 'willow']):
-        return 2
+    # ২. স্পোর্টস (পপুলার চ্যানেলগুলো আগে)
+    if 'sports' in group or any(k in name for k in ['t sports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'dd sports']):
+        sports_popular = ['t sports', 'tsports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow']
+        if any(pop in name for pop in sports_popular):
+            return (2, 0)
+        return (2, 1)
 
-    # ৩. কলকাতা/পশ্চিমবঙ্গ বাংলা চ্যানেল
+    # ৩. কলকাতা/পশ্চিমবঙ্গ (পপুলার চ্যানেলগুলো আগে)
     if 'kolkata' in group or 'west bengal' in group or 'bangla' in group or any(k in name for k in ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla']):
-        return 3
+        kolkata_popular = ['star jalsha', 'zee bangla', 'abp ananda', 'colors bangla', 'sony aath', 'zee 24 ghanta', 'sangeet bangla']
+        if any(pop in name for pop in kolkata_popular):
+            return (3, 0)
+        return (3, 1)
 
-    # ৪. ইন্ডিয়া (জাতীয়/অন্যান্য)
+    # ৪. ইন্ডিয়ান হিন্দি/অন্যান্য (পপুলার চ্যানেলগুলো আগে)
     if 'india' in group or channel.get('source_country') == 'in':
-        return 4
+        indian_popular = [
+            'star plus', 'sony entertainment', 'colors', 'zee tv', 'sab tv', 'star bharat',
+            'aaj tak', 'ndtv', 'india today', 'star gold', 'sony max', 'zee cinema', 
+            'pogo', 'hungama', 'discovery', 'national geographic'
+        ]
+        if any(pop in name for pop in indian_popular):
+            return (4, 0)
+        return (4, 1)
 
-    # ৫. পাকিস্তান
+    # ৫. পাকিস্তান (পপুলার চ্যানেলগুলো আগে)
     if 'pakistan' in group or channel.get('source_country') == 'pk':
-        return 5
+        pak_popular = ['geo tv', 'ary digital', 'hum tv', 'ptv sports', 'geo news', 'ary news', 'samaa']
+        if any(pop in name for pop in pak_popular):
+            return (5, 0)
+        return (5, 1)
 
-    return 6
+    return (6, 0)
 
 def fetch_channels_by_group():
-    # সুনির্দিষ্ট কান্ট্রি সোর্স
     sources = [
         ("https://iptv-org.github.io/iptv/countries/bd.m3u", "bd"),
         ("https://iptv-org.github.io/iptv/languages/ben.m3u", "ben"),
@@ -58,7 +79,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 Group-Title ফিল্টার করে চ্যানেল সাজানো হচ্ছে...")
+    print("🔄 সকল ক্যাটাগরির পপুলার চ্যানেলগুলোকে উপরে সাজানো হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -90,7 +111,6 @@ def fetch_channels_by_group():
                     logo_match = re.search(r'tvg-logo="([^"]*)"', info_line)
                     logo = logo_match.group(1) if logo_match else ""
 
-                    # group-title এক্সট্র্যাক্ট করা
                     group_match = re.search(r'group-title="([^"]*)"', info_line)
                     group = group_match.group(1) if group_match else "General"
 
@@ -107,16 +127,15 @@ def fetch_channels_by_group():
                         seen_urls.add(stream_url)
             i += 1
 
-    # সর্টিং অগ্রাধিকার
+    # সর্টিং ফিল্টার প্রয়োগ
     channels.sort(key=get_channel_priority)
 
-    # M3U আউটপুট (গ্রুপ টাইটেল সহ সেভ হবে)
     m3u_lines = ["#EXTM3U\n"]
     json_channels = []
 
     for ch in channels:
-        p = get_channel_priority(ch)
-        # গ্রুপ টাইটেল পুনর্নির্ধারণ যাতে প্লেয়ারে সুন্দর দেখায়
+        p, sub_p = get_channel_priority(ch)
+        
         if p == 1:
             display_group = "Bangladeshi TV"
         elif p == 2:
@@ -147,7 +166,7 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সফলভাবে {len(json_channels)} টি চ্যানেল গ্রুপ ট্যাগ সহ সেভ করা হয়েছে!")
+    print(f"✅ সফলভাবে {len(json_channels)} টি চ্যানেল পপুলারিটি অনুযায়ী সাজিয়ে সেভ করা হয়েছে!")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
