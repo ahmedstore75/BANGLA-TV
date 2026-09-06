@@ -1,6 +1,6 @@
 {
     "status": "success",
-    "total_channels": 830,
+    "total_channels": 806,
     "channels": [
         {
             "name": "ATN Bangla",
@@ -399,12 +399,6 @@
             "stream_url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8"
         },
         {
-            "name": "Colors Tamil HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_TAMIL/images/LOGO_HD/image.png",
-            "category": "Entertainment",
-            "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorstamilhd11.smil/playlist.m3u8"
-        },
-        {
             "name": "DD India",
             "logo": "https://dtil.tmsimg.com/assets/s158251_ld_h15_aa.png?lock=720x540",
             "category": "General",
@@ -687,12 +681,6 @@
             "stream_url": "http://149.71.34.166:8000/play/a059/index.m3u8"
         },
         {
-            "name": "Star Vijay HD",
-            "logo": "https://i.imgur.com/dZtJHAe.png",
-            "category": "Entertainment",
-            "stream_url": "http://149.71.34.166:8000/play/a06i/index.m3u8"
-        },
-        {
             "name": "Starnet",
             "logo": "https://i.imgur.com/J3jB7Kr.png",
             "category": "General",
@@ -871,18 +859,6 @@
             "logo": "https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zsouthflix.png",
             "category": "Movies",
             "stream_url": "https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8"
-        },
-        {
-            "name": "Zee Tamil HD",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG00233WCL.png?lock=720x540",
-            "category": "Entertainment",
-            "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8"
-        },
-        {
-            "name": "Zee Tamil News",
-            "logo": "https://english.cdn.zeenews.com/images/logo/zee-tamil-logo-20.svg",
-            "category": "News",
-            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/ZMCL/ZeeTamilNews.m3u8"
         },
         {
             "name": "Zee TV HD",
@@ -1563,12 +1539,6 @@
             "stream_url": "https://aasthaott.akamaized.net/110923/smil:aasthaprime1.smil/master.m3u8"
         },
         {
-            "name": "Aastha Tamil",
-            "logo": "https://i.imgur.com/YQK9ewf.png",
-            "category": "Religious",
-            "stream_url": "https://aasthaott.akamaized.net/110923/smil:aasthatamil.smil/playlist.m3u8"
-        },
-        {
             "name": "ABN Andhra Jyoti",
             "logo": "https://dtil.tmsimg.com/assets/s142517_ld_h15_aa.png?lock=720x540",
             "category": "News",
@@ -2079,12 +2049,6 @@
             "stream_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/26e915d6d12b4a06822c5e33c088ed56/index.m3u8"
         },
         {
-            "name": "DD Tamil HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_TAMIL/images/LOGO_HD/image.png",
-            "category": "General",
-            "stream_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8"
-        },
-        {
             "name": "DD Urdu",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_URDU/images/LOGO_HD/image.png",
             "category": "General",
@@ -2487,12 +2451,6 @@
             "stream_url": "http://103.154.3.101:5001/live/577.m3u8"
         },
         {
-            "name": "HMTV",
-            "logo": "https://dtil.tmsimg.com/assets/s143136_ld_h15_aa.png?lock=720x540",
-            "category": "News",
-            "stream_url": "https://cdn-1.pishow.tv/live/280/master.m3u8"
-        },
-        {
             "name": "Hornbill TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HORNBILL/images/LOGO_HD/image.png",
             "category": "News",
@@ -2635,12 +2593,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_MAX/images/LOGO_HD/image.png",
             "category": "Culture;Entertainment",
             "stream_url": "http://103.72.101.252:8080/live/420.m3u8"
-        },
-        {
-            "name": "Jaya TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_TV/images/LOGO_HD/image.png",
-            "category": "Culture;Entertainment",
-            "stream_url": "http://103.72.101.252:8080/live/419.m3u8"
         },
         {
             "name": "Jeevan TV",
@@ -3045,12 +2997,6 @@
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/News1st/playlist.m3u8"
         },
         {
-            "name": "News 7 Tamil",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS7_TAMIL/images/LOGO_HD/image.png",
-            "category": "News",
-            "stream_url": "https://segment.yuppcdn.net/240122/news7/playlist.m3u8"
-        },
-        {
             "name": "News9Live",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/News9.png",
             "category": "News",
@@ -3117,12 +3063,6 @@
             "stream_url": "https://n18syndication.akamaized.net/bpk-tv/News18_Rajasthan_NW18_MOB/output01/master.m3u8"
         },
         {
-            "name": "News18 Tamil Nadu",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS18_TAMIL_NADU/images/LOGO_HD/image.png",
-            "category": "News",
-            "stream_url": "https://n18syndication.akamaized.net/bpk-tv/News18_Tamil_Nadu_NW18_MOB/output01/master.m3u8"
-        },
-        {
             "name": "News18 Urdu",
             "logo": "https://i.imgur.com/8xnwMRR.png",
             "category": "News",
@@ -3175,12 +3115,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s143596_ld_h15_aa.png?lock=720x540",
             "category": "News",
             "stream_url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/6cd2f649739a45ca9de1daf81cc7d0f2/index.m3u8"
-        },
-        {
-            "name": "News Tamil 24x7",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS_TAMIL_24X7/images/LOGO_HD/image.png",
-            "category": "News",
-            "stream_url": "https://cdn-3.pishow.tv/live/1433/master.m3u8"
         },
         {
             "name": "NewsX",
@@ -3289,18 +3223,6 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/p_pktflm.png",
             "category": "Movies",
             "stream_url": "https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8"
-        },
-        {
-            "name": "Polimer News",
-            "logo": "https://dtil.tmsimg.com/assets/s143664_ld_h9_aa.png?lock=720x540",
-            "category": "News",
-            "stream_url": "https://segment.yuppcdn.net/110322/polimernews/playlist.m3u8"
-        },
-        {
-            "name": "Polimer TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143665_ld_h15_aa.png?lock=720x540",
-            "category": "Entertainment",
-            "stream_url": "https://cdn-2.pishow.tv/live/1241/master.m3u8"
         },
         {
             "name": "Prag News",
@@ -3435,12 +3357,6 @@
             "stream_url": "http://stream.pztv.online/pztv/playlist.m3u8"
         },
         {
-            "name": "Puthiya Thalaimurai",
-            "logo": "https://dtil.tmsimg.com/assets/s143692_ld_h15_aa.png?lock=720x540",
-            "category": "News",
-            "stream_url": "https://mumt07.tangotv.in/zHjX9OFlPUTHIYAEXPRESS/index.m3u8"
-        },
-        {
             "name": "Puthuyugam TV",
             "logo": "https://dtil.tmsimg.com/assets/s143693_ld_h15_aa.png?lock=720x540",
             "category": "Undefined",
@@ -3471,12 +3387,6 @@
             "stream_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8"
         },
         {
-            "name": "Raj Musix Tamil",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TAMIL/images/LOGO_HD/image.png",
-            "category": "Music",
-            "stream_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8"
-        },
-        {
             "name": "Raj News",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_NEWS_TAMIL/images/LOGO_HD/image.png",
             "category": "News",
@@ -3493,12 +3403,6 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Raj_Pariwar.png",
             "category": "News",
             "stream_url": "http://103.72.101.252:8080/live/533.m3u8"
-        },
-        {
-            "name": "Raj TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_TV/images/LOGO_HD/image.png",
-            "category": "Entertainment",
-            "stream_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8"
         },
         {
             "name": "Ramdhenu",
@@ -4071,24 +3975,6 @@
             "stream_url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8"
         },
         {
-            "name": "Tamil Janam",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Janam_Tamil.png",
-            "category": "News",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3JANAMTVTAMIL/index.m3u8"
-        },
-        {
-            "name": "Tamilan TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Tamilan_Television.png",
-            "category": "Undefined",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4TAMILANTELEVISION/index.m3u8"
-        },
-        {
-            "name": "TamilVision-TV",
-            "logo": "https://i.imgur.com/DodsLuW.png",
-            "category": "Undefined",
-            "stream_url": "https://live.cmr24.fm/TVI/HD/chunks.m3u8"
-        },
-        {
             "name": "Tarang Music",
             "logo": "https://i.imgur.com/oSm8zFD.png",
             "category": "Music",
@@ -4111,12 +3997,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s158791_ld_h15_aa.png?lock=720x540",
             "category": "Entertainment",
             "stream_url": "https://mumt07.tangotv.in/zHjX9OFlTHANTHIONE/index.m3u8"
-        },
-        {
-            "name": "Thanthi TV",
-            "logo": "https://dtil.tmsimg.com/assets/s144000_ld_h15_aa.png?lock=720x540",
-            "category": "News",
-            "stream_url": "https://streams.tangotv.in/THANTHITV/ORIGIN/index.m3u8"
         },
         {
             "name": "The Jungle Book",
@@ -4177,12 +4057,6 @@
             "logo": "https://i.imgur.com/LPwRdmF.png",
             "category": "Religious",
             "stream_url": "https://d34z4embz0hjf6.cloudfront.net/out/v1/d55b3323a9f142638f897378f0b526fe/index.m3u8"
-        },
-        {
-            "name": "Travelxp Tamil",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Travel_XP_Tamil.png",
-            "category": "Travel",
-            "stream_url": "http://103.72.101.252:8080/live/814.m3u8"
         },
         {
             "name": "Tunes 6",
@@ -4365,12 +4239,6 @@
             "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8"
         },
         {
-            "name": "Vasanth TV",
-            "logo": "https://dtil.tmsimg.com/assets/s144068_ld_h15_aa.png?lock=720x540",
-            "category": "Entertainment",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4VASANTHTV/index.m3u8"
-        },
-        {
             "name": "VCV",
             "logo": "https://i.imgur.com/KbU36xI.png",
             "category": "General",
@@ -4387,12 +4255,6 @@
             "logo": "https://upload.wikimedia.org/wikipedia/en/e/e4/Logo_of_Velicham_TV.png",
             "category": "News",
             "stream_url": "https://mumt05.tangotv.in/87NeALx2VALICHAMPLUS/index.m3u8"
-        },
-        {
-            "name": "Vendhar TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Vendhar_TV.png",
-            "category": "Entertainment",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4VENDHARTV/index.m3u8"
         },
         {
             "name": "Village TV",
@@ -4471,12 +4333,6 @@
             "logo": "https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/channel/logos/mjvezt.png",
             "category": "Animation;Kids",
             "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
-        },
-        {
-            "name": "WOW Kidz Tamil",
-            "logo": "https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/channel/logos/mjvezt.png",
-            "category": "Animation;Kids",
-            "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
             "name": "YET Max",
