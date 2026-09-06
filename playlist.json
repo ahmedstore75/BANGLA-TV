@@ -429,6 +429,24 @@
             "stream_url": "https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8"
         },
         {
+            "name": "B4U Bhojpuri",
+            "logo": "https://i.imgur.com/NwOQUDp.png",
+            "group": "Indian Channels",
+            "stream_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8"
+        },
+        {
+            "name": "B4U Movies",
+            "logo": "https://i.imgur.com/M9kMFJl.png",
+            "group": "Indian Channels",
+            "stream_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "Bhojpuri Cinema",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHOJPURI_CINEMA/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8"
+        },
+        {
             "name": "Colors Cineplex Bollywood",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_BOLLYWOOD/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -469,6 +487,18 @@
             "logo": "https://i.imgur.com/xkOunuW.png",
             "group": "Indian Channels",
             "stream_url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8"
+        },
+        {
+            "name": "Goldmines",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "Goldmines Bollywood",
+            "logo": "https://i.imgur.com/6mNQ9mM.png",
+            "group": "Indian Channels",
+            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8"
         },
         {
             "name": "Hungama TV",
@@ -957,22 +987,10 @@
             "stream_url": "http://d1msejlow1t3l4.cloudfront.net/fta/ayushtv/playlist.m3u8"
         },
         {
-            "name": "B4U Bhojpuri",
-            "logo": "https://i.imgur.com/NwOQUDp.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8"
-        },
-        {
             "name": "B4U Kadak",
             "logo": "https://dtil.tmsimg.com/assets/s142695_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
             "stream_url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "B4U Movies",
-            "logo": "https://i.imgur.com/M9kMFJl.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
         },
         {
             "name": "B4U Music",
@@ -1021,12 +1039,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHARAT_SAMACHAR/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HBHARATSAMACHAR/index.m3u8"
-        },
-        {
-            "name": "Bhojpuri Cinema",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHOJPURI_CINEMA/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8"
         },
         {
             "name": "BIG TV",
@@ -1669,18 +1681,6 @@
             "logo": "https://i.imgur.com/WDLqcWW.png",
             "group": "Indian Channels",
             "stream_url": "https://server.livelegitpro.in/globalpunjab/globalpunjab/index.m3u8"
-        },
-        {
-            "name": "Goldmines",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "Goldmines Bollywood",
-            "logo": "https://i.imgur.com/6mNQ9mM.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8"
         },
         {
             "name": "Good News Today",
