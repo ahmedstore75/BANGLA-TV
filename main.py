@@ -2,6 +2,9 @@ import requests
 import json
 import re
 
+# আপনার নাম এখানে দিন
+MY_NAME = "Ahmed Store"
+
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
@@ -50,7 +53,7 @@ def categorize_and_prioritize(channel):
         sub_p = 0 if any(normalize_text(pop) == norm_name or normalize_text(pop) in norm_name for pop in sports_popular) else 1
         return (2, sub_p, "Sports Channels")
 
-    # ৩. স্পোর্টস চ্যানেলের নিচে: ইন্ডিয়ান মুভি চ্যানেল (পপুলারগুলো সবার উপরে)
+    # ৩. স্পোর্টস চ্যানেলের নিচে: ইন্ডিয়ান মুভি চ্যানেল
     indian_movie_keywords = [
         'star gold', 'sony max', 'zee cinema', 'and pictures', 'andpictures', '&pictures',
         'goldmines', 'b4u movies', 'b4u kadak', 'colors cineplex', 'star movies', 
@@ -58,7 +61,6 @@ def categorize_and_prioritize(channel):
         'rishtey cineplex', 'bhojpuri cinema', 'b4u bhojpuri', '&flix', 'andflix'
     ]
     
-    # সব মুভি চ্যানেলের মধ্যে পপুলারগুলো আগে রাখার জন্য sub_priority
     if any(normalize_text(m_kw) in norm_name for m_kw in indian_movie_keywords):
         popular_movies = ['stargold', 'sonymax', 'zeecinema', 'andpictures', 'b4umovies', 'goldmines', 'colorscineplex']
         sub_p = 0 if any(normalize_text(p_mov) in norm_name for p_mov in popular_movies) else 1
@@ -126,7 +128,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 স্পোর্টস চ্যানেলের ঠিক নিচে Indian Movies সেট করে প্লেলিস্ট তৈরি করা হচ্ছে...")
+    print("🔄 চ্যানেল ফেচিং এবং প্রসেসিং শুরু হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -178,7 +180,11 @@ def fetch_channels_by_group():
 
     channels.sort(key=lambda x: x[1][:2])
 
-    m3u_lines = ["#EXTM3U\n"]
+    total_count = len(channels)
+    
+    # M3U ফাইলের হেডারে নাম এবং মোট চ্যানেল কাউন্ট
+    m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
+    m3u_lines = [m3u_header]
     json_channels = []
 
     for ch, res in channels:
@@ -193,13 +199,23 @@ def fetch_channels_by_group():
             "stream_url": ch["stream_url"]
         })
 
+    # JSON ফাইলে নাম ও অটো কাউন্ট
+    json_data = {
+        "playlist_name": MY_NAME,
+        "total_channels": total_count,
+        "status": "success",
+        "channels": json_channels
+    }
+
     with open("playlist.json", "w", encoding="utf-8") as jf:
-        json.dump({"status": "success", "total_channels": len(json_channels), "channels": json_channels}, jf, indent=4, ensure_ascii=False)
+        json.dump(json_data, jf, indent=4, ensure_ascii=False)
 
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সফলভাবে সঠিক সিকোয়েন্সে মোট {len(json_channels)} টি চ্যানেল সেভ করা হয়েছে!")
+    print(f"✅ প্লেলিস্ট তৈরি সম্পন্ন!")
+    print(f"📌 প্লেলিস্টের নাম: {MY_NAME}")
+    print(f"📊 মোট সেভ হওয়া চ্যানেল: {total_count} টি")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
