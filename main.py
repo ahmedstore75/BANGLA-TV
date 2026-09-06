@@ -97,7 +97,6 @@ def fetch_specific_country_channels():
         "https://iptv-org.github.io/iptv/countries/bd.m3u",
         "https://iptv-org.github.io/iptv/countries/in.m3u",
         "https://iptv-org.github.io/iptv/countries/pk.m3u",
-        "https://iptv-org.github.io/iptv/categories/sports.m3u",
     ]
 
     headers = {
