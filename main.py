@@ -3,19 +3,16 @@ import json
 import re
 
 def clean_channel_name(name):
-    # ব্র্যাকেট (), [], {} এবং ভেতরের লেখা মুছে নাম পরিষ্কার করা
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
 
 def normalize_text(text):
-    # স্পেস ও স্পেশাল ক্যারেক্টার ছাড়া শুধু অক্ষর তুলনা করার জন্য
     return re.sub(r'[^a-zA-Z0-9]', '', text).lower()
 
 def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
-    # তেলেগু ও তামিল ফিল্টারিং
     excluded = ['telugu', 'tamil', 'gemini', 'vijay', 'sun tv', 'kalignar', 'etv telugu', 'sakshi']
     if any(k in group for k in ['telugu', 'tamil']) or any(k in name for k in excluded):
         return True
@@ -26,9 +23,9 @@ def categorize_and_prioritize(channel):
     name = channel['name'].lower()
     norm_name = normalize_text(name)
 
-    # ১. বাংলাদেশ (পপুলার চ্যানেলগুলো সবার উপরে)
+    # ১. বাংলাদেশ (পপুলার চ্যানেল সবার উপরে)
     if 'bangladesh' in group or channel.get('source_country') == 'bd':
-        if not any(ex in name for ex in ['abp', 'uk', 'india', 'sangeet bangla', 'hope channel']):
+        if not any(ex in name for ex in ['abp', 'uk', 'india', 'sangeet bangla', 'hope channel', 'enterr10']):
             bd_popular = [
                 'somoy', 'ekattor', 'jamuna', 'channel i', 'ntv', 'atn bangla', 'atn news', 'rtv', 
                 'independent', 'banglavision', 'dbc news', 'channel 24', 'gtv', 'gazi tv', 
@@ -37,17 +34,17 @@ def categorize_and_prioritize(channel):
             sub_p = 0 if any(normalize_text(pop) in norm_name for pop in bd_popular) else 1
             return (1, sub_p, "Bangladeshi TV")
 
-    # ২. স্পোর্টস (পপুলার স্পোর্টস চ্যানেলগুলো উপরে)
+    # ২. স্পোর্টস (পপুলার চ্যানেল সবার উপরে)
     sports_keywords = ['sport', 'sports', 'cricket', 'kabaddi']
-    if any(k in group for k in sports_keywords) or any(k in name for k in ['t sports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'dd sports', 'astro arena']):
+    if any(k in group for k in sports_keywords) or any(k in name for k in ['t sports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'dd sports']):
         sports_popular = ['t sports', 'tsports', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'dd sports']
         sub_p = 0 if any(normalize_text(pop) in norm_name for pop in sports_popular) else 1
         return (2, sub_p, "Sports Channels")
 
-    # ৩. কলকাতা বাংলা (পপুলার চ্যানেলগুলো উপরে)
-    if 'kolkata' in group or 'west bengal' in group or any(k in name for k in ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta']):
-        kolkata_popular = ['star jalsha', 'zee bangla', 'abp ananda', 'colors bangla', 'sony aath', 'zee 24 ghanta', 'sangeet bangla', 'news18 bangla', 'tv9 bangla']
-        sub_p = 0 if any(normalize_text(pop) in norm_name for pop in kolkata_popular) else 1
+    # ৩. কলকাতা বাংলা (Enterr10 Bangla সহ)
+    kolkata_keywords = ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'enterr10 bangla', 'enterr 10 bangla', 'enterr10', 'news18 bangla', 'tv9 bangla', 'aakash aath', 'rupashi bangla']
+    if 'kolkata' in group or 'west bengal' in group or any(k in name for k in kolkata_keywords):
+        sub_p = 0 if any(normalize_text(pop) in norm_name for pop in kolkata_keywords) else 1
         return (3, sub_p, "Kolkata Bangla")
 
     # ৪. কিডস
@@ -59,17 +56,17 @@ def categorize_and_prioritize(channel):
         return (5, 0, "Documentary")
 
     # ৬. মিউজিক
-    if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4u music', 'sangeet bangla']):
+    if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4u music']):
         return (6, 0, "Music Channels")
 
-    # ৭. ইন্ডিয়ান পপুলার ও মুভি চ্যানেল (সকল বড় ব্র্যান্ডের চ্যানেল)
-    if 'india' in group or channel.get('source_country') == 'in':
-        indian_popular = [
-            'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
-            'aaj tak', 'ndtv', 'india today', 'star movies', 'mnx', 'hbo', 'movies now', 
-            'sony pix', 'wb', 'star gold', 'sony max', 'zee cinema', 'goldmines', 'goldmine',
-            'b4u movies', 'b4u bhojpuri', 'bhojpuri cinema', 'zee anmol', 'colors cineplex'
-        ]
+    # ৭. ইন্ডিয়ান পপুলার মুভি ও বিনোদন চ্যানেল (সবার উপরে)
+    indian_popular = [
+        'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
+        'star movies', 'mnx', 'hbo', 'movies now', 'sony pix', 'wb', 'star gold', 'sony max', 
+        'zee cinema', 'goldmines', 'goldmine', 'b4u movies', 'b4u bhojpuri', 'bhojpuri cinema', 
+        'zee anmol', 'colors cineplex', 'aaj tak', 'ndtv', 'india today'
+    ]
+    if 'india' in group or channel.get('source_country') == 'in' or any(normalize_text(pop) in norm_name for pop in indian_popular):
         sub_p = 0 if any(normalize_text(pop) in norm_name for pop in indian_popular) else 1
         return (7, sub_p, "Indian Channels")
 
@@ -93,7 +90,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 নিখুঁত পপুলারিটি চেকিং সহ ক্যাটাগরি তৈরি হচ্ছে...")
+    print("🔄 Enterr10 Bangla ও ইন্ডিয়ান পপুলার মুভি চ্যানেল সর্টিং করা হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -141,7 +138,7 @@ def fetch_channels_by_group():
                         seen_urls.add(stream_url)
             i += 1
 
-    # সর্টিং (প্রথম মান ক্যাটাগরি, দ্বিতীয় মান পপুলারিটি: ০ মানে পপুলার চ্যানেল, ১ মানে সাধারণ)
+    # সর্টিং অগ্রাধিকার প্রয়োগ
     channels.sort(key=lambda x: categorize_and_prioritize(x)[:2])
 
     m3u_lines = ["#EXTM3U\n"]
@@ -165,7 +162,7 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সফলভাবে সর্বমোট {len(json_channels)} টি চ্যানেল পপুলার অগ্রাধিকার অনুযায়ী সেভ করা হয়েছে!")
+    print(f"✅ সফলভাবে সর্বমোট {len(json_channels)} টি চ্যানেল আপডেটেড লিস্টে সেভ করা হয়েছে!")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
