@@ -72,18 +72,20 @@ def categorize_and_prioritize(channel):
     if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom']):
         return (6, 0, "Music Channels")
 
-    # ৭. ইন্ডিয়ান ফিল্টারড চ্যানেল (&pictures ও B4U সহ)
+    # ৭. ইন্ডিয়ান ফিল্টারড চ্যানেল (&TV, &pictures, B4U সহ)
     indian_allowlist = [
         'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
+        'and tv', 'andtv', 'amptv', '&tv', 'and pictures', 'amp pictures', 'andpictures', '&pictures',
+        'andxplor', '&xplor', 'andflix', '&flix',
         'star movies', 'mnx', 'hbo', 'movies now', 'sony pix', 'wb', 
-        'star gold', 'sony max', 'zee cinema', 'and pictures', 'amp pictures', 'andpictures', 'andxplor',
-        'goldmines', 'b4u movies', 'b4u music', 'b4u bhojpuri', 'b4u kadak', 'b4u plus',
+        'star gold', 'sony max', 'zee cinema', 'goldmines', 
+        'b4u movies', 'b4u music', 'b4u bhojpuri', 'b4u kadak', 'b4u plus',
         'bhojpuri cinema', 'zee anmol', 'colors cineplex', 
         'aaj tak', 'ndtv', 'india today', 'dd national', 'dd news', 'dangal'
     ]
     
-    # &pictures চ্যানেলের স্পেশাল নাম ম্যাচিং
-    if 'india' in group or channel.get('source_country') == 'in' or 'b4u' in norm_name or 'pictures' in norm_name:
+    # &TV এবং অন্যান্য চ্যানেল চেক
+    if 'india' in group or channel.get('source_country') == 'in' or 'b4u' in norm_name or 'pictures' in norm_name or 'andtv' in norm_name:
         is_allowed = any(normalize_text(allow) in norm_name for allow in indian_allowlist)
         if is_allowed:
             return (7, 0, "Indian Channels")
@@ -117,7 +119,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 &pictures সহ পপুলার মুভি চ্যানেল ফিল্টার করে সেভ করা হচ্ছে...")
+    print("🔄 &TV (অ্যান্ড টিভি) ও &pictures সহ প্লেলিস্ট আপডেট করা হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -190,7 +192,7 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সফলভাবে &pictures সহ মোট {len(json_channels)} টি পরিচ্ছন্ন চ্যানেল সেভ করা হয়েছে!")
+    print(f"✅ সফলভাবে &TV সহ মোট {len(json_channels)} টি চ্যানেল সেভ করা হয়েছে!")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
