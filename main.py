@@ -28,7 +28,6 @@ def is_excluded_channel(channel):
         'vasanth tv', 'seithigal', 'mk tv', 'j invasion', 'tamizh'
     ]
 
-    # ক্যাটাগরি বা নামের মধ্যে তেলেগু বা তামিল লেখা থাকলে True রিটার্ন করবে (বাদ যাবে)
     if 'telugu' in category or 'tamil' in category:
         return True
     if any(k in name for k in telugu_keywords):
@@ -42,14 +41,18 @@ def get_channel_priority(channel):
     name = channel['name'].lower()
     category = channel['category'].lower()
 
-    # ১. বাংলাদেশী চ্যানেল (সবার উপরে)
+    # ১. বাংলাদেশী সব ধরনের চ্যানেল (১ম অগ্রাধিকার - সবার উপরে)
     bd_keywords = [
         'btv', 'somoy', 'channel i', 'ekattor', 'jamuna', 'rtv', 'atn', 'ntv', 
-        'independent', 'bangla vision', 'dbc', 'deepto', 'asian tv', 'desh tv', 
-        'nagorik', 'boishakhi', 'maasranga', 'bijoy', 'gtv', 'gazitv', 'bangladesh',
-        'duronto', 'saatv', 'sangeet bangla', 'news24', 'channel 24', 'mohana', 'channel9'
+        'independent', 'bangla vision', 'banglavision', 'dbc', 'deepto', 'asian tv', 
+        'desh tv', 'nagorik', 'boishakhi', 'maasranga', 'bijoy', 'gtv', 'gazitv', 
+        'bangladesh', 'duronto', 'saatv', 'saa tv', 'sangeet bangla', 'news24', 
+        'channel 24', 'mohana', 'channel9', 'channel 9', 'my tv', 'mytv', 'nexus', 
+        'titas', 'chotoder', 'ananda', 'bengal', 'shomoy', 'bd'
     ]
-    if any(k in name for k in bd_keywords) or 'bangladesh' in category:
+    
+    # যদি নামে বা ক্যাটাগরিতে বাংলাদেশের চিহ্ন থাকে তবে সরাসরি পজিশন ১
+    if any(k in name for k in bd_keywords) or 'bangladesh' in category or 'bd' in category:
         return 1
 
     # ২. স্পোর্টস চ্যানেল
@@ -59,7 +62,7 @@ def get_channel_priority(channel):
 
     # ৩. কলকাতা বাংলা চ্যানেল
     kolkata_keywords = ['star jalsha', 'zee bangla', 'colors bangla', 'sony aath', 'rupashi bangla', 'sangeet bangla', 'news18 bangla', 'tv9 bangla', 'khabor 365', 'calcutta', 'kolkata']
-    if any(k in name for k in kolkata_keywords):
+    if any(k in name for k in kolkata_keywords) or 'bangla' in category:
         return 3
 
     # ৪. ইন্ডিয়ান টিভি চ্যানেল
@@ -75,10 +78,9 @@ def get_channel_priority(channel):
     return 6
 
 def fetch_channels():
-    # চ্যানেল সোর্সসমূহ
     sources = [
-        "https://iptv-org.github.io/iptv/languages/ben.m3u",
-        "https://iptv-org.github.io/iptv/countries/bd.m3u",
+        "https://iptv-org.github.io/iptv/countries/bd.m3u",   # বাংলাদেশী চ্যানেল সবার আগে প্রসেস হবে
+        "https://iptv-org.github.io/iptv/languages/ben.m3u",  # বাংলা চ্যানেল সোর্স
         "https://iptv-org.github.io/iptv/countries/in.m3u",
         "https://iptv-org.github.io/iptv/countries/pk.m3u"
     ]
@@ -87,7 +89,7 @@ def fetch_channels():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 তেলেগু ও তামিল চ্যানেল বাদ দিয়ে ডাটা লোড করা হচ্ছে...")
+    print("🔄 বাংলাদেশী চ্যানেলকে ১০০% উপরে রেখে ফিল্টার করা হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -129,21 +131,20 @@ def fetch_channels():
                         "stream_url": stream_url
                     }
 
-                    # তেলেগু ও তামিল চ্যানেল না হলে লিস্টে যোগ হবে
                     if not is_excluded_channel(ch_obj):
                         channels.append(ch_obj)
                         seen_urls.add(stream_url)
             i += 1
 
-    # সিরিয়াল অনুযায়ী সাজানো
+    # সর্টিং অ্যালগরিদম রান করা (BD Channels -> Sports -> Kolkata Bangla -> India -> Pakistan)
     channels.sort(key=get_channel_priority)
 
-    # M3U জেনারেট করা
+    # M3U ফাইল তৈরি
     m3u_lines = ["#EXTM3U\n"]
     for ch in channels:
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{ch["name"]}\n{ch["stream_url"]}\n')
 
-    # ১. playlist.json সেভ
+    # ১. playlist.json তৈরি
     json_data = {
         "status": "success",
         "total_channels": len(channels),
@@ -154,10 +155,10 @@ def fetch_channels():
         json.dump(json_data, jf, indent=4, ensure_ascii=False)
     print(f"✅ playlist.json আপডেট করা হয়েছে (মোট চ্যানেল: {len(channels)})")
 
-    # ২. playlist.m3u সেভ
+    # ২. playlist.m3u তৈরি
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print("✅ playlist.m3u সফলতা সহকারে সেভ হয়েছে")
+    print("✅ playlist.m3u সফলভাবে আপডেট করা হয়েছে")
 
 if __name__ == "__main__":
     fetch_channels()
