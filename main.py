@@ -72,7 +72,7 @@ def categorize_and_prioritize(channel):
     if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4u music']):
         return (6, 0, "Music Channels")
 
-    # ৭. ইন্ডিয়ান ফিল্টারড চ্যানেল (শুধু পপুলার ও কাজের হিন্দি/মুভি চ্যানেল রাখা হবে)
+    # ৭. ইন্ডিয়ান ফিল্টারড চ্যানেল
     indian_allowlist = [
         'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
         'star movies', 'mnx', 'hbo', 'movies now', 'sony pix', 'wb', 
@@ -80,20 +80,25 @@ def categorize_and_prioritize(channel):
         'b4u bhojpuri', 'bhojpuri cinema', 'zee anmol', 'colors cineplex', 
         'aaj tak', 'ndtv', 'india today', 'dd national', 'dd news', 'dangal'
     ]
-    
     if 'india' in group or channel.get('source_country') == 'in':
-        # শুধুমাত্র অ্যালাউলিস্টের চ্যানেলগুলোই থাকবে, বাকি আজেবাজে চ্যানেল সরাসরি বাদ পড়বে
         is_allowed = any(normalize_text(allow) in norm_name for allow in indian_allowlist)
         if is_allowed:
             return (7, 0, "Indian Channels")
         else:
-            return None  # এটি বাদ দেওয়ার সিগন্যাল
+            return None
 
-    # ৮. পাকিস্তান
+    # ৮. পাকিস্তান ফিল্টারড চ্যানেল (শুধু পপুলারগুলোই থাকবে)
+    pak_allowlist = [
+        'geo tv', 'geo news', 'geo kahani', 'ary digital', 'ary news', 'ary zindagi', 
+        'hum tv', 'hum news', 'ptv sports', 'ptv news', 'ptv home', 'samaa', 
+        'express news', 'express entertainment', 'dunya news', 'bol news', 'ten sports'
+    ]
     if 'pakistan' in group or channel.get('source_country') == 'pk':
-        pak_popular = ['geo tv', 'ary digital', 'hum tv', 'ptv sports', 'geo news', 'ary news', 'samaa']
-        sub_p = 0 if any(normalize_text(pop) in norm_name for pop in pak_popular) else 1
-        return (8, sub_p, "Pakistani Channels")
+        is_allowed = any(normalize_text(allow) in norm_name for allow in pak_allowlist)
+        if is_allowed:
+            return (8, 0, "Pakistani Channels")
+        else:
+            return None  # বাকি সব আজেবাজে পাকিস্তানি চ্যানেল বাদ
 
     return None
 
@@ -109,7 +114,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 ইন্ডিয়ান আজেবাজে চ্যানেল বাদ দিয়ে মূল চ্যানেলগুলো ফিল্টার করা হচ্ছে...")
+    print("🔄 ইন্ডিয়ান ও পাকিস্তানি আজেবাজে চ্যানেল বাদ দিয়ে মূল প্লেলিস্ট সেভ করা হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -153,14 +158,12 @@ def fetch_channels_by_group():
                     }
 
                     if not is_excluded_channel(ch_obj):
-                        # ক্যাটাগরি চেক
                         res = categorize_and_prioritize(ch_obj)
-                        if res is not None:  # শুধুমাত্র ভ্যালিড চ্যানেল রাখা হবে
+                        if res is not None:
                             channels.append((ch_obj, res))
                             seen_urls.add(stream_url)
             i += 1
 
-    # সর্টিং
     channels.sort(key=lambda x: x[1][:2])
 
     m3u_lines = ["#EXTM3U\n"]
@@ -184,7 +187,7 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সফলভাবে আজেবাজে চ্যানেল মুক্ত পরিচ্ছন্ন প্লেলিস্ট তৈরি করা হয়েছে! মোট চ্যানেল: {len(json_channels)}")
+    print(f"✅ সম্পূর্ণ পরিচ্ছন্ন প্লেলিস্ট তৈরি সম্পন্ন! মোট চ্যানেল সংখ্যা: {len(json_channels)}")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
