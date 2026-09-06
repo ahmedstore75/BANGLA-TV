@@ -47,12 +47,13 @@ def get_channel_priority(channel):
             return (3, 0)
         return (3, 1)
 
-    # ৪. ইন্ডিয়ান হিন্দি/অন্যান্য (পপুলার চ্যানেলগুলো আগে)
+    # ৪. ইন্ডিয়ান পপুলার ও মুভি চ্যানেল (Star Movies, MNX, HBO সহ)
     if 'india' in group or channel.get('source_country') == 'in':
         indian_popular = [
             'star plus', 'sony entertainment', 'colors', 'zee tv', 'sab tv', 'star bharat',
-            'aaj tak', 'ndtv', 'india today', 'star gold', 'sony max', 'zee cinema', 
-            'pogo', 'hungama', 'discovery', 'national geographic'
+            'aaj tak', 'ndtv', 'india today', 'star movies', 'mnx', 'hbo', 'movies now', 
+            'sony pix', 'wb', 'star gold', 'sony max', 'zee cinema', 'pogo', 'hungama', 
+            'discovery', 'national geographic'
         ]
         if any(pop in name for pop in indian_popular):
             return (4, 0)
@@ -79,7 +80,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 সকল ক্যাটাগরির পপুলার চ্যানেলগুলোকে উপরে সাজানো হচ্ছে...")
+    print("🔄 Star Movies, MNX, HBO সহ পপুলার চ্যানেল সাজানো হচ্ছে...")
 
     channels = []
     seen_urls = set()
@@ -166,7 +167,7 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ সফলভাবে {len(json_channels)} টি চ্যানেল পপুলারিটি অনুযায়ী সাজিয়ে সেভ করা হয়েছে!")
+    print(f"✅ সফলভাবে {len(json_channels)} টি চ্যানেল সেভ করা হয়েছে!")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
