@@ -927,12 +927,6 @@
             "stream_url": "https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8"
         },
         {
-            "name": "Khushboo Bangla",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-4.pishow.tv/live/1473/master.m3u8"
-        },
-        {
             "name": "Aaj Tak",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AAJ_TAK/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -943,12 +937,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AAJ_TAK/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8"
-        },
-        {
-            "name": "Anand TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Anand_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live.legitpro.co.in/anandtv/index.m3u8"
         },
         {
             "name": "B4U Bhojpuri",
@@ -981,36 +969,6 @@
             "stream_url": "http://66.102.126.10:8000/play/a076/index.m3u8"
         },
         {
-            "name": "Colors Gujarati",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_GUJARATI/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ColorsGujarati.m3u8"
-        },
-        {
-            "name": "Colors HD",
-            "logo": "https://i.imgur.com/M8uCJ0D.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a00a/index.m3u8"
-        },
-        {
-            "name": "Colors Infinity HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_INFINITY/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a014/index.m3u8"
-        },
-        {
-            "name": "Colors Kannada HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_KANNADA_HD/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorskannadahd1.smil/playlist.m3u8"
-        },
-        {
-            "name": "Colors Rishtey Americas",
-            "logo": "https://i.imgur.com/xkOunuW.png",
-            "group": "Indian Channels",
-            "stream_url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8"
-        },
-        {
             "name": "Goldmines",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -1027,12 +985,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TODAY/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/master.m3u8"
-        },
-        {
-            "name": "Jaihind TV",
-            "logo": "https://i.imgur.com/NaiA73p.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJAIHIND/index.m3u8"
         },
         {
             "name": "MNX",
@@ -1059,52 +1011,10 @@
             "stream_url": "http://103.161.153.165:8000/play/mnh/index.m3u8"
         },
         {
-            "name": "Nagaland TV",
-            "logo": "https://i.imgur.com/EBEIpPo.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVNAGALANDTV/index.m3u8"
-        },
-        {
-            "name": "NDTV 24x7",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_24X7/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/NDTV24x7.m3u8"
-        },
-        {
-            "name": "NDTV Good Times",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8"
-        },
-        {
             "name": "NDTV India",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_INDIA/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "http://103.213.31.109:90/StarUtsavMovies/playlist.m3u8"
-        },
-        {
-            "name": "NDTV Madhya Pradesh Chhattisgarh",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_MPCG/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvmpcg/master_1.m3u8"
-        },
-        {
-            "name": "NDTV Profit",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_PROFIT_PRIME/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8"
-        },
-        {
-            "name": "NDTV Rajasthan",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_RAJASTHAN/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvraj/master_1.m3u8"
-        },
-        {
-            "name": "Peace of Mind TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PEACE_OF_MIND/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://yuppnimrestreammum.akamaized.net/181224/smil:peaceofmind.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
             "name": "Sony Entertainment Television HD",
@@ -1213,12 +1123,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TV/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Channels",
             "stream_url": "http://41.205.93.154/ZEE-TV/index.m3u8"
-        },
-        {
-            "name": "SAB TV",
-            "logo": "https://i.imgur.com/hC7Sidr.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ml-pull-dvc-myco.io:2096/SAB_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8"
         },
         {
             "name": "4TV News",
@@ -1369,6 +1273,12 @@
             "logo": "https://i.imgur.com/WdSjlPl.png",
             "group": "Indian Channels",
             "stream_url": "https://ddash74r36xqp.cloudfront.net/master.m3u8"
+        },
+        {
+            "name": "Anand TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Anand_TV.png",
+            "group": "Indian Channels",
+            "stream_url": "https://live.legitpro.co.in/anandtv/index.m3u8"
         },
         {
             "name": "ANB News",
@@ -1603,6 +1513,36 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/C_News_Bharat.png",
             "group": "Indian Channels",
             "stream_url": "https://legitpro.co.in/cnews/cnews/index.fmp4.m3u8"
+        },
+        {
+            "name": "Colors Gujarati",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_GUJARATI/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ColorsGujarati.m3u8"
+        },
+        {
+            "name": "Colors HD",
+            "logo": "https://i.imgur.com/M8uCJ0D.png",
+            "group": "Indian Channels",
+            "stream_url": "http://66.102.126.10:8000/play/a00a/index.m3u8"
+        },
+        {
+            "name": "Colors Infinity HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_INFINITY/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "http://66.102.126.10:8000/play/a014/index.m3u8"
+        },
+        {
+            "name": "Colors Kannada HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_KANNADA_HD/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorskannadahd1.smil/playlist.m3u8"
+        },
+        {
+            "name": "Colors Rishtey Americas",
+            "logo": "https://i.imgur.com/xkOunuW.png",
+            "group": "Indian Channels",
+            "stream_url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8"
         },
         {
             "name": "CVR English",
@@ -2307,6 +2247,12 @@
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/jaimaharashtra/playlist.m3u8"
         },
         {
+            "name": "Jaihind TV",
+            "logo": "https://i.imgur.com/NaiA73p.png",
+            "group": "Indian Channels",
+            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJAIHIND/index.m3u8"
+        },
+        {
             "name": "Jan TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAN_TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -2703,6 +2649,12 @@
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/moontv/playlist.m3u8"
         },
         {
+            "name": "Nagaland TV",
+            "logo": "https://i.imgur.com/EBEIpPo.png",
+            "group": "Indian Channels",
+            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVNAGALANDTV/index.m3u8"
+        },
+        {
             "name": "Nambikkai TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAMBIKKAI_TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -2719,6 +2671,36 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Nandighosha.png",
             "group": "Indian Channels",
             "stream_url": "https://mumt05.tangotv.in/87NeALx2NANDIGHOSHATV/index.m3u8"
+        },
+        {
+            "name": "NDTV 24x7",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_24X7/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/NDTV24x7.m3u8"
+        },
+        {
+            "name": "NDTV Good Times",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8"
+        },
+        {
+            "name": "NDTV Madhya Pradesh Chhattisgarh",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_MPCG/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvmpcg/master_1.m3u8"
+        },
+        {
+            "name": "NDTV Profit",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_PROFIT_PRIME/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8"
+        },
+        {
+            "name": "NDTV Rajasthan",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_RAJASTHAN/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvraj/master_1.m3u8"
         },
         {
             "name": "NE News",
@@ -2959,6 +2941,12 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PARAS_GOLD_ONE/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "https://mumt04.tangotv.in/m18aqlK4PARASGOLD/index.m3u8"
+        },
+        {
+            "name": "Peace of Mind TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PEACE_OF_MIND/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://yuppnimrestreammum.akamaized.net/181224/smil:peaceofmind.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
             "name": "Peace TV Urdu",
@@ -4371,6 +4359,12 @@
             "stream_url": "https://jtbsclassic.dpdns.org/live.m3u8"
         },
         {
+            "name": "Khushboo Bangla",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://cdn-4.pishow.tv/live/1473/master.m3u8"
+        },
+        {
             "name": "Kolkata TV",
             "logo": "https://dtil.tmsimg.com/assets/s143271_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
@@ -4891,6 +4885,12 @@
             "logo": "https://i.imgur.com/TedWqfL.png",
             "group": "Pakistani Channels",
             "stream_url": "http://103.250.28.74:8000/play/a01k/index.m3u8"
+        },
+        {
+            "name": "SAB TV",
+            "logo": "https://i.imgur.com/hC7Sidr.png",
+            "group": "Pakistani Channels",
+            "stream_url": "https://ml-pull-dvc-myco.io:2096/SAB_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8"
         },
         {
             "name": "Shine Star TV",
