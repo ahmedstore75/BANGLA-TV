@@ -47,13 +47,14 @@ def get_channel_priority(channel):
             return (3, 0)
         return (3, 1)
 
-    # ৪. ইন্ডিয়ান পপুলার ও মুভি চ্যানেল (Star Movies, MNX, HBO সহ)
+    # ৪. ইন্ডিয়ান পপুলার, মুভি ও ভোজপুরি চ্যানেল
     if 'india' in group or channel.get('source_country') == 'in':
         indian_popular = [
             'star plus', 'sony entertainment', 'colors', 'zee tv', 'sab tv', 'star bharat',
             'aaj tak', 'ndtv', 'india today', 'star movies', 'mnx', 'hbo', 'movies now', 
-            'sony pix', 'wb', 'star gold', 'sony max', 'zee cinema', 'pogo', 'hungama', 
-            'discovery', 'national geographic'
+            'sony pix', 'wb', 'star gold', 'sony max', 'zee cinema', 'goldmines', 'goldmine',
+            'b4u movies', 'b4u bhojpuri', 'bhojpuri cinema', 'zee anmol', 'pogo', 
+            'hungama', 'discovery', 'national geographic'
         ]
         if any(pop in name for pop in indian_popular):
             return (4, 0)
@@ -80,7 +81,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 Star Movies, MNX, HBO সহ পপুলার চ্যানেল সাজানো হচ্ছে...")
+    print("🔄 Goldmines, B4U, Bhojpuri Cinema সহ পপুলার চ্যানেল সাজানো হচ্ছে...")
 
     channels = []
     seen_urls = set()
