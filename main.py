@@ -7,6 +7,24 @@ def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
 
+def is_telugu_channel(channel):
+    name = channel['name'].lower()
+    category = channel['category'].lower()
+    
+    # তেলেগু চ্যানেল চেনার জন্য নির্দিষ্ট কিউয়ার্ড (ব্লকলিস্ট)
+    telugu_keywords = [
+        'telugu', 'gemini tv', 'gemini movies', 'gemini music', 'gemini comedy',
+        'etv telugu', 'etv plus', 'etv cinema', 'etv life', 'etv abhirami',
+        'sakshi', 'v6 news', 'tv9 telugu', 'nTV telugu', 't news', '10tv',
+        'abn andhra jyothi', 'bhakthi tv', 'svbc', 'raj news telugu', 'mahaa news',
+        'hMTV', 'prime9 news', 'studio n', 'cvr news', 'tollywood'
+    ]
+
+    # যদি ক্যাটাগরি বা নামের মধ্যে তেলেগু চিহ্নিত হয়
+    if 'telugu' in category or any(k in name for k in telugu_keywords):
+        return True
+    return False
+
 def get_channel_priority(channel):
     name = channel['name'].lower()
     category = channel['category'].lower()
@@ -41,11 +59,10 @@ def get_channel_priority(channel):
     if any(k in name for k in pak_keywords) or 'pakistan' in category:
         return 5
 
-    # ৬. বাকি সব চ্যানেল (যাতে কোনো চ্যানেল বাদ না পড়ে)
     return 6
 
-def fetch_all_channels():
-    # বাংলাদেশ, ইন্ডিয়া, পাকিস্তান এবং গ্লোবাল বাংলা চ্যানেল সোর্স
+def fetch_channels_without_telugu():
+    # চ্যানেল সোর্সসমূহ
     sources = [
         "https://iptv-org.github.io/iptv/languages/ben.m3u",
         "https://iptv-org.github.io/iptv/countries/bd.m3u",
@@ -57,10 +74,10 @@ def fetch_all_channels():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 সোর্সগুলো থেকে সব চ্যানেল লোড করা হচ্ছে...")
+    print("🔄 তেলেগু চ্যানেল ফিল্টার করে বাকি ডাটা লোড করা হচ্ছে...")
 
     channels = []
-    seen_urls = set()  # এক লিঙ্ক বারবার আসবে না
+    seen_urls = set()
 
     for url in sources:
         try:
@@ -82,7 +99,6 @@ def fetch_all_channels():
                     stream_url = lines[i + 1].strip()
                     i += 1
 
-                # লিঙ্ক ইউনিক হলে সাথে সাথে যুক্ত করবে (কোনো ফিল্টার ছাড়া)
                 if stream_url and stream_url not in seen_urls:
                     raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
                     clean_name = clean_channel_name(raw_name)
@@ -99,20 +115,22 @@ def fetch_all_channels():
                         "category": category,
                         "stream_url": stream_url
                     }
-                    
-                    channels.append(ch_obj)
-                    seen_urls.add(stream_url)
+
+                    # তেলেগু চ্যানেল হলে বাদ দেওয়া হবে
+                    if not is_telugu_channel(ch_obj):
+                        channels.append(ch_obj)
+                        seen_urls.add(stream_url)
             i += 1
 
-    # অগ্রাধিকার অনুযায়ী চ্যানেলগুলোকে সাজানো (BD -> Sports -> Kolkata -> India -> Pakistan -> Others)
+    # সিরিয়াল অনুযায়ী সর্টিং
     channels.sort(key=get_channel_priority)
 
-    # M3U ফরম্যাটিং
+    # M3U জেনারেট করা
     m3u_lines = ["#EXTM3U\n"]
     for ch in channels:
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{ch["name"]}\n{ch["stream_url"]}\n')
 
-    # ১. playlist.json সেভ করা
+    # ১. playlist.json সেভ
     json_data = {
         "status": "success",
         "total_channels": len(channels),
@@ -121,12 +139,12 @@ def fetch_all_channels():
 
     with open("playlist.json", "w", encoding="utf-8") as jf:
         json.dump(json_data, jf, indent=4, ensure_ascii=False)
-    print(f"✅ playlist.json আপডেট হয়েছে (মোট চ্যানেল: {len(channels)})")
+    print(f"✅ playlist.json আপডেট করা হয়েছে (মোট চ্যানেল: {len(channels)})")
 
-    # ২. playlist.m3u সেভ করা
+    # ২. playlist.m3u সেভ
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
-    print("✅ playlist.m3u সেভ হয়েছে")
+    print("✅ playlist.m3u সফলতা সহকারে সেভ হয়েছে")
 
 if __name__ == "__main__":
-    fetch_all_channels()
+    fetch_channels_without_telugu()
