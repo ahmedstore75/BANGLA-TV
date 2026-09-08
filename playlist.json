@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 367,
+    "total_channels": 369,
     "status": "success",
     "channels": [
         {
@@ -241,7 +241,7 @@
             "name": "Zee Bangla HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BANGLA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Bangladeshi TV",
-            "stream_url": "http://103.165.93.31:8095/zeeBangla/index.m3u8"
+            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8"
         },
         {
             "name": "Zee Bangla Sonar",
@@ -1072,6 +1072,12 @@
             "stream_url": "http://115.42.65.142:9981/stream/channelid/582886861"
         },
         {
+            "name": "8XM HD",
+            "logo": "https://i.ibb.co/Kc0xHyBb/8XM-Logo.png",
+            "group": "Music Channels",
+            "stream_url": "https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8"
+        },
+        {
             "name": "Jalwa TV",
             "logo": "https://i.imgur.com/HWb5Iat.png",
             "group": "Music Channels",
@@ -1642,6 +1648,12 @@
             "stream_url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/marinebiztvlive/marinebiztvlive/playlist.m3u8"
         },
         {
+            "name": "Mei Alai TV",
+            "logo": "https://www.meialai.in/assets/meialai-DBaBUZTH.png",
+            "group": "Indian Channels",
+            "stream_url": "https://meialai.iptelevishion.com/meialai/2/index.m3u8"
+        },
+        {
             "name": "Mercy TV",
             "logo": "https://i.imgur.com/klNH4tV.png",
             "group": "Indian Channels",
@@ -1685,7 +1697,7 @@
         },
         {
             "name": "NDTV 24x7",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_24X7/images/LOGO_HD/image.png",
+            "logo": "https://dtil.tmsimg.com/assets/s154895_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
             "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/NDTV24x7.m3u8"
         },
