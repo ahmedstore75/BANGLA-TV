@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 369,
+    "total_channels": 367,
     "status": "success",
     "channels": [
         {
@@ -550,18 +550,6 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/pixhd.m3u8"
         },
         {
-            "name": "Star Movies HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://66.102.126.10:8000/play/a021/index.m3u8"
-        },
-        {
-            "name": "Star Movies Select HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://66.102.126.10:8000/play/a020/index.m3u8"
-        },
-        {
             "name": "Zee Classic",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movies",
@@ -775,7 +763,7 @@
             "name": "Safari TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAFARI_TV/images/LOGO_HD/image.png",
             "group": "Documentary",
-            "stream_url": "https://cdn-6.pishow.tv/live/1513/master.m3u8"
+            "stream_url": "https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8"
         },
         {
             "name": "Sony BBC Earth HD",
