@@ -3,7 +3,7 @@ import json
 import re
 
 # আপনার নাম এখানে দিন
-MY_NAME = "Ahmed Store"
+MY_NAME = "Ahmed Iptv"
 
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
@@ -24,6 +24,27 @@ def is_excluded_channel(channel):
     ]
     if any(k in group for k in excluded) or any(k in name for k in excluded):
         return True
+    return False
+
+def is_stream_working(url):
+    """
+    স্ট্রিম URL টি সক্রিয় (Active) কি না তা যাচাই করার ফাংশন।
+    """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
+    try:
+        # প্রথমে দ্রুত চেক করার জন্য HEAD রিকোয়েস্ট
+        response = requests.head(url, headers=headers, timeout=4, allow_redirects=True)
+        if response.status_code == 200:
+            return True
+        
+        # HEAD ফেল করলে কিছু সার্ভারের জন্য GET রিকোয়েস্ট (Stream Data লোড না করে শুধু হেডার চেক)
+        response = requests.get(url, headers=headers, timeout=4, stream=True, allow_redirects=True)
+        if response.status_code == 200:
+            return True
+    except Exception:
+        return False
     return False
 
 def categorize_and_prioritize(channel):
@@ -53,14 +74,13 @@ def categorize_and_prioritize(channel):
         sub_p = 0 if any(normalize_text(pop) == norm_name or normalize_text(pop) in norm_name for pop in sports_popular) else 1
         return (2, sub_p, "Sports Channels")
 
-    # ৩. স্পোর্টস চ্যানেলের নিচে: ইন্ডিয়ান মুভি চ্যানেল
+    # ৩. ইন্ডিয়ান মুভি চ্যানেল
     indian_movie_keywords = [
         'star gold', 'sony max', 'zee cinema', 'and pictures', 'andpictures', '&pictures',
         'goldmines', 'b4u movies', 'b4u kadak', 'colors cineplex', 'star movies', 
         'mnx', 'hbo', 'movies now', 'sony pix', 'wb', 'zee classic', 'zee action',
         'rishtey cineplex', 'bhojpuri cinema', 'b4u bhojpuri', '&flix', 'andflix'
     ]
-    
     if any(normalize_text(m_kw) in norm_name for m_kw in indian_movie_keywords):
         popular_movies = ['stargold', 'sonymax', 'zeecinema', 'andpictures', 'b4umovies', 'goldmines', 'colorscineplex']
         sub_p = 0 if any(normalize_text(p_mov) in norm_name for p_mov in popular_movies) else 1
@@ -88,7 +108,7 @@ def categorize_and_prioritize(channel):
     if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4u music']):
         return (7, 0, "Music Channels")
 
-    # ৮. ইন্ডিয়ান নাটক ও নিউজ
+    # ৮. ইন্ডিয়ান চ্যানেল
     indian_allowlist = [
         'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
         'and tv', 'andtv', 'amptv', '&tv', 'b4u plus', 'zee anmol', 'dangal',
@@ -101,7 +121,7 @@ def categorize_and_prioritize(channel):
         else:
             return None
 
-    # ৯. পাকিস্তান ফিল্টারড চ্যানেল
+    # ৯. পাকিস্তানি চ্যানেল
     pak_allowlist = [
         'geo tv', 'geo news', 'geo kahani', 'ary digital', 'ary news', 'ary zindagi', 
         'hum tv', 'hum news', 'ptv sports', 'ptv news', 'ptv home', 'samaa', 
@@ -174,8 +194,13 @@ def fetch_channels_by_group():
                     if not is_excluded_channel(ch_obj):
                         res = categorize_and_prioritize(ch_obj)
                         if res is not None:
-                            channels.append((ch_obj, res))
-                            seen_urls.add(stream_url)
+                            # অ্যাক্টিভ এবং ওয়ার্কিং চ্যানেল চেক করা হচ্ছে
+                            if is_stream_working(stream_url):
+                                channels.append((ch_obj, res))
+                                seen_urls.add(stream_url)
+                                print(f"  🟢 [Working]: {ch_obj['name']}")
+                            else:
+                                print(f"  🔴 [Offline]: {ch_obj['name']}")
             i += 1
 
     channels.sort(key=lambda x: x[1][:2])
@@ -213,9 +238,9 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"✅ প্লেলিস্ট তৈরি সম্পন্ন!")
+    print(f"\n✅ প্লেলিস্ট তৈরি সম্পন্ন!")
     print(f"📌 প্লেলিস্টের নাম: {MY_NAME}")
-    print(f"📊 মোট সেভ হওয়া চ্যানেল: {total_count} টি")
+    print(f"📊 মোট অ্যাক্টিভ চ্যানেল সেভ হয়েছে: {total_count} টি")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
