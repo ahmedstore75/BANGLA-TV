@@ -1,56 +1,8 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 367,
+    "total_channels": 236,
     "status": "success",
     "channels": [
-        {
-            "name": "ATN Bangla",
-            "logo": "https://i.imgur.com/K1HmMRz.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
-        },
-        {
-            "name": "Azan TV",
-            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
-        },
-        {
-            "name": "Bangla Vision",
-            "logo": "https://i.imgur.com/nCWgp38.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen5.aynaott.com/banglavision/index.m3u8"
-        },
-        {
-            "name": "Boishakhi TV",
-            "logo": "https://i.imgur.com/gxL05Y4.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8"
-        },
-        {
-            "name": "DBC News",
-            "logo": "https://i.imgur.com/Qbt6q4z.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8"
-        },
-        {
-            "name": "Ekhon TV",
-            "logo": "https://i.imgur.com/tRrDh6z.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tplay.live/out/bangladesh/ekhontv.index.m3u8"
-        },
-        {
-            "name": "Gazi TV",
-            "logo": "https://i.imgur.com/2Lzhiq6.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8"
-        },
-        {
-            "name": "Green TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
-        },
         {
             "name": "Maasranga TV",
             "logo": "https://i.imgur.com/uVZJMed.png",
@@ -58,16 +10,10 @@
             "stream_url": "http://tvsen5.aynascope.net/maasrangatv/index.m3u8"
         },
         {
-            "name": "NAN TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
+            "name": "ATN Bangla",
+            "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
-        },
-        {
-            "name": "NTV",
-            "logo": "https://i.imgur.com/l75bDTx.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8"
+            "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
         },
         {
             "name": "RTV",
@@ -76,166 +22,40 @@
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
         },
         {
-            "name": "Aamar Bangla",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
+            "name": "Azan TV",
+            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
+            "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
         },
         {
-            "name": "Ananda TV",
-            "logo": "https://i.imgur.com/jkbo7Qe.png",
+            "name": "Green TV",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
             "group": "Bangladeshi TV",
-            "stream_url": "http://103.99.249.139/anandatv/index.m3u8"
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
         },
         {
-            "name": "ATN Music",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681",
+            "name": "Boishakhi TV",
+            "logo": "https://i.imgur.com/gxL05Y4.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
+            "stream_url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8"
         },
         {
-            "name": "Channel S",
-            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "name": "Bangla Vision",
+            "logo": "https://i.imgur.com/nCWgp38.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
+            "stream_url": "https://tvsen5.aynaott.com/banglavision/index.m3u8"
         },
         {
-            "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
+            "name": "NTV",
+            "logo": "https://i.imgur.com/l75bDTx.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
-            "name": "Deshi TV",
-            "logo": "https://i.imgur.com/PzqzgMm.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://deshitv.deshitv24.net/live/myStream/playlist.m3u8"
-        },
-        {
-            "name": "Disney International HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_INTERNATIONAL_HD/images/LOGO_HD/image.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://202.70.146.135:8000/play/a04p/index.m3u8"
-        },
-        {
-            "name": "Duronto TV",
-            "logo": "https://i.imgur.com/gXsddRK.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
-        },
-        {
-            "name": "Ekushey TV",
-            "logo": "https://i.imgur.com/lRpkGHj.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
-        },
-        {
-            "name": "Madani Channel Bangla",
-            "logo": "https://i.imgur.com/vIJTVia.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8"
-        },
-        {
-            "name": "Movie Bangla",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2016/02/moviebangla.jpg?x50681",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://alvetv.com/moviebanglatv/8080/index.m3u8"
-        },
-        {
-            "name": "My TV",
-            "logo": "https://i.imgur.com/475qK5T.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
-        },
-        {
-            "name": "National Geographic",
-            "logo": "https://dtil.tmsimg.com/assets/s143573_ld_h15_aa.png?lock=720x540",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:28:41&stream=373017&extension=ts&play_token=zCaGy5dtla"
-        },
-        {
-            "name": "National Geographic HD",
-            "logo": "https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.165.93.31:8095/nationalGeographic/index.m3u8"
-        },
-        {
-            "name": "News 21 Bangla TV",
-            "logo": "https://i.imgur.com/ijuJfmd.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
-        },
-        {
-            "name": "Nexus TV",
-            "logo": "https://i.imgur.com/XcJZKg4.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
-        },
-        {
-            "name": "Nick Jr.",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.185.24.134:3001/NICK-JR/index.m3u8"
-        },
-        {
-            "name": "Nickelodeon",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.185.24.134:3001/NICK/index.m3u8"
-        },
-        {
-            "name": "Peace TV Bangla",
-            "logo": "https://i.imgur.com/1ztVXUi.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8"
+            "stream_url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8"
         },
         {
             "name": "Probashi TV News",
             "logo": "https://i.imgur.com/7oTsfQ4.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://158.69.24.53:8080/probashi_tv/index.m3u8"
-        },
-        {
-            "name": "Rajdhani TV",
-            "logo": "https://i.imgur.com/MBm2gPz.jpeg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
-        },
-        {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
-        },
-        {
-            "name": "Sonic",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.185.24.134:3001/SONIC/index.m3u8"
-        },
-        {
-            "name": "Star Jalsha",
-            "logo": "https://i.imgur.com/IlufzR5.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV"
-        },
-        {
-            "name": "Star Jalsha HD",
-            "logo": "https://i.imgur.com/IlufzR5.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8"
-        },
-        {
-            "name": "T Sports",
-            "logo": "https://i.imgur.com/2JzlorD.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8"
-        },
-        {
-            "name": "Vokta TV",
-            "logo": "https://i.imgur.com/szAGBCU.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://vokta.raytahost.com/live/voktatv/index.m3u8"
         },
         {
             "name": "Zee Bangla HD",
@@ -250,6 +70,126 @@
             "stream_url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8"
         },
         {
+            "name": "Star Jalsha HD",
+            "logo": "https://i.imgur.com/IlufzR5.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8"
+        },
+        {
+            "name": "Nickelodeon",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/NICK/index.m3u8"
+        },
+        {
+            "name": "My TV",
+            "logo": "https://i.imgur.com/475qK5T.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
+        },
+        {
+            "name": "Aamar Bangla",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
+        },
+        {
+            "name": "Nick Jr.",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/NICK-JR/index.m3u8"
+        },
+        {
+            "name": "Sonic",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/SONIC/index.m3u8"
+        },
+        {
+            "name": "Disney International HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_INTERNATIONAL_HD/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://202.70.146.135:8000/play/a04p/index.m3u8"
+        },
+        {
+            "name": "Movie Bangla",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2016/02/moviebangla.jpg?x50681",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://alvetv.com/moviebanglatv/8080/index.m3u8"
+        },
+        {
+            "name": "Deshi TV",
+            "logo": "https://i.imgur.com/PzqzgMm.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://deshitv.deshitv24.net/live/myStream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.imgur.com/hJxFLvF.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
+        },
+        {
+            "name": "Madani Channel Bangla",
+            "logo": "https://i.imgur.com/vIJTVia.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8"
+        },
+        {
+            "name": "ATN Music",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
+        },
+        {
+            "name": "Peace TV Bangla",
+            "logo": "https://i.imgur.com/1ztVXUi.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8"
+        },
+        {
+            "name": "Nexus TV",
+            "logo": "https://i.imgur.com/XcJZKg4.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
+        },
+        {
+            "name": "T Sports",
+            "logo": "https://i.imgur.com/2JzlorD.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8"
+        },
+        {
+            "name": "Rajdhani TV",
+            "logo": "https://i.imgur.com/MBm2gPz.jpeg",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
+        },
+        {
+            "name": "Duronto TV",
+            "logo": "https://i.imgur.com/gXsddRK.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://dtil.tmsimg.com/assets/s143573_ld_h15_aa.png?lock=720x540",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:28:41&stream=373017&extension=ts&play_token=zCaGy5dtla"
+        },
+        {
+            "name": "Ekushey TV",
+            "logo": "https://i.imgur.com/lRpkGHj.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
+        },
+        {
             "name": "Sony Sports Ten 5",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png",
             "group": "Sports Channels",
@@ -262,22 +202,10 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8"
         },
         {
-            "name": "Star Sports Select 1 HD",
-            "logo": "https://i.imgur.com/Mh9tKPx.png",
-            "group": "Sports Channels",
-            "stream_url": "http://tvsen7.aynascope.net/sspts1/index.m3u8"
-        },
-        {
             "name": "DD Sports SD",
             "logo": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8"
-        },
-        {
-            "name": "Sony Sports Ten 1",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png",
-            "group": "Sports Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten1.m3u8"
         },
         {
             "name": "Sony Sports Ten 1 HD",
@@ -286,10 +214,10 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten1hd.m3u8"
         },
         {
-            "name": "Sony Sports Ten 2",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png",
+            "name": "Sony Sports Ten 1",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png",
             "group": "Sports Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten2.m3u8"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten1.m3u8"
         },
         {
             "name": "Sony Sports Ten 2 HD",
@@ -298,16 +226,16 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten2hd.m3u8"
         },
         {
+            "name": "Sony Sports Ten 2",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png",
+            "group": "Sports Channels",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten2.m3u8"
+        },
+        {
             "name": "Sony Sports Ten 3 Hindi",
             "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten3.m3u8"
-        },
-        {
-            "name": "Sony Sports Ten 3 Hindi HD",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540",
-            "group": "Sports Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8"
         },
         {
             "name": "Sony Sports Ten 4",
@@ -316,16 +244,16 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten4.m3u8"
         },
         {
-            "name": "Star Sports 1 Hindi",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HINDI/images/LOGO_HD/image.png",
+            "name": "Sony Sports Ten 3 Hindi HD",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540",
             "group": "Sports Channels",
-            "stream_url": "http://103.253.18.58:8000/play/a03o"
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8"
         },
         {
-            "name": "Star Sports 1 Hindi HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD_HINDI/images/LOGO_HD/image.png",
+            "name": "Star Sports Select 2 HD",
+            "logo": "https://i.imgur.com/FtRT73R.png",
             "group": "Sports Channels",
-            "stream_url": "http://103.253.18.58:8000/play/a00t"
+            "stream_url": "http://tvsen7.aynascope.net/ssport2hd/index.m3u8"
         },
         {
             "name": "Star Sports 2 HD",
@@ -338,30 +266,6 @@
             "logo": "https://i.imgur.com/kHerF19.png",
             "group": "Sports Channels",
             "stream_url": "https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8"
-        },
-        {
-            "name": "Star Sports 2 Hindi HD",
-            "logo": "https://i.imgur.com/kHerF19.png",
-            "group": "Sports Channels",
-            "stream_url": "http://103.157.248.140:8000/play/a01m/index.m3u8"
-        },
-        {
-            "name": "Star Sports Select 2 HD",
-            "logo": "https://i.imgur.com/FtRT73R.png",
-            "group": "Sports Channels",
-            "stream_url": "http://tvsen7.aynascope.net/ssport2hd/index.m3u8"
-        },
-        {
-            "name": "PTV Sports",
-            "logo": "https://i.imgur.com/CPm6GHA.png",
-            "group": "Sports Channels",
-            "stream_url": "http://103.250.28.74:8000/play/a019/index.m3u8"
-        },
-        {
-            "name": "Ten Sports Pakistan",
-            "logo": "https://i.imgur.com/nnqpYNm.png",
-            "group": "Sports Channels",
-            "stream_url": "http://121.91.61.106:8000/play/a04h/index.m3u8"
         },
         {
             "name": "Kabaddi 24x7",
@@ -382,58 +286,16 @@
             "stream_url": "https://cdn.rabta.stream/M-Sports/index.m3u8"
         },
         {
-            "name": "One Golf",
-            "logo": "https://i.imgur.com/7JhaEW5.png",
-            "group": "Sports Channels",
-            "stream_url": "http://162.250.201.58:6211/pk/ONEGOLF/index.m3u8"
-        },
-        {
-            "name": "PK Sports",
-            "logo": "https://i.imgur.com/qtbSnrY.png",
-            "group": "Sports Channels",
-            "stream_url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8"
-        },
-        {
-            "name": "B4U Movies",
-            "logo": "https://i.imgur.com/M9kMFJl.png",
-            "group": "Indian Movies",
-            "stream_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
-        },
-        {
             "name": "Colors Cineplex Bollywood",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_BOLLYWOOD/images/LOGO_HD/image.png",
             "group": "Indian Movies",
             "stream_url": "http://202.70.146.135:8000/play/a058/index.m3u8"
         },
         {
-            "name": "Colors Cineplex HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_HD/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://66.102.126.10:8000/play/a076/index.m3u8"
-        },
-        {
-            "name": "Goldmines",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "Goldmines Bollywood",
-            "logo": "https://i.imgur.com/6mNQ9mM.png",
-            "group": "Indian Movies",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8"
-        },
-        {
             "name": "Sony Max",
             "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
             "group": "Indian Movies",
             "stream_url": "https://cloudplay-sonyliv.pages.dev/max.m3u8"
-        },
-        {
-            "name": "Sony Max 1",
-            "logo": "https://dtil.tmsimg.com/assets/s179440_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Movies",
-            "stream_url": "http://103.159.180.34:5001/live/3418.m3u8"
         },
         {
             "name": "Sony Max 2",
@@ -448,70 +310,16 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/maxhd.m3u8"
         },
         {
-            "name": "Star Gold 2",
-            "logo": "https://i.imgur.com/G0ZfzZr.png",
-            "group": "Indian Movies",
-            "stream_url": "http://66.102.126.10:8000/play/a00g/index.m3u8"
-        },
-        {
-            "name": "Star Gold 2 HD",
-            "logo": "https://i.imgur.com/G0ZfzZr.png",
-            "group": "Indian Movies",
-            "stream_url": "http://66.102.126.10:8000/play/a077/index.m3u8"
-        },
-        {
-            "name": "Star Gold HD",
-            "logo": "https://i.imgur.com/xC460sj.png",
-            "group": "Indian Movies",
-            "stream_url": "http://66.102.126.10:8000/play/a00f/index.m3u8"
-        },
-        {
-            "name": "Star Gold Romance",
-            "logo": "https://i.imgur.com/gSWv9U3.png",
-            "group": "Indian Movies",
-            "stream_url": "http://66.102.126.10:8000/play/a00r/index.m3u8"
-        },
-        {
-            "name": "Star Gold Select HD",
-            "logo": "https://i.imgur.com/U7eiuqv.png",
-            "group": "Indian Movies",
-            "stream_url": "http://149.71.34.166:8000/play/a01d/index.m3u8"
-        },
-        {
             "name": "Zee Cinema",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movies",
             "stream_url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8"
         },
         {
-            "name": "Zee Cinema HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://103.72.101.252:8080/live/165.m3u8"
-        },
-        {
-            "name": "Khushboo Bangla",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "https://cdn-4.pishow.tv/live/1473/master.m3u8"
-        },
-        {
-            "name": "&pictures",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002FYK4V.png?lock=720x540",
-            "group": "Indian Movies",
-            "stream_url": "https://tvsen3.aynaott.com/jzT482XQ/index.m3u8"
-        },
-        {
             "name": "B4U Bhojpuri",
             "logo": "https://i.imgur.com/NwOQUDp.png",
             "group": "Indian Movies",
             "stream_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8"
-        },
-        {
-            "name": "B4U Kadak",
-            "logo": "https://dtil.tmsimg.com/assets/s142695_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Movies",
-            "stream_url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8"
         },
         {
             "name": "Bhojpuri Cinema",
@@ -526,70 +334,10 @@
             "stream_url": "http://59.103.38.46:8000/play/a052/index.m3u8"
         },
         {
-            "name": "MNX HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://149.71.34.166:8000/play/a05u/index.m3u8"
-        },
-        {
-            "name": "Movies Now +",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://149.71.34.166:8000/play/a05t/index.m3u8"
-        },
-        {
-            "name": "Movies Now HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://103.161.153.165:8000/play/mnh/index.m3u8"
-        },
-        {
             "name": "Sony Pix HD",
             "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
             "group": "Indian Movies",
             "stream_url": "https://cloudplay-sonyliv.pages.dev/pixhd.m3u8"
-        },
-        {
-            "name": "Zee Classic",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LOGO_HD/LOGO_HD_image.png",
-            "group": "Indian Movies",
-            "stream_url": "http://103.72.101.252:8080/live/1691.m3u8"
-        },
-        {
-            "name": "Zee South Flix",
-            "logo": "https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zsouthflix.png",
-            "group": "Indian Movies",
-            "stream_url": "https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8"
-        },
-        {
-            "name": "ABP Ananda",
-            "logo": "https://dtil.tmsimg.com/assets/s142518_ld_h15_aa.png?lock=720x540",
-            "group": "Kolkata Bangla",
-            "stream_url": "https://d2l4ar6y3mrs4k.cloudfront.net/live-streaming/ananda-livetv/master.m3u8"
-        },
-        {
-            "name": "Colors Bangla HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_BANGLA/images/LOGO_HD/image.png",
-            "group": "Kolkata Bangla",
-            "stream_url": "http://103.165.93.31:8095/colorsBangla/index.m3u8"
-        },
-        {
-            "name": "Enterr 10 Bangla",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ENTERR10_BANGLA/images/LOGO_HD/image.png",
-            "group": "Kolkata Bangla",
-            "stream_url": "https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8"
-        },
-        {
-            "name": "News18 Bangla",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS18_BANGLA/images/LOGO_HD/image.png",
-            "group": "Kolkata Bangla",
-            "stream_url": "https://n18syndication.akamaized.net/bpk-tv/News18_Bangla_NW18_MOB/output01/master.m3u8"
-        },
-        {
-            "name": "Sangeet Bangla",
-            "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Sangeet%20Bangla.png",
-            "group": "Kolkata Bangla",
-            "stream_url": "https://cdn-4.pishow.tv/live/1143/master.m3u8"
         },
         {
             "name": "Sony Aath",
@@ -604,10 +352,22 @@
             "stream_url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8"
         },
         {
-            "name": "Zee 24 Ghanta",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0022KGXP.png?lock=720x540",
+            "name": "ABP Ananda",
+            "logo": "https://dtil.tmsimg.com/assets/s142518_ld_h15_aa.png?lock=720x540",
             "group": "Kolkata Bangla",
-            "stream_url": "http://45.148.145.57/IN_Zee24Ghanta/index.m3u8"
+            "stream_url": "https://d2l4ar6y3mrs4k.cloudfront.net/live-streaming/ananda-livetv/master.m3u8"
+        },
+        {
+            "name": "News18 Bangla",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS18_BANGLA/images/LOGO_HD/image.png",
+            "group": "Kolkata Bangla",
+            "stream_url": "https://n18syndication.akamaized.net/bpk-tv/News18_Bangla_NW18_MOB/output01/master.m3u8"
+        },
+        {
+            "name": "Enterr 10 Bangla",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ENTERR10_BANGLA/images/LOGO_HD/image.png",
+            "group": "Kolkata Bangla",
+            "stream_url": "https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8"
         },
         {
             "name": "Sony Yay!",
@@ -616,22 +376,16 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/yay.m3u8"
         },
         {
-            "name": "ZB Cartoon",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png",
-            "group": "Kids Channels",
-            "stream_url": "https://server.zillarbarta.com/zbcatun/video.m3u8"
-        },
-        {
             "name": "Animax Asia India",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Animax.png",
             "group": "Kids Channels",
             "stream_url": "https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8"
         },
         {
-            "name": "Chithiram",
-            "logo": "https://i.imgur.com/xv9cWSh.png",
+            "name": "ZB Cartoon",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png",
             "group": "Kids Channels",
-            "stream_url": "https://cdn-6.pishow.tv/live/1243/master.m3u8"
+            "stream_url": "https://server.zillarbarta.com/zbcatun/video.m3u8"
         },
         {
             "name": "Disney Channel",
@@ -640,10 +394,10 @@
             "stream_url": "http://202.70.146.135:8000/play/a01q/index.m3u8"
         },
         {
-            "name": "Disney Channel HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL_HD/images/LOGO_HD/image.png",
+            "name": "Hungama TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png",
             "group": "Kids Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a013/index.m3u8"
+            "stream_url": "http://103.185.24.134:3001/HUNGAMA/index.m3u8"
         },
         {
             "name": "Epic Kids Digital",
@@ -652,34 +406,16 @@
             "stream_url": "https://cc-t8lqe1o99pszu.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-t8lqe1o99pszu/playlist.m3u8"
         },
         {
-            "name": "Hungama TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png",
-            "group": "Kids Channels",
-            "stream_url": "http://103.185.24.134:3001/HUNGAMA/index.m3u8"
-        },
-        {
             "name": "Mr. Bean Animated",
             "logo": "https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png",
             "group": "Kids Channels",
             "stream_url": "https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8"
         },
         {
-            "name": "Nick HD+",
-            "logo": "https://dtil.tmsimg.com/assets/s159121_ld_h15_aa.png?lock=720x540",
-            "group": "Kids Channels",
-            "stream_url": "http://103.72.101.252:8080/live/1226.m3u8"
-        },
-        {
             "name": "Super Hungama",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA/images/LOGO_HD/image.png",
             "group": "Kids Channels",
             "stream_url": "http://103.185.24.134:3001/SUPER-HUNGAMA/index.m3u8"
-        },
-        {
-            "name": "The Jungle Book",
-            "logo": "https://pash.ink/storage/uploads/JungleBook_Logo.png",
-            "group": "Kids Channels",
-            "stream_url": "https://cc-4bhi5osabejc9.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4bhi5osabejc9/junglebook.m3u8"
         },
         {
             "name": "WOW Kidz",
@@ -694,10 +430,16 @@
             "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
-            "name": "God Stands Kids Club TV Arabic",
+            "name": "The Jungle Book",
+            "logo": "https://pash.ink/storage/uploads/JungleBook_Logo.png",
+            "group": "Kids Channels",
+            "stream_url": "https://cc-4bhi5osabejc9.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4bhi5osabejc9/junglebook.m3u8"
+        },
+        {
+            "name": "God Stands Kids Club TV Urdu",
             "logo": "https://i.imgur.com/FxDBbpz.jpeg",
             "group": "Kids Channels",
-            "stream_url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsArabic.m3u8"
+            "stream_url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8"
         },
         {
             "name": "God Stands Kids Club TV Chinese",
@@ -712,16 +454,10 @@
             "stream_url": "https://online.godstands.tv:5443/WebRTCApp/streams/kidsenglish.m3u8"
         },
         {
-            "name": "God Stands Kids Club TV Urdu",
+            "name": "God Stands Kids Club TV Arabic",
             "logo": "https://i.imgur.com/FxDBbpz.jpeg",
             "group": "Kids Channels",
-            "stream_url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8"
-        },
-        {
-            "name": "Kids Zone",
-            "logo": "https://i.imgur.com/mJWBVH1.png",
-            "group": "Kids Channels",
-            "stream_url": "http://103.250.28.74:8000/play/a04m/index.m3u8"
+            "stream_url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsArabic.m3u8"
         },
         {
             "name": "Minimax",
@@ -736,16 +472,10 @@
             "stream_url": "https://cc-mgr91yrk4pehy.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mgr91yrk4pehy/playlist.m3u8"
         },
         {
-            "name": "Epic Crimes",
-            "logo": "https://i.imgur.com/EFDsCkH.png",
+            "name": "INWILD",
+            "logo": "https://cdn.uc.assets.prezly.com/92770c71-9d6f-400f-8311-38e9cfec52c2/InWild_landscape-green.png",
             "group": "Documentary",
-            "stream_url": "https://cc-wsuyg2uxeak04.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-wsuyg2uxeak04/master.m3u8"
-        },
-        {
-            "name": "History TV18 HD",
-            "logo": "https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540",
-            "group": "Documentary",
-            "stream_url": "http://103.154.3.101:5001/live/577.m3u8"
+            "stream_url": "https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8"
         },
         {
             "name": "India TV Aap Ki Adalat",
@@ -754,10 +484,10 @@
             "stream_url": "https://amg01550-amg01550c6-samsung-in-4679.playouts.now.amagi.tv/playlist/amg01550-indiatvfast-indiatvakasamsung-samsungin/playlist.m3u8"
         },
         {
-            "name": "INWILD",
-            "logo": "https://cdn.uc.assets.prezly.com/92770c71-9d6f-400f-8311-38e9cfec52c2/InWild_landscape-green.png",
+            "name": "Epic Crimes",
+            "logo": "https://i.imgur.com/EFDsCkH.png",
             "group": "Documentary",
-            "stream_url": "https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8"
+            "stream_url": "https://cc-wsuyg2uxeak04.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-wsuyg2uxeak04/master.m3u8"
         },
         {
             "name": "Safari TV",
@@ -770,30 +500,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s143800_ld_h15_aa.png?lock=720x540",
             "group": "Documentary",
             "stream_url": "https://cloudplay-sonyliv.pages.dev/bbcearthhd.m3u8"
-        },
-        {
-            "name": "Dhoom Music",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DHOOM_MUSIC/images/LOGO_HD/image.png",
-            "group": "Music Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/1456/master.m3u8"
-        },
-        {
-            "name": "Orange Bangla TV",
-            "logo": "https://i.imgur.com/wjSaHj5.png",
-            "group": "Music Channels",
-            "stream_url": "https://cdn-4.pishow.tv/live/1499/master.m3u8"
-        },
-        {
-            "name": "ZB Music",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/zbmusic.png",
-            "group": "Music Channels",
-            "stream_url": "https://server.zillarbarta.com/zbmusic/index.m3u8"
-        },
-        {
-            "name": "7S Music",
-            "logo": "https://i.imgur.com/zDiIhdN.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8"
         },
         {
             "name": "9X Jalwa",
@@ -826,58 +532,22 @@
             "stream_url": "https://stream.ottlive.co.in/aryatvtamil/index.m3u8"
         },
         {
-            "name": "Andy Haryana",
-            "logo": "https://i.imgur.com/rmCBD3e.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HANDYHARYANA/index.m3u8"
-        },
-        {
-            "name": "B4U Music",
-            "logo": "https://dtil.tmsimg.com/assets/s158141_ld_h15_aa.png?lock=720x540",
-            "group": "Music Channels",
-            "stream_url": "https://cdn-2.pishow.tv/live/415/master.m3u8"
-        },
-        {
             "name": "Balle Balle",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Balle_Balle_TV.png",
             "group": "Music Channels",
             "stream_url": "https://mcncdndigital.com/balleballetv/index.m3u8"
         },
         {
+            "name": "ZB Music",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/zbmusic.png",
+            "group": "Music Channels",
+            "stream_url": "https://server.zillarbarta.com/zbmusic/index.m3u8"
+        },
+        {
             "name": "Deewana HD",
             "logo": "https://i.imgur.com/xIYITQ9.png",
             "group": "Music Channels",
             "stream_url": "https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8"
-        },
-        {
-            "name": "Dhool TV",
-            "logo": "https://i.ibb.co/Rk78p2LB/dhooltv.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4SUBHARTITV/index.m3u8"
-        },
-        {
-            "name": "Epic Music",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHOWBOX/images/LOGO_HD/image.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4EPICMUSIC/index.m3u8"
-        },
-        {
-            "name": "Epic Music Digital",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHOWBOX/images/LOGO_HD/image.png",
-            "group": "Music Channels",
-            "stream_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/playlist.m3u8"
-        },
-        {
-            "name": "HMTV",
-            "logo": "https://dtil.tmsimg.com/assets/s143136_ld_h15_aa.png?lock=720x540",
-            "group": "Music Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/280/master.m3u8"
-        },
-        {
-            "name": "Insync",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Insync.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8"
         },
         {
             "name": "Isai Aruvi",
@@ -892,34 +562,22 @@
             "stream_url": "http://server.applelive.in/kalikatv/kalikatv.m3u8"
         },
         {
+            "name": "Epic Music Digital",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHOWBOX/images/LOGO_HD/image.png",
+            "group": "Music Channels",
+            "stream_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/playlist.m3u8"
+        },
+        {
             "name": "Music India",
             "logo": "https://dtil.tmsimg.com/assets/s143563_ld_h15_aa.png?lock=720x540",
             "group": "Music Channels",
             "stream_url": "https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8"
         },
         {
-            "name": "Peppers TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Peppers_TV.png",
-            "group": "Music Channels",
-            "stream_url": "https://cdn-2.pishow.tv/live/1383/master.m3u8"
-        },
-        {
-            "name": "PTC Chakde",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PTC_CHAKDE/images/LOGO_HD/image.png",
-            "group": "Music Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/449/master.m3u8"
-        },
-        {
             "name": "PTC Music",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PTC_MUSIC/images/LOGO_HD/image.png",
             "group": "Music Channels",
             "stream_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index.m3u8"
-        },
-        {
-            "name": "Public Music",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PUBLIC_MUSIC/images/LOGO_HD/image.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4PUBLICMUSIC/index.m3u8"
         },
         {
             "name": "Qello Concerts by Stingray",
@@ -934,34 +592,10 @@
             "stream_url": "https://mumbai-edge.smartplaytv.in/SanaPlusHD/index.m3u8"
         },
         {
-            "name": "Sangeet Bhojpuri",
-            "logo": "https://dtil.tmsimg.com/assets/s143757_ld_h15_aa.png?lock=720x540",
+            "name": "Stingray Easy Listening",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Stingray_Music_logo.svg/960px-Stingray_Music_logo.svg.png",
             "group": "Music Channels",
-            "stream_url": "http://103.213.31.109:90/SangeetBhojpuri/playlist.m3u8"
-        },
-        {
-            "name": "Shemaroo Filmi Gaane",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/channel/0d5b07555b2d4415aa9f145273095ed7.png",
-            "group": "Music Channels",
-            "stream_url": "http://103.213.31.109:90/ShemarooFilmiGaane/playlist.m3u8"
-        },
-        {
-            "name": "Songdew TV",
-            "logo": "https://dtil.tmsimg.com/assets/s142920_ld_h9_aa.png?lock=720x540",
-            "group": "Music Channels",
-            "stream_url": "http://103.72.101.252:8080/live/1411.m3u8"
-        },
-        {
-            "name": "Steelbird Music",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Steelbird_Music.png",
-            "group": "Music Channels",
-            "stream_url": "https://cdn2.in/SteelbirdMusicTVhls/live.m3u8"
-        },
-        {
-            "name": "Stingray Classic Rock",
-            "logo": "https://i.imgur.com/FBgu8yB.png",
-            "group": "Music Channels",
-            "stream_url": "https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8"
+            "stream_url": "https://lotus.stingray.com/manifest/ose-137ads-montreal/samsungtvplus/master.m3u8"
         },
         {
             "name": "Stingray DJAZZ",
@@ -970,22 +604,10 @@
             "stream_url": "https://lotus.stingray.com/manifest/djazz-djaads-montreal/samsungtvplus/master.m3u8"
         },
         {
-            "name": "Stingray Easy Listening",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Stingray_Music_logo.svg/960px-Stingray_Music_logo.svg.png",
+            "name": "Stingray Classic Rock",
+            "logo": "https://i.imgur.com/FBgu8yB.png",
             "group": "Music Channels",
-            "stream_url": "https://lotus.stingray.com/manifest/ose-137ads-montreal/samsungtvplus/master.m3u8"
-        },
-        {
-            "name": "Stingray Naturescape",
-            "logo": "https://i.imgur.com/882kd90.png",
-            "group": "Music Channels",
-            "stream_url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8"
-        },
-        {
-            "name": "Stingray The Spa",
-            "logo": "https://i.imgur.com/ywAN923.png",
-            "group": "Music Channels",
-            "stream_url": "https://lotus.stingray.com/manifest/ose-122ads-montreal/samsungtvplus/master.m3u8"
+            "stream_url": "https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8"
         },
         {
             "name": "Stingray Today's KPOP",
@@ -994,10 +616,16 @@
             "stream_url": "https://lotus.stingray.com/manifest/ose-317ads-montreal/samsungtvplus/master.m3u8"
         },
         {
-            "name": "Tabbar Hits",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TABBAR_HITS/images/LOGO_HD/image.png",
+            "name": "Stingray The Spa",
+            "logo": "https://i.imgur.com/ywAN923.png",
             "group": "Music Channels",
-            "stream_url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8"
+            "stream_url": "https://lotus.stingray.com/manifest/ose-122ads-montreal/samsungtvplus/master.m3u8"
+        },
+        {
+            "name": "Stingray Naturescape",
+            "logo": "https://i.imgur.com/882kd90.png",
+            "group": "Music Channels",
+            "stream_url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8"
         },
         {
             "name": "Tarang Music",
@@ -1006,10 +634,22 @@
             "stream_url": "https://livetv.tarangplus.in/tarangmusic-origin/live/playlist.m3u8"
         },
         {
-            "name": "Tunes 6",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Tunes_6.png",
+            "name": "Steelbird Music",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Steelbird_Music.png",
             "group": "Music Channels",
-            "stream_url": "https://stream.d6-pro.com/tunes6music/live/video.m3u8"
+            "stream_url": "https://cdn2.in/SteelbirdMusicTVhls/live.m3u8"
+        },
+        {
+            "name": "YET Max",
+            "logo": "https://yettelevision.com/assets/images/logo/channel_11847.png",
+            "group": "Music Channels",
+            "stream_url": "https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8"
+        },
+        {
+            "name": "Tabbar Hits",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TABBAR_HITS/images/LOGO_HD/image.png",
+            "group": "Music Channels",
+            "stream_url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8"
         },
         {
             "name": "Ultimate TV",
@@ -1024,22 +664,10 @@
             "stream_url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8"
         },
         {
-            "name": "YET Max",
-            "logo": "https://yettelevision.com/assets/images/logo/channel_11847.png",
-            "group": "Music Channels",
-            "stream_url": "https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8"
-        },
-        {
             "name": "YRF Music",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/YRF_Music.png",
             "group": "Music Channels",
             "stream_url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8"
-        },
-        {
-            "name": "Zing!",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025L26R.png?lock=720x540",
-            "group": "Music Channels",
-            "stream_url": "http://103.72.101.252:8080/live/585.m3u8"
         },
         {
             "name": "Zoom",
@@ -1048,16 +676,10 @@
             "stream_url": "https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8"
         },
         {
-            "name": "Zoom Global",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZOOM/images/LOGO_HD/image.png",
+            "name": "JooMusic",
+            "logo": "https://i.imgur.com/KHuKQQL.png",
             "group": "Music Channels",
-            "stream_url": "https://d14c63magvk61v.cloudfront.net/strm/channels/zoom/master.m3u8"
-        },
-        {
-            "name": "8XM",
-            "logo": "https://i.imgur.com/KLrfKRn.png",
-            "group": "Music Channels",
-            "stream_url": "http://115.42.65.142:9981/stream/channelid/582886861"
+            "stream_url": "https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8"
         },
         {
             "name": "8XM HD",
@@ -1066,52 +688,10 @@
             "stream_url": "https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8"
         },
         {
-            "name": "Jalwa TV",
-            "logo": "https://i.imgur.com/HWb5Iat.png",
+            "name": "Tunes 6",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Tunes_6.png",
             "group": "Music Channels",
-            "stream_url": "http://119.156.228.231:9983/stream/channelid/1893273325?profile=pass&ticket=B3DB50D5930411D593B973B8404789C46D3559B8"
-        },
-        {
-            "name": "JooMusic",
-            "logo": "https://i.imgur.com/KHuKQQL.png",
-            "group": "Music Channels",
-            "stream_url": "https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8"
-        },
-        {
-            "name": "4TV News",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/4_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-4.pishow.tv/live/1007/master.m3u8"
-        },
-        {
-            "name": "10 TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumbai-edge.smartplaytv.in/10TV/index.m3u8"
-        },
-        {
-            "name": "99TV",
-            "logo": "https://i.imgur.com/dZA4gel.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/1211/master.m3u8"
-        },
-        {
-            "name": "&TV HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDTV/images/LOGO_HD/LOGO_HD_image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://202.70.146.135:8000/play/a06c/index.m3u8"
-        },
-        {
-            "name": "Aadinath TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AADINATH_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3AADINATHTV/index.m3u8"
-        },
-        {
-            "name": "Aaj Tak",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AAJ_TAK/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.213.31.109:90/AajtakHD/playlist.m3u8"
+            "stream_url": "https://stream.d6-pro.com/tunes6music/live/video.m3u8"
         },
         {
             "name": "Aaj Tak HD",
@@ -1120,46 +700,10 @@
             "stream_url": "https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8"
         },
         {
-            "name": "Aaseervatham TV",
-            "logo": "https://i.imgur.com/GlfrYs7.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4AASEERVATHAMTV/index.m3u8"
-        },
-        {
             "name": "ABN TV India",
             "logo": "https://i.imgur.com/VcZn60X.png",
             "group": "Indian Channels",
             "stream_url": "https://mediaserver.abnvideos.com/streams/abntvindia.m3u8"
-        },
-        {
-            "name": "Adhyatm TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Adhyatam_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumbai-edge.smartplaytv.in/AdhyatmTV/index.m3u8"
-        },
-        {
-            "name": "Amrita TV",
-            "logo": "https://i.imgur.com/WdSjlPl.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ddash74r36xqp.cloudfront.net/master.m3u8"
-        },
-        {
-            "name": "Anand TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Anand_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live.legitpro.co.in/anandtv/index.m3u8"
-        },
-        {
-            "name": "Angel TV",
-            "logo": "https://i.imgur.com/qKLEGU7.png",
-            "group": "Indian Channels",
-            "stream_url": "https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/playlist.m3u8"
-        },
-        {
-            "name": "Anjan TV",
-            "logo": "https://i.imgur.com/sh0yFSf.png",
-            "group": "Indian Channels",
-            "stream_url": "https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8"
         },
         {
             "name": "Apna Punjab TV",
@@ -1168,34 +712,16 @@
             "stream_url": "https://plus.gigabitcdn.net/live-stream/apna-punjab-H3sE/playlist.m3u8"
         },
         {
-            "name": "Aradana TV",
-            "logo": "https://dtil.tmsimg.com/assets/s142649_ld_h9_aa.png?lock=720x540",
+            "name": "Amrita TV",
+            "logo": "https://i.imgur.com/WdSjlPl.png",
             "group": "Indian Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/961/master.m3u8"
+            "stream_url": "https://ddash74r36xqp.cloudfront.net/master.m3u8"
         },
         {
-            "name": "Arputhar Yesu TV",
-            "logo": "https://arputharyesutv.net/wp-content/uploads/2022/07/AR-LOGO-PNG.png",
+            "name": "&TV HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDTV/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Channels",
-            "stream_url": "https://account33.livebox.co.in/jesushelpshls/live.m3u8"
-        },
-        {
-            "name": "Aryan TV National",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ARYAN_TV_NATIONAL/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4ARYANTVNATIONAL/index.m3u8"
-        },
-        {
-            "name": "Awaaz India TV",
-            "logo": "https://i.imgur.com/eKQs51V.png",
-            "group": "Indian Channels",
-            "stream_url": "https://awaazindia.livebox.co.in/AwaazIndaTVhls/Live.m3u8"
-        },
-        {
-            "name": "Awakening TV",
-            "logo": "https://i.imgur.com/p26iWOi.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HAWAKENINGTV/index.m3u8"
+            "stream_url": "http://202.70.146.135:8000/play/a06c/index.m3u8"
         },
         {
             "name": "Ayush TV",
@@ -1204,16 +730,10 @@
             "stream_url": "http://d1msejlow1t3l4.cloudfront.net/fta/ayushtv/playlist.m3u8"
         },
         {
-            "name": "Bhakthi TV",
-            "logo": "https://upload.wikimedia.org/wikipedia/en/6/61/Bhakthi_TV_logo.jpg",
+            "name": "Angel TV",
+            "logo": "https://i.imgur.com/qKLEGU7.png",
             "group": "Indian Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/397/master.m3u8"
-        },
-        {
-            "name": "BIG TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Big_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/1059/master.m3u8"
+            "stream_url": "https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/playlist.m3u8"
         },
         {
             "name": "Big TV 24x7",
@@ -1222,10 +742,10 @@
             "stream_url": "https://d2gvyg6lvauoko.cloudfront.net/230226/bigtvmalyalam/chunks.m3u8"
         },
         {
-            "name": "BT TV",
-            "logo": "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/best-bank-new.png",
+            "name": "Chardikla Time TV North America",
+            "logo": "https://i.imgur.com/IUeMFey.jpg",
             "group": "Indian Channels",
-            "stream_url": "https://feeds.intoday.in/bttv/itgd.m3u8"
+            "stream_url": "https://chardikalanorthamerica.gigabitcdn.net/in-chardikala/chardikala-north-usa/playlist.m3u8"
         },
         {
             "name": "Chardikla Gurbaani TV",
@@ -1240,34 +760,28 @@
             "stream_url": "https://chardikalagurbanitv.gigabitcdn.net/in-chardikala/chardikala-timetv/playlist.m3u8"
         },
         {
-            "name": "Chardikla Time TV North America",
-            "logo": "https://i.imgur.com/IUeMFey.jpg",
+            "name": "10 TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
-            "stream_url": "https://chardikalanorthamerica.gigabitcdn.net/in-chardikala/chardikala-north-usa/playlist.m3u8"
+            "stream_url": "https://mumbai-edge.smartplaytv.in/10TV/index.m3u8"
         },
         {
-            "name": "CNBC TV18",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18.png",
+            "name": "Adhyatm TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Adhyatam_TV.png",
             "group": "Indian Channels",
-            "stream_url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_TV18_NW18_MOB/output01/index.m3u8"
+            "stream_url": "https://mumbai-edge.smartplaytv.in/AdhyatmTV/index.m3u8"
         },
         {
-            "name": "CNBC TV18 Prime HD",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18Prime.png",
+            "name": "Anand TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Anand_TV.png",
             "group": "Indian Channels",
-            "stream_url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8"
+            "stream_url": "https://live.legitpro.co.in/anandtv/index.m3u8"
         },
         {
-            "name": "Colors HD",
-            "logo": "https://i.imgur.com/M8uCJ0D.png",
+            "name": "BT TV",
+            "logo": "https://akm-img-a-in.tosshub.com/businesstoday/resource/img/best-bank-new.png",
             "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a00a/index.m3u8"
-        },
-        {
-            "name": "Colors Infinity HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_INFINITY/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://66.102.126.10:8000/play/a014/index.m3u8"
+            "stream_url": "https://feeds.intoday.in/bttv/itgd.m3u8"
         },
         {
             "name": "Colors Rishtey Americas",
@@ -1276,34 +790,10 @@
             "stream_url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8"
         },
         {
-            "name": "CTVN AKD Plus",
-            "logo": "https://dtil.tmsimg.com/assets/s142754_ld_h15_aa.png?lock=720x540",
+            "name": "Anjan TV",
+            "logo": "https://i.imgur.com/sh0yFSf.png",
             "group": "Indian Channels",
-            "stream_url": "https://live.legitpro.co.in/ctvnakdplus/index.m3u8"
-        },
-        {
-            "name": "Daily Post TV",
-            "logo": "https://papaji.freetvindia.com/media/Daily_post.png",
-            "group": "Indian Channels",
-            "stream_url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/103b8dd3-a888-4d1d-89a5-8a4bc25e48c1/index.m3u8"
-        },
-        {
-            "name": "Dangal 2",
-            "logo": "https://i.imgur.com/BEr1r7L.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live-dangal2.akamaized.net/liveabr/playlist.m3u8"
-        },
-        {
-            "name": "Dangal TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DANGAL/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live-dangal.akamaized.net/liveabr/playlist.m3u8"
-        },
-        {
-            "name": "Darshana TV",
-            "logo": "https://dtil.tmsimg.com/assets/s142774_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4DARSHANATV/index.m3u8"
+            "stream_url": "https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8"
         },
         {
             "name": "DD National HD",
@@ -1312,34 +802,40 @@
             "stream_url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8"
         },
         {
-            "name": "DD National SD",
-            "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20National.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/11/master.m3u8"
-        },
-        {
-            "name": "DD News",
-            "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20News%20HD.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/DDNEWS/ORIGIN/index.m3u8"
-        },
-        {
             "name": "DD News HD",
             "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20News%20HD.png",
             "group": "Indian Channels",
             "stream_url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/0811cd8c37ca4c409d5385a6cd2fa18b/index.m3u8"
         },
         {
-            "name": "Dharsan TV",
-            "logo": "https://play-lh.googleusercontent.com/brn76ZzRlqS8ylZVVcc5ZFWcqUp36iJ82WyzwiQ8-Nqi_8pIZZ_gsMCXNn6YiLhOEQ",
+            "name": "Dangal 2",
+            "logo": "https://i.imgur.com/BEr1r7L.png",
             "group": "Indian Channels",
-            "stream_url": "https://cable91tataplay.akamaized.net/live/dharshantv/index.m3u8"
+            "stream_url": "https://live-dangal2.akamaized.net/liveabr/playlist.m3u8"
         },
         {
-            "name": "Dheeran TV",
-            "logo": "https://i.imgur.com/jSedjXf.png",
+            "name": "CNBC TV18 Prime HD",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18Prime.png",
             "group": "Indian Channels",
-            "stream_url": "https://live.we2live.in/dheerantv/dheerantv/playlist.m3u8"
+            "stream_url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8"
+        },
+        {
+            "name": "CNBC TV18",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18.png",
+            "group": "Indian Channels",
+            "stream_url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_TV18_NW18_MOB/output01/index.m3u8"
+        },
+        {
+            "name": "Dangal TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DANGAL/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://live-dangal.akamaized.net/liveabr/playlist.m3u8"
+        },
+        {
+            "name": "Awaaz India TV",
+            "logo": "https://i.imgur.com/eKQs51V.png",
+            "group": "Indian Channels",
+            "stream_url": "https://awaazindia.livebox.co.in/AwaazIndaTVhls/Live.m3u8"
         },
         {
             "name": "Disha TV",
@@ -1348,28 +844,10 @@
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/dishatv/playlist.m3u8"
         },
         {
-            "name": "Divyavani TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Divya_Vani.png",
+            "name": "Arputhar Yesu TV",
+            "logo": "https://arputharyesutv.net/wp-content/uploads/2022/07/AR-LOGO-PNG.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumbai-edge.smartplaytv.in/Divyavani/index.m3u8"
-        },
-        {
-            "name": "Epic TV Digital",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EPIC/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8"
-        },
-        {
-            "name": "Fateh TV",
-            "logo": "https://i.imgur.com/c4ItNkB.png",
-            "group": "Indian Channels",
-            "stream_url": "http://180.188.254.253/live/FATEHTVHD.m3u8"
-        },
-        {
-            "name": "Gangaur TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png",
-            "group": "Indian Channels",
-            "stream_url": "https://pbgangaur.wiseplayout.com/Gangaur/master.m3u8"
+            "stream_url": "https://account33.livebox.co.in/jesushelpshls/live.m3u8"
         },
         {
             "name": "Gaunda Punjab TV",
@@ -1378,70 +856,46 @@
             "stream_url": "http://cdn6.live247stream.com/gaundapunjab/tv/playlist.m3u8"
         },
         {
-            "name": "GoodNews TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOODNEWS_TV/images/LOGO_HD/image.png",
+            "name": "Dheeran TV",
+            "logo": "https://i.imgur.com/jSedjXf.png",
             "group": "Indian Channels",
-            "stream_url": "https://bpgdlwwar3ze-hls-live.wmncdn.net/goodnews/live.stream/playlist.m3u8"
+            "stream_url": "https://live.we2live.in/dheerantv/dheerantv/playlist.m3u8"
         },
         {
-            "name": "Hamdard TV",
-            "logo": "https://i.ibb.co/JcD2xck/logo-hamda.png",
+            "name": "Fateh TV",
+            "logo": "https://i.imgur.com/c4ItNkB.png",
             "group": "Indian Channels",
-            "stream_url": "https://tv.hamdardtv.com/hamdard/index.m3u8"
+            "stream_url": "http://180.188.254.253/live/FATEHTVHD.m3u8"
         },
         {
-            "name": "Hare Krsna TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143102_ld_h15_aa.png?lock=720x540",
+            "name": "CTVN AKD Plus",
+            "logo": "https://dtil.tmsimg.com/assets/s142754_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
-            "stream_url": "https://hktv.harekrsnatv.com/HKTV/HKWebApp/manifest.mpd"
+            "stream_url": "https://live.legitpro.co.in/ctvnakdplus/index.m3u8"
         },
         {
-            "name": "Harvest TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HARVEST_TV_24X7/images/LOGO_HD/image.png",
+            "name": "DD News",
+            "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20News%20HD.png",
             "group": "Indian Channels",
-            "stream_url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvesttvlive1/bbb19eae240ec100af921d511efc86a0.sdp/index.m3u8"
+            "stream_url": "https://streams.tangotv.in/DDNEWS/ORIGIN/index.m3u8"
         },
         {
-            "name": "Harvest TV Keralam",
-            "logo": "https://i.imgur.com/1DyPuIt.png",
+            "name": "Gangaur TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png",
             "group": "Indian Channels",
-            "stream_url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestenglish/d1796a22d24e8696c7d5d0b5c349fdd2.sdp/index.m3u8"
+            "stream_url": "https://pbgangaur.wiseplayout.com/Gangaur/master.m3u8"
         },
         {
-            "name": "Hebron TV",
-            "logo": "https://i0.wp.com/hebrontv.in/wp-content/uploads/2023/11/hebron-.png?w=512",
+            "name": "Daily Post TV",
+            "logo": "https://papaji.freetvindia.com/media/Daily_post.png",
             "group": "Indian Channels",
-            "stream_url": "https://account20.livebox.co.in/charleshls/live.m3u8"
+            "stream_url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/103b8dd3-a888-4d1d-89a5-8a4bc25e48c1/index.m3u8"
         },
         {
-            "name": "Hornbill TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HORNBILL/images/LOGO_HD/image.png",
+            "name": "Divyavani TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Divya_Vani.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3HORNBILLTV/index.m3u8"
-        },
-        {
-            "name": "Hosanna TV",
-            "logo": "https://i.imgur.com/VYorU1L.png",
-            "group": "Indian Channels",
-            "stream_url": "https://asia.mslivestream.net/mslive/bfba54c5c96a6359e2da0ca35f4998af.sdp/playlist.m3u8"
-        },
-        {
-            "name": "Hosanna TV Global",
-            "logo": "https://i.imgur.com/VYorU1L.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ktismaservers.in:3349/live/hosannatvlive.m3u8"
-        },
-        {
-            "name": "Hosanna TV Hindi",
-            "logo": "https://i.imgur.com/VYorU1L.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ktismaservers.in:3466/live/hosannattvhindhilive.m3u8"
-        },
-        {
-            "name": "Hyder TV",
-            "logo": "https://i.imgur.com/reHjjRZ.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn.live247stream.com/hyder/tv/playlist.m3u8"
+            "stream_url": "https://mumbai-edge.smartplaytv.in/Divyavani/index.m3u8"
         },
         {
             "name": "India Today",
@@ -1450,34 +904,46 @@
             "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/master.m3u8"
         },
         {
+            "name": "Hyder TV",
+            "logo": "https://i.imgur.com/reHjjRZ.png",
+            "group": "Indian Channels",
+            "stream_url": "https://cdn.live247stream.com/hyder/tv/playlist.m3u8"
+        },
+        {
+            "name": "GoodNews TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOODNEWS_TV/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://bpgdlwwar3ze-hls-live.wmncdn.net/goodnews/live.stream/playlist.m3u8"
+        },
+        {
             "name": "India TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "https://pl-indiatvnews.akamaized.net/out/v1/db79179b608641ceaa5a4d0dd0dca8da/index.m3u8"
         },
         {
-            "name": "India TV Speed News",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TV_SPEED_NEWS/images/LOGO_HD/image.png",
+            "name": "Hosanna TV Hindi",
+            "logo": "https://i.imgur.com/VYorU1L.png",
             "group": "Indian Channels",
-            "stream_url": "https://cc-lyf4c0hwzg5dd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lyf4c0hwzg5dd/v1/vglive-sk-479089/main.m3u8"
+            "stream_url": "https://ktismaservers.in:3466/live/hosannattvhindhilive.m3u8"
         },
         {
-            "name": "Indywood TV",
-            "logo": "https://i.ibb.co/jT3NCPp/logo-tv.png",
+            "name": "Hosanna TV Global",
+            "logo": "https://i.imgur.com/VYorU1L.png",
             "group": "Indian Channels",
-            "stream_url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/index.m3u8"
+            "stream_url": "https://ktismaservers.in:3349/live/hosannatvlive.m3u8"
         },
         {
-            "name": "Ishwar Bhakti TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ISHWAR_TV/images/LOGO_HD/image.png",
+            "name": "Hosanna TV",
+            "logo": "https://i.imgur.com/VYorU1L.png",
             "group": "Indian Channels",
-            "stream_url": "https://6n3yow8pl9ok-hls-live.5centscdn.com/ishwartvlive/tv.stream/playlist.m3u8"
+            "stream_url": "https://asia.mslivestream.net/mslive/bfba54c5c96a6359e2da0ca35f4998af.sdp/playlist.m3u8"
         },
         {
-            "name": "Jaihind TV",
-            "logo": "https://i.imgur.com/NaiA73p.png",
+            "name": "Epic TV Digital",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EPIC/images/LOGO_HD/image.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJAIHIND/index.m3u8"
+            "stream_url": "https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8"
         },
         {
             "name": "Jan TV",
@@ -1486,46 +952,10 @@
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/jantv/playlist.m3u8"
         },
         {
-            "name": "Janam TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143221_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJANAMTV/index.m3u8"
-        },
-        {
-            "name": "Janapriyam TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Janapriyam_News.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.72.101.252:8080/live/1455.m3u8"
-        },
-        {
             "name": "Janta TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JANTA_TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "https://live.jswk.online/IK_RTPM/live/index.m3u8"
-        },
-        {
-            "name": "Jantantra TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Jantantra.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt05.tangotv.in/87NeALx2JANTANTRA/index.m3u8"
-        },
-        {
-            "name": "Jaya TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.72.101.252:8080/live/419.m3u8"
-        },
-        {
-            "name": "Jeevan TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Jeevan_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-3.pishow.tv/live/1467/master.m3u8"
-        },
-        {
-            "name": "Jothi TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JOTHI_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.154.3.101:5001/live/2768.m3u8"
         },
         {
             "name": "Joy TV",
@@ -1534,88 +964,16 @@
             "stream_url": "https://ktismaservers.in:3412/live/joytvlive.m3u8"
         },
         {
-            "name": "Kairali TV",
-            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Kairali_TV.svg/500px-Kairali_TV.svg.png",
+            "name": "Indywood TV",
+            "logo": "https://i.ibb.co/jT3NCPp/logo-tv.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8"
+            "stream_url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/index.m3u8"
         },
         {
-            "name": "Kalaignar TV",
-            "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Kalaignar%20TV.png",
+            "name": "Hare Krsna TV",
+            "logo": "https://dtil.tmsimg.com/assets/s143102_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
-            "stream_url": "http://103.72.101.252:8080/live/1209.m3u8"
-        },
-        {
-            "name": "Kalinga TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KALINGA_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3KALINGATV/index.m3u8"
-        },
-        {
-            "name": "Kappa TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Kappa_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HKAPPATV/index.m3u8"
-        },
-        {
-            "name": "Kaumudy TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143259_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8"
-        },
-        {
-            "name": "KCL TV",
-            "logo": "https://i.imgur.com/bkp9dIm.png",
-            "group": "Indian Channels",
-            "stream_url": "https://kcltv.livebox.co.in/kclhls/live.m3u8"
-        },
-        {
-            "name": "Kolkata TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143271_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8"
-        },
-        {
-            "name": "KTV Bangla",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/channel/2f8e3b371c660faa2f43a7f0942948a4.png",
-            "group": "Indian Channels",
-            "stream_url": "https://server.livelegitpro.in:9899/tribetv/tribetv/index.m3u8"
-        },
-        {
-            "name": "Life TV",
-            "logo": "https://i.ibb.co/v1C0bdR/logo-1.png",
-            "group": "Indian Channels",
-            "stream_url": "https://lifetv.livebox.co.in/lifetvhls/lifetv.m3u8"
-        },
-        {
-            "name": "Madha TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143287_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt07.tangotv.in/zHjX9OFlMADHATV/index.m3u8"
-        },
-        {
-            "name": "Madhimugam TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8"
-        },
-        {
-            "name": "Makkal TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MAKKAL_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8"
-        },
-        {
-            "name": "Malai Murasu TV",
-            "logo": "https://i.imgur.com/OC5TQxp.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/MALAIMURASUSEITHIGAL/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "Malar TV",
-            "logo": "",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-3.pishow.tv/live/473/master.m3u8"
+            "stream_url": "https://hktv.harekrsnatv.com/HKTV/HKWebApp/manifest.mpd"
         },
         {
             "name": "Mango Mobile TV",
@@ -1624,40 +982,22 @@
             "stream_url": "https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8"
         },
         {
-            "name": "Manoranjan TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MANORANJAN_TV/images/LOGO_HD/image.png",
+            "name": "Hebron TV",
+            "logo": "https://i0.wp.com/hebrontv.in/wp-content/uploads/2023/11/hebron-.png?w=512",
             "group": "Indian Channels",
-            "stream_url": "http://103.213.31.109:90/ManoranjanTv/playlist.m3u8"
+            "stream_url": "https://account20.livebox.co.in/charleshls/live.m3u8"
         },
         {
-            "name": "MediBizTV",
-            "logo": "https://www.medibiztv.com/assets/logo-E76jcvP9.png",
+            "name": "Kolkata TV",
+            "logo": "https://dtil.tmsimg.com/assets/s143271_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
-            "stream_url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/marinebiztvlive/marinebiztvlive/playlist.m3u8"
+            "stream_url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8"
         },
         {
-            "name": "Mei Alai TV",
-            "logo": "https://www.meialai.in/assets/meialai-DBaBUZTH.png",
+            "name": "Ishwar Bhakti TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ISHWAR_TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
-            "stream_url": "https://meialai.iptelevishion.com/meialai/2/index.m3u8"
-        },
-        {
-            "name": "Mercy TV",
-            "logo": "https://i.imgur.com/klNH4tV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://5dd3981940faa.streamlock.net/mercytv/mercytv/playlist.m3u8"
-        },
-        {
-            "name": "Metro TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Metro_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8"
-        },
-        {
-            "name": "MNTV",
-            "logo": "https://i.imgur.com/cFNw4Af.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mntv.livebox.co.in/mntvhls/live.m3u8"
+            "stream_url": "https://6n3yow8pl9ok-hls-live.5centscdn.com/ishwartvlive/tv.stream/playlist.m3u8"
         },
         {
             "name": "Moon TV",
@@ -1666,22 +1006,40 @@
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/moontv/playlist.m3u8"
         },
         {
-            "name": "Nagaland TV",
-            "logo": "https://i.imgur.com/EBEIpPo.png",
+            "name": "Kairali TV",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Kairali_TV.svg/500px-Kairali_TV.svg.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVNAGALANDTV/index.m3u8"
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8"
         },
         {
-            "name": "Nambikkai TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAMBIKKAI_TV/images/LOGO_HD/image.png",
+            "name": "Kalinga TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KALINGA_TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt02.tangotv.in/NAMBIKKAITV/index.m3u8"
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3KALINGATV/index.m3u8"
         },
         {
-            "name": "Nandighosha TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Nandighosha.png",
+            "name": "KTV Bangla",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/channel/2f8e3b371c660faa2f43a7f0942948a4.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt05.tangotv.in/87NeALx2NANDIGHOSHATV/index.m3u8"
+            "stream_url": "https://server.livelegitpro.in:9899/tribetv/tribetv/index.m3u8"
+        },
+        {
+            "name": "Kaumudy TV",
+            "logo": "https://dtil.tmsimg.com/assets/s143259_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Channels",
+            "stream_url": "https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8"
+        },
+        {
+            "name": "MediBizTV",
+            "logo": "https://www.medibiztv.com/assets/logo-E76jcvP9.png",
+            "group": "Indian Channels",
+            "stream_url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/marinebiztvlive/marinebiztvlive/playlist.m3u8"
+        },
+        {
+            "name": "Life TV",
+            "logo": "https://i.ibb.co/v1C0bdR/logo-1.png",
+            "group": "Indian Channels",
+            "stream_url": "https://lifetv.livebox.co.in/lifetvhls/lifetv.m3u8"
         },
         {
             "name": "NDTV 24x7",
@@ -1696,76 +1054,10 @@
             "stream_url": "https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8"
         },
         {
-            "name": "NDTV India",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_INDIA/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.213.31.109:90/StarUtsavMovies/playlist.m3u8"
-        },
-        {
-            "name": "NDTV Madhya Pradesh Chhattisgarh",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_MPCG/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvmpcg/master_1.m3u8"
-        },
-        {
             "name": "NDTV Profit",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_PROFIT_PRIME/images/LOGO_HD/image.png",
             "group": "Indian Channels",
             "stream_url": "https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8"
-        },
-        {
-            "name": "NDTV Rajasthan",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_RAJASTHAN/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvraj/master_1.m3u8"
-        },
-        {
-            "name": "Nireekshana TV",
-            "logo": "https://i.imgur.com/nGJv6QR.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-1.pishow.tv/live/965/master.m3u8"
-        },
-        {
-            "name": "NK TV 24x7",
-            "logo": "https://www.nktv.in/wp-content/uploads/2023/01/NEW-LOGO-NEW.png",
-            "group": "Indian Channels",
-            "stream_url": "https://nktv.smartstream.video/smartstream-us/nktvplus/nktvplus/chunks.m3u8"
-        },
-        {
-            "name": "NK TV Bangla",
-            "logo": "https://www.nktvbangla.com/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-12-at-2.59.18-PM.jpg",
-            "group": "Indian Channels",
-            "stream_url": "https://nktv.smartstream.video/smartstream-us/nkbangla/nkbangla/playlist.m3u8"
-        },
-        {
-            "name": "NTC TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/ntvtamil.png",
-            "group": "Indian Channels",
-            "stream_url": "https://galaxyott.live/hls/ntv.m3u8"
-        },
-        {
-            "name": "Odisha TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143639_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8"
-        },
-        {
-            "name": "Oli TV",
-            "logo": "https://i.ibb.co/XfvTQyJn/main-removebg-preview.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live.olidigital.in/olitv/olitv/index.m3u8"
-        },
-        {
-            "name": "OM TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
-        },
-        {
-            "name": "Onkar Only Truth TV",
-            "logo": "https://i.imgur.com/wu7aQRg.png",
-            "group": "Indian Channels",
-            "stream_url": "https://5dd3981940faa.streamlock.net/onkarentertainment/onkarentertainment/playlist.m3u8"
         },
         {
             "name": "Peace of Mind TV",
@@ -1774,52 +1066,58 @@
             "stream_url": "https://yuppnimrestreammum.akamaized.net/181224/smil:peaceofmind.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
+            "name": "Odisha TV",
+            "logo": "https://dtil.tmsimg.com/assets/s143639_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Channels",
+            "stream_url": "https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8"
+        },
+        {
+            "name": "India TV Speed News",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TV_SPEED_NEWS/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://cc-lyf4c0hwzg5dd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lyf4c0hwzg5dd/v1/vglive-sk-479089/main.m3u8"
+        },
+        {
+            "name": "Metro TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Metro_TV.png",
+            "group": "Indian Channels",
+            "stream_url": "https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8"
+        },
+        {
+            "name": "Mei Alai TV",
+            "logo": "https://www.meialai.in/assets/meialai-DBaBUZTH.png",
+            "group": "Indian Channels",
+            "stream_url": "https://meialai.iptelevishion.com/meialai/2/index.m3u8"
+        },
+        {
+            "name": "NDTV Rajasthan",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_RAJASTHAN/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvraj/master_1.m3u8"
+        },
+        {
+            "name": "NDTV Madhya Pradesh Chhattisgarh",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_MPCG/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvmpcg/master_1.m3u8"
+        },
+        {
             "name": "Peace TV Urdu",
             "logo": "https://github.com/fawazahmed0/tiger/raw/master/peace/urdu.jpg",
             "group": "Indian Channels",
             "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8"
         },
         {
-            "name": "Polimer TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143665_ld_h15_aa.png?lock=720x540",
+            "name": "MNTV",
+            "logo": "https://i.imgur.com/cFNw4Af.png",
             "group": "Indian Channels",
-            "stream_url": "https://cdn-2.pishow.tv/live/1241/master.m3u8"
+            "stream_url": "https://mntv.livebox.co.in/mntvhls/live.m3u8"
         },
         {
-            "name": "Prarthana TV",
-            "logo": "https://i.imgur.com/gj7dtNF.png",
+            "name": "Mercy TV",
+            "logo": "https://i.imgur.com/klNH4tV.png",
             "group": "Indian Channels",
-            "stream_url": "https://livetv.tarangplus.in/prarthana-origin/live/playlist.m3u8"
-        },
-        {
-            "name": "Public TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PUBLIC_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-3.pishow.tv/live/439/master.m3u8"
-        },
-        {
-            "name": "Pulari TV",
-            "logo": "https://i.imgur.com/v5urG30.png",
-            "group": "Indian Channels",
-            "stream_url": "https://royalstarindia.co.in/pularitv_hls/pularitv.m3u8"
-        },
-        {
-            "name": "Puthuyugam TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143693_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4PUTHUYUGAMTV/index.m3u8"
-        },
-        {
-            "name": "Q TV",
-            "logo": "https://www.theq.tv/wp-content/uploads/2023/10/The-Q-new-Logo.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8"
-        },
-        {
-            "name": "Raj TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8"
+            "stream_url": "https://5dd3981940faa.streamlock.net/mercytv/mercytv/playlist.m3u8"
         },
         {
             "name": "Reporter TV",
@@ -1828,22 +1126,10 @@
             "stream_url": "https://segment.yuppcdn.net/050522/reporter/playlist.m3u8"
         },
         {
-            "name": "Republic TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143723_ld_h15_aa.png?lock=720x540",
+            "name": "Prarthana TV",
+            "logo": "https://i.imgur.com/gj7dtNF.png",
             "group": "Indian Channels",
-            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/RepublicTV.m3u8"
-        },
-        {
-            "name": "Rongeen TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rongeen_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8"
-        },
-        {
-            "name": "Saam TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAAM_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-3.pishow.tv/live/437/master.m3u8"
+            "stream_url": "https://livetv.tarangplus.in/prarthana-origin/live/playlist.m3u8"
         },
         {
             "name": "Sada TV",
@@ -1852,46 +1138,28 @@
             "stream_url": "http://cdn12.henico.net:8080/live/sadatv/index.m3u8"
         },
         {
-            "name": "Sadhna TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143736_ld_h15_aa.png?lock=720x540",
+            "name": "Pulari TV",
+            "logo": "https://i.imgur.com/v5urG30.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt05.tangotv.in/87NeALx2SADHNATV/index.m3u8"
+            "stream_url": "https://royalstarindia.co.in/pularitv_hls/pularitv.m3u8"
         },
         {
-            "name": "Sai TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAI_TV/images/LOGO_HD/image.png",
+            "name": "Oli TV",
+            "logo": "https://i.ibb.co/XfvTQyJn/main-removebg-preview.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSAITV/index.m3u8"
+            "stream_url": "https://live.olidigital.in/olitv/olitv/index.m3u8"
         },
         {
-            "name": "Sairam TV",
-            "logo": "",
+            "name": "Republic TV",
+            "logo": "https://dtil.tmsimg.com/assets/s143723_ld_h15_aa.png?lock=720x540",
             "group": "Indian Channels",
-            "stream_url": "https://cdn-3.pishow.tv/live/1611/master.m3u8"
+            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/RepublicTV.m3u8"
         },
         {
-            "name": "Salaam TV",
-            "logo": "https://dtil.tmsimg.com/assets/s144466_ld_h15_aa.png?lock=720x540",
+            "name": "NTC TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/ntvtamil.png",
             "group": "Indian Channels",
-            "stream_url": "https://d2o3r1shda7xvv.cloudfront.net/index_5.m3u8"
-        },
-        {
-            "name": "Salvation TV",
-            "logo": "https://content.jdmagicbox.com/comp/bangalore/l5/080pxx80.xx80.150207120517.e4l5/catalogue/salvation-tv-network-pvt-m-g-road-bangalore-religious-organizations-1sabn2d.jpg",
-            "group": "Indian Channels",
-            "stream_url": "https://ktismaservers.in:3902/live/salvationtvlive.m3u8"
-        },
-        {
-            "name": "Sana TV",
-            "logo": "https://i.imgur.com/CR7DGBv.png",
-            "group": "Indian Channels",
-            "stream_url": "https://vglivessai.akamaized.net/us/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b6d9e864-ec16-410a-804d-ccf8f720bfaa/index.m3u8"
-        },
-        {
-            "name": "Sankara TV",
-            "logo": "https://i.imgur.com/2z0bDRD.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt05.tangotv.in/87NeALx2SRISANKARA/index.m3u8"
+            "stream_url": "https://galaxyott.live/hls/ntv.m3u8"
         },
         {
             "name": "Sansad TV 1 HD",
@@ -1906,10 +1174,70 @@
             "stream_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/e4182054dce340da9e0ff38b6b3658a4/index.m3u8"
         },
         {
-            "name": "Sansad TV 2",
-            "logo": "https://dtil.tmsimg.com/assets/s143761_ld_h15_aa.png?lock=720x540",
+            "name": "Rongeen TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rongeen_TV.png",
             "group": "Indian Channels",
-            "stream_url": "https://cdn-2.pishow.tv/live/39/master.m3u8"
+            "stream_url": "https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8"
+        },
+        {
+            "name": "Salvation TV",
+            "logo": "https://content.jdmagicbox.com/comp/bangalore/l5/080pxx80.xx80.150207120517.e4l5/catalogue/salvation-tv-network-pvt-m-g-road-bangalore-religious-organizations-1sabn2d.jpg",
+            "group": "Indian Channels",
+            "stream_url": "https://ktismaservers.in:3902/live/salvationtvlive.m3u8"
+        },
+        {
+            "name": "Sana TV",
+            "logo": "https://i.imgur.com/CR7DGBv.png",
+            "group": "Indian Channels",
+            "stream_url": "https://vglivessai.akamaized.net/us/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b6d9e864-ec16-410a-804d-ccf8f720bfaa/index.m3u8"
+        },
+        {
+            "name": "NK TV 24x7",
+            "logo": "https://www.nktv.in/wp-content/uploads/2023/01/NEW-LOGO-NEW.png",
+            "group": "Indian Channels",
+            "stream_url": "https://nktv.smartstream.video/smartstream-us/nktvplus/nktvplus/chunks.m3u8"
+        },
+        {
+            "name": "NK TV Bangla",
+            "logo": "https://www.nktvbangla.com/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-12-at-2.59.18-PM.jpg",
+            "group": "Indian Channels",
+            "stream_url": "https://nktv.smartstream.video/smartstream-us/nkbangla/nkbangla/playlist.m3u8"
+        },
+        {
+            "name": "Salaam TV",
+            "logo": "https://dtil.tmsimg.com/assets/s144466_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Channels",
+            "stream_url": "https://d2o3r1shda7xvv.cloudfront.net/index_5.m3u8"
+        },
+        {
+            "name": "Sadhna TV",
+            "logo": "https://dtil.tmsimg.com/assets/s143736_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Channels",
+            "stream_url": "https://mumt05.tangotv.in/87NeALx2SADHNATV/index.m3u8"
+        },
+        {
+            "name": "Sony Entertainment Television HD",
+            "logo": "https://dtil.tmsimg.com/assets/s159096_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Channels",
+            "stream_url": "http://38.96.178.205/SONYHD/index.m3u8"
+        },
+        {
+            "name": "Shubh Cinema TV",
+            "logo": "https://i.imgur.com/RQhorAG.png",
+            "group": "Indian Channels",
+            "stream_url": "https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8"
+        },
+        {
+            "name": "Sirippoli TV",
+            "logo": "https://dtil.tmsimg.com/assets/s143791_ld_h9_aa.png?lock=720x540",
+            "group": "Indian Channels",
+            "stream_url": "http://ptuf.ridsys.in/riptv/live/KALAIGNAR_SIRIPOLI/index.m3u8"
+        },
+        {
+            "name": "Raj TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_TV/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8"
         },
         {
             "name": "Sanskar TV",
@@ -1924,12 +1252,6 @@
             "stream_url": "https://deatfcv3xdvi3.cloudfront.net/out/v1/7a43dd2f64e34ec28da1b4bd6923251a/index.m3u8"
         },
         {
-            "name": "Santvani Channel",
-            "logo": "https://dtil.tmsimg.com/assets/s143763_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-2.pishow.tv/live/475/master.m3u8"
-        },
-        {
             "name": "Satsang TV",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SATSANG/images/LOGO_HD/image.png",
             "group": "Indian Channels",
@@ -1942,28 +1264,10 @@
             "stream_url": "https://d1ji7e9jbzm5g8.cloudfront.net/out/v1/769f22f64d80442889306b9c4abea63c/index.m3u8"
         },
         {
-            "name": "Sharnam TV",
-            "logo": "https://papaji.freetvindia.com/media/channels/SarnamTV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVSHARNAMTV/index.m3u8"
-        },
-        {
             "name": "Shekinah TV",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Shekinah.png",
             "group": "Indian Channels",
             "stream_url": "https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8"
-        },
-        {
-            "name": "Shemaroo TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHEMAROO_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://airtelapp.shemaroo.com/shemarootv/smil:shemarootvadp.smil/playlist.m3u8"
-        },
-        {
-            "name": "Shubh Cinema TV",
-            "logo": "https://i.imgur.com/RQhorAG.png",
-            "group": "Indian Channels",
-            "stream_url": "https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8"
         },
         {
             "name": "Shubh TV",
@@ -1972,34 +1276,10 @@
             "stream_url": "https://d2g1vdc6ozl2o8.cloudfront.net/out/v1/0a0dc7d7911b4fddbb4dfc963fdd4b9e/index.m3u8"
         },
         {
-            "name": "Shubhsandesh TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHUBHSANDESH_TV/images/LOGO_HD/image.png",
+            "name": "Shemaroo TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHEMAROO_TV/images/LOGO_HD/image.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSHUBHSANDESH/index.m3u8"
-        },
-        {
-            "name": "Sirippoli TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143791_ld_h9_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "http://ptuf.ridsys.in/riptv/live/KALAIGNAR_SIRIPOLI/index.m3u8"
-        },
-        {
-            "name": "Soham TV",
-            "logo": "https://i.imgur.com/cpedJ0L.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSOHAMTV/index.m3u8"
-        },
-        {
-            "name": "Sony Entertainment Television HD",
-            "logo": "https://dtil.tmsimg.com/assets/s159096_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "http://38.96.178.205/SONYHD/index.m3u8"
-        },
-        {
-            "name": "Star Bharat",
-            "logo": "https://i.imgur.com/Q8ajPij.png",
-            "group": "Indian Channels",
-            "stream_url": "http://103.253.18.58:8000/play/a00u"
+            "stream_url": "https://airtelapp.shemaroo.com/shemarootv/smil:shemarootvadp.smil/playlist.m3u8"
         },
         {
             "name": "StarPlus HD",
@@ -2008,40 +1288,10 @@
             "stream_url": "http://202.70.146.135:8000/play/a009/index.m3u8"
         },
         {
-            "name": "Subhavaartha TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUBHAVAARTHA/images/LOGO_HD/image.png",
+            "name": "Soham TV",
+            "logo": "https://i.imgur.com/cpedJ0L.png",
             "group": "Indian Channels",
-            "stream_url": "https://2mk9qae4rwyb-hls-live.wmncdn.net/shubhavartha/live.stream/playlist.m3u8"
-        },
-        {
-            "name": "Subin TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/subintvtamil.png",
-            "group": "Indian Channels",
-            "stream_url": "https://stream.galaxyott.live/live/subintv/index.m3u8"
-        },
-        {
-            "name": "Suriya TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/suryatvtamil.png",
-            "group": "Indian Channels",
-            "stream_url": "https://stream.ottlive.co.in/suryatvtamil/index.m3u8"
-        },
-        {
-            "name": "Suriyan TV",
-            "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Suriyan-tv-logo_2000_X_1125_Transpharent.png",
-            "group": "Indian Channels",
-            "stream_url": "https://stream.sscloud7.com/live/suriyantv/index.m3u8"
-        },
-        {
-            "name": "Swatantra TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Swatantra_News.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumbai-edge.smartplaytv.in/SwatantraTV/index.m3u8"
-        },
-        {
-            "name": "Taaza TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Taaza_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live.we2live.in/taazatv/live/playlist.m3u8"
+            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSOHAMTV/index.m3u8"
         },
         {
             "name": "Tarang TV",
@@ -2050,40 +1300,10 @@
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
         },
         {
-            "name": "Tehzeeb TV",
-            "logo": "https://i.imgur.com/PCVOdup.png",
+            "name": "TV Punjab",
+            "logo": "https://en.tvpunjab.com/storage/2022/03/logo-2022.png",
             "group": "Indian Channels",
-            "stream_url": "https://cdn-4.pishow.tv/live/239/master.m3u8"
-        },
-        {
-            "name": "Thalaa TV",
-            "logo": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/thalaa-tv.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8"
-        },
-        {
-            "name": "Thanthi TV",
-            "logo": "https://dtil.tmsimg.com/assets/s144000_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://streams.tangotv.in/THANTHITV/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "Tolly TV",
-            "logo": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/aumnrs.png",
-            "group": "Indian Channels",
-            "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8"
-        },
-        {
-            "name": "Total TV Haryana",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TOTAL_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://cdn-2.pishow.tv/live/1522/master.m3u8"
-        },
-        {
-            "name": "TV5 News",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TV5_TELUGU/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/tv5_nim_https/110322/tv5/playlist.m3u8"
+            "stream_url": "https://932y483pdjv8-hls-live.5centscdn.com/stream/deb10bae362f810630ec3abedcae5894.sdp/playlist.m3u8"
         },
         {
             "name": "TV9 Bharatvarsh",
@@ -2092,64 +1312,28 @@
             "stream_url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9hinjzgtpe/liveabr/playlist.m3u8"
         },
         {
-            "name": "TV BRICS English",
-            "logo": "https://i.imgur.com/8rKNuS6.png",
+            "name": "Suriya TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/suryatvtamil.png",
             "group": "Indian Channels",
-            "stream_url": "https://engbrics.mediacdn.ru/cdn/brics/english/playlist.m3u8"
+            "stream_url": "https://stream.ottlive.co.in/suryatvtamil/index.m3u8"
         },
         {
-            "name": "TV Punjab",
-            "logo": "https://en.tvpunjab.com/storage/2022/03/logo-2022.png",
+            "name": "Taaza TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Taaza_TV.png",
             "group": "Indian Channels",
-            "stream_url": "https://932y483pdjv8-hls-live.5centscdn.com/stream/deb10bae362f810630ec3abedcae5894.sdp/playlist.m3u8"
+            "stream_url": "https://live.we2live.in/taazatv/live/playlist.m3u8"
         },
         {
-            "name": "UTV Palakkad",
-            "logo": "https://utvpkd.in/assets/img/logo.png",
+            "name": "Subin TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/subintvtamil.png",
             "group": "Indian Channels",
-            "stream_url": "https://em4qj6nedyvg-hls-live.wmncdn.net/liveunit/89b1e919eed04e59383cf820d644c20e.sdp/playlist.m3u8"
+            "stream_url": "https://stream.galaxyott.live/live/subintv/index.m3u8"
         },
         {
-            "name": "Vanitha TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_VANITHA/images/LOGO_HD/image.png",
+            "name": "Subhavaartha TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUBHAVAARTHA/images/LOGO_HD/image.png",
             "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8"
-        },
-        {
-            "name": "Vasanth TV",
-            "logo": "https://dtil.tmsimg.com/assets/s144068_ld_h15_aa.png?lock=720x540",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4VASANTHTV/index.m3u8"
-        },
-        {
-            "name": "Velicham TV",
-            "logo": "https://upload.wikimedia.org/wikipedia/en/e/e4/Logo_of_Velicham_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt05.tangotv.in/87NeALx2VALICHAMPLUS/index.m3u8"
-        },
-        {
-            "name": "Vendhar TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Vendhar_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt04.tangotv.in/m18aqlK4VENDHARTV/index.m3u8"
-        },
-        {
-            "name": "Village TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/VillageTV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://live.villagetv.net/villagetv/hd/index.m3u8"
-        },
-        {
-            "name": "Vissa TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_VISSA_TV/images/LOGO_HD/image.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt07.tangotv.in/zHjX9OFlVISSATV/index.m3u8"
-        },
-        {
-            "name": "Win TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Win_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVWINTV/index.m3u8"
+            "stream_url": "https://2mk9qae4rwyb-hls-live.wmncdn.net/shubhavartha/live.stream/playlist.m3u8"
         },
         {
             "name": "YET TV",
@@ -2158,10 +1342,70 @@
             "stream_url": "https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8"
         },
         {
+            "name": "Swatantra TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Swatantra_News.png",
+            "group": "Indian Channels",
+            "stream_url": "https://mumbai-edge.smartplaytv.in/SwatantraTV/index.m3u8"
+        },
+        {
+            "name": "TV5 News",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TV5_TELUGU/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/tv5_nim_https/110322/tv5/playlist.m3u8"
+        },
+        {
+            "name": "Harvest TV Keralam",
+            "logo": "https://i.imgur.com/1DyPuIt.png",
+            "group": "Indian Channels",
+            "stream_url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestenglish/d1796a22d24e8696c7d5d0b5c349fdd2.sdp/index.m3u8"
+        },
+        {
             "name": "Zee TV HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TV/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Channels",
             "stream_url": "http://41.205.93.154/ZEE-TV/index.m3u8"
+        },
+        {
+            "name": "Thalaa TV",
+            "logo": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/thalaa-tv.png",
+            "group": "Indian Channels",
+            "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8"
+        },
+        {
+            "name": "Tolly TV",
+            "logo": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/aumnrs.png",
+            "group": "Indian Channels",
+            "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8"
+        },
+        {
+            "name": "Harvest TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HARVEST_TV_24X7/images/LOGO_HD/image.png",
+            "group": "Indian Channels",
+            "stream_url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvesttvlive1/bbb19eae240ec100af921d511efc86a0.sdp/index.m3u8"
+        },
+        {
+            "name": "TV BRICS English",
+            "logo": "https://i.imgur.com/8rKNuS6.png",
+            "group": "Indian Channels",
+            "stream_url": "https://engbrics.mediacdn.ru/cdn/brics/english/playlist.m3u8"
+        },
+        {
+            "name": "Village TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/VillageTV.png",
+            "group": "Indian Channels",
+            "stream_url": "https://live.villagetv.net/villagetv/hd/index.m3u8"
+        },
+        {
+            "name": "UTV Palakkad",
+            "logo": "https://utvpkd.in/assets/img/logo.png",
+            "group": "Indian Channels",
+            "stream_url": "https://em4qj6nedyvg-hls-live.wmncdn.net/liveunit/89b1e919eed04e59383cf820d644c20e.sdp/playlist.m3u8"
+        },
+        {
+            "name": "Hum TV",
+            "logo": "https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png",
+            "group": "Pakistani Channels",
+            "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
         },
         {
             "name": "ARY News",
@@ -2174,36 +1418,6 @@
             "logo": "https://i.imgur.com/1PbtW0y.png",
             "group": "Pakistani Channels",
             "stream_url": "https://imob.dunyanews.tv/livehd/ngrp:dunyalivehd_2_all/playlist.m3u8"
-        },
-        {
-            "name": "Express Entertainment",
-            "logo": "https://i.imgur.com/rgHbb8W.png",
-            "group": "Pakistani Channels",
-            "stream_url": "https://ml-pull-dvc-myco.io:2096/EXPRESS_ENTERTAINMENT/index.m3u8"
-        },
-        {
-            "name": "Hum News",
-            "logo": "https://i.imgur.com/9OroocT.png",
-            "group": "Pakistani Channels",
-            "stream_url": "http://103.86.135.164:9981/stream/channelid/2024790699?profile=pass&ticket=CAC87CD3CF8747A13FB03B91C9BE860F93CD615C"
-        },
-        {
-            "name": "Hum TV",
-            "logo": "https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png",
-            "group": "Pakistani Channels",
-            "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
-        },
-        {
-            "name": "PTV News",
-            "logo": "https://i.imgur.com/Fpn8VU7.png",
-            "group": "Pakistani Channels",
-            "stream_url": "http://103.250.28.74:8000/play/a017/index.m3u8"
-        },
-        {
-            "name": "Samaa TV",
-            "logo": "https://i.imgur.com/r3U4A1P.png",
-            "group": "Pakistani Channels",
-            "stream_url": "http://103.250.28.74:8000/play/a022/index.m3u8"
         }
     ]
 }
