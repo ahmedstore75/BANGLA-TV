@@ -1,9 +1,10 @@
 import requests
 import json
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # আপনার নাম এখানে দিন
-MY_NAME = "Ahmed Iptv"
+MY_NAME = "Ahmed Store"
 
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
@@ -16,7 +17,6 @@ def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
-    # আঞ্চলিক ও অপ্রয়োজনীয় চ্যানেল ব্ল্যাকলিস্ট
     excluded = [
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
@@ -26,26 +26,30 @@ def is_excluded_channel(channel):
         return True
     return False
 
-def is_stream_working(url):
+def check_single_stream(item):
     """
-    স্ট্রিম URL টি সক্রিয় (Active) কি না তা যাচাই করার ফাংশন।
+    মাল্টি-থ্রেডিংয়ের মাধ্যমে দ্রুত অ্যাক্টিভ স্ট্রিম চেক করার ফাংশন।
     """
+    ch_obj, res = item
+    url = ch_obj['stream_url']
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
+    
     try:
-        # প্রথমে দ্রুত চেক করার জন্য HEAD রিকোয়েস্ট
-        response = requests.head(url, headers=headers, timeout=4, allow_redirects=True)
+        # দ্রুত চেক করতে HEAD রিকোয়েস্ট
+        response = requests.head(url, headers=headers, timeout=3, allow_redirects=True)
         if response.status_code == 200:
-            return True
+            return item
         
-        # HEAD ফেল করলে কিছু সার্ভারের জন্য GET রিকোয়েস্ট (Stream Data লোড না করে শুধু হেডার চেক)
-        response = requests.get(url, headers=headers, timeout=4, stream=True, allow_redirects=True)
+        # HEAD ব্যর্থ হলে ছোট GET রিকোয়েস্ট
+        response = requests.get(url, headers=headers, timeout=3, stream=True, allow_redirects=True)
         if response.status_code == 200:
-            return True
+            return item
     except Exception:
-        return False
-    return False
+        pass
+    
+    return None
 
 def categorize_and_prioritize(channel):
     group = channel['group'].lower()
@@ -118,8 +122,6 @@ def categorize_and_prioritize(channel):
         is_allowed = any(normalize_text(allow) in norm_name for allow in indian_allowlist)
         if is_allowed:
             return (8, 0, "Indian Channels")
-        else:
-            return None
 
     # ৯. পাকিস্তানি চ্যানেল
     pak_allowlist = [
@@ -131,8 +133,6 @@ def categorize_and_prioritize(channel):
         is_allowed = any(normalize_text(allow) in norm_name for allow in pak_allowlist)
         if is_allowed:
             return (9, 0, "Pakistani Channels")
-        else:
-            return None
 
     return None
 
@@ -148,9 +148,9 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 চ্যানেল ফেচিং এবং প্রসেসিং শুরু হচ্ছে...")
+    print("🔄 চ্যানেল ফেচ করা হচ্ছে...")
 
-    channels = []
+    candidate_channels = []
     seen_urls = set()
 
     for url, country_code in sources:
@@ -194,25 +194,32 @@ def fetch_channels_by_group():
                     if not is_excluded_channel(ch_obj):
                         res = categorize_and_prioritize(ch_obj)
                         if res is not None:
-                            # অ্যাক্টিভ এবং ওয়ার্কিং চ্যানেল চেক করা হচ্ছে
-                            if is_stream_working(stream_url):
-                                channels.append((ch_obj, res))
-                                seen_urls.add(stream_url)
-                                print(f"  🟢 [Working]: {ch_obj['name']}")
-                            else:
-                                print(f"  🔴 [Offline]: {ch_obj['name']}")
+                            candidate_channels.append((ch_obj, res))
+                            seen_urls.add(stream_url)
             i += 1
 
-    channels.sort(key=lambda x: x[1][:2])
+    print(f"⚡ {len(candidate_channels)} টি চ্যানেল পাওয়া গেছে। লাইভ স্ট্যাটাস চেক করা হচ্ছে...")
 
-    total_count = len(channels)
+    working_channels = []
     
-    # M3U ফাইলের হেডারে নাম এবং মোট চ্যানেল কাউন্ট
+    # ৫০টি থ্রেড একসাথে চ্যানেল টেস্ট করবে
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        futures = [executor.submit(check_single_stream, item) for item in candidate_channels]
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                working_channels.append(result)
+                print(f"  🟢 [Live]: {result[0]['name']}")
+
+    working_channels.sort(key=lambda x: x[1][:2])
+    total_count = len(working_channels)
+
+    # M3U এবং JSON রাইট
     m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
     m3u_lines = [m3u_header]
     json_channels = []
 
-    for ch, res in channels:
+    for ch, res in working_channels:
         p, sub_p, display_group = res
 
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
@@ -224,7 +231,6 @@ def fetch_channels_by_group():
             "stream_url": ch["stream_url"]
         })
 
-    # JSON ফাইলে নাম ও অটো কাউন্ট
     json_data = {
         "playlist_name": MY_NAME,
         "total_channels": total_count,
@@ -238,9 +244,9 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ প্লেলিস্ট তৈরি সম্পন্ন!")
-    print(f"📌 প্লেলিস্টের নাম: {MY_NAME}")
-    print(f"📊 মোট অ্যাক্টিভ চ্যানেল সেভ হয়েছে: {total_count} টি")
+    print(f"\n✅ কাজ শেষ!")
+    print(f"📌 প্লেলিস্ট: {MY_NAME}")
+    print(f"📊 মোট অ্যাক্টিভ চ্যানেল: {total_count} টি")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
