@@ -28,22 +28,22 @@ def is_excluded_channel(channel):
 
 def check_single_stream(item):
     """
-    মাল্টি-থ্রেডিংয়ের মাধ্যমে দ্রুত অ্যাক্টিভ স্ট্রিম চেক করার ফাংশন।
+    ধীরগতির অ্যাক্টিভ চ্যানেলগুলোও যাতে মিস না হয় সেজন্য ১০ সেকেন্ড টাইমআউট ব্যবহার করা হয়েছে।
     """
     ch_obj, res = item
     url = ch_obj['stream_url']
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        # দ্রুত চেক করতে HEAD রিকোয়েস্ট
-        response = requests.head(url, headers=headers, timeout=3, allow_redirects=True)
+        # ১. আগে 빠르게 HEAD রিকোয়েস্ট (Timeout: 10 Sec)
+        response = requests.head(url, headers=headers, timeout=10, allow_redirects=True)
         if response.status_code == 200:
             return item
         
-        # HEAD ব্যর্থ হলে ছোট GET রিকোয়েস্ট
-        response = requests.get(url, headers=headers, timeout=3, stream=True, allow_redirects=True)
+        # ২. HEAD কাজ না করলে GET রিকোয়েস্ট (Timeout: 10 Sec)
+        response = requests.get(url, headers=headers, timeout=10, stream=True, allow_redirects=True)
         if response.status_code == 200:
             return item
     except Exception:
@@ -198,12 +198,12 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
-    print(f"⚡ {len(candidate_channels)} টি চ্যানেল পাওয়া গেছে। লাইভ স্ট্যাটাস চেক করা হচ্ছে...")
+    print(f"⚡ {len(candidate_channels)} টি চ্যানেল পাওয়া গেছে। ১০ সেকেন্ড টাইমআউট দিয়ে লাইভ স্ট্যাটাস চেক করা হচ্ছে...")
 
     working_channels = []
     
-    # ৫০টি থ্রেড একসাথে চ্যানেল টেস্ট করবে
-    with ThreadPoolExecutor(max_workers=50) as executor:
+    # ৮০টি থ্রেড একসাথে চ্যানেল চেক করবে
+    with ThreadPoolExecutor(max_workers=80) as executor:
         futures = [executor.submit(check_single_stream, item) for item in candidate_channels]
         for future in as_completed(futures):
             result = future.result()
@@ -214,7 +214,7 @@ def fetch_channels_by_group():
     working_channels.sort(key=lambda x: x[1][:2])
     total_count = len(working_channels)
 
-    # M3U এবং JSON রাইট
+    # M3U এবং JSON ফাইলের জন্য ডাটা প্রস্তুত করা
     m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
     m3u_lines = [m3u_header]
     json_channels = []
@@ -244,9 +244,9 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ কাজ শেষ!")
+    print(f"\n✅ প্রসেসিং সম্পন্ন!")
     print(f"📌 প্লেলিস্ট: {MY_NAME}")
-    print(f"📊 মোট অ্যাক্টিভ চ্যানেল: {total_count} টি")
+    print(f"📊 মোট অ্যাক্টিভ চ্যানেল প্লেলিস্টে সেভ হয়েছে: {total_count} টি")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
