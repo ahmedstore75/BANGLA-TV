@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahammad Ali Premium IPTV",
-    "total_channels": 285,
+    "total_channels": 300,
     "status": "success",
     "channels": [
         {
@@ -26,6 +26,18 @@
             "logo": "https://i.imgur.com/dZdUbYd.png",
             "group": "01. Bangladeshi TV",
             "stream_url": "https://5bf7b725107e5.streamlock.net/ahsantv/ahsantv/playlist.m3u8"
+        },
+        {
+            "name": "Al Janoub TV",
+            "logo": "https://i.imgur.com/rxDh6W1.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://live.alissahost.net/hls/test.m3u8"
+        },
+        {
+            "name": "Al Masar TV",
+            "logo": "https://play-lh.googleusercontent.com/FHPrsr391mPFqKfTq6ZdvWPZNVfsZeTAVQ8rjQF-NosnRdNipUy5xa43RWkiF4tGcQU",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://starmenajo.com/hls/almasar/index.m3u8"
         },
         {
             "name": "Al-Jawadain TV",
@@ -146,6 +158,12 @@
             "logo": "https://i.imgur.com/VCDSjX7.png",
             "group": "01. Bangladeshi TV",
             "stream_url": "https://goliveafrica.media:9998/live/64227f58b8413/index.m3u8"
+        },
+        {
+            "name": "CBS News 24/7",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/CBS_News_247_logo.svg/960px-CBS_News_247_logo.svg.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8"
         },
         {
             "name": "Cetelmón TV",
@@ -298,6 +316,12 @@
             "stream_url": "https://na.linear.zype.com/bf94f9f4-383c-40e0-9d49-279a4f33ab8d/f29b8836-d990-4c8d-b421-192a8f43edc4-zype/live.m3u8"
         },
         {
+            "name": "God Stands Kids Club TV Arabic",
+            "logo": "https://i.imgur.com/FxDBbpz.jpeg",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsArabic.m3u8"
+        },
+        {
             "name": "God Stands Kids Club TV Chinese",
             "logo": "https://i.imgur.com/FxDBbpz.jpeg",
             "group": "01. Bangladeshi TV",
@@ -320,12 +344,6 @@
             "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
             "group": "01. Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
-        },
-        {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "01. Bangladeshi TV",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "Habib TV",
@@ -466,6 +484,12 @@
             "stream_url": "https://streamer12.vdn.dstreamone.net/kingtv/kingtv/playlist.m3u8"
         },
         {
+            "name": "LaC News 24",
+            "logo": "https://www.omnys.com/media/news/lac-news24-icona.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://f5842579ff984c1c98d63b8d789673eb.msvdn.net/live/S27391994/HVvPMzy/playlist.m3u8"
+        },
+        {
             "name": "LifevisionTV",
             "logo": "",
             "group": "01. Bangladeshi TV",
@@ -574,10 +598,34 @@
             "stream_url": "https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_027/Stream/playlist.m3u8"
         },
         {
+            "name": "News 24",
+            "logo": "https://dtil.tmsimg.com/assets/s90009_ld_h15_aa.png?lock=720x540",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://vidcdn.vidgyor.com/news24-origin/liveabr/playlist.m3u8"
+        },
+        {
+            "name": "News 24 Albania",
+            "logo": "https://i.imgur.com/eG33jue.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "http://tv.balkanweb.com:8081/news24/livestream/playlist.m3u8"
+        },
+        {
+            "name": "News 24 MP & Chhattisgarh",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS24_MPCG/images/LOGO_HD/image.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://mumt04.tangotv.in/m18aqlK4NEWS24MPCG/index.m3u8"
+        },
+        {
             "name": "News Live Bangla",
             "logo": "https://papaji.freetvindia.com/media/News_Live_Bangla.png",
             "group": "01. Bangladeshi TV",
             "stream_url": "https://mumt06.tangotv.in/qYyB8fXVINDRADHANU/index.m3u8"
+        },
+        {
+            "name": "NKR TV Kannada",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/NKRTV.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://stream.ottlive.co.in/nkrtv/index.m3u8"
         },
         {
             "name": "Noor TV",
@@ -598,6 +646,12 @@
             "stream_url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8"
         },
         {
+            "name": "NTV Telugu",
+            "logo": "https://i.imgur.com/WqTIoWS.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://mumbai-edge.smartplaytv.in/NTVTelugu/index.m3u8"
+        },
+        {
             "name": "OCN TV",
             "logo": "https://i.imgur.com/iSB5Obl.png",
             "group": "01. Bangladeshi TV",
@@ -614,6 +668,12 @@
             "logo": "https://www.qmc.qa/img/LiveChannels/1ca67a44-9290-4b2a-8a16-d8c6e2260816.jpg",
             "group": "01. Bangladeshi TV",
             "stream_url": "https://qatartv.akamaized.net/hls/live/20000612/qtvquran/master.m3u8"
+        },
+        {
+            "name": "Rai News 24 HD",
+            "logo": "https://i.imgur.com/n2u57y3.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://d3k8wzt41aflvx.cloudfront.net/RAINEWS24/Live.m3u8"
         },
         {
             "name": "Rakuten TV Action Movies Finland",
@@ -868,10 +928,22 @@
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSHUBHSANDESH/index.m3u8"
         },
         {
+            "name": "Silverbird News 24",
+            "logo": "https://i.imgur.com/9jcV9oG.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_029/Stream/playlist.m3u8"
+        },
+        {
             "name": "Sivan TV",
             "logo": "https://i.ibb.co/b3HG9wm/Logo-site.png",
             "group": "01. Bangladeshi TV",
             "stream_url": "http://sivantv.livebox.co.in/sivantvhls/sivan.m3u8"
+        },
+        {
+            "name": "Sooriyan TV",
+            "logo": "https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8"
         },
         {
             "name": "SporTV 3",
@@ -896,6 +968,18 @@
             "logo": "https://i.imgur.com/KyI0s5n.png",
             "group": "01. Bangladeshi TV",
             "stream_url": "https://live-us1.thaimomo.com/live-as/chtsport-1/playlist.m3u8"
+        },
+        {
+            "name": "Tamilan TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Tamilan_Television.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://mumt04.tangotv.in/m18aqlK4TAMILANTELEVISION/index.m3u8"
+        },
+        {
+            "name": "TamilVision-TV",
+            "logo": "https://i.imgur.com/DodsLuW.png",
+            "group": "01. Bangladeshi TV",
+            "stream_url": "https://live.cmr24.fm/TVI/HD/chunks.m3u8"
         },
         {
             "name": "Tarang TV",
@@ -998,6 +1082,12 @@
             "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0025T4PV.png?lock=720x540",
             "group": "02. Sports Channels",
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten4.m3u8"
+        },
+        {
+            "name": "Sony Sports Ten 4 Telugu",
+            "logo": "https://dtil.tmsimg.com/assets/s149166_ld_h15_aa.png?lock=720x540",
+            "group": "02. Sports Channels",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten4hd.m3u8"
         },
         {
             "name": "Sony Sports Ten 5",
@@ -1108,6 +1198,24 @@
             "stream_url": "http://185.227.34.179:8080/axn-black/index.m3u8"
         },
         {
+            "name": "AXN Latin America",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+            "group": "04. Indian & English Movies",
+            "stream_url": "http://138.121.15.230:9002/AXN/index.m3u8"
+        },
+        {
+            "name": "AXN Latin America Mexico",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+            "group": "04. Indian & English Movies",
+            "stream_url": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8"
+        },
+        {
+            "name": "AXN Latin America South",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+            "group": "04. Indian & English Movies",
+            "stream_url": "http://45.228.235.116:8000/play/a0iy/index.m3u8"
+        },
+        {
             "name": "B4U Movies",
             "logo": "https://i.imgur.com/M9kMFJl.png",
             "group": "04. Indian & English Movies",
@@ -1180,6 +1288,12 @@
             "stream_url": "https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8"
         },
         {
+            "name": "Paramount Network de Pluto TV",
+            "logo": "https://images.pluto.tv/channels/68d566603d3a9580eb461251/colorLogoPNG_1762199133146.png",
+            "group": "04. Indian & English Movies",
+            "stream_url": "https://jmp2.uk/plu-68d566603d3a9580eb461251.m3u8"
+        },
+        {
             "name": "Paramount+ Picks",
             "logo": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
             "group": "04. Indian & English Movies",
@@ -1246,10 +1360,22 @@
             "stream_url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8"
         },
         {
+            "name": "Holy Quran Radio Nablus",
+            "logo": "https://quran-radio.com/assets/images/site/quran-radio-logo-h-rtl.png",
+            "group": "05. Islamic TV",
+            "stream_url": "http://streaming.zaytonatube.com:8080/holyquran/holyquran/video.m3u8"
+        },
+        {
             "name": "Iqraa Africa & Europe",
             "logo": "https://i.imgur.com/nUlZvSe.png",
             "group": "05. Islamic TV",
             "stream_url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv1/playlist.m3u8"
+        },
+        {
+            "name": "Iqraa Arabic",
+            "logo": "https://i.imgur.com/HPVsIa4.png",
+            "group": "05. Islamic TV",
+            "stream_url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv3/playlist.m3u8"
         },
         {
             "name": "Iqraa Quran",
@@ -1288,10 +1414,46 @@
             "stream_url": "https://media2.streambrothers.com:1936/8122/8122/playlist.m3u8"
         },
         {
+            "name": "Peace TV Bangla",
+            "logo": "https://i.imgur.com/1ztVXUi.png",
+            "group": "05. Islamic TV",
+            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8"
+        },
+        {
+            "name": "Peace TV Chinese",
+            "logo": "https://github.com/fawazahmed0/tiger/raw/master/peace/chinese.jpg",
+            "group": "05. Islamic TV",
+            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvChinese/index.m3u8"
+        },
+        {
+            "name": "Peace TV English",
+            "logo": "https://i.imgur.com/rjgCM2B.png",
+            "group": "05. Islamic TV",
+            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8"
+        },
+        {
+            "name": "Peace TV Urdu",
+            "logo": "https://github.com/fawazahmed0/tiger/raw/master/peace/urdu.jpg",
+            "group": "05. Islamic TV",
+            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8"
+        },
+        {
             "name": "Quran",
             "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
             "group": "05. Islamic TV",
             "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
+        },
+        {
+            "name": "Quran Radio",
+            "logo": "https://aloula.faulio.com/storage/mediagallery/14/da/fullhd_823bc2fe722ede75410492d57fd6c201208b4224.png",
+            "group": "05. Islamic TV",
+            "stream_url": "https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8"
+        },
+        {
+            "name": "Sharjah Radio Quran",
+            "logo": "https://i.imgur.com/MxZlOvc.png",
+            "group": "05. Islamic TV",
+            "stream_url": "https://live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8"
         },
         {
             "name": "The Islamic Network",
@@ -1300,16 +1462,10 @@
             "stream_url": "https://video1.getstreamhosting.com:1936/8322/8322/playlist.m3u8"
         },
         {
-            "name": "3ABN Dare To Dream Network",
-            "logo": "https://i.imgur.com/ONsAt3Z.png",
+            "name": "9X Jalwa",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_9X_JALWA/images/LOGO_HD/image.png",
             "group": "06. Music Channels",
-            "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
-        },
-        {
-            "name": "3ABN Proclaim! Network",
-            "logo": "https://i.imgur.com/zUMUNhe.png",
-            "group": "06. Music Channels",
-            "stream_url": "https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8"
+            "stream_url": "https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8"
         },
         {
             "name": "9XM",
@@ -1396,12 +1552,6 @@
             "stream_url": "https://video1.getstreamhosting.com:1936/8282/8282/playlist.m3u8"
         },
         {
-            "name": "M-Net Sport",
-            "logo": "https://i.imgur.com/7k8ar1Z.png",
-            "group": "06. Music Channels",
-            "stream_url": "http://ares.mnet.mk/hls/mnet-sport.m3u8"
-        },
-        {
             "name": "Madhimugam TV",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png",
             "group": "06. Music Channels",
@@ -1412,6 +1562,24 @@
             "logo": "",
             "group": "06. Music Channels",
             "stream_url": "https://metafilmhls.wns.live/hls/stream.m3u8"
+        },
+        {
+            "name": "Mh 1 Music",
+            "logo": "https://dtil.tmsimg.com/assets/s143539_ld_h15_aa.png?lock=720x540",
+            "group": "06. Music Channels",
+            "stream_url": "https://livestream.jswk.online/playlisttest/live/playlist.m3u8"
+        },
+        {
+            "name": "Mh 1 News",
+            "logo": "https://dtil.tmsimg.com/assets/s143540_ld_h15_aa.png?lock=720x540",
+            "group": "06. Music Channels",
+            "stream_url": "https://streams.tangotv.in/MHONENEWS/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "Mh 1 Prime",
+            "logo": "",
+            "group": "06. Music Channels",
+            "stream_url": "https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8"
         },
         {
             "name": "MTM TV",
@@ -1480,6 +1648,18 @@
             "stream_url": "https://bozztv.com/uni10rtmp/ssstv1-cdn/smil:ssstv1web.smil/playlist.m3u8"
         },
         {
+            "name": "SUMtv Latino",
+            "logo": "https://i.imgur.com/ZObFN8Z.png",
+            "group": "06. Music Channels",
+            "stream_url": "https://bozztv.com/uni10rtmp/ssstv2-cdn/smil:ssstv2web.smil/playlist.m3u8"
+        },
+        {
+            "name": "Triunfo 96.9 FM TV",
+            "logo": "https://i.ibb.co/q0qt0h5/x-SCWAc-Jfp3.png",
+            "group": "06. Music Channels",
+            "stream_url": "https://59825a54e4454.streamlock.net:8443/william652/william652/playlist.m3u8"
+        },
+        {
             "name": "TV Zoom",
             "logo": "https://i.imgur.com/jCGrjf5.png",
             "group": "06. Music Channels",
@@ -1516,6 +1696,12 @@
             "stream_url": "http://198.58.104.90:8989/natgeo/index.m3u8"
         },
         {
+            "name": "National Geographic Latin America",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "07. Documentary & Info",
+            "stream_url": "http://15.204.246.24:8080/NatGeoHD/index.m3u8"
+        },
+        {
             "name": "National Geographic Wild",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
             "group": "07. Documentary & Info",
@@ -1534,10 +1720,64 @@
             "stream_url": "http://202.70.146.135:8000/play/a01q/index.m3u8"
         },
         {
+            "name": "Disney Channel Latin America",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://15.204.246.24:8080/DisneyHD/index.m3u8"
+        },
+        {
+            "name": "Disney Channel Latin America Center",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://181.78.8.199:8000/play/a0dn/index.m3u8"
+        },
+        {
+            "name": "Disney Channel Latin America Mexico",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://45.166.93.156:9999/play/a0f3/index.m3u8"
+        },
+        {
+            "name": "Disney Channel Latin America North",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://138.121.15.230:9002/DISNEY-CHANNEL/index.m3u8"
+        },
+        {
+            "name": "Disney Channel Latin America Panregional HD",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://45.134.141.161:2200/ARG/Disney_Channel/index.m3u8"
+        },
+        {
             "name": "Disney International HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_INTERNATIONAL_HD/images/LOGO_HD/image.png",
             "group": "08. Kids Channels",
             "stream_url": "http://202.70.146.135:8000/play/a04p/index.m3u8"
+        },
+        {
+            "name": "Disney Jr. Latin America North HD",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://181.78.14.26:4000/play/a073/index.m3u8"
+        },
+        {
+            "name": "Disney Jr. Latin America South",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://45.185.163.75:8000/play/a016/index.m3u8"
+        },
+        {
+            "name": "Disney Jr. Latin America South HD",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
+            "group": "08. Kids Channels",
+            "stream_url": "http://45.134.141.161:2200/ARG/Disney_Junior/index.m3u8"
+        },
+        {
+            "name": "Nickelodeon Pluto TV",
+            "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/colorLogoPNG.png",
+            "group": "08. Kids Channels",
+            "stream_url": "https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8"
         },
         {
             "name": "Sonic TV",
@@ -1562,156 +1802,6 @@
             "logo": "https://i.imgur.com/7bRVpnu.png",
             "group": "09. International News",
             "stream_url": "https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8"
-        },
-        {
-            "name": "Al Jazeera 2",
-            "logo": "https://i.imgur.com/miq8O1Q.png",
-            "group": "09. International News",
-            "stream_url": "https://live-hls-web-aja2-gcp.thehlive.com/AJA2/index.m3u8"
-        },
-        {
-            "name": "Al Jazeera English",
-            "logo": "https://i.imgur.com/7bRVpnu.png",
-            "group": "09. International News",
-            "stream_url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"
-        },
-        {
-            "name": "Al Jazeera English HD",
-            "logo": "https://i.imgur.com/7bRVpnu.png",
-            "group": "09. International News",
-            "stream_url": "http://stream.mcquack.net/131/index.m3u8"
-        },
-        {
-            "name": "Al Jazeera Mubasher",
-            "logo": "https://i.imgur.com/X80DQvF.png",
-            "group": "09. International News",
-            "stream_url": "https://live-hls-apps-ajm-fa.getaj.net/AJM/index.m3u8"
-        },
-        {
-            "name": "Al Jazeera Mubasher 24",
-            "logo": "https://i.imgur.com/LMCcIZ2.png",
-            "group": "09. International News",
-            "stream_url": "https://live-hls-apps-ajm24-fa.getaj.net/AJM24/index.m3u8"
-        },
-        {
-            "name": "Al Jazeera Mubasher Broadcast 2",
-            "logo": "https://i.imgur.com/nJmi6G6.png",
-            "group": "09. International News",
-            "stream_url": "https://live-hls-apps-ajm2-fa.getaj.net/AJM2/index.m3u8"
-        },
-        {
-            "name": "Anand TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Anand_TV.png",
-            "group": "09. International News",
-            "stream_url": "https://live.legitpro.co.in/anandtv/index.m3u8"
-        },
-        {
-            "name": "BBC News",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://xemzi.short.gy/1000015"
-        },
-        {
-            "name": "BBC News Europe",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "http://46.32.176.50/bbcworld/index.m3u8"
-        },
-        {
-            "name": "BBC News North America",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "http://23.237.104.106:8080/USA_BBC_NEWS/index.m3u8"
-        },
-        {
-            "name": "CNN Prima News",
-            "logo": "https://i.imgur.com/elZyUjX.png",
-            "group": "09. International News",
-            "stream_url": "http://88.212.15.19/live/test_cnn_pirma_news/playlist.m3u8"
-        },
-        {
-            "name": "France 24 English",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8"
-        },
-        {
-            "name": "France 24 Español",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8"
-        },
-        {
-            "name": "France 24 French",
-            "logo": "https://i.imgur.com/u8N6uoj.png",
-            "group": "09. International News",
-            "stream_url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8"
-        },
-        {
-            "name": "India Today",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TODAY/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/master.m3u8"
-        },
-        {
-            "name": "Jaihind TV",
-            "logo": "https://i.imgur.com/NaiA73p.png",
-            "group": "09. International News",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJAIHIND/index.m3u8"
-        },
-        {
-            "name": "Nagaland TV",
-            "logo": "https://i.imgur.com/EBEIpPo.png",
-            "group": "09. International News",
-            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVNAGALANDTV/index.m3u8"
-        },
-        {
-            "name": "NDTV 24x7",
-            "logo": "https://dtil.tmsimg.com/assets/s154895_ld_h15_aa.png?lock=720x540",
-            "group": "09. International News",
-            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/NDTV24x7.m3u8"
-        },
-        {
-            "name": "NDTV Good Times",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8"
-        },
-        {
-            "name": "NDTV Madhya Pradesh Chhattisgarh",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_MPCG/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvmpcg/master_1.m3u8"
-        },
-        {
-            "name": "NDTV Profit",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_PROFIT_PRIME/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8"
-        },
-        {
-            "name": "NDTV Rajasthan",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_RAJASTHAN/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvraj/master_1.m3u8"
-        },
-        {
-            "name": "Payvand TV",
-            "logo": "https://i.imgur.com/A4gqEmG.png",
-            "group": "09. International News",
-            "stream_url": "https://tgn.bozztv.com/cus01/ucur1/Payvand/index.m3u8"
-        },
-        {
-            "name": "Peace of Mind TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PEACE_OF_MIND/images/LOGO_HD/image.png",
-            "group": "09. International News",
-            "stream_url": "https://yuppnimrestreammum.akamaized.net/181224/smil:peaceofmind.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
-        },
-        {
-            "name": "RCN Noticias",
-            "logo": "https://i.imgur.com/FMX4QCM.png",
-            "group": "09. International News",
-            "stream_url": "https://jmp2.uk/plu-67d9b0ebc290c9499046e88f.m3u8"
         }
     ]
 }
