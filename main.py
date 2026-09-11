@@ -85,7 +85,7 @@ def categorize_and_prioritize(channel):
     if any(normalize_text(m) in norm_name for m in indian_movies):
         return (4, 0, "Indian Movie Channels")
 
-    # ৫. ইংলিশ পপুলার মুভি চ্যানেল (ইন্ডিয়ান মুভির ঠিক নিচে - Priority 5)
+    # ৫. ইংলিশ পপুলার মুভি চ্যানেল (Priority 5)
     english_movies = [
         'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'andflix',
         'mnx', 'wb', 'paramount', 'cinemax', 'sky cinema', 'film4', 'amc'
@@ -108,8 +108,8 @@ def categorize_and_prioritize(channel):
         return (7, 0, "Kids Channels")
 
     # ৮. পপুলার ডকুমেন্টারি ও তথ্যভিত্তিক (Priority 8)
-    doc_keywords = ['discovery', 'national geographic', 'nat geo', 'natgeo', 'history tv', 'animal planet']
-    if any(k in norm_name for k in doc_keywords):
+    doc_keywords = ['discovery', 'nationalgeographic', 'natgeo', 'geographic', 'animalplanet', 'history', 'planetearth', 'science', 'investigation']
+    if 'documentary' in group or any(k in norm_name for k in doc_keywords):
         return (8, 0, "Documentary & Info")
 
     # ৯. পপুলার মিউজিক চ্যানেল (Priority 9)
@@ -192,36 +192,27 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
-    # ২. ব্যাকআপ ও পপুলার কাস্টম সোর্স
+    # ২. ব্যাকআপ সোর্স (ডকুমেন্টারি সহ মূল পপুলার চ্যানেল স্ট্রিম নিশ্চিত করতে)
     extra_channels = [
-        # T Sports Multi-Source
-        {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
-        {"name": "T Sports Live", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://iptv-org.github.io/iptv/channels/bd/tsports.m3u8"},
-        
-        # PTV Sports Multi-Source
-        {"name": "PTV Sports HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pk_ptvsports.m3u8"},
-        {"name": "PTV Sports Live", "logo": "", "group": "Sports Channels", "stream_url": "https://iptv-org.github.io/iptv/channels/pk/ptvsports.m3u8"},
+        # Documentary Direct Stream Direct Backup
+        {"name": "Discovery Channel HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_discoverychannel.m3u8"},
+        {"name": "National Geographic HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_nationalgeographic.m3u8"},
+        {"name": "Nat Geo Wild HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_natgeowild.m3u8"},
+        {"name": "Animal Planet HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_animalplanet.m3u8"},
+        {"name": "History TV18 HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_historytv18.m3u8"},
 
-        # Primary Sports
-        {"name": "Gazi TV (GTV)", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_gtv.m3u8"},
-        {"name": "Star Sports 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starsports1.m3u8"},
-        {"name": "Sports18 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sports18_1.m3u8"},
-        {"name": "Sony Sports Ten 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten1.m3u8"},
-        {"name": "Sony Sports Ten 3 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten3.m3u8"},
-        
+        # Sports Multi-Source
+        {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
+        {"name": "PTV Sports HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pk_ptvsports.m3u8"},
+
         # Islamic Channels
         {"name": "Makkah Live", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sa_makkahlive.m3u8"},
-        {"name": "Madinah Live", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sa_madinahlive.m3u8"},
-        {"name": "Peace TV Bangla", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ae_peacetvbangla.m3u8"},
-
-        # English Movies
-        {"name": "HBO HD", "logo": "", "group": "English Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_hbo.m3u8"},
-        {"name": "Star Movies HD", "logo": "", "group": "English Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starmovies.m3u8"}
+        {"name": "Madinah Live", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sa_madinahlive.m3u8"}
     ]
 
     for extra in extra_channels:
         if extra["stream_url"] not in seen_urls:
-            p_val = 2 if extra["group"] == "Sports Channels" else (3 if extra["group"] == "Islamic TV" else 5)
+            p_val = 8 if extra["group"] == "Documentary & Info" else (2 if extra["group"] == "Sports Channels" else 3)
             candidate_channels.append((extra, (p_val, 0, extra["group"])))
             seen_urls.add(extra["stream_url"])
 
@@ -273,7 +264,7 @@ def fetch_channels_by_group():
 
     print(f"\n✅ প্রসেসিং সম্পন্ন!")
     print(f"📌 প্লেলিস্ট: {MY_NAME}")
-    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি")
+    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি (ডকুমেন্টারি সেকশনসহ আপডেট করা হয়েছে)")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
