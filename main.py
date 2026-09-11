@@ -17,7 +17,6 @@ def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
-    # আঞ্চলিক এবং অপ্রয়োজনীয় চ্যানেল ফিল্টার
     excluded = [
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
@@ -29,7 +28,7 @@ def is_excluded_channel(channel):
 
 def check_single_stream(item):
     """
-    ১০ সেকেন্ড টাইমআউটে লাইভ ও ওয়ার্কিং স্ট্রিম চেক করে।
+    ১০ সেকেন্ড টাইমআউটে অ্যাক্টিভ স্ট্রিম চেক করে।
     """
     ch_obj, res = item
     url = ch_obj['stream_url']
@@ -67,18 +66,15 @@ def categorize_and_prioritize(channel):
             sub_p = 0 if any(normalize_text(pop) in norm_name for pop in bd_popular) else 1
             return (1, sub_p, "Bangladeshi TV")
 
-    # ২. শুধুমাত্র পপুলার ক্রিকেট ও ফুটবল স্পোর্টস চ্যানেল ফিল্টার
+    # ২. ক্রিকেট ও ফুটবল স্পোর্টস চ্যানেল ফিল্টার
     popular_sports_allowed = [
-        # ক্রিকেট ও ফুটবল (বাংলাদেশ ও ভারত)
         't sports', 'tsports', 'gazi tv', 'gtv', 'star sports', 'sony sports', 
         'sony ten', 'ten sports', 'sports18', 'sports 18', 'willow', 'ptv sports', 
         'dd sports', 'astrosports', 'astro supersport',
-        # পপুলার গ্লোবাল ফুটবল চ্যানেল
         'bein sports', 'supersport', 'sky sports', 'tnt sports', 'eurosport', 
         'laliga tv', 'premier sports', 'cbs sports', 'fox sports'
     ]
     
-    # অপ্রয়োজনীয় খেলা বাদ দেওয়ার ফিল্টার (যেমন: Basketball, Racing, Fishing, Golf ইত্যাদি)
     unwanted_sports = ['golf', 'racing', 'poker', 'outdoor', 'hunt', 'fight', 'ufc', 'billiards', 'darts']
     
     if any(un_sp in norm_name for un_sp in unwanted_sports):
@@ -160,7 +156,7 @@ def fetch_channels_by_group():
     candidate_channels = []
     seen_urls = set()
 
-    # ১. অনলাইন সোর্স থেকে পড়া
+    # ১. অনলাইন সোর্স
     for url, country_code in sources:
         try:
             response = requests.get(url, headers=headers, timeout=15)
@@ -206,16 +202,25 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
-    # ২. পপুলার ক্রিকেট ও ফুটবল ব্যাকআপ স্ট্রিম (Extra Fallback)
+    # ২. PTV Sports, T Sports এবং অন্যান্য পপুলার স্পোর্টস চ্যানেলের একাধিক বিকল্প সোর্স
     extra_sports = [
+        # T Sports Multi-Source
         {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
+        {"name": "T Sports Live", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Cricket & Football Sports", "stream_url": "https://iptv-org.github.io/iptv/channels/bd/tsports.m3u8"},
+        
+        # PTV Sports Multi-Source
+        {"name": "PTV Sports HD", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pk_ptvsports.m3u8"},
+        {"name": "PTV Sports Live", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://iptv-org.github.io/iptv/channels/pk/ptvsports.m3u8"},
+
+        # Gazi TV
         {"name": "Gazi TV (GTV)", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_gtv.m3u8"},
+        
+        # Star & Sony Sports
         {"name": "Star Sports 1 HD", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starsports1.m3u8"},
         {"name": "Sports18 1 HD", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sports18_1.m3u8"},
         {"name": "Sony Sports Ten 1 HD", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten1.m3u8"},
         {"name": "Sony Sports Ten 3 HD", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten3.m3u8"},
-        {"name": "Willow Cricket HD", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_willow.m3u8"},
-        {"name": "beIN Sports 1", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/qa_beinsports1.m3u8"}
+        {"name": "Willow Cricket HD", "logo": "", "group": "Cricket & Football Sports", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_willow.m3u8"}
     ]
 
     for sp in extra_sports:
@@ -227,7 +232,6 @@ def fetch_channels_by_group():
 
     working_channels = []
     
-    # ৮০টি প্যারালাল থ্রেডে টেস্ট
     with ThreadPoolExecutor(max_workers=80) as executor:
         futures = [executor.submit(check_single_stream, item) for item in candidate_channels]
         for future in as_completed(futures):
@@ -236,11 +240,9 @@ def fetch_channels_by_group():
                 working_channels.append(result)
                 print(f"  🟢 [Live]: {result[0]['name']} -> ({result[1][2]})")
 
-    # সর্টিং
     working_channels.sort(key=lambda x: (x[1][0], x[1][1], x[0]['name'].lower()))
     total_count = len(working_channels)
 
-    # ফাইল জেনারেশন
     m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
     m3u_lines = [m3u_header]
     json_channels = []
