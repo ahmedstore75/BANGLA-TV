@@ -17,7 +17,7 @@ def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
-    # আঞ্চলিক অখ্যাত ভারতীয় ভাষা ও অপ্রয়োজনীয় চ্যানেল ফিল্টার
+    # অপ্রয়োজনীয় ক্যাটাগরি ও চ্যানেল বাদ দেওয়ার জন্য
     excluded = [
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
@@ -107,9 +107,12 @@ def categorize_and_prioritize(channel):
     if any(k in norm_name for k in kids_keywords):
         return (7, 0, "Kids Channels")
 
-    # ৮. পপুলার ডকুমেন্টারি ও তথ্যভিত্তিক (Priority 8)
-    doc_keywords = ['discovery', 'nationalgeographic', 'natgeo', 'geographic', 'animalplanet', 'history', 'planetearth', 'science', 'investigation']
-    if 'documentary' in group or any(k in norm_name for k in doc_keywords):
+    # ৮. শুধুমাত্র নির্দিষ্ট পপুলার ডকুমেন্টারি চ্যানেল (Strict Filter - Priority 8)
+    doc_popular_keywords = [
+        'discovery', 'national geographic', 'nat geo', 'natgeo', 
+        'animal planet', 'history tv', 'history channel', 'planet earth'
+    ]
+    if any(normalize_text(k) in norm_name for k in doc_popular_keywords):
         return (8, 0, "Documentary & Info")
 
     # ৯. পপুলার মিউজিক চ্যানেল (Priority 9)
@@ -192,16 +195,16 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
-    # ২. ব্যাকআপ সোর্স (ডকুমেন্টারি সহ মূল পপুলার চ্যানেল স্ট্রিম নিশ্চিত করতে)
+    # ২. ব্যাকআপ চ্যানেল সোর্স
     extra_channels = [
-        # Documentary Direct Stream Direct Backup
+        # Main Popular Documentary Streams
         {"name": "Discovery Channel HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_discoverychannel.m3u8"},
         {"name": "National Geographic HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_nationalgeographic.m3u8"},
         {"name": "Nat Geo Wild HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_natgeowild.m3u8"},
         {"name": "Animal Planet HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_animalplanet.m3u8"},
         {"name": "History TV18 HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_historytv18.m3u8"},
 
-        # Sports Multi-Source
+        # Primary Sports
         {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
         {"name": "PTV Sports HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pk_ptvsports.m3u8"},
 
@@ -264,7 +267,7 @@ def fetch_channels_by_group():
 
     print(f"\n✅ প্রসেসিং সম্পন্ন!")
     print(f"📌 প্লেলিস্ট: {MY_NAME}")
-    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি (ডকুমেন্টারি সেকশনসহ আপডেট করা হয়েছে)")
+    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি (ডকুমেন্টারি চ্যানেল সংখ্যা কমে নিদির্ষ্ট পপুলার চ্যানেল ফিল্টার করা হয়েছে)")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
