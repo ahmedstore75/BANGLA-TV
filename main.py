@@ -5,6 +5,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # আপনার নাম
 MY_NAME = "Ahmed Store"
+MAX_TOTAL_CHANNELS = 250  # মোট চ্যানেলের সর্বোচ্চ সীমা
 
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
@@ -17,11 +18,11 @@ def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
-    # অপ্রয়োজনীয় ক্যাটাগরি ও চ্যানেল বাদ দেওয়ার জন্য
+    # আঞ্চলিক ও অপ্রয়োজনীয় চ্যানেল সম্পূর্ণ বাদ দেওয়ার লিস্ট
     excluded = [
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
-        'shopping', 'teleshopping', 'home shop', 'local', 'cable'
+        'shopping', 'teleshopping', 'home shop', 'local', 'cable', 'radio', 'fm'
     ]
     if any(k in group for k in excluded) or any(k in name for k in excluded):
         return True
@@ -55,7 +56,7 @@ def categorize_and_prioritize(channel):
     name = channel['name'].lower()
     norm_name = normalize_text(name)
 
-    # ১. বাংলাদেশের সকল চ্যানেল (Priority 1)
+    # ১. বাংলাদেশের চ্যানেল (Priority 1)
     if 'bangladesh' in group or channel.get('source_country') == 'bd':
         return (1, 0, "Bangladeshi TV")
 
@@ -107,7 +108,7 @@ def categorize_and_prioritize(channel):
     if any(k in norm_name for k in kids_keywords):
         return (7, 0, "Kids Channels")
 
-    # ৮. শুধুমাত্র নির্দিষ্ট পপুলার ডকুমেন্টারি চ্যানেল (Strict Filter - Priority 8)
+    # ৮. শুধুমাত্র নির্দিষ্ট পপুলার ডকুমেন্টারি চ্যানেল (Priority 8)
     doc_popular_keywords = [
         'discovery', 'national geographic', 'nat geo', 'natgeo', 
         'animal planet', 'history tv', 'history channel', 'planet earth'
@@ -195,9 +196,9 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
-    # ২. ব্যাকআপ চ্যানেল সোর্স
+    # ২. ব্যাকআপ ও ইম্পর্ট্যান্ট সোর্স
     extra_channels = [
-        # Main Popular Documentary Streams
+        # Main Documentary Streams
         {"name": "Discovery Channel HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_discoverychannel.m3u8"},
         {"name": "National Geographic HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_nationalgeographic.m3u8"},
         {"name": "Nat Geo Wild HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_natgeowild.m3u8"},
@@ -219,7 +220,7 @@ def fetch_channels_by_group():
             candidate_channels.append((extra, (p_val, 0, extra["group"])))
             seen_urls.add(extra["stream_url"])
 
-    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট পপুলার চ্যানেল ফিল্টার করা হয়েছে। ১০ সেকেন্ডে অ্যাক্টিভ চেক চালু হচ্ছে...")
+    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট ফিল্টারড চ্যানেল চেক করার জন্য তৈরি। অ্যাক্টিভ স্ট্রিম চেক চালু হচ্ছে...")
 
     working_channels = []
     
@@ -233,14 +234,17 @@ def fetch_channels_by_group():
 
     # ক্যাটাগরি প্রায়োরিটি Index (1 -> 10) অনুযায়ী সাজানো
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
-    total_count = len(working_channels)
+
+    # ২৫০টি বেস্ট চ্যানেলের মধ্যে সীমাবদ্ধ রাখা
+    final_selected_channels = working_channels[:MAX_TOTAL_CHANNELS]
+    total_count = len(final_selected_channels)
 
     # M3U এবং JSON প্লেলিস্ট তৈরি
     m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
     m3u_lines = [m3u_header]
     json_channels = []
 
-    for ch, res in working_channels:
+    for ch, res in final_selected_channels:
         p, sub_p, display_group = res
 
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
@@ -265,9 +269,9 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ প্রসেসিং সম্পন্ন!")
+    print(f"\n✅ প্রসেসিং সফলভাবে সম্পন্ন!")
     print(f"📌 প্লেলিস্ট: {MY_NAME}")
-    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি (ডকুমেন্টারি চ্যানেল সংখ্যা কমে নিদির্ষ্ট পপুলার চ্যানেল ফিল্টার করা হয়েছে)")
+    print(f"📊 সর্বমোট সেভ হওয়া নির্বাচিত পপুলার চ্যানেল: {total_count} টি")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
