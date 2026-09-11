@@ -21,7 +21,7 @@ def is_excluded_channel(channel):
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
         'shopping', 'teleshopping', 'home shop', 'local', 'cable', 'radio', 'fm',
-        'latin', 'latam', 'brazil', 'mexico', 'spanish', 'portuguese', 'pluto'
+        'latin', 'latam', 'brazil', 'mexico', 'spanish', 'portuguese', 'pluto', 'iraq', 'arabic'
     ]
     if any(k in group for k in excluded) or any(k in name for k in excluded):
         return True
@@ -55,24 +55,24 @@ def categorize_and_prioritize(channel):
     name = channel['name'].lower()
     norm_name = normalize_text(name)
 
-    # ১. Bangladeshi TV
+    # ১. Bangladeshi TV (সবার উপরে)
     bd_real_channels = [
         'somoy', 'jamuna', 'ekattor', 'independent', 'channel i', 'atn bangla', 'atn news', 
         'ntv', 'rtv', 'deepto', 'boishakhi', 'banglavision', 'desh tv', 'maasranga', 
-        'nagorik', 'channel 24', 'dbc news', 'bvnews', 'saatv', 'asian tv', 'ebangla', 'duronto'
+        'nagorik', 'channel 24', 'dbc news', 'bvnews', 'saatv', 'asian tv', 'ebangla', 'duronto', 'btv'
     ]
     if channel.get('source_country') == 'bd' or any(normalize_text(k) in norm_name for k in bd_real_channels):
-        return (1, "1. Bangladeshi TV")
+        return (1, "01. Bangladeshi TV")
 
     # ২. Sports Channels
     sports_keywords = ['tsports', 't sports', 'gtv', 'gazi tv', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'sports18', 'willow', 'ptv sports', 'astro sports']
     if any(normalize_text(sp) in norm_name for sp in sports_keywords):
-        return (2, "2. Sports Channels")
+        return (2, "02. Sports Channels")
 
-    # ৩. Indian Bangla (Kolkata)
+    # ৩. Kolkata Bangla
     kolkata_popular = ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'news18 bangla', 'tv9 bangla', 'aakash aath']
     if 'kolkata' in group or 'west bengal' in group or any(normalize_text(k) in norm_name for k in kolkata_popular):
-        return (3, "3. Kolkata Bangla")
+        return (3, "03. Kolkata Bangla")
 
     # ৪. Indian & English Movies
     movie_keywords = [
@@ -80,32 +80,32 @@ def categorize_and_prioritize(channel):
         'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'mnx', 'wb', 'paramount', 'axn'
     ]
     if any(normalize_text(m) in norm_name for m in movie_keywords):
-        return (4, "4. Indian & English Movies")
+        return (4, "04. Indian & English Movies")
 
     # ৫. Islamic TV
     islamic_keywords = ['makkah', 'madinah', 'peace tv', 'quran', 'islam', 'madani', 'iqra', 'alhuda']
     if any(k in norm_name for k in islamic_keywords) or 'islamic' in group:
-        return (5, "5. Islamic TV")
+        return (5, "05. Islamic TV")
 
     # ৬. Music Channels
     music_keywords = ['9xm', 'mtv', 'zoom', 'b4u music', 'sangeet bangla', 'mnet']
     if any(k in norm_name for k in music_keywords):
-        return (6, "6. Music Channels")
+        return (6, "06. Music Channels")
 
     # ৭. Documentary & Information
     doc_keywords = ['discovery', 'national geographic', 'nat geo', 'animal planet', 'history tv', 'planet earth']
     if any(normalize_text(k) in norm_name for k in doc_keywords):
-        return (7, "7. Documentary & Info")
+        return (7, "07. Documentary & Info")
 
     # ৮. Kids Channels
     kids_keywords = ['hungama', 'super hungama', 'pogo', 'cartoon network', 'sonic', 'nickelodeon', 'nick', 'disney']
     if any(k in norm_name for k in kids_keywords):
-        return (8, "8. Kids Channels")
+        return (8, "08. Kids Channels")
 
     # ৯. International News
     global_news = ['bbc news', 'cnn', 'al jazeera', 'aaj tak', 'ndtv', 'india today', 'dw news', 'france 24']
     if any(normalize_text(news) in norm_name for news in global_news):
-        return (9, "9. International News")
+        return (9, "09. International News")
 
     return None
 
@@ -126,7 +126,7 @@ def fetch_and_generate_playlist():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 সোর্স ফেচ করা হচ্ছে...")
+    print("🔄 নিখুঁত সিকোয়েন্স অনুযায়ী ফিল্টার করা হচ্ছে...")
 
     candidate_channels = []
     seen_urls = set()
@@ -180,7 +180,7 @@ def fetch_and_generate_playlist():
                                 seen_channel_names.add(norm_clean_name)
             i += 1
 
-    print(f"⚡ {len(candidate_channels)} টি চ্যানেল প্রসেস করা হচ্ছে...")
+    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট চ্যানেল টেস্ট করা হচ্ছে...")
 
     working_channels = []
     
@@ -191,6 +191,7 @@ def fetch_and_generate_playlist():
             if result:
                 working_channels.append(result)
 
+    # ১ থেকে ৯ নাম্বারিং সিকোয়েন্স অনুযায়ী সর্ট করা
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
 
     final_selected_channels = working_channels[:MAX_TOTAL_CHANNELS]
@@ -225,7 +226,7 @@ def fetch_and_generate_playlist():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ প্লেলিস্ট তৈরি সফল হয়েছে! মোট চ্যানেল: {total_count}")
+    print(f"\n✅ সঠিকভাবে সিকোয়েন্স সাজিয়ে প্লেলিস্ট ফাইল জেনারেট সম্পন্ন হয়েছে!")
 
 if __name__ == "__main__":
     fetch_and_generate_playlist()
