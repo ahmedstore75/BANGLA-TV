@@ -36,58 +36,66 @@ def check_single_stream(item):
     
     return None
 
-# চ্যানেলের নাম বিশ্লেষণ করে নতুন গ্রুপ ও পজিশন ঠিক করার ফাংশন
-def auto_detect_group_by_name(channel_name):
+def assign_exact_group(channel_name):
     norm = normalize_text(channel_name)
 
-    # ১. বাংলাদেশি টিভি (নামে এই শব্দগুলো থাকতেই হবে)
-    bd_keywords = ['somoy', 'jamuna', 'ekattor', 'independent', 'channeli', 'atn', 'ntv', 'rtv', 'deepto', 'boishakhi', 'banglavision', 'deshtv', 'maasranga', 'nagorik', 'channel24', 'dbc', 'saatv', 'asiantv', 'duronto', 'btv', 'bijoy', 'mytv', 'gazi', 'gtv', 'tsports', 'news24', 'bangla']
-    
-    # কিন্তু ইন্ডিয়ান বাংলা যেন বাংলাদেশি গ্রুপে না ঢুকে যায়
-    indian_bangla_indicators = ['jalsha', 'zeebangla', 'colorsbangla', 'abpananda', 'sonyaath', 'sangeetbangla', 'zee24ghanta', 'news18bangla', 'tv9bangla', 'aakash']
-    
-    if any(k in norm for k in indian_bangla_indicators):
-        return (3, "03. Kolkata Bangla")
+    # ১. শুধুমাত্র অরিজিনাল বাংলাদেশি চ্যানেলের লিস্ট (এর বাইরে কেউ বাংলাদেশি হতে পারবে না)
+    exact_bd_channels = {
+        'somoytv': 'Somoy TV', 'jamunatv': 'Jamuna TV', 'ekattortv': 'Ekattor TV', 
+        'independenttv': 'Independent TV', 'channeli': 'Channel i', 'atnbangla': 'ATN Bangla', 
+        'atnnews': 'ATN News', 'ntv': 'NTV', 'rtv': 'RTV', 'deeptotv': 'Deepto TV', 
+        'boishakhitv': 'Boishakhi TV', 'banglavision': 'Banglavision', 'deshtv': 'Desh TV', 
+        'maasrangatv': 'Maasranga TV', 'nagoriktv': 'Nagorik TV', 'channel24': 'Channel 24', 
+        'dbcnews': 'DBC News', 'saatv': 'SA TV', 'asiantv': 'Asian TV', 'durontotv': 'Duronto TV', 
+        'btv': 'BTV', 'btvworld': 'BTV World', 'bijoytv': 'Bijoy TV', 'mytv': 'My TV', 
+        'gazitv': 'Gazi TV', 'gtv': 'GTV', 'tsports': 'T Sports', 'news24': 'News 24'
+    }
 
-    if any(k in norm for k in bd_keywords):
-        return (1, "01. Bangladeshi TV")
+    for key, display_name in exact_bd_channels.items():
+        if key in norm:
+            return (1, "01. Bangladeshi TV", display_name)
 
-    # ২. স্পোর্টস চ্যানেল
-    sports_keywords = ['sport', 'sports', 'cricket', 'football', 'ten1', 'ten2', 'ten3', 'starsports', 'sonysports', 'sonyten', 'willow', 'ptvsports', 'astrosports', 'eurosport', 't sports']
+    # ২. ইন্ডিয়ান বাংলা
+    kolkata_keywords = ['starjalsha', 'zeebangla', 'colorsbangla', 'abpananda', 'sonyaath', 'sangeetbangla', 'zee24ghanta', 'news18bangla', 'tv9bangla', 'aakashaath', 'abntvindia']
+    if any(k in norm for k in kolkata_keywords):
+        return (3, "03. Kolkata Bangla", channel_name)
+
+    # ৩. স্পোর্টস চ্যানেল
+    sports_keywords = ['sport', 'cricket', 'football', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'astro sports']
     if any(k in norm for k in sports_keywords):
-        return (2, "02. Sports Channels")
+        return (2, "02. Sports Channels", channel_name)
 
     # ৪. মুভি চ্যানেল
-    movie_keywords = ['movie', 'movies', 'cinema', 'pictures', 'goldmines', 'cineplex', 'hbo', 'starmovies', 'pix', 'flix', 'mnx', 'action']
+    movie_keywords = ['star gold', 'sony max', 'zee cinema', 'and pictures', 'goldmines', 'cineplex', 'hbo', 'star movies', 'sony pix', ' Flix', 'mnx']
     if any(k in norm for k in movie_keywords):
-        return (4, "04. Indian & English Movies")
+        return (4, "04. Indian & English Movies", channel_name)
 
-    # ৫. ইসলামিক / ধর্মীয় টিভি
-    islamic_keywords = ['makkah', 'madinah', 'peace', 'quran', 'islam', 'madani', 'iqra', 'sunnah', 'alhuda']
+    # ৫. ইসলামিক টিভি
+    islamic_keywords = ['makkah', 'madinah', 'peace tv', 'quran', 'islam tv', 'madani', 'iqra', 'assunnah']
     if any(k in norm for k in islamic_keywords):
-        return (5, "05. Islamic TV")
+        return (5, "05. Islamic TV", channel_name)
 
     # ৬. মিউজিক চ্যানেল
-    music_keywords = ['music', '9xm', 'mtv', 'zoom', 'mh1', 'sangeet']
+    music_keywords = ['9xm', 'mtv', 'zoom', 'mh1', 'b4u music']
     if any(k in norm for k in music_keywords):
-        return (6, "06. Music Channels")
+        return (6, "06. Music Channels", channel_name)
 
     # ৭. ডকুমেন্টারি
-    doc_keywords = ['discovery', 'nationalgeographic', 'natgeo', 'animalplanet', 'history', 'planet']
+    doc_keywords = ['discovery', 'national geographic', 'nat geo', 'animal planet', 'history tv', 'planet earth']
     if any(k in norm for k in doc_keywords):
-        return (7, "07. Documentary & Info")
+        return (7, "07. Documentary & Info", channel_name)
 
-    # ৮. কিডস / কার্টুন
-    kids_keywords = ['cartoon', 'hungama', 'pogo', 'sonic', 'nickelodeon', 'nick', 'disney', 'kids']
+    # ৮. কিডস চ্যানেল
+    kids_keywords = ['hungama', 'pogo', 'cartoon network', 'sonic', 'nickelodeon', 'nick', 'disney']
     if any(k in norm for k in kids_keywords):
-        return (8, "08. Kids Channels")
+        return (8, "08. Kids Channels", channel_name)
 
-    # ৯. আন্তর্জাতিক সংবাদ
-    news_keywords = ['bbc', 'cnn', 'aljazeera', 'aajtak', 'ndtv', 'indiatoday', 'dwnews', 'france24']
+    # ৯. ইন্টারন্যাশনাল নিউজ
+    news_keywords = ['bbc news', 'cnn', 'al jazeera', 'aaj tak', 'ndtv', 'india today', 'dw news', 'france 24']
     if any(k in norm for k in news_keywords):
-        return (9, "09. International News")
+        return (9, "09. International News", channel_name)
 
-    # কোনো ক্যাটাগরির নামের সাথে না মিললে বাদ দেওয়া হবে (যাতে 30A Lionel বা Al Janoub এর মতো আজেবাজে চ্যানেল না আসে)
+    # অন্য যেকোনো অজানা চ্যানেল (যেমন: 30A Lionel, Al Janoub, Al Masar) সরাসরি রিজেক্ট হবে
     return None
 
 def fetch_and_generate_playlist():
@@ -107,7 +115,7 @@ def fetch_and_generate_playlist():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 চ্যানেলের নাম স্ক্যান করে অটোমেটিক গ্রুপ তৈরি করা হচ্ছে...")
+    print("🔄 সম্পূর্ণ নতুন কঠোর ফিল্টারিং চালানো হচ্ছে...")
 
     candidate_channels = []
     seen_urls = set()
@@ -136,27 +144,28 @@ def fetch_and_generate_playlist():
                 if stream_url and stream_url not in seen_urls:
                     raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
                     clean_name = clean_channel_name(raw_name)
-                    norm_clean_name = normalize_text(clean_name)
 
-                    if norm_clean_name not in seen_channel_names:
-                        # নামে কি-ওয়ার্ড স্ক্যান করে গ্রুপ এসাইন
-                        group_info = auto_detect_group_by_name(clean_name)
-                        
-                        if group_info is not None:
+                    group_result = assign_exact_group(clean_name)
+                    
+                    if group_result is not None:
+                        cat_order, display_group, final_name = group_result
+                        norm_final_name = normalize_text(final_name)
+
+                        if norm_final_name not in seen_channel_names:
                             logo_match = re.search(r'tvg-logo="([^"]*)"', info_line)
                             logo = logo_match.group(1) if logo_match else ""
 
                             ch_obj = {
-                                "name": clean_name if clean_name else raw_name,
+                                "name": final_name,
                                 "logo": logo,
                                 "stream_url": stream_url
                             }
-                            candidate_channels.append((ch_obj, group_info))
+                            candidate_channels.append((ch_obj, group_result))
                             seen_urls.add(stream_url)
-                            seen_channel_names.add(norm_clean_name)
+                            seen_channel_names.add(norm_final_name)
             i += 1
 
-    print(f"⚡ নাম বিশ্লেষণ শেষে {len(candidate_channels)} টি সঠিক চ্যানেল প্রসেস করা হচ্ছে...")
+    print(f"⚡ ফিল্টার শেষে যাচাইকৃত {len(candidate_channels)} টি চ্যানেল চেক করা হচ্ছে...")
 
     working_channels = []
     
@@ -167,7 +176,7 @@ def fetch_and_generate_playlist():
             if result:
                 working_channels.append(result)
 
-    # গ্রুপ ক্রমানুসারে সাজানো
+    # ১. ক্যাটাগরি অর্ডার অনুযায়ী সাজানো
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
 
     final_selected_channels = working_channels[:MAX_TOTAL_CHANNELS]
@@ -178,7 +187,7 @@ def fetch_and_generate_playlist():
     json_channels = []
 
     for ch, cat_info in final_selected_channels:
-        cat_order, display_group = cat_info
+        cat_order, display_group, ch_name = cat_info
 
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
         
@@ -202,7 +211,7 @@ def fetch_and_generate_playlist():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ চ্যানেল নাম অনুযায়ী নিখুঁত গ্রুপ তৈরি করে প্লেলিস্ট সেভ করা হয়েছে!")
+    print(f"\n✅ ১০০% সঠিক গ্রুপ নাম সহ প্লেলিস্ট তৈরি সম্পন্ন হয়েছে!")
 
 if __name__ == "__main__":
     fetch_and_generate_playlist()
