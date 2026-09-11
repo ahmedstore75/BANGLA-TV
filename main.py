@@ -99,8 +99,8 @@ def assign_exact_group(channel_name):
     return None
 
 def fetch_and_generate_playlist():
+    # bd.m3u বাদ দেওয়া হয়েছে, ben.m3u রাখা হয়েছে
     sources = [
-        "https://iptv-org.github.io/iptv/countries/bd.m3u",
         "https://iptv-org.github.io/iptv/languages/ben.m3u",
         "https://iptv-org.github.io/iptv/countries/in.m3u",
         "https://iptv-org.github.io/iptv/categories/sports.m3u",
@@ -117,7 +117,7 @@ def fetch_and_generate_playlist():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 অরিজিনাল সোর্স লোগো নিয়ে স্ক্যান শুরু হচ্ছে...")
+    print("🔄 bd.m3u বাদ দিয়ে ben.m3u সহ অন্যান্য সোর্স স্ক্যান করা হচ্ছে...")
 
     candidate_channels = []
     seen_urls = set()
@@ -154,7 +154,6 @@ def fetch_and_generate_playlist():
                         norm_final_name = normalize_text(final_name)
 
                         if norm_final_name not in seen_channel_names:
-                            # সরাসরি সোর্সের মেটাডেটা থেকে লোগো নেওয়া হচ্ছে
                             logo_match = re.search(r'tvg-logo="([^"]*)"', info_line)
                             logo = logo_match.group(1) if logo_match else ""
 
@@ -168,7 +167,7 @@ def fetch_and_generate_playlist():
                             seen_channel_names.add(norm_final_name)
             i += 1
 
-    print(f"⚡ সক্রিয়তার জন্য {len(candidate_channels)} টি চ্যানেল চেক হচ্ছে...")
+    print(f"⚡ ফিল্টার শেষে {len(candidate_channels)} টি চ্যানেল চেকিং হচ্ছে...")
 
     working_channels = []
     
@@ -213,7 +212,7 @@ def fetch_and_generate_playlist():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ অরিজিনাল সোর্স লোগো দিয়ে {total_count} টি অ্যাক্টিভ চ্যানেল সেভ করা হয়েছে!")
+    print(f"\n✅ সফলভাবে প্লেলিস্ট আপডেট করা হয়েছে!")
 
 if __name__ == "__main__":
     fetch_and_generate_playlist()
