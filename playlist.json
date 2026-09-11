@@ -1,107 +1,101 @@
 {
     "playlist_name": "Ahammad Ali Premium IPTV",
-    "total_channels": 252,
+    "total_channels": 250,
     "status": "success",
     "channels": [
         {
             "name": "ATN Bangla",
-            "logo": "https://i.imgur.com/K1HmMRz.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/6/6d/ATN_Bangla_logo.svg/512px-ATN_Bangla_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
         },
         {
             "name": "Banglavision",
-            "logo": "https://i.imgur.com/nCWgp38.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/8/8d/Banglavision_Logo.svg/512px-Banglavision_Logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://tvsen5.aynaott.com/banglavision/index.m3u8"
         },
         {
             "name": "Boishakhi TV",
-            "logo": "https://i.imgur.com/gxL05Y4.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/a/a6/Boishakhi_TV_Logo.svg/512px-Boishakhi_TV_Logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8"
         },
         {
             "name": "BTV",
-            "logo": "https://i.imgur.com/IM4D8Wz.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Bangladesh_Television_logo.svg/512px-Bangladesh_Television_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://plus.gigabitcdn.net/live-stream/apna-punjab-H3sE/playlist.m3u8"
         },
         {
             "name": "Channel 24",
-            "logo": "https://i.imgur.com/5mhYHtD.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/8/87/Channel_24_logo.svg/512px-Channel_24_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://livestream.telvue.com/lompoccmttv2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8"
         },
         {
             "name": "Channel i",
-            "logo": "https://i.imgur.com/wPzPUrK.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/e/e0/Channel_i_logo.svg/512px-Channel_i_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3HOPECHANNELINDIA/index.m3u8"
         },
         {
             "name": "Desh TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHUBHSANDESH_TV/images/LOGO_HD/image.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/5/52/Desh_TV_Logo.png/512px-Desh_TV_Logo.png",
             "group": "Bangladeshi",
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSHUBHSANDESH/index.m3u8"
         },
         {
             "name": "Duronto TV",
-            "logo": "https://i.imgur.com/gXsddRK.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/c/ca/Duronto_TV_logo.png/512px-Duronto_TV_logo.png",
             "group": "Bangladeshi",
             "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
         },
         {
-            "name": "Green TV",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/27/WWAY_logo.png",
-            "group": "Bangladeshi",
-            "stream_url": "https://linear-702.frequency.stream/dist/stirr/702/hls/master/playlist.m3u8"
-        },
-        {
             "name": "GTV",
-            "logo": "https://i.imgur.com/p26iWOi.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/d/d3/GTV_logo.svg/512px-GTV_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HAWAKENINGTV/index.m3u8"
         },
         {
             "name": "Maasranga TV",
-            "logo": "https://i.imgur.com/uVZJMed.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/4/4e/Maasranga_TV_logo.svg/512px-Maasranga_TV_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "http://tvsen5.aynascope.net/maasrangatv/index.m3u8"
         },
         {
             "name": "My TV",
-            "logo": "https://i.imgur.com/475qK5T.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/9/90/My_TV_logo.svg/512px-My_TV_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
             "name": "News 24",
-            "logo": "https://dtil.tmsimg.com/assets/s90009_ld_h15_aa.png?lock=720x540",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/2/21/News24_logo.svg/512px-News24_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://vidcdn.vidgyor.com/news24-origin/liveabr/playlist.m3u8"
         },
         {
             "name": "Nexus TV",
-            "logo": "https://i.imgur.com/XcJZKg4.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/1/1a/Nexus_TV_logo.png/512px-Nexus_TV_logo.png",
             "group": "Bangladeshi",
             "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
         },
         {
             "name": "NTV",
-            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/3/3a/NTV_logo.svg/512px-NTV_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
         },
         {
             "name": "RTV",
-            "logo": "https://i.imgur.com/yu8ugqt.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/4/41/RTV_logo.svg/512px-RTV_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
         },
         {
             "name": "T Sports",
-            "logo": "https://i.imgur.com/2JzlorD.png",
+            "logo": "https://upload.wikimedia.org/wikipedia/bn/thumb/c/c5/T_Sports_logo.svg/512px-T_Sports_logo.svg.png",
             "group": "Bangladeshi",
             "stream_url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8"
         },
@@ -334,22 +328,10 @@
             "stream_url": "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt.m3u8"
         },
         {
-            "name": "NBC Sports Bay Area",
-            "logo": "https://i.imgur.com/MTgUVKx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://messi.damitv.st/papi/ts/nbc-sports-bayarea/playlist.m3u8"
-        },
-        {
             "name": "NBC Sports NOW",
             "logo": "https://i.imgur.com/EzNf2Yx.png",
             "group": "Sports Channels",
             "stream_url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_channelId=99993008"
-        },
-        {
-            "name": "NBC Sports Philadelphia",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NBC_Sports_Philadelphia.png/960px-NBC_Sports_Philadelphia.png",
-            "group": "Sports Channels",
-            "stream_url": "https://messi.damitv.st/papi/ts/nbc-sports-philly/playlist.m3u8"
         },
         {
             "name": "Okko Prajm Sport",
@@ -550,6 +532,12 @@
             "stream_url": "https://a-cdn.klowdtv.com/live3/swervewomenssports_720p/playlist.m3u8"
         },
         {
+            "name": "talkSPORT",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png",
+            "group": "Sports Channels",
+            "stream_url": "https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8"
+        },
+        {
             "name": "Tigo Sports",
             "logo": "https://i.imgur.com/6wkmgGM.png",
             "group": "Sports Channels",
@@ -746,24 +734,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png",
             "group": "Movies",
             "stream_url": "http://59.103.38.46:8000/play/a052/index.m3u8"
-        },
-        {
-            "name": "Paramount Movie Channel",
-            "logo": "https://i.imgur.com/sj5h9bl.png",
-            "group": "Movies",
-            "stream_url": "https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8"
-        },
-        {
-            "name": "Paramount Network de Pluto TV",
-            "logo": "https://images.pluto.tv/channels/68d566603d3a9580eb461251/colorLogoPNG_1762199133146.png",
-            "group": "Movies",
-            "stream_url": "https://jmp2.uk/plu-68d566603d3a9580eb461251.m3u8"
-        },
-        {
-            "name": "Paramount+ Picks",
-            "logo": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
-            "group": "Movies",
-            "stream_url": "https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8"
         },
         {
             "name": "Al Quran Al Kareem TV",
@@ -1120,6 +1090,12 @@
             "stream_url": "https://jmp2.uk/plu-620fdc7d8a36fc000710e3ba.m3u8"
         },
         {
+            "name": "MTV Latin America",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",
+            "group": "Music Channels",
+            "stream_url": "http://15.204.246.24:8080/MTVHD/index.m3u8"
+        },
+        {
             "name": "MTV Lebanon",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Murr_tv.png",
             "group": "Music Channels",
@@ -1145,9 +1121,9 @@
         },
         {
             "name": "MTV Reality",
-            "logo": "https://images.pluto.tv/channels/685137f4a1e091e16f2dd471/colorLogoPNG_1780301718240.png",
+            "logo": "https://images.pluto.tv/channels/685136fb33a52de120bbb086/colorLogoPNG_1780303948285.png",
             "group": "Music Channels",
-            "stream_url": "https://jmp2.uk/plu-685137f4a1e091e16f2dd471.m3u8"
+            "stream_url": "https://jmp2.uk/plu-685136fb33a52de120bbb086.m3u8"
         },
         {
             "name": "MTV Ridiculousness",
@@ -1220,6 +1196,12 @@
             "logo": "https://i.imgur.com/9ZXCQvy.png",
             "group": "Music Channels",
             "stream_url": "https://stream.ontvmx.com/ontv/Wn3jgo4UYNSmwRDIev/playlist.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1352,6 +1334,12 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL/images/LOGO_HD/image.png",
             "group": "Kids Channels",
             "stream_url": "http://202.70.146.135:8000/play/a01q/index.m3u8"
+        },
+        {
+            "name": "Disney Channel Latin America",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+            "group": "Kids Channels",
+            "stream_url": "http://15.204.246.24:8080/DisneyHD/index.m3u8"
         },
         {
             "name": "Disney Channel Latin America Center",
