@@ -322,12 +322,6 @@
             "stream_url": "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt.m3u8"
         },
         {
-            "name": "NBC Sports Bay Area",
-            "logo": "https://i.imgur.com/MTgUVKx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://messi.damitv.st/papi/ts/nbc-sports-bayarea/playlist.m3u8"
-        },
-        {
             "name": "NBC Sports NOW",
             "logo": "https://i.imgur.com/EzNf2Yx.png",
             "group": "Sports Channels",
@@ -530,6 +524,12 @@
             "logo": "https://i.imgur.com/GT0Yi2T.png",
             "group": "Sports Channels",
             "stream_url": "https://a-cdn.klowdtv.com/live3/swervewomenssports_720p/playlist.m3u8"
+        },
+        {
+            "name": "talkSPORT",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png",
+            "group": "Sports Channels",
+            "stream_url": "https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8"
         },
         {
             "name": "Tigo Sports",
