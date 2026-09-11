@@ -4,7 +4,7 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # আপনার নাম এখানে দিন
-MY_NAME = "Ahmed Store"
+MY_NAME = "Ahmed Iptv"
 
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
@@ -17,7 +17,6 @@ def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
-    # অপ্রয়োজনীয় ও আঞ্চলিক ভাষা ফিল্টার
     excluded = [
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
@@ -55,7 +54,7 @@ def categorize_and_prioritize(channel):
     name = channel['name'].lower()
     norm_name = normalize_text(name)
 
-    # ১. বাংলাদেশ টিভি (Priority 1)
+    # ১. বাংলাদেশ টিভি
     bd_popular = [
         'somoy tv', 'somoy news', 'ekattor tv', 'jamuna tv', 'channel i', 'ntv', 
         'atn bangla', 'atn news', 'rtv', 'independent tv', 'banglavision', 'dbc news', 
@@ -63,12 +62,11 @@ def categorize_and_prioritize(channel):
         'boishakhi tv', 'btv', 'btv world', 'titas tv', 'bengal tv', 'sa tv', 'desh tv', 'asian tv'
     ]
     if 'bangladesh' in group or channel.get('source_country') == 'bd':
-        # ভারতীয় বা অন্য দেশের চ্যানেল ভুলবশত বিডিতে এলে ফিল্টার করবে
         if not any(ex in name for ex in ['abp', 'uk', 'india', 'sangeet bangla', 'hope channel', 'enterr10', 'zee', 'star']):
             sub_p = 0 if any(normalize_text(pop) in norm_name for pop in bd_popular) else 1
             return (1, sub_p, "Bangladeshi TV")
 
-    # ২. স্পোর্টস চ্যানেল (Priority 2)
+    # ২. স্পোর্টস চ্যানেল
     sports_keywords = ['sport', 'sports', 'cricket', 'kabaddi']
     sports_popular = [
         'tsports', 't sports', 'starsports1', 'starsports2', 'starsports', 'sonysports', 
@@ -78,7 +76,7 @@ def categorize_and_prioritize(channel):
         sub_p = 0 if any(normalize_text(pop) in norm_name for pop in sports_popular) else 1
         return (2, sub_p, "Sports Channels")
 
-    # ৩. ইন্ডিয়ান মুভি চ্যানেল (Priority 3)
+    # ৩. ইন্ডিয়ান মুভি চ্যানেল
     indian_movie_keywords = [
         'star gold', 'sony max', 'zee cinema', 'and pictures', 'andpictures', '&pictures',
         'goldmines', 'b4u movies', 'b4u kadak', 'colors cineplex', 'star movies', 
@@ -90,7 +88,7 @@ def categorize_and_prioritize(channel):
         sub_p = 0 if any(normalize_text(p_mov) in norm_name for p_mov in popular_movies) else 1
         return (3, sub_p, "Indian Movies")
 
-    # ৪. কলকাতা বাংলা (Priority 4)
+    # ৪. কলকাতা বাংলা
     kolkata_popular = [
         'star jalsha', 'star jalsha movies', 'zee bangla', 'zee bangla cinema', 'colors bangla', 
         'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'enterr10 bangla', 
@@ -100,19 +98,19 @@ def categorize_and_prioritize(channel):
         sub_p = 0 if any(normalize_text(pop) in norm_name for pop in kolkata_popular) else 1
         return (4, sub_p, "Kolkata Bangla")
 
-    # ৫. কিডস (Priority 5)
+    # ৫. কিডস
     if 'kid' in group or 'animation' in group or any(k in name for k in ['pogo', 'hungama', 'cartoon network', 'nick', 'disney', 'sonic']):
         return (5, 0, "Kids Channels")
 
-    # ৬. ডকুমেন্টারি (Priority 6)
+    # ৬. ডকুমেন্টারি
     if 'documentary' in group or any(k in name for k in ['discovery', 'national geographic', 'nat geo', 'history tv', 'animal planet']):
         return (6, 0, "Documentary")
 
-    # ৭. মিউজিক (Priority 7)
+    # ৭. মিউজিক
     if 'music' in group or any(k in name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4u music']):
         return (7, 0, "Music Channels")
 
-    # ৮. ইন্ডিয়ান চ্যানেল (Priority 8)
+    # ৮. ইন্ডিয়ান চ্যানেল
     indian_allowlist = [
         'star plus', 'sony entertainment', 'set india', 'colors', 'zee tv', 'sab tv', 'star bharat',
         'and tv', 'andtv', 'amptv', '&tv', 'b4u plus', 'zee anmol', 'dangal',
@@ -121,7 +119,7 @@ def categorize_and_prioritize(channel):
     if any(normalize_text(allow) in norm_name for allow in indian_allowlist):
         return (8, 0, "Indian Channels")
 
-    # ৯. পাকিস্তানি চ্যানেল (Priority 9)
+    # ৯. পাকিস্তানি চ্যানেল
     pak_allowlist = [
         'geo tv', 'geo news', 'geo kahani', 'ary digital', 'ary news', 'ary zindagi', 
         'hum tv', 'hum news', 'ptv news', 'ptv home', 'samaa', 
@@ -133,11 +131,14 @@ def categorize_and_prioritize(channel):
     return None
 
 def fetch_channels_by_group():
+    # সাধারণ সোর্সসমূহ
     sources = [
         ("https://iptv-org.github.io/iptv/countries/bd.m3u", "bd"),
         ("https://iptv-org.github.io/iptv/languages/ben.m3u", "ben"),
         ("https://iptv-org.github.io/iptv/countries/in.m3u", "in"),
-        ("https://iptv-org.github.io/iptv/countries/pk.m3u", "pk")
+        ("https://iptv-org.github.io/iptv/countries/pk.m3u", "pk"),
+        # অতিরিক্ত পপুলার ক্যাটাগরি সোর্স
+        ("https://iptv-org.github.io/iptv/categories/sports.m3u", "sports")
     ]
     
     headers = {
@@ -149,6 +150,7 @@ def fetch_channels_by_group():
     candidate_channels = []
     seen_urls = set()
 
+    # ১. প্রধান সোর্সগুলো থেকে ফেচ
     for url, country_code in sources:
         try:
             response = requests.get(url, headers=headers, timeout=15)
@@ -194,6 +196,21 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
+    # ২. পপুলার স্পোর্টস চ্যানেলের ব্যাকআপ লিঙ্ক (Fallback Sources)
+    extra_sports = [
+        {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
+        {"name": "Gazi TV (GTV)", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_gtv.m3u8"},
+        {"name": "Star Sports 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starsports1.m3u8"},
+        {"name": "Sony Sports Ten 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten1.m3u8"},
+        {"name": "Sony Sports Ten 3 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten3.m3u8"},
+        {"name": "Willow HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_willow.m3u8"}
+    ]
+
+    for sp in extra_sports:
+        if sp["stream_url"] not in seen_urls:
+            candidate_channels.append((sp, (2, 0, "Sports Channels")))
+            seen_urls.add(sp["stream_url"])
+
     print(f"⚡ {len(candidate_channels)} টি ফিল্টারড চ্যানেল পাওয়া গেছে। ১০ সেকেন্ড টাইমআউটে লাইভ চেক করা হচ্ছে...")
 
     working_channels = []
@@ -206,7 +223,7 @@ def fetch_channels_by_group():
                 working_channels.append(result)
                 print(f"  🟢 [Live]: {result[0]['name']} -> ({result[1][2]})")
 
-    # ক্যাটাগরি এবং পপুলারিটি অনুযায়ী সর্টিং
+    # সর্টিং
     working_channels.sort(key=lambda x: (x[1][0], x[1][1], x[0]['name'].lower()))
     total_count = len(working_channels)
 
