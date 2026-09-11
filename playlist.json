@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 296,
+    "total_channels": 295,
     "status": "success",
     "channels": [
         {
@@ -59,15 +59,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.imgur.com/hJxFLvF.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -484,12 +484,6 @@
             "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
-            "name": "ZB Cartoon",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png",
-            "group": "Kids Channels",
-            "stream_url": "https://server.zillarbarta.com/zbcatun/video.m3u8"
-        },
-        {
             "name": "DocuBay TV",
             "logo": "https://i.imgur.com/OGyeLLR.png",
             "group": "Documentary",
@@ -806,12 +800,6 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Anand_TV.png",
             "group": "Indian Channels",
             "stream_url": "https://live.legitpro.co.in/anandtv/index.m3u8"
-        },
-        {
-            "name": "Angel TV",
-            "logo": "https://i.imgur.com/qKLEGU7.png",
-            "group": "Indian Channels",
-            "stream_url": "https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/playlist.m3u8"
         },
         {
             "name": "Anjan TV",
@@ -1252,6 +1240,12 @@
             "stream_url": "https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8"
         },
         {
+            "name": "KCL TV",
+            "logo": "https://i.imgur.com/bkp9dIm.png",
+            "group": "Indian Channels",
+            "stream_url": "https://kcltv.livebox.co.in/kclhls/live.m3u8"
+        },
+        {
             "name": "King TV",
             "logo": "https://i.imgur.com/dujrwRE.png",
             "group": "Indian Channels",
@@ -1342,12 +1336,6 @@
             "stream_url": "https://d1msejlow1t3l4.cloudfront.net/fta/moontv/playlist.m3u8"
         },
         {
-            "name": "Nagaland TV",
-            "logo": "https://i.imgur.com/EBEIpPo.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVNAGALANDTV/index.m3u8"
-        },
-        {
             "name": "Nandighosha TV",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Nandighosha.png",
             "group": "Indian Channels",
@@ -1412,6 +1400,12 @@
             "logo": "https://i.ibb.co/XfvTQyJn/main-removebg-preview.png",
             "group": "Indian Channels",
             "stream_url": "https://live.olidigital.in/olitv/olitv/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Indian Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Peace of Mind TV",
