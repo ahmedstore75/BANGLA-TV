@@ -20,15 +20,16 @@ def check_single_stream(item):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
+    # শুধু সক্রিয় (HTTP 200) চ্যানেলগুলো সেভ করার জন্য ভ্যালিডেশন
     try:
-        response = requests.head(url, headers=headers, timeout=5, allow_redirects=True)
+        response = requests.head(url, headers=headers, timeout=6, allow_redirects=True)
         if response.status_code == 200:
             return item
     except Exception:
         pass
 
     try:
-        response = requests.get(url, headers=headers, timeout=5, stream=True, allow_redirects=True)
+        response = requests.get(url, headers=headers, timeout=6, stream=True, allow_redirects=True)
         if response.status_code == 200:
             return item
     except Exception:
@@ -39,7 +40,7 @@ def check_single_stream(item):
 def assign_exact_group(channel_name):
     norm = normalize_text(channel_name)
 
-    # ১. শুধুমাত্র অরিজিনাল বাংলাদেশি চ্যানেলের লিস্ট (এর বাইরে কেউ বাংলাদেশি হতে পারবে না)
+    # ১. বাংলাদেশি টিভি (গ্রুপের নাম শুধু 'Bangladeshi')
     exact_bd_channels = {
         'somoytv': 'Somoy TV', 'jamunatv': 'Jamuna TV', 'ekattortv': 'Ekattor TV', 
         'independenttv': 'Independent TV', 'channeli': 'Channel i', 'atnbangla': 'ATN Bangla', 
@@ -48,54 +49,54 @@ def assign_exact_group(channel_name):
         'maasrangatv': 'Maasranga TV', 'nagoriktv': 'Nagorik TV', 'channel24': 'Channel 24', 
         'dbcnews': 'DBC News', 'saatv': 'SA TV', 'asiantv': 'Asian TV', 'durontotv': 'Duronto TV', 
         'btv': 'BTV', 'btvworld': 'BTV World', 'bijoytv': 'Bijoy TV', 'mytv': 'My TV', 
-        'gazitv': 'Gazi TV', 'gtv': 'GTV', 'tsports': 'T Sports', 'news24': 'News 24'
+        'gazitv': 'Gazi TV', 'gtv': 'GTV', 'tsports': 'T Sports', 'news24': 'News 24',
+        'nexus': 'Nexus TV', 'titas': 'Titas TV', 'green': 'Green TV'
     }
 
     for key, display_name in exact_bd_channels.items():
         if key in norm:
-            return (1, "01. Bangladeshi TV", display_name)
+            return (1, "Bangladeshi", display_name)
 
     # ২. ইন্ডিয়ান বাংলা
     kolkata_keywords = ['starjalsha', 'zeebangla', 'colorsbangla', 'abpananda', 'sonyaath', 'sangeetbangla', 'zee24ghanta', 'news18bangla', 'tv9bangla', 'aakashaath', 'abntvindia']
     if any(k in norm for k in kolkata_keywords):
-        return (3, "03. Kolkata Bangla", channel_name)
+        return (2, "Kolkata Bangla", channel_name)
 
     # ৩. স্পোর্টস চ্যানেল
     sports_keywords = ['sport', 'cricket', 'football', 'star sports', 'sony sports', 'sony ten', 'ten sports', 'willow', 'ptv sports', 'astro sports']
     if any(k in norm for k in sports_keywords):
-        return (2, "02. Sports Channels", channel_name)
+        return (3, "Sports Channels", channel_name)
 
     # ৪. মুভি চ্যানেল
-    movie_keywords = ['star gold', 'sony max', 'zee cinema', 'and pictures', 'goldmines', 'cineplex', 'hbo', 'star movies', 'sony pix', ' Flix', 'mnx']
+    movie_keywords = ['star gold', 'sony max', 'zee cinema', 'and pictures', 'goldmines', 'cineplex', 'hbo', 'star movies', 'sony pix', 'flix', 'mnx', 'paramount']
     if any(k in norm for k in movie_keywords):
-        return (4, "04. Indian & English Movies", channel_name)
+        return (4, "Movies", channel_name)
 
     # ৫. ইসলামিক টিভি
     islamic_keywords = ['makkah', 'madinah', 'peace tv', 'quran', 'islam tv', 'madani', 'iqra', 'assunnah']
     if any(k in norm for k in islamic_keywords):
-        return (5, "05. Islamic TV", channel_name)
+        return (5, "Islamic TV", channel_name)
 
     # ৬. মিউজিক চ্যানেল
     music_keywords = ['9xm', 'mtv', 'zoom', 'mh1', 'b4u music']
     if any(k in norm for k in music_keywords):
-        return (6, "06. Music Channels", channel_name)
+        return (6, "Music Channels", channel_name)
 
     # ৭. ডকুমেন্টারি
     doc_keywords = ['discovery', 'national geographic', 'nat geo', 'animal planet', 'history tv', 'planet earth']
     if any(k in norm for k in doc_keywords):
-        return (7, "07. Documentary & Info", channel_name)
+        return (7, "Documentary & Info", channel_name)
 
     # ৮. কিডস চ্যানেল
     kids_keywords = ['hungama', 'pogo', 'cartoon network', 'sonic', 'nickelodeon', 'nick', 'disney']
     if any(k in norm for k in kids_keywords):
-        return (8, "08. Kids Channels", channel_name)
+        return (8, "Kids Channels", channel_name)
 
     # ৯. ইন্টারন্যাশনাল নিউজ
     news_keywords = ['bbc news', 'cnn', 'al jazeera', 'aaj tak', 'ndtv', 'india today', 'dw news', 'france 24']
     if any(k in norm for k in news_keywords):
-        return (9, "09. International News", channel_name)
+        return (9, "International News", channel_name)
 
-    # অন্য যেকোনো অজানা চ্যানেল (যেমন: 30A Lionel, Al Janoub, Al Masar) সরাসরি রিজেক্ট হবে
     return None
 
 def fetch_and_generate_playlist():
@@ -108,14 +109,16 @@ def fetch_and_generate_playlist():
         "https://iptv-org.github.io/iptv/categories/religious.m3u",
         "https://iptv-org.github.io/iptv/categories/movies.m3u",
         "https://iptv-org.github.io/iptv/categories/animation.m3u",
-        "https://iptv-org.github.io/iptv/categories/documentary.m3u"
+        "https://iptv-org.github.io/iptv/categories/documentary.m3u",
+        "https://iptv-org.github.io/iptv/categories/general.m3u",
+        "https://iptv-org.github.io/iptv/categories/entertainment.m3u"
     ]
     
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 সম্পূর্ণ নতুন কঠোর ফিল্টারিং চালানো হচ্ছে...")
+    print("🔄 নতুন গ্রুপ স্কিম ও বর্ধিত সোর্স স্ক্যান করা হচ্ছে...")
 
     candidate_channels = []
     seen_urls = set()
@@ -165,10 +168,11 @@ def fetch_and_generate_playlist():
                             seen_channel_names.add(norm_final_name)
             i += 1
 
-    print(f"⚡ ফিল্টার শেষে যাচাইকৃত {len(candidate_channels)} টি চ্যানেল চেক করা হচ্ছে...")
+    print(f"⚡ ফিল্টার শেষে যাচাইকরণের জন্য {len(candidate_channels)} টি চ্যানেল পাওয়া গেছে...")
 
     working_channels = []
     
+    # সমান্তরালভাবে স্ট্রিম চেক করা (শুধু ওয়ার্কিং চ্যানেল ফিল্টার হবে)
     with ThreadPoolExecutor(max_workers=30) as executor:
         futures = [executor.submit(check_single_stream, item) for item in candidate_channels]
         for future in as_completed(futures):
@@ -176,7 +180,7 @@ def fetch_and_generate_playlist():
             if result:
                 working_channels.append(result)
 
-    # ১. ক্যাটাগরি অর্ডার অনুযায়ী সাজানো
+    # ক্যাটাগরি ক্রমানুসারে সর্টিং
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
 
     final_selected_channels = working_channels[:MAX_TOTAL_CHANNELS]
@@ -211,7 +215,7 @@ def fetch_and_generate_playlist():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ ১০০% সঠিক গ্রুপ নাম সহ প্লেলিস্ট তৈরি সম্পন্ন হয়েছে!")
+    print(f"\n✅ মোট {total_count} টি অ্যাক্টিভ চ্যানেল নিয়ে প্লেলিস্ট তৈরি সম্পন্ন হয়েছে!")
 
 if __name__ == "__main__":
     fetch_and_generate_playlist()
