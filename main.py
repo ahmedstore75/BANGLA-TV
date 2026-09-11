@@ -17,6 +17,7 @@ def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
+    # আঞ্চলিক অখ্যাত ভারতীয় ভাষা ও অপ্রয়োজনীয় চ্যানেল ফিল্টার
     excluded = [
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
@@ -70,49 +71,56 @@ def categorize_and_prioritize(channel):
         if any(normalize_text(sp) in norm_name for sp in sports_keywords):
             return (2, 0, "Sports Channels")
 
-    # ৩. ইসলামিক চ্যানেল (স্পোর্টসের পর - Priority 3)
+    # ৩. ইসলামিক চ্যানেল (Priority 3)
     islamic_keywords = ['islam', 'quran', 'madani', 'peace tv', 'makkah', 'madinah', 'sunnah', 'alhuda', 'iqra']
     if any(k in norm_name for k in islamic_keywords) or 'islamic' in group:
         return (3, 0, "Islamic TV")
 
-    # ৪. মুভি চ্যানেল: ইন্ডিয়ান + পপুলার ইংলিশ মুভি (Priority 4)
-    movie_keywords = [
-        # Indian Movies
+    # ৪. ইন্ডিয়ান পপুলার মুভি চ্যানেল (Priority 4)
+    indian_movies = [
         'star gold', 'sony max', 'zee cinema', 'and pictures', '&pictures',
         'goldmines', 'b4u movies', 'colors cineplex', 'zee classic', 'zee action',
-        'rishtey cineplex',
-        # Popular English Movies
+        'rishtey cineplex'
+    ]
+    if any(normalize_text(m) in norm_name for m in indian_movies):
+        return (4, 0, "Indian Movie Channels")
+
+    # ৫. ইংলিশ পপুলার মুভি চ্যানেল (ইন্ডিয়ান মুভির ঠিক নিচে - Priority 5)
+    english_movies = [
         'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'andflix',
         'mnx', 'wb', 'paramount', 'cinemax', 'sky cinema', 'film4', 'amc'
     ]
-    if any(normalize_text(m) in norm_name for m in movie_keywords) or 'movie' in group:
-        return (4, 0, "Movie Channels")
+    if any(normalize_text(em) in norm_name for em in english_movies):
+        return (5, 0, "English Movie Channels")
 
-    # ৫. কলকাতা বাংলা (Priority 5)
+    # ৬. কলকাতা বাংলা পপুলার চ্যানেল (Priority 6)
     kolkata_popular = [
         'star jalsha', 'star jalsha movies', 'zee bangla', 'zee bangla cinema', 'colors bangla', 
         'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'enterr10 bangla', 
         'news18 bangla', 'tv9 bangla', 'aakash aath'
     ]
     if 'kolkata' in group or 'west bengal' in group or any(normalize_text(k) in norm_name for k in kolkata_popular):
-        return (5, 0, "Kolkata Bangla")
+        return (6, 0, "Kolkata Bangla")
 
-    # ৬. কিডস/কার্টুন চ্যানেল (Priority 6)
-    if 'kid' in group or 'animation' in group or any(k in norm_name for k in ['pogo', 'hungama', 'cartoonnetwork', 'nick', 'disney', 'sonic']):
-        return (6, 0, "Kids Channels")
+    # ৭. পপুলার কিডস/কার্টুন চ্যানেল (Priority 7)
+    kids_keywords = ['pogo', 'hungama', 'cartoon network', 'cartoonnetwork', 'nick', 'disney', 'sonic']
+    if any(k in norm_name for k in kids_keywords):
+        return (7, 0, "Kids Channels")
 
-    # ৭. ইনফরমেশন ও ডকুমেন্টারি চ্যানেল (Priority 7)
-    if 'documentary' in group or any(k in norm_name for k in ['discovery', 'nationalgeographic', 'natgeo', 'historytv', 'animalplanet']):
-        return (7, 0, "Documentary & Info")
+    # ৮. পপুলার ডকুমেন্টারি ও তথ্যভিত্তিক (Priority 8)
+    doc_keywords = ['discovery', 'national geographic', 'nat geo', 'natgeo', 'history tv', 'animal planet']
+    if any(k in norm_name for k in doc_keywords):
+        return (8, 0, "Documentary & Info")
 
-    # ৮. মিউজিক চ্যানেল (Priority 8)
-    if 'music' in group or any(k in norm_name for k in ['mnet', 'mtv', '9xm', 'zoom', 'b4umusic', 'sangeetbangla']):
-        return (8, 0, "Music Channels")
+    # ৯. পপুলার মিউজিক চ্যানেল (Priority 9)
+    music_keywords = ['mnet', 'mtv', '9xm', 'zoom', 'b4u music', 'sangeet bangla']
+    if any(k in norm_name for k in music_keywords):
+        return (9, 0, "Music Channels")
 
-    # ৯. আন্তর্জাতিক পপুলার নিউজ (Priority 9)
+    # ১০. আন্তর্জাতিক পপুলার নিউজ (Priority 10)
     global_news = ['bbc news', 'cnn', 'al jazeera', 'aaj tak', 'ndtv india', 'india today']
     if any(normalize_text(news) in norm_name for news in global_news):
-        return (9, 0, "International News")
+        return (10, 0, "International News")
 
     return None
 
@@ -133,7 +141,7 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 সোর্স থেকে সকল চ্যানেল ফেচ করা হচ্ছে...")
+    print("🔄 সোর্স থেকে চ্যানেল ফিল্টার করা হচ্ছে...")
 
     candidate_channels = []
     seen_urls = set()
@@ -184,7 +192,7 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
-    # ২. ব্যাকআপ ও ইম্পর্ট্যান্ট চ্যানেল সোর্স
+    # ২. ব্যাকআপ ও পপুলার কাস্টম সোর্স
     extra_channels = [
         # T Sports Multi-Source
         {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
@@ -206,25 +214,18 @@ def fetch_channels_by_group():
         {"name": "Madinah Live", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sa_madinahlive.m3u8"},
         {"name": "Peace TV Bangla", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ae_peacetvbangla.m3u8"},
 
-        # Extra English Movies
-        {"name": "HBO HD", "logo": "", "group": "Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_hbo.m3u8"},
-        {"name": "Star Movies HD", "logo": "", "group": "Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starmovies.m3u8"}
+        # English Movies
+        {"name": "HBO HD", "logo": "", "group": "English Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_hbo.m3u8"},
+        {"name": "Star Movies HD", "logo": "", "group": "English Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starmovies.m3u8"}
     ]
 
     for extra in extra_channels:
         if extra["stream_url"] not in seen_urls:
-            if extra["group"] == "Sports Channels":
-                p_val = 2
-            elif extra["group"] == "Islamic TV":
-                p_val = 3
-            elif extra["group"] == "Movie Channels":
-                p_val = 4
-            else:
-                p_val = 5
+            p_val = 2 if extra["group"] == "Sports Channels" else (3 if extra["group"] == "Islamic TV" else 5)
             candidate_channels.append((extra, (p_val, 0, extra["group"])))
             seen_urls.add(extra["stream_url"])
 
-    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট ক্যাটাগরির চ্যানেল ফিল্টার করা হয়েছে। ১০ সেকেন্ডে অ্যাক্টিভ চেক চালু হচ্ছে...")
+    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট পপুলার চ্যানেল ফিল্টার করা হয়েছে। ১০ সেকেন্ডে অ্যাক্টিভ চেক চালু হচ্ছে...")
 
     working_channels = []
     
@@ -236,7 +237,7 @@ def fetch_channels_by_group():
                 working_channels.append(result)
                 print(f"  🟢 [Live]: {result[0]['name']} -> ({result[1][2]})")
 
-    # ক্যাটাগরি প্রায়োরিটি index (1 -> 9) অনুযায়ী শর্ট বা সাজানো
+    # ক্যাটাগরি প্রায়োরিটি Index (1 -> 10) অনুযায়ী সাজানো
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
     total_count = len(working_channels)
 
@@ -272,7 +273,7 @@ def fetch_channels_by_group():
 
     print(f"\n✅ প্রসেসিং সম্পন্ন!")
     print(f"📌 প্লেলিস্ট: {MY_NAME}")
-    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি (নতুন সিকোয়েন্স অনুযায়ী সাজানো হয়েছে)")
+    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
