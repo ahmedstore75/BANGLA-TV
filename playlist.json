@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 165,
+    "total_channels": 162,
     "status": "success",
     "channels": [
         {
@@ -376,12 +376,6 @@
             "stream_url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8"
         },
         {
-            "name": "Holy Quran Radio Nablus",
-            "logo": "https://quran-radio.com/assets/images/site/quran-radio-logo-h-rtl.png",
-            "group": "Islamic TV",
-            "stream_url": "http://streaming.zaytonatube.com:8080/holyquran/holyquran/video.m3u8"
-        },
-        {
             "name": "Iqraa Africa & Europe",
             "logo": "https://i.imgur.com/nUlZvSe.png",
             "group": "Islamic TV",
@@ -434,18 +428,6 @@
             "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
             "group": "Islamic TV",
             "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
-        },
-        {
-            "name": "Quran Radio",
-            "logo": "https://aloula.faulio.com/storage/mediagallery/14/da/fullhd_823bc2fe722ede75410492d57fd6c201208b4224.png",
-            "group": "Islamic TV",
-            "stream_url": "https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8"
-        },
-        {
-            "name": "Sharjah Radio Quran",
-            "logo": "https://i.imgur.com/MxZlOvc.png",
-            "group": "Islamic TV",
-            "stream_url": "https://live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8"
         },
         {
             "name": "The Islamic Network",
