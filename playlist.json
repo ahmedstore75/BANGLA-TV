@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 294,
+    "total_channels": 296,
     "status": "success",
     "channels": [
         {
@@ -8,6 +8,12 @@
             "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
+        },
+        {
+            "name": "Azan TV",
+            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
         },
         {
             "name": "Bangla Vision",
@@ -52,22 +58,16 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
         },
         {
-            "name": "ATN Music",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681",
+            "name": "Channel S",
+            "logo": "https://i.imgur.com/hJxFLvF.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
             "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -112,6 +112,12 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
+            "name": "National Geographic",
+            "logo": "https://dtil.tmsimg.com/assets/s143573_ld_h15_aa.png?lock=720x540",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:28:41&stream=373017&extension=ts&play_token=zCaGy5dtla"
+        },
+        {
             "name": "Nexus TV",
             "logo": "https://i.imgur.com/XcJZKg4.png",
             "group": "Bangladeshi TV",
@@ -146,12 +152,6 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
-        },
-        {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Sonic",
@@ -254,6 +254,12 @@
             "logo": "https://msports.pk/wp-content/uploads/2026/02/m-sports-300.png",
             "group": "Sports Channels",
             "stream_url": "https://cdn.rabta.stream/M-Sports/index.m3u8"
+        },
+        {
+            "name": "PK Sports",
+            "logo": "https://i.imgur.com/qtbSnrY.png",
+            "group": "Sports Channels",
+            "stream_url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8"
         },
         {
             "name": "Sports Squad Haryana",
@@ -469,13 +475,13 @@
             "name": "WOW Kidz",
             "logo": "https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/channel/logos/mjvezt.png",
             "group": "Kids Channels",
-            "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
+            "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
             "name": "WOW Kidz",
             "logo": "https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/channel/logos/mjvezt.png",
             "group": "Kids Channels",
-            "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
+            "stream_url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
             "name": "ZB Cartoon",
@@ -694,6 +700,12 @@
             "stream_url": "https://lotus.stingray.com/manifest/ose-317ads-montreal/samsungtvplus/master.m3u8"
         },
         {
+            "name": "Tabbar Hits",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TABBAR_HITS/images/LOGO_HD/image.png",
+            "group": "Music Channels",
+            "stream_url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8"
+        },
+        {
             "name": "Tarang Music",
             "logo": "https://i.imgur.com/oSm8zFD.png",
             "group": "Music Channels",
@@ -800,6 +812,12 @@
             "logo": "https://i.imgur.com/qKLEGU7.png",
             "group": "Indian Channels",
             "stream_url": "https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/playlist.m3u8"
+        },
+        {
+            "name": "Anjan TV",
+            "logo": "https://i.imgur.com/sh0yFSf.png",
+            "group": "Indian Channels",
+            "stream_url": "https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8"
         },
         {
             "name": "Apna Punjab TV",
@@ -1394,12 +1412,6 @@
             "logo": "https://i.ibb.co/XfvTQyJn/main-removebg-preview.png",
             "group": "Indian Channels",
             "stream_url": "https://live.olidigital.in/olitv/olitv/index.m3u8"
-        },
-        {
-            "name": "OM TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
-            "group": "Indian Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Peace of Mind TV",
