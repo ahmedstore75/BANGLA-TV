@@ -325,13 +325,13 @@
             "name": "Willow Sports",
             "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
             "group": "Sports Channels",
-            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
+            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8"
         },
         {
             "name": "Willow Sports",
             "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
             "group": "Sports Channels",
-            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8"
+            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
         },
         {
             "name": "Al Quran Al Kareem TV",
