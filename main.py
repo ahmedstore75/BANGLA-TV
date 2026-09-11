@@ -3,7 +3,7 @@ import json
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-MY_NAME = "Ahmed Store Premium IPTV"
+MY_NAME = "Ahammad Ali Premium IPTV"
 MAX_TOTAL_CHANNELS = 300
 
 def clean_channel_name(name):
@@ -21,7 +21,7 @@ def is_excluded_channel(channel):
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
         'shopping', 'teleshopping', 'home shop', 'local', 'cable', 'radio', 'fm',
-        'latin', 'latam', 'brazil', 'mexico', 'spanish', 'portuguese', 'pluto', 'iraq', 'arabic'
+        'latin', 'latam', 'brazil', 'mexico', 'spanish', 'portuguese', 'pluto', 'iraq', 'arabic', 'janoub', 'masar'
     ]
     if any(k in group for k in excluded) or any(k in name for k in excluded):
         return True
@@ -55,13 +55,16 @@ def categorize_and_prioritize(channel):
     name = channel['name'].lower()
     norm_name = normalize_text(name)
 
-    # ১. Bangladeshi TV (সবার উপরে)
-    bd_real_channels = [
-        'somoy', 'jamuna', 'ekattor', 'independent', 'channel i', 'atn bangla', 'atn news', 
-        'ntv', 'rtv', 'deepto', 'boishakhi', 'banglavision', 'desh tv', 'maasranga', 
-        'nagorik', 'channel 24', 'dbc news', 'bvnews', 'saatv', 'asian tv', 'ebangla', 'duronto', 'btv'
+    # ১. Bangladeshi TV (Strict Whitelist Filter)
+    bd_authentic_list = [
+        'somoy tv', 'jamuna tv', 'ekattor tv', 'independent tv', 'channel i', 'atn bangla', 'atn news', 
+        'ntv', 'rtv', 'deepto tv', 'boishakhi tv', 'banglavision', 'desh tv', 'maasranga', 
+        'nagorik tv', 'channel 24', 'dbc news', 'bvnews', 'saatv', 'saa tv', 'asian tv', 'ebangla', 
+        'duronto tv', 'btv', 'btv world', 'btv chittagong', 'bijoy tv', 'my tv', 'gazi tv', 'gtv', 't sports'
     ]
-    if channel.get('source_country') == 'bd' or any(normalize_text(k) in norm_name for k in bd_real_channels):
+    
+    # শুধু যদি অনুমোদিত লিস্টে চ্যানেলটির নাম অবিকল মিলে যায়
+    if any(normalize_text(k) in norm_name for k in bd_authentic_list):
         return (1, "01. Bangladeshi TV")
 
     # ২. Sports Channels
@@ -71,7 +74,7 @@ def categorize_and_prioritize(channel):
 
     # ৩. Kolkata Bangla
     kolkata_popular = ['star jalsha', 'zee bangla', 'colors bangla', 'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'news18 bangla', 'tv9 bangla', 'aakash aath']
-    if 'kolkata' in group or 'west bengal' in group or any(normalize_text(k) in norm_name for k in kolkata_popular):
+    if any(normalize_text(k) in norm_name for k in kolkata_popular):
         return (3, "03. Kolkata Bangla")
 
     # ৪. Indian & English Movies
@@ -83,8 +86,8 @@ def categorize_and_prioritize(channel):
         return (4, "04. Indian & English Movies")
 
     # ৫. Islamic TV
-    islamic_keywords = ['makkah', 'madinah', 'peace tv', 'quran', 'islam', 'madani', 'iqra', 'alhuda']
-    if any(k in norm_name for k in islamic_keywords) or 'islamic' in group:
+    islamic_keywords = ['makkah', 'madinah', 'peace tv', 'quran', 'islam', 'madani', 'iqra', 'alhuda', 'sunnah']
+    if any(k in norm_name for k in islamic_keywords):
         return (5, "05. Islamic TV")
 
     # ৬. Music Channels
@@ -126,7 +129,7 @@ def fetch_and_generate_playlist():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 নিখুঁত সিকোয়েন্স অনুযায়ী ফিল্টার করা হচ্ছে...")
+    print("🔄 নিখুঁত ফিল্টারিং চালু হচ্ছে...")
 
     candidate_channels = []
     seen_urls = set()
@@ -180,7 +183,7 @@ def fetch_and_generate_playlist():
                                 seen_channel_names.add(norm_clean_name)
             i += 1
 
-    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট চ্যানেল টেস্ট করা হচ্ছে...")
+    print(f"⚡ ফিল্টার শেষে {len(candidate_channels)} টি চ্যানেল প্রসেস করা হচ্ছে...")
 
     working_channels = []
     
@@ -191,7 +194,6 @@ def fetch_and_generate_playlist():
             if result:
                 working_channels.append(result)
 
-    # ১ থেকে ৯ নাম্বারিং সিকোয়েন্স অনুযায়ী সর্ট করা
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
 
     final_selected_channels = working_channels[:MAX_TOTAL_CHANNELS]
@@ -226,7 +228,7 @@ def fetch_and_generate_playlist():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ সঠিকভাবে সিকোয়েন্স সাজিয়ে প্লেলিস্ট ফাইল জেনারেট সম্পন্ন হয়েছে!")
+    print(f"\n✅ প্লেলিস্ট তৈরি সম্পন্ন হয়েছে! মোট আসল চ্যানেল: {total_count}")
 
 if __name__ == "__main__":
     fetch_and_generate_playlist()
