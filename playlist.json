@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 173,
+    "total_channels": 175,
     "status": "success",
     "channels": [
         {
@@ -14,18 +14,6 @@
             "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
-        },
-        {
-            "name": "ATN Music",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
-        },
-        {
-            "name": "Azan TV",
-            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
         },
         {
             "name": "Bangla Vision",
@@ -70,12 +58,6 @@
             "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
         },
         {
-            "name": "Ekushey TV",
-            "logo": "https://i.imgur.com/lRpkGHj.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
-        },
-        {
             "name": "Green TV",
             "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
             "group": "Bangladeshi TV",
@@ -118,6 +100,18 @@
             "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
         },
         {
+            "name": "Nick Jr.",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/NICK-JR/index.m3u8"
+        },
+        {
+            "name": "Nickelodeon",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/NICK/index.m3u8"
+        },
+        {
             "name": "NTV",
             "logo": "https://i.imgur.com/l75bDTx.png",
             "group": "Bangladeshi TV",
@@ -146,6 +140,18 @@
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
+        },
+        {
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
+        },
+        {
+            "name": "Sonic",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/SONIC/index.m3u8"
         },
         {
             "name": "Star Jalsha HD",
@@ -224,6 +230,12 @@
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
+        },
+        {
+            "name": "Gugbang TV",
+            "logo": "https://i.imgur.com/f1tz5fg.png",
+            "group": "Sports Channels",
+            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -496,12 +508,6 @@
             "stream_url": "http://107.167.16.138/stargold2/index.m3u8?token=test"
         },
         {
-            "name": "Zee Action",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://107.167.16.138/zeeaction/index.m3u8?token=test"
-        },
-        {
             "name": "Zee Cinema",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movie Channels",
@@ -658,10 +664,22 @@
             "stream_url": "http://202.70.146.135:8000/play/a01q/index.m3u8"
         },
         {
+            "name": "Hungama TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png",
+            "group": "Kids Channels",
+            "stream_url": "http://103.185.24.134:3001/HUNGAMA/index.m3u8"
+        },
+        {
             "name": "Sonic TV",
             "logo": "https://i.imgur.com/TKhRlrR.png",
             "group": "Kids Channels",
             "stream_url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2260"
+        },
+        {
+            "name": "Super Hungama",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA/images/LOGO_HD/image.png",
+            "group": "Kids Channels",
+            "stream_url": "http://103.185.24.134:3001/SUPER-HUNGAMA/index.m3u8"
         },
         {
             "name": "Asharq Discovery",
@@ -674,12 +692,6 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
-        },
-        {
-            "name": "National Geographic",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
-            "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -790,6 +802,12 @@
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJANAMTV/index.m3u8"
         },
         {
+            "name": "Japanim TV",
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
+            "group": "Music Channels",
+            "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
+        },
+        {
             "name": "Kozoom TV",
             "logo": "https://i.imgur.com/M1Ee79b.png",
             "group": "Music Channels",
@@ -800,6 +818,12 @@
             "logo": "https://i.imgur.com/FVnq2cQ.png",
             "group": "Music Channels",
             "stream_url": "https://video1.getstreamhosting.com:1936/8282/8282/playlist.m3u8"
+        },
+        {
+            "name": "M-Net Sport",
+            "logo": "https://i.imgur.com/7k8ar1Z.png",
+            "group": "Music Channels",
+            "stream_url": "http://ares.mnet.mk/hls/mnet-sport.m3u8"
         },
         {
             "name": "Madhimugam TV",
@@ -830,12 +854,6 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
-        },
-        {
-            "name": "OM TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1004,12 +1022,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
             "group": "International News",
             "stream_url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8"
-        },
-        {
-            "name": "France 24 English HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
-            "group": "International News",
-            "stream_url": "http://nmk.ioapk.com:5050/4gtv-live146/index.m3u8"
         },
         {
             "name": "France 24 Español",
