@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 161,
+    "total_channels": 164,
     "status": "success",
     "channels": [
         {
@@ -118,6 +118,18 @@
             "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
         },
         {
+            "name": "Nick Jr.",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/NICK-JR/index.m3u8"
+        },
+        {
+            "name": "Nickelodeon",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/NICK/index.m3u8"
+        },
+        {
             "name": "NTV",
             "logo": "https://i.imgur.com/l75bDTx.png",
             "group": "Bangladeshi TV",
@@ -146,6 +158,12 @@
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
+        },
+        {
+            "name": "Sonic",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.185.24.134:3001/SONIC/index.m3u8"
         },
         {
             "name": "Star Jalsha HD",
@@ -358,12 +376,6 @@
             "stream_url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8"
         },
         {
-            "name": "Holy Quran Radio Nablus",
-            "logo": "https://quran-radio.com/assets/images/site/quran-radio-logo-h-rtl.png",
-            "group": "Islamic TV",
-            "stream_url": "http://streaming.zaytonatube.com:8080/holyquran/holyquran/video.m3u8"
-        },
-        {
             "name": "Iqraa Africa & Europe",
             "logo": "https://i.imgur.com/nUlZvSe.png",
             "group": "Islamic TV",
@@ -416,18 +428,6 @@
             "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
             "group": "Islamic TV",
             "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
-        },
-        {
-            "name": "Quran Radio",
-            "logo": "https://aloula.faulio.com/storage/mediagallery/14/da/fullhd_823bc2fe722ede75410492d57fd6c201208b4224.png",
-            "group": "Islamic TV",
-            "stream_url": "https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8"
-        },
-        {
-            "name": "Sharjah Radio Quran",
-            "logo": "https://i.imgur.com/MxZlOvc.png",
-            "group": "Islamic TV",
-            "stream_url": "https://live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8"
         },
         {
             "name": "The Islamic Network",
@@ -530,12 +530,6 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
             "group": "English Movie Channels",
             "stream_url": "http://hls127.freeott.top:8080/BG_AMC/video.m3u8"
-        },
-        {
-            "name": "AMC Latin America",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://15.204.246.24:8080/AMCHD/index.m3u8"
         },
         {
             "name": "AMC Latin America Brazil",
@@ -670,12 +664,6 @@
             "stream_url": "http://202.70.146.135:8000/play/a01q/index.m3u8"
         },
         {
-            "name": "Disney Channel Latin America",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
-            "group": "Kids Channels",
-            "stream_url": "http://15.204.246.24:8080/DisneyHD/index.m3u8"
-        },
-        {
             "name": "Disney Channel Latin America Center",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
             "group": "Kids Channels",
@@ -730,6 +718,12 @@
             "stream_url": "http://45.134.141.161:2200/ARG/Disney_Junior/index.m3u8"
         },
         {
+            "name": "Hungama TV",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png",
+            "group": "Kids Channels",
+            "stream_url": "http://103.185.24.134:3001/HUNGAMA/index.m3u8"
+        },
+        {
             "name": "Nickelodeon Pluto TV",
             "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/colorLogoPNG.png",
             "group": "Kids Channels",
@@ -742,10 +736,46 @@
             "stream_url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2260"
         },
         {
+            "name": "Super Hungama",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA/images/LOGO_HD/image.png",
+            "group": "Kids Channels",
+            "stream_url": "http://103.185.24.134:3001/SUPER-HUNGAMA/index.m3u8"
+        },
+        {
             "name": "Asharq Discovery",
             "logo": "https://i.imgur.com/Czxi7yk.png",
             "group": "Documentary & Info",
             "stream_url": "https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+        },
+        {
+            "name": "National Geographic HD East",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://198.58.104.90:8989/natgeo/index.m3u8"
+        },
+        {
+            "name": "National Geographic Wild",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://hls127.freeott.top:8080/Nat_Geo_Wild_SD/video.m3u8"
+        },
+        {
+            "name": "National Geographic Wild HD East",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://198.58.104.90:8989/natgeowild/index.m3u8"
         },
         {
             "name": "3ABN Dare To Dream Network",
@@ -868,12 +898,6 @@
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
         },
         {
-            "name": "OM TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
-        },
-        {
             "name": "Puthuyugam TV",
             "logo": "https://dtil.tmsimg.com/assets/s143693_ld_h15_aa.png?lock=720x540",
             "group": "Music Channels",
@@ -932,12 +956,6 @@
             "logo": "https://i.imgur.com/ZObFN8Z.png",
             "group": "Music Channels",
             "stream_url": "https://bozztv.com/uni10rtmp/ssstv2-cdn/smil:ssstv2web.smil/playlist.m3u8"
-        },
-        {
-            "name": "Triunfo 96.9 FM TV",
-            "logo": "https://i.ibb.co/q0qt0h5/x-SCWAc-Jfp3.png",
-            "group": "Music Channels",
-            "stream_url": "https://59825a54e4454.streamlock.net:8443/william652/william652/playlist.m3u8"
         },
         {
             "name": "Velicham TV",
