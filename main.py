@@ -5,6 +5,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # আপনার নাম
 MY_NAME = "Ahmed Store"
+MAX_TOTAL_CHANNELS = 250  # মোট চ্যানেলের সর্বোচ্চ সীমা
 
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
@@ -17,11 +18,11 @@ def is_excluded_channel(channel):
     name = channel['name'].lower()
     group = channel['group'].lower()
     
-    # আঞ্চলিক অখ্যাত ভারতীয় ভাষা ও অপ্রয়োজনীয় চ্যানেল ফিল্টার
+    # আঞ্চলিক ও অপ্রয়োজনীয় চ্যানেল সম্পূর্ণ বাদ দেওয়ার লিস্ট
     excluded = [
         'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
         'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
-        'shopping', 'teleshopping', 'home shop', 'local', 'cable'
+        'shopping', 'teleshopping', 'home shop', 'local', 'cable', 'radio', 'fm'
     ]
     if any(k in group for k in excluded) or any(k in name for k in excluded):
         return True
@@ -55,7 +56,7 @@ def categorize_and_prioritize(channel):
     name = channel['name'].lower()
     norm_name = normalize_text(name)
 
-    # ১. বাংলাদেশের সকল চ্যানেল (Priority 1)
+    # ১. বাংলাদেশের চ্যানেল (Priority 1)
     if 'bangladesh' in group or channel.get('source_country') == 'bd':
         return (1, 0, "Bangladeshi TV")
 
@@ -85,7 +86,7 @@ def categorize_and_prioritize(channel):
     if any(normalize_text(m) in norm_name for m in indian_movies):
         return (4, 0, "Indian Movie Channels")
 
-    # ৫. ইংলিশ পপুলার মুভি চ্যানেল (ইন্ডিয়ান মুভির ঠিক নিচে - Priority 5)
+    # ৫. ইংলিশ পপুলার মুভি চ্যানেল (Priority 5)
     english_movies = [
         'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'andflix',
         'mnx', 'wb', 'paramount', 'cinemax', 'sky cinema', 'film4', 'amc'
@@ -107,9 +108,12 @@ def categorize_and_prioritize(channel):
     if any(k in norm_name for k in kids_keywords):
         return (7, 0, "Kids Channels")
 
-    # ৮. পপুলার ডকুমেন্টারি ও তথ্যভিত্তিক (Priority 8)
-    doc_keywords = ['discovery', 'national geographic', 'nat geo', 'natgeo', 'history tv', 'animal planet']
-    if any(k in norm_name for k in doc_keywords):
+    # ৮. শুধুমাত্র নির্দিষ্ট পপুলার ডকুমেন্টারি চ্যানেল (Priority 8)
+    doc_popular_keywords = [
+        'discovery', 'national geographic', 'nat geo', 'natgeo', 
+        'animal planet', 'history tv', 'history channel', 'planet earth'
+    ]
+    if any(normalize_text(k) in norm_name for k in doc_popular_keywords):
         return (8, 0, "Documentary & Info")
 
     # ৯. পপুলার মিউজিক চ্যানেল (Priority 9)
@@ -192,40 +196,31 @@ def fetch_channels_by_group():
                             seen_urls.add(stream_url)
             i += 1
 
-    # ২. ব্যাকআপ ও পপুলার কাস্টম সোর্স
+    # ২. ব্যাকআপ ও ইম্পর্ট্যান্ট সোর্স
     extra_channels = [
-        # T Sports Multi-Source
-        {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
-        {"name": "T Sports Live", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://iptv-org.github.io/iptv/channels/bd/tsports.m3u8"},
-        
-        # PTV Sports Multi-Source
-        {"name": "PTV Sports HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pk_ptvsports.m3u8"},
-        {"name": "PTV Sports Live", "logo": "", "group": "Sports Channels", "stream_url": "https://iptv-org.github.io/iptv/channels/pk/ptvsports.m3u8"},
+        # Main Documentary Streams
+        {"name": "Discovery Channel HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_discoverychannel.m3u8"},
+        {"name": "National Geographic HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_nationalgeographic.m3u8"},
+        {"name": "Nat Geo Wild HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_natgeowild.m3u8"},
+        {"name": "Animal Planet HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_animalplanet.m3u8"},
+        {"name": "History TV18 HD", "logo": "", "group": "Documentary & Info", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_historytv18.m3u8"},
 
         # Primary Sports
-        {"name": "Gazi TV (GTV)", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_gtv.m3u8"},
-        {"name": "Star Sports 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starsports1.m3u8"},
-        {"name": "Sports18 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sports18_1.m3u8"},
-        {"name": "Sony Sports Ten 1 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten1.m3u8"},
-        {"name": "Sony Sports Ten 3 HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_sonyten3.m3u8"},
-        
+        {"name": "T Sports HD", "logo": "https://i.imgur.com/8QGz6vX.png", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd_tsports.m3u8"},
+        {"name": "PTV Sports HD", "logo": "", "group": "Sports Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pk_ptvsports.m3u8"},
+
         # Islamic Channels
         {"name": "Makkah Live", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sa_makkahlive.m3u8"},
-        {"name": "Madinah Live", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sa_madinahlive.m3u8"},
-        {"name": "Peace TV Bangla", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ae_peacetvbangla.m3u8"},
-
-        # English Movies
-        {"name": "HBO HD", "logo": "", "group": "English Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_hbo.m3u8"},
-        {"name": "Star Movies HD", "logo": "", "group": "English Movie Channels", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in_starmovies.m3u8"}
+        {"name": "Madinah Live", "logo": "", "group": "Islamic TV", "stream_url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sa_madinahlive.m3u8"}
     ]
 
     for extra in extra_channels:
         if extra["stream_url"] not in seen_urls:
-            p_val = 2 if extra["group"] == "Sports Channels" else (3 if extra["group"] == "Islamic TV" else 5)
+            p_val = 8 if extra["group"] == "Documentary & Info" else (2 if extra["group"] == "Sports Channels" else 3)
             candidate_channels.append((extra, (p_val, 0, extra["group"])))
             seen_urls.add(extra["stream_url"])
 
-    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট পপুলার চ্যানেল ফিল্টার করা হয়েছে। ১০ সেকেন্ডে অ্যাক্টিভ চেক চালু হচ্ছে...")
+    print(f"⚡ {len(candidate_channels)} টি নির্দিষ্ট ফিল্টারড চ্যানেল চেক করার জন্য তৈরি। অ্যাক্টিভ স্ট্রিম চেক চালু হচ্ছে...")
 
     working_channels = []
     
@@ -239,14 +234,17 @@ def fetch_channels_by_group():
 
     # ক্যাটাগরি প্রায়োরিটি Index (1 -> 10) অনুযায়ী সাজানো
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
-    total_count = len(working_channels)
+
+    # ২৫০টি বেস্ট চ্যানেলের মধ্যে সীমাবদ্ধ রাখা
+    final_selected_channels = working_channels[:MAX_TOTAL_CHANNELS]
+    total_count = len(final_selected_channels)
 
     # M3U এবং JSON প্লেলিস্ট তৈরি
     m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
     m3u_lines = [m3u_header]
     json_channels = []
 
-    for ch, res in working_channels:
+    for ch, res in final_selected_channels:
         p, sub_p, display_group = res
 
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
@@ -271,9 +269,9 @@ def fetch_channels_by_group():
     with open("playlist.m3u", "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ প্রসেসিং সম্পন্ন!")
+    print(f"\n✅ প্রসেসিং সফলভাবে সম্পন্ন!")
     print(f"📌 প্লেলিস্ট: {MY_NAME}")
-    print(f"📊 সেভ হওয়া মোট অ্যাক্টিভ চ্যানেল: {total_count} টি")
+    print(f"📊 সর্বমোট সেভ হওয়া নির্বাচিত পপুলার চ্যানেল: {total_count} টি")
 
 if __name__ == "__main__":
     fetch_channels_by_group()
