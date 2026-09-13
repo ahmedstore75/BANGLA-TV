@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 175,
+    "total_channels": 172,
     "status": "success",
     "channels": [
         {
@@ -56,6 +56,12 @@
             "logo": "https://i.imgur.com/gXsddRK.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
+        },
+        {
+            "name": "Ekushey TV",
+            "logo": "https://i.imgur.com/lRpkGHj.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
         },
         {
             "name": "Green TV",
@@ -140,12 +146,6 @@
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
-        },
-        {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Sonic",
@@ -304,24 +304,6 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8"
         },
         {
-            "name": "Star Sports 2 HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png",
-            "group": "Sports Channels",
-            "stream_url": "http://tvsen5.aynascope.net/cXPB2LKkErN9/index.m3u8"
-        },
-        {
-            "name": "Star Sports 2 Hindi",
-            "logo": "https://i.imgur.com/kHerF19.png",
-            "group": "Sports Channels",
-            "stream_url": "https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8"
-        },
-        {
-            "name": "Star Sports Select 2 HD",
-            "logo": "https://i.imgur.com/FtRT73R.png",
-            "group": "Sports Channels",
-            "stream_url": "http://tvsen7.aynascope.net/ssport2hd/index.m3u8"
-        },
-        {
             "name": "T Sports 7",
             "logo": "https://i.imgur.com/KyI0s5n.png",
             "group": "Sports Channels",
@@ -334,22 +316,10 @@
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
         },
         {
-            "name": "Vinh Long TV 1",
-            "logo": "https://i.imgur.com/5YFsqPx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
             "name": "Vinh Long TV 3",
             "logo": "https://i.imgur.com/OQXEhqu.png",
             "group": "Sports Channels",
             "stream_url": "https://dethich.pw/thvl3/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 4",
-            "logo": "https://i.imgur.com/ARhIkvR.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Willow",
@@ -506,6 +476,12 @@
             "logo": "https://i.imgur.com/G0ZfzZr.png",
             "group": "Indian Movie Channels",
             "stream_url": "http://107.167.16.138/stargold2/index.m3u8?token=test"
+        },
+        {
+            "name": "Zee Action",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540",
+            "group": "Indian Movie Channels",
+            "stream_url": "http://107.167.16.138/zeeaction/index.m3u8?token=test"
         },
         {
             "name": "Zee Cinema",
@@ -697,6 +673,12 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
@@ -770,12 +752,6 @@
             "logo": "https://i.imgur.com/KvdFCD5.png",
             "group": "Music Channels",
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
-        },
-        {
-            "name": "CEACOM TV",
-            "logo": "https://i.imgur.com/hutdRfk.png",
-            "group": "Music Channels",
-            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
         },
         {
             "name": "Dream TV",
@@ -854,6 +830,12 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -985,13 +967,13 @@
             "name": "BBC News",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
-            "stream_url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd"
+            "stream_url": "https://xemzi.short.gy/1000015"
         },
         {
             "name": "BBC News",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
-            "stream_url": "https://xemzi.short.gy/1000015"
+            "stream_url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd"
         },
         {
             "name": "BBC News Europe",
