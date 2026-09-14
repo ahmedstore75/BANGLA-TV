@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 178,
+    "total_channels": 177,
     "status": "success",
     "channels": [
         {
@@ -712,12 +712,6 @@
             "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
-            "name": "National Geographic",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
-            "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
-        },
-        {
             "name": "National Geographic HD East",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
@@ -776,6 +770,12 @@
             "logo": "https://i.imgur.com/rBixF3P.png",
             "group": "Music Channels",
             "stream_url": "https://hlspackager.akamaized.net/live/DB/ALYAUM_TV/HLS/ALYAUM_TV.m3u8"
+        },
+        {
+            "name": "Alwafa Tarim TV",
+            "logo": "https://i.ibb.co/3yfMjmf/logo-3.png",
+            "group": "Music Channels",
+            "stream_url": "https://ammedia.siar.us/ammedia/live/playlist.m3u8"
         },
         {
             "name": "Boonniyom TV",
@@ -866,12 +866,6 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
-        },
-        {
-            "name": "OM TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
