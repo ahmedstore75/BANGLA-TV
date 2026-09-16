@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 182,
+    "total_channels": 183,
     "status": "success",
     "channels": [
         {
@@ -20,6 +20,12 @@
             "logo": "https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
+        },
+        {
+            "name": "Azan TV",
+            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
         },
         {
             "name": "Bangla Vision",
@@ -361,13 +367,13 @@
             "name": "Willow Sports",
             "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
             "group": "Sports Channels",
-            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8"
+            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
         },
         {
             "name": "Willow Sports",
             "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
             "group": "Sports Channels",
-            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
+            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8"
         },
         {
             "name": "Al Quran Al Kareem TV",
@@ -446,6 +452,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
             "group": "Islamic TV",
             "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
+        },
+        {
+            "name": "The Islamic Network",
+            "logo": "https://i.imgur.com/EtQolw6.png",
+            "group": "Islamic TV",
+            "stream_url": "https://video1.getstreamhosting.com:1936/8322/8322/playlist.m3u8"
         },
         {
             "name": "B4U Movies",
@@ -1021,13 +1033,13 @@
             "name": "BBC News",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
-            "stream_url": "https://xemzi.short.gy/1000015"
+            "stream_url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd"
         },
         {
             "name": "BBC News",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
-            "stream_url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd"
+            "stream_url": "https://xemzi.short.gy/1000015"
         },
         {
             "name": "BBC News Europe",
@@ -1058,12 +1070,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
             "group": "International News",
             "stream_url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8"
-        },
-        {
-            "name": "France 24 English HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
-            "group": "International News",
-            "stream_url": "http://nmk.ioapk.com:5050/4gtv-live146/index.m3u8"
         },
         {
             "name": "France 24 Español",
