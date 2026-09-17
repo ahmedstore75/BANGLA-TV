@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 189,
+    "total_channels": 187,
     "status": "success",
     "channels": [
         {
@@ -164,12 +164,6 @@
             "logo": "https://i.imgur.com/IlufzR5.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8"
-        },
-        {
-            "name": "T Sports",
-            "logo": "https://i.imgur.com/2JzlorD.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8"
         },
         {
             "name": "Zee Bangla HD",
@@ -367,13 +361,13 @@
             "name": "Willow Sports",
             "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
             "group": "Sports Channels",
-            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8"
+            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
         },
         {
             "name": "Willow Sports",
             "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
             "group": "Sports Channels",
-            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
+            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8"
         },
         {
             "name": "Al Quran Al Kareem TV",
@@ -518,12 +512,6 @@
             "logo": "https://i.imgur.com/G0ZfzZr.png",
             "group": "Indian Movie Channels",
             "stream_url": "http://107.167.16.138/stargold2/index.m3u8?token=test"
-        },
-        {
-            "name": "Zee Action",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://107.167.16.138/zeeaction/index.m3u8?token=test"
         },
         {
             "name": "Zee Cinema",
@@ -739,13 +727,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic HD East",
