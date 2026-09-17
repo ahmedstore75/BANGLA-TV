@@ -1,9 +1,11 @@
-#EXTM3U name="Ahmed Store IPTV | Total Channels: 182"
+#EXTM3U name="Ahmed Store IPTV | Total Channels: 189"
 
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png" group-title="Bangladeshi TV",Aamar Bangla
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/K1HmMRz.png" group-title="Bangladeshi TV",ATN Bangla
 http://tvsen5.aynascope.net/atnbangla/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681" group-title="Bangladeshi TV",ATN Music
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JlqS6I4.jpeg" group-title="Bangladeshi TV",Azan TV
 https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/nCWgp38.png" group-title="Bangladeshi TV",Bangla Vision
@@ -71,15 +73,15 @@ https://bein-xtra-bein.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Big_TV.png" group-title="Sports Channels",BIG TV
 https://cdn.pishow.tv/ott/live/1059/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/rpHrRxR5/big_tv_malayalam.png" group-title="Sports Channels",Big TV 24x7
-https://d2gvyg6lvauoko.cloudfront.net/230226/bigtvmalyalam/chunks.m3u8
+https://stream.ottlive.co.in/bigtvmalayalam/index.m3u8
+#EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540" group-title="Sports Channels",DD Sports
+https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8
 #EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540" group-title="Sports Channels",DD Sports SD
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/b0Wx7pE.png" group-title="Sports Channels",Elbeshara GTV
 http://media3.smc-host.com:1935/elbesharagtv.com/gtv.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png" group-title="Sports Channels",FGTV
 https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/f1tz5fg.png" group-title="Sports Channels",Gugbang TV
-http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/dujrwRE.png" group-title="Sports Channels",King TV
 https://streamer12.vdn.dstreamone.net/kingtv/kingtv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SATSANG/images/LOGO_HD/image.png" group-title="Sports Channels",Satsang TV
@@ -156,6 +158,8 @@ https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8
 http://202.70.146.135:8000/play/a058/index.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png" group-title="Indian Movie Channels",Goldmines
 https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Indian Movie Channels",Goldmines 2
+https://mumt03.tangotv.in/Dsly5z3HGOLDMINES2/index.m3u8
 #EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/_X6U6bMLF-pTu5wBMFwsSI6aubGrXk2B0kUKdGiLIMqFLyDIne4Ot4ro76BS1S8fX3pWcCwS=s900-c-k-c0x00ffffff-no-rj" group-title="Indian Movie Channels",Goldmines Action
 https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/6mNQ9mM.png" group-title="Indian Movie Channels",Goldmines Bollywood
@@ -202,6 +206,12 @@ https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=50
 http://stream.mcquack.net/112/index.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png" group-title="English Movie Channels",MNX
 http://59.103.38.46:8000/play/a052/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/yF9MPTDK/blyflx.png" group-title="English Movie Channels",NH BollyFlix
+https://jmp2.uk/stvp-IN46000140Q
+#EXTINF:-1 tvg-logo="https://i.ibb.co/x9PsrMy/NH-BOLLYGOLD.png" group-title="English Movie Channels",NH BollyGold
+https://0dc330e6408b4c3b9ac31fd37b121368.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/nh-bollygold-airtel/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/BKB9mv1K/NH-Bolly-Raga.png" group-title="English Movie Channels",NH BollyRaga
+https://jmp2.uk/stvp-IN460001373
 #EXTINF:-1 tvg-logo="https://i.imgur.com/sj5h9bl.png" group-title="English Movie Channels",Paramount Movie Channel
 https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png" group-title="English Movie Channels",Paramount Network
@@ -260,8 +270,12 @@ https://live20.bozztv.com/giatv/giatv-adoram/adoram/chunks.m3u8
 https://hlspackager.akamaized.net/live/DB/ALYAUM_TV/HLS/ALYAUM_TV.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/3yfMjmf/logo-3.png" group-title="Music Channels",Alwafa Tarim TV
 https://ammedia.siar.us/ammedia/live/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/aanadhamtvtamil.png" group-title="Music Channels",Bhagyam TV
+https://ott.bhagyam.net/hls/bhagyamweb/index-1409148900-now.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/KvdFCD5.png" group-title="Music Channels",Boonniyom TV
 https://live.x2.co.th/live/bntv.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/hutdRfk.png" group-title="Music Channels",CEACOM TV
+https://eu1.servers10.com:8081/ceacom/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XRUDhqQ.png" group-title="Music Channels",Dream TV
 https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/LdsRz2E.png" group-title="Music Channels",EWTN/Bonum TV
@@ -278,8 +292,6 @@ https://foxkidstv.be:3369/stream/play.m3u8
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/FVnq2cQ.png" group-title="Music Channels",LMTV French
 https://video1.getstreamhosting.com:1936/8282/8282/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/0fnY2cj/IMG-20230419-161527.jpg" group-title="Music Channels",M-Net Info
-https://live.mnet.mk/hls/mnet-info.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7k8ar1Z.png" group-title="Music Channels",M-Net Sport
 http://ares.mnet.mk/hls/mnet-sport.m3u8
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png" group-title="Music Channels",Madhimugam TV
@@ -306,6 +318,8 @@ https://mumt04.tangotv.in/m18aqlK4SAIRAMTV/index.m3u8
 https://d2o3r1shda7xvv.cloudfront.net/index_5.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/728fAcC.png" group-title="Music Channels",Sangkem TV
 https://live.sangkemtv.com/memfs/sangkem.m3u8
+#EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/s143765_ld_h15_aa.png?lock=720x540" group-title="Music Channels",Sathiyam TV
+https://mumt07.tangotv.in/zHjX9OFlSATHIYAMTV/index.m3u8
 #EXTINF:-1 tvg-logo="https://sercemtv.com.tr/sercemlogo.jpg" group-title="Music Channels",Sercem TV
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/lJ4MLHn.png" group-title="Music Channels",Shalom TV
