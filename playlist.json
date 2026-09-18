@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 191,
+    "total_channels": 185,
     "status": "success",
     "channels": [
         {
@@ -14,6 +14,12 @@
             "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
+        },
+        {
+            "name": "ATN Music",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
         },
         {
             "name": "Azan TV",
@@ -136,7 +142,7 @@
             "stream_url": "http://158.69.24.53:8080/probashi_tv/index.m3u8"
         },
         {
-            "name": "Rajdhani TV",
+            "name": "Rajdhani TV SD",
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
@@ -182,12 +188,6 @@
             "logo": "https://i.imgur.com/Asu5pE9.png",
             "group": "Sports Channels",
             "stream_url": "http://45.162.64.114/ARIRANG/index.m3u8"
-        },
-        {
-            "name": "Arirang TV UN",
-            "logo": "https://i.imgur.com/Jdy3WNm.png",
-            "group": "Sports Channels",
-            "stream_url": "https://amdlive-ch02-ctnd-com.akamaized.net/arirang_2ch/smil:arirang_2ch.smil/playlist.m3u8"
         },
         {
             "name": "Awakening TV",
@@ -236,12 +236,6 @@
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
-        },
-        {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -364,12 +358,6 @@
             "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
         },
         {
-            "name": "Willow Sports",
-            "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
-            "group": "Sports Channels",
-            "stream_url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8"
-        },
-        {
             "name": "Al Quran Al Kareem TV",
             "logo": "https://aloula.faulio.com/storage/mediagallery/da/6c/fullhd_7eaf7e165c4cad5b3a45eff65d2011e18be5d670.png",
             "group": "Islamic TV",
@@ -442,7 +430,7 @@
             "stream_url": "https://qatartv.akamaized.net/hls/live/20000612/qtvquran/master.m3u8"
         },
         {
-            "name": "Quran",
+            "name": "Quran TV",
             "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
             "group": "Islamic TV",
             "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
@@ -538,7 +526,7 @@
             "stream_url": "http://23.239.31.26:8989/amc/index.m3u8"
         },
         {
-            "name": "AMC East",
+            "name": "AMC  East",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
             "group": "English Movie Channels",
             "stream_url": "http://190.11.225.124:5000/live/amc_hd/playlist.m3u8"
@@ -550,7 +538,7 @@
             "stream_url": "http://hls127.freeott.top:8080/BG_AMC/video.m3u8"
         },
         {
-            "name": "Artflix Movie Classics",
+            "name": "ARTFLIX Movie Classics",
             "logo": "https://i.imgur.com/5pOZQB4.png",
             "group": "English Movie Channels",
             "stream_url": "https://amogonetworx-artflix-1-nl.samsung.wurl.tv/playlist.m3u8"
@@ -742,13 +730,13 @@
             "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
-            "name": "National Geographic HD",
+            "name": "National Geographic  HD",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://str2.iptvhd.ru:8080/National_Geo_HD/index.m3u8"
         },
         {
-            "name": "National Geographic HD East",
+            "name": "National Geographic  HD East",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://198.58.104.90:8989/natgeo/index.m3u8"
@@ -766,22 +754,16 @@
             "stream_url": "http://hls127.freeott.top:8080/BG_NG_Wild_HD/video.m3u8"
         },
         {
-            "name": "National Geographic Wild HD",
+            "name": "National Geographic Wild  HD",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://str2.iptvhd.ru:8080/Nat_Geo_Wild_HD/index.m3u8"
         },
         {
-            "name": "National Geographic Wild HD East",
+            "name": "National Geographic Wild  HD East",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://198.58.104.90:8989/natgeowild/index.m3u8"
-        },
-        {
-            "name": "3ABN Dare To Dream Network",
-            "logo": "https://i.imgur.com/ONsAt3Z.png",
-            "group": "Music Channels",
-            "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
         },
         {
             "name": "3ABN Proclaim! Network",
@@ -820,12 +802,6 @@
             "stream_url": "https://hlspackager.akamaized.net/live/DB/ALYAUM_TV/HLS/ALYAUM_TV.m3u8"
         },
         {
-            "name": "Alwafa Tarim TV",
-            "logo": "https://i.ibb.co/3yfMjmf/logo-3.png",
-            "group": "Music Channels",
-            "stream_url": "https://ammedia.siar.us/ammedia/live/playlist.m3u8"
-        },
-        {
             "name": "Bhagyam TV",
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/aanadhamtvtamil.png",
             "group": "Music Channels",
@@ -842,6 +818,12 @@
             "logo": "https://i.imgur.com/hutdRfk.png",
             "group": "Music Channels",
             "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
+        },
+        {
+            "name": "Dare To Dream Network",
+            "logo": "https://i.imgur.com/ONsAt3Z.png",
+            "group": "Music Channels",
+            "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
         },
         {
             "name": "Dream TV",
@@ -874,7 +856,7 @@
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJANAMTV/index.m3u8"
         },
         {
-            "name": "Japanim TV",
+            "name": "JapanimTV",
             "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
             "group": "Music Channels",
             "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
@@ -886,7 +868,7 @@
             "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8"
         },
         {
-            "name": "LMTV French",
+            "name": "LM TV French",
             "logo": "https://i.imgur.com/FVnq2cQ.png",
             "group": "Music Channels",
             "stream_url": "https://video1.getstreamhosting.com:1936/8282/8282/playlist.m3u8"
@@ -904,16 +886,16 @@
             "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8"
         },
         {
+            "name": "Marutam TV",
+            "logo": "https://i.imgur.com/cFNw4Af.png",
+            "group": "Music Channels",
+            "stream_url": "https://mntv.livebox.co.in/mntvhls/live.m3u8"
+        },
+        {
             "name": "Meta Film TV",
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://metafilmhls.wns.live/hls/stream.m3u8"
-        },
-        {
-            "name": "MTM TV",
-            "logo": "https://i.imgur.com/krcVhrx.png",
-            "group": "Music Channels",
-            "stream_url": "https://angel.btbn.tv:5443/mtmtv/streams/live.m3u8"
         },
         {
             "name": "MTV Uutiset",
@@ -1081,13 +1063,13 @@
             "name": "BBC News",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
-            "stream_url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd"
+            "stream_url": "https://xemzi.short.gy/1000015"
         },
         {
-            "name": "BBC News",
+            "name": "BBC News Africa",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
-            "stream_url": "https://xemzi.short.gy/1000015"
+            "stream_url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd"
         },
         {
             "name": "BBC News Europe",
@@ -1096,16 +1078,16 @@
             "stream_url": "http://46.32.176.50/bbcworld/index.m3u8"
         },
         {
-            "name": "BBC News North America",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
-            "group": "International News",
-            "stream_url": "http://23.237.104.106:8080/USA_BBC_NEWS/index.m3u8"
-        },
-        {
             "name": "CNN Prima News",
             "logo": "https://i.imgur.com/elZyUjX.png",
             "group": "International News",
             "stream_url": "http://88.212.15.19/live/test_cnn_pirma_news/playlist.m3u8"
+        },
+        {
+            "name": "France 24",
+            "logo": "https://i.imgur.com/u8N6uoj.png",
+            "group": "International News",
+            "stream_url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8"
         },
         {
             "name": "France 24 Arabic",
@@ -1120,18 +1102,6 @@
             "stream_url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8"
         },
         {
-            "name": "France 24 Español",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
-            "group": "International News",
-            "stream_url": "https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8"
-        },
-        {
-            "name": "France 24 French",
-            "logo": "https://i.imgur.com/u8N6uoj.png",
-            "group": "International News",
-            "stream_url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8"
-        },
-        {
             "name": "India Today",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TODAY/images/LOGO_HD/image.png",
             "group": "International News",
@@ -1142,12 +1112,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s154895_ld_h15_aa.png?lock=720x540",
             "group": "International News",
             "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/NDTV24x7.m3u8"
-        },
-        {
-            "name": "RCN Noticias",
-            "logo": "https://i.imgur.com/FMX4QCM.png",
-            "group": "International News",
-            "stream_url": "https://jmp2.uk/plu-67d9b0ebc290c9499046e88f.m3u8"
         }
     ]
 }
