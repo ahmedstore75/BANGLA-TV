@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 185,
+    "total_channels": 186,
     "status": "success",
     "channels": [
         {
@@ -745,13 +745,13 @@
             "name": "National Geographic Wild",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://hls127.freeott.top:8080/Nat_Geo_Wild_SD/video.m3u8"
+            "stream_url": "http://hls127.freeott.top:8080/BG_NG_Wild_HD/video.m3u8"
         },
         {
             "name": "National Geographic Wild",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://hls127.freeott.top:8080/BG_NG_Wild_HD/video.m3u8"
+            "stream_url": "http://hls127.freeott.top:8080/Nat_Geo_Wild_SD/video.m3u8"
         },
         {
             "name": "National Geographic Wild  HD",
@@ -1076,6 +1076,12 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
             "stream_url": "http://46.32.176.50/bbcworld/index.m3u8"
+        },
+        {
+            "name": "BBC News North America",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
+            "group": "International News",
+            "stream_url": "http://23.237.104.106:8080/USA_BBC_NEWS/index.m3u8"
         },
         {
             "name": "CNN Prima News",
