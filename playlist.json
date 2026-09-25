@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 185,
+    "total_channels": 186,
     "status": "success",
     "channels": [
         {
@@ -112,6 +112,12 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
         },
         {
+            "name": "News 21 Bangla TV",
+            "logo": "https://i.imgur.com/ijuJfmd.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
+        },
+        {
             "name": "Nexus TV",
             "logo": "https://i.imgur.com/XcJZKg4.png",
             "group": "Bangladeshi TV",
@@ -146,6 +152,12 @@
             "logo": "https://i.imgur.com/7oTsfQ4.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://158.69.24.53:8080/probashi_tv/index.m3u8"
+        },
+        {
+            "name": "Rajdhani TV SD",
+            "logo": "https://i.imgur.com/MBm2gPz.jpeg",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
         },
         {
             "name": "RTV",
@@ -248,6 +260,12 @@
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
+        },
+        {
+            "name": "Gugbang TV",
+            "logo": "https://i.imgur.com/f1tz5fg.png",
+            "group": "Sports Channels",
+            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -802,12 +820,6 @@
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
         },
         {
-            "name": "CEACOM TV",
-            "logo": "https://i.imgur.com/hutdRfk.png",
-            "group": "Music Channels",
-            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
-        },
-        {
             "name": "Dare To Dream Network",
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
@@ -818,12 +830,6 @@
             "logo": "https://i.imgur.com/XRUDhqQ.png",
             "group": "Music Channels",
             "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
-        },
-        {
-            "name": "EWTN/Bonum TV",
-            "logo": "https://i.imgur.com/LdsRz2E.png",
-            "group": "Music Channels",
-            "stream_url": "https://dash2.antik.sk/live/ewtn_bonum/index.m3u8"
         },
         {
             "name": "HMTV",
