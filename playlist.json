@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 185,
+    "total_channels": 186,
     "status": "success",
     "channels": [
         {
@@ -41,15 +41,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://i.imgur.com/hJxFLvF.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -172,6 +172,12 @@
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
         },
         {
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
+        },
+        {
             "name": "Sonic",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
             "group": "Bangladeshi TV",
@@ -260,6 +266,12 @@
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
+        },
+        {
+            "name": "Gugbang TV",
+            "logo": "https://i.imgur.com/f1tz5fg.png",
+            "group": "Sports Channels",
+            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -356,24 +368,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s143927_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 1",
-            "logo": "https://i.imgur.com/5YFsqPx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 3",
-            "logo": "https://i.imgur.com/OQXEhqu.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 4",
-            "logo": "https://i.imgur.com/ARhIkvR.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Willow Sports",
@@ -556,6 +550,12 @@
             "stream_url": "https://amogonetworx-artflix-1-nl.samsung.wurl.tv/playlist.m3u8"
         },
         {
+            "name": "Cinemax Action East HD",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Cinemax_Action_Logo.png/960px-Cinemax_Action_Logo.png",
+            "group": "English Movie Channels",
+            "stream_url": "https://sra72yz.s.gy/CINEMAX_ACTION_HD.m3u8"
+        },
+        {
             "name": "Cinemax Classics",
             "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Cinemax_Classics_Logo.png/960px-Cinemax_Classics_Logo.png",
             "group": "English Movie Channels",
@@ -572,6 +572,12 @@
             "logo": "https://i.imgur.com/rgNQYAl.png",
             "group": "English Movie Channels",
             "stream_url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2229"
+        },
+        {
+            "name": "HBO Drama",
+            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/HBO_Drama_Logo.svg/960px-HBO_Drama_Logo.svg.png",
+            "group": "English Movie Channels",
+            "stream_url": "https://sra72yz.s.gy/HBO_DRAMA_HD.m3u8"
         },
         {
             "name": "HBO Hits East HD",
@@ -733,13 +739,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
             "name": "National Geographic",
