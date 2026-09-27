@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 181,
+    "total_channels": 182,
     "status": "success",
     "channels": [
         {
@@ -35,15 +35,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://i.imgur.com/hJxFLvF.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -68,12 +68,6 @@
             "logo": "https://i.imgur.com/lRpkGHj.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
-        },
-        {
-            "name": "Green TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
         },
         {
             "name": "Maasranga TV",
@@ -110,6 +104,12 @@
             "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
+        },
+        {
+            "name": "News 21 Bangla TV",
+            "logo": "https://i.imgur.com/ijuJfmd.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
         },
         {
             "name": "Nexus TV",
@@ -158,6 +158,12 @@
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
+        },
+        {
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Sonic",
@@ -766,12 +772,6 @@
             "stream_url": "https://mumbai-edge.smartplaytv.in/AdhyatmTV/index.m3u8"
         },
         {
-            "name": "Adoram TV",
-            "logo": "https://i.imgur.com/uU01KHz.png",
-            "group": "Music Channels",
-            "stream_url": "https://live20.bozztv.com/giatv/giatv-adoram/adoram/chunks.m3u8"
-        },
-        {
             "name": "Al Yaum TV",
             "logo": "https://i.imgur.com/rBixF3P.png",
             "group": "Music Channels",
@@ -790,16 +790,16 @@
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
         },
         {
+            "name": "CEACOM TV",
+            "logo": "https://i.imgur.com/hutdRfk.png",
+            "group": "Music Channels",
+            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
+        },
+        {
             "name": "Dare To Dream Network",
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
-        },
-        {
-            "name": "Dream TV",
-            "logo": "https://i.imgur.com/XRUDhqQ.png",
-            "group": "Music Channels",
-            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
         },
         {
             "name": "EWTN/Bonum TV",
@@ -938,6 +938,12 @@
             "logo": "https://i.imgur.com/lJ4MLHn.png",
             "group": "Music Channels",
             "stream_url": "https://media.streambrothers.com:1936/8400/8400/playlist.m3u8"
+        },
+        {
+            "name": "Sharnam TV",
+            "logo": "https://papaji.freetvindia.com/media/channels/SarnamTV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVSHARNAMTV/index.m3u8"
         },
         {
             "name": "Soham TV",
