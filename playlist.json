@@ -106,6 +106,12 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
+            "name": "NAN TV",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
+        },
+        {
             "name": "News 21 Bangla TV",
             "logo": "https://i.imgur.com/ijuJfmd.png",
             "group": "Bangladeshi TV",
@@ -310,6 +316,12 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5.m3u8"
         },
         {
+            "name": "Sony Sports Ten 5 HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png",
+            "group": "Sports Channels",
+            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8"
+        },
+        {
             "name": "Star Sports 2 HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png",
             "group": "Sports Channels",
@@ -344,12 +356,6 @@
             "logo": "https://i.imgur.com/5YFsqPx.png",
             "group": "Sports Channels",
             "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 3",
-            "logo": "https://i.imgur.com/OQXEhqu.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
         },
         {
             "name": "Vinh Long TV 4",
@@ -806,12 +812,6 @@
             "logo": "https://i.imgur.com/FVnq2cQ.png",
             "group": "Music Channels",
             "stream_url": "https://video1.getstreamhosting.com:1936/8282/8282/playlist.m3u8"
-        },
-        {
-            "name": "M-Net Info",
-            "logo": "https://i.ibb.co/0fnY2cj/IMG-20230419-161527.jpg",
-            "group": "Music Channels",
-            "stream_url": "https://live.mnet.mk/hls/mnet-info.m3u8"
         },
         {
             "name": "M-Net Sport",
