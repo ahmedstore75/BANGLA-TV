@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 174,
+    "total_channels": 177,
     "status": "success",
     "channels": [
         {
@@ -478,6 +478,12 @@
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8"
         },
         {
+            "name": "Zee Action",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540",
+            "group": "Indian Movie Channels",
+            "stream_url": "http://107.167.16.138/zeeaction/index.m3u8?token=test"
+        },
+        {
             "name": "Zee Cinema",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movie Channels",
@@ -488,6 +494,12 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movie Channels",
             "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8"
+        },
+        {
+            "name": "Zee Classic",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LOGO_HD/LOGO_HD_image.png",
+            "group": "Indian Movie Channels",
+            "stream_url": "http://107.167.16.138/zeeclassic/index.m3u8?token=test"
         },
         {
             "name": "90s Throwback",
@@ -667,13 +679,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -830,6 +842,12 @@
             "logo": "https://i.imgur.com/ZO8ShOK.png",
             "group": "Music Channels",
             "stream_url": "https://live.streaming.a2d.tv/asset/20025962.isml/.m3u8"
+        },
+        {
+            "name": "Muslim Network TV",
+            "logo": "",
+            "group": "Music Channels",
+            "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
         },
         {
             "name": "OM TV",
