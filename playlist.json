@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 197,
+    "total_channels": 196,
     "status": "success",
     "channels": [
         {
@@ -74,12 +74,6 @@
             "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
-        },
-        {
-            "name": "Jalsha Movies",
-            "logo": "https://i.imgur.com/25eWjX2.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://51.75.127.199:3141/jalshamovies/index.m3u8"
         },
         {
             "name": "Maasranga TV",
@@ -176,6 +170,12 @@
             "logo": "https://i.imgur.com/7oTsfQ4.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://158.69.24.53:8080/probashi_tv/index.m3u8"
+        },
+        {
+            "name": "Rajdhani TV SD",
+            "logo": "https://i.imgur.com/MBm2gPz.jpeg",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
         },
         {
             "name": "RTV",
@@ -764,12 +764,6 @@
             "logo": "https://i.imgur.com/Czxi7yk.png",
             "group": "Documentary & Info",
             "stream_url": "https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8"
-        },
-        {
-            "name": "History TV18",
-            "logo": "https://dtil.tmsimg.com/assets/s143132_ld_h15_aa.png?lock=720x540",
-            "group": "Documentary & Info",
-            "stream_url": "http://51.75.127.199:3141/historytv18/index.m3u8"
         },
         {
             "name": "History TV18 HD",
