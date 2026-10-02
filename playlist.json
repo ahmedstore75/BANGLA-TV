@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 197,
+    "total_channels": 194,
     "status": "success",
     "channels": [
         {
@@ -158,12 +158,6 @@
             "logo": "https://i.imgur.com/l75bDTx.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8"
-        },
-        {
-            "name": "Peace TV Bangla",
-            "logo": "https://i.imgur.com/1ztVXUi.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8"
         },
         {
             "name": "Probashi TV News",
@@ -484,12 +478,6 @@
             "stream_url": "http://202.70.146.135:8000/play/a058/index.m3u8"
         },
         {
-            "name": "Colors Cineplex HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_HD/images/LOGO_HD/image.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://51.75.127.199:3141/colorscineplexhd/index.m3u8"
-        },
-        {
             "name": "Colors Cineplex Superhits",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_SUPERHITS/images/LOGO_HD/image.png",
             "group": "Indian Movie Channels",
@@ -772,12 +760,6 @@
             "stream_url": "https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8"
         },
         {
-            "name": "History TV18",
-            "logo": "https://dtil.tmsimg.com/assets/s143132_ld_h15_aa.png?lock=720x540",
-            "group": "Documentary & Info",
-            "stream_url": "http://51.75.127.199:3141/historytv18/index.m3u8"
-        },
-        {
             "name": "History TV18 HD",
             "logo": "https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540",
             "group": "Documentary & Info",
@@ -787,13 +769,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -866,6 +848,12 @@
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
+        },
+        {
+            "name": "Dream TV",
+            "logo": "https://i.imgur.com/XRUDhqQ.png",
+            "group": "Music Channels",
+            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
         },
         {
             "name": "Elim TV",
@@ -1034,12 +1022,6 @@
             "logo": "https://i.imgur.com/hp1rJjX.png",
             "group": "Music Channels",
             "stream_url": "https://bozztv.com/uni10rtmp/ssstv1-cdn/smil:ssstv1web.smil/playlist.m3u8"
-        },
-        {
-            "name": "TV Zoom",
-            "logo": "https://i.imgur.com/jCGrjf5.png",
-            "group": "Music Channels",
-            "stream_url": "https://cdn.jmvstream.com/w/LVW-9730/LVW9730_LmUwslM8jt/playlist.m3u8"
         },
         {
             "name": "Valam TV Dayro",
