@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 196,
+    "total_channels": 197,
     "status": "success",
     "channels": [
         {
@@ -334,12 +334,6 @@
             "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5.m3u8"
         },
         {
-            "name": "Sony Sports Ten 5 HD",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png",
-            "group": "Sports Channels",
-            "stream_url": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8"
-        },
-        {
             "name": "Star Sports 1",
             "logo": "https://i.imgur.com/E5jjKHI.png",
             "group": "Sports Channels",
@@ -476,6 +470,12 @@
             "logo": "https://i.imgur.com/M9kMFJl.png",
             "group": "Indian Movie Channels",
             "stream_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "Colors Cineplex",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX/images/LOGO_HD/image.png",
+            "group": "Indian Movie Channels",
+            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8"
         },
         {
             "name": "Colors Cineplex Bollywood",
@@ -658,6 +658,12 @@
             "stream_url": "https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8"
         },
         {
+            "name": "Paramount Network",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://193.254.245.162/PARAMOUNT-CHANNEL/index.m3u8"
+        },
+        {
             "name": "Paramount+ Picks",
             "logo": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
             "group": "English Movie Channels",
@@ -766,6 +772,12 @@
             "stream_url": "https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8"
         },
         {
+            "name": "History TV18",
+            "logo": "https://dtil.tmsimg.com/assets/s143132_ld_h15_aa.png?lock=720x540",
+            "group": "Documentary & Info",
+            "stream_url": "http://51.75.127.199:3141/historytv18/index.m3u8"
+        },
+        {
             "name": "History TV18 HD",
             "logo": "https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540",
             "group": "Documentary & Info",
@@ -775,13 +787,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -854,12 +866,6 @@
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
-        },
-        {
-            "name": "Dream TV",
-            "logo": "https://i.imgur.com/XRUDhqQ.png",
-            "group": "Music Channels",
-            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
         },
         {
             "name": "Elim TV",
