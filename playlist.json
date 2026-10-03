@@ -40,12 +40,6 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
-            "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
             "name": "Deshi TV",
             "logo": "https://i.imgur.com/PzqzgMm.png",
             "group": "Bangladeshi TV",
@@ -256,12 +250,6 @@
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
         },
         {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
-        },
-        {
             "name": "King TV",
             "logo": "https://i.imgur.com/dujrwRE.png",
             "group": "Sports Channels",
@@ -356,6 +344,24 @@
             "logo": "https://dtil.tmsimg.com/assets/s143927_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 1",
+            "logo": "https://i.imgur.com/5YFsqPx.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 3",
+            "logo": "https://i.imgur.com/OQXEhqu.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 4",
+            "logo": "https://i.imgur.com/ARhIkvR.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Willow Sports",
@@ -733,13 +739,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -818,12 +824,6 @@
             "logo": "https://i.imgur.com/XRUDhqQ.png",
             "group": "Music Channels",
             "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
-        },
-        {
-            "name": "Elim TV",
-            "logo": "https://i.imgur.com/payIg0N.png",
-            "group": "Music Channels",
-            "stream_url": "http://38.252.238.18:8000/play/a01k/index.m3u8"
         },
         {
             "name": "EWTN/Bonum TV",
