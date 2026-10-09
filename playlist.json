@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 165,
+    "total_channels": 174,
     "status": "success",
     "channels": [
         {
@@ -16,6 +16,12 @@
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
         },
         {
+            "name": "Bangla Vision",
+            "logo": "https://i.imgur.com/nCWgp38.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://tvsen5.aynaott.com/banglavision/index.m3u8"
+        },
+        {
             "name": "Boishakhi TV",
             "logo": "https://i.imgur.com/gxL05Y4.png",
             "group": "Bangladeshi TV",
@@ -23,15 +29,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.imgur.com/hJxFLvF.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -52,16 +58,16 @@
             "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
         },
         {
-            "name": "Ekushey TV",
-            "logo": "https://i.imgur.com/lRpkGHj.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
-        },
-        {
             "name": "Jalsha Movies HD",
             "logo": "https://i.imgur.com/25eWjX2.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://103.185.24.134:3001/JALSHA-MOVIES-HD/index.m3u8"
+        },
+        {
+            "name": "Maasranga TV",
+            "logo": "https://i.imgur.com/uVZJMed.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://tvsen5.aynascope.net/maasrangatv/index.m3u8"
         },
         {
             "name": "Madani Channel Bangla",
@@ -88,6 +94,12 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
+            "name": "NAN TV",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
+        },
+        {
             "name": "National Geographic Wild  HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png",
             "group": "Bangladeshi TV",
@@ -100,6 +112,12 @@
             "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
         },
         {
+            "name": "Nexus TV",
+            "logo": "https://i.imgur.com/XcJZKg4.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
+        },
+        {
             "name": "Nick Jr.",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png",
             "group": "Bangladeshi TV",
@@ -110,6 +128,12 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://103.185.24.134:3001/NICK/index.m3u8"
+        },
+        {
+            "name": "NTV",
+            "logo": "https://i.imgur.com/l75bDTx.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8"
         },
         {
             "name": "Peace TV Bangla",
@@ -128,6 +152,12 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
+        },
+        {
+            "name": "RTV",
+            "logo": "https://i.imgur.com/yu8ugqt.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
         },
         {
             "name": "Sonic",
@@ -236,6 +266,18 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SATSANG/images/LOGO_HD/image.png",
             "group": "Sports Channels",
             "stream_url": "https://d2vfwvjxwtwq1t.cloudfront.net/out/v1/6b24239d5517495b986e7705490c6e65/index.m3u8"
+        },
+        {
+            "name": "Star Sports Select 1 HD",
+            "logo": "https://i.imgur.com/Mh9tKPx.png",
+            "group": "Sports Channels",
+            "stream_url": "http://103.151.60.162:2122/play/a026/index.m3u8?hls"
+        },
+        {
+            "name": "Star Sports Select 2 HD",
+            "logo": "https://i.imgur.com/FtRT73R.png",
+            "group": "Sports Channels",
+            "stream_url": "http://103.151.60.162:2122/play/a027/index.m3u8?hls"
         },
         {
             "name": "T Sports 7",
@@ -416,6 +458,12 @@
             "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
             "group": "Indian Movie Channels",
             "stream_url": "http://103.185.24.134:3001/SonyMAX/index.m3u8"
+        },
+        {
+            "name": "Star Gold 2 HD",
+            "logo": "https://i.imgur.com/G0ZfzZr.png",
+            "group": "Indian Movie Channels",
+            "stream_url": "http://103.151.60.162:2122/play/a01v/index.m3u8?hls"
         },
         {
             "name": "Star Gold HD",
@@ -830,6 +878,12 @@
             "logo": "https://i.imgur.com/lJ4MLHn.png",
             "group": "Music Channels",
             "stream_url": "https://media.streambrothers.com:1936/8400/8400/playlist.m3u8"
+        },
+        {
+            "name": "Sharnam TV",
+            "logo": "https://papaji.freetvindia.com/media/channels/SarnamTV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt06.tangotv.in/qYyB8fXVSHARNAMTV/index.m3u8"
         },
         {
             "name": "Soham TV",
