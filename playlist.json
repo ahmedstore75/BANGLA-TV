@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 199,
+    "total_channels": 196,
     "status": "success",
     "channels": [
         {
@@ -14,6 +14,12 @@
             "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
+        },
+        {
+            "name": "ATN Music",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2015/12/atnmusic.jpg?x50681",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
         },
         {
             "name": "Bangla Vision",
@@ -58,10 +64,10 @@
             "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
         },
         {
-            "name": "Ekushey TV",
-            "logo": "https://i.imgur.com/lRpkGHj.png",
+            "name": "Green TV",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
             "group": "Bangladeshi TV",
-            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
         },
         {
             "name": "Jalsha Movies HD",
@@ -100,6 +106,12 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
+            "name": "NAN TV",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
+        },
+        {
             "name": "National Geographic  HD",
             "logo": "https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540",
             "group": "Bangladeshi TV",
@@ -112,22 +124,16 @@
             "stream_url": "http://103.185.24.134:3001/NATGEO-WILD-HD/index.m3u8"
         },
         {
+            "name": "News 21 Bangla TV",
+            "logo": "https://i.imgur.com/ijuJfmd.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
+        },
+        {
             "name": "Nexus TV",
             "logo": "https://i.imgur.com/XcJZKg4.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
-        },
-        {
-            "name": "Nick Jr.",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.185.24.134:3001/NICK-JR/index.m3u8"
-        },
-        {
-            "name": "Nickelodeon",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.185.24.134:3001/NICK/index.m3u8"
         },
         {
             "name": "NTV",
@@ -160,10 +166,16 @@
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
         },
         {
-            "name": "Sonic",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
             "group": "Bangladeshi TV",
-            "stream_url": "http://103.185.24.134:3001/SONIC/index.m3u8"
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
+        },
+        {
+            "name": "Star Jalsha",
+            "logo": "https://i.imgur.com/IlufzR5.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.151.60.162:2122/play/a00w/index.m3u8?hls"
         },
         {
             "name": "Star Jalsha HD",
@@ -712,22 +724,10 @@
             "stream_url": "http://103.151.60.162:2122/play/a016/index.m3u8?hls"
         },
         {
-            "name": "Hungama TV",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png",
-            "group": "Kids Channels",
-            "stream_url": "http://103.185.24.134:3001/HUNGAMA/index.m3u8"
-        },
-        {
             "name": "Sonic TV",
             "logo": "https://i.imgur.com/TKhRlrR.png",
             "group": "Kids Channels",
             "stream_url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2260"
-        },
-        {
-            "name": "Super Hungama",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA/images/LOGO_HD/image.png",
-            "group": "Kids Channels",
-            "stream_url": "http://103.185.24.134:3001/SUPER-HUNGAMA/index.m3u8"
         },
         {
             "name": "Animal Planet",
@@ -769,13 +769,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -838,12 +838,6 @@
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
         },
         {
-            "name": "CEACOM TV",
-            "logo": "https://i.imgur.com/hutdRfk.png",
-            "group": "Music Channels",
-            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
-        },
-        {
             "name": "Dare To Dream Network",
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
@@ -878,12 +872,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s143221_ld_h15_aa.png?lock=720x540",
             "group": "Music Channels",
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJANAMTV/index.m3u8"
-        },
-        {
-            "name": "JapanimTV",
-            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
-            "group": "Music Channels",
-            "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
         },
         {
             "name": "Kozoom TV",
@@ -1094,12 +1082,6 @@
             "logo": "https://static.wikia.nocookie.net/logopedia/images/8/82/Antena_3_CNN_2022_v1.png/revision/latest/scale-to-width-down/512",
             "group": "International News",
             "stream_url": "https://live4dai.antenaplay.ro/live2_aws4_sdi11/live2_aws4_sdi11_600k.m3u8"
-        },
-        {
-            "name": "BBC News",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
-            "group": "International News",
-            "stream_url": "https://xemzi.short.gy/1000015"
         },
         {
             "name": "BBC News Africa",
