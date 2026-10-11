@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 198,
+    "total_channels": 199,
     "status": "success",
     "channels": [
         {
@@ -112,12 +112,6 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
-            "name": "NAN TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
-        },
-        {
             "name": "National Geographic  HD",
             "logo": "https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540",
             "group": "Bangladeshi TV",
@@ -182,6 +176,12 @@
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
+        },
+        {
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Sonic",
@@ -793,13 +793,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
             "name": "National Geographic  HD East",
@@ -902,6 +902,12 @@
             "logo": "https://i.imgur.com/M1Ee79b.png",
             "group": "Music Channels",
             "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8"
+        },
+        {
+            "name": "M-Net Sport",
+            "logo": "https://i.imgur.com/7k8ar1Z.png",
+            "group": "Music Channels",
+            "stream_url": "http://ares.mnet.mk/hls/mnet-sport.m3u8"
         },
         {
             "name": "Madhimugam TV",
