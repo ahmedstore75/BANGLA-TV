@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 221,
+    "total_channels": 222,
     "status": "success",
     "channels": [
         {
@@ -29,15 +29,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://i.imgur.com/hJxFLvF.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -170,12 +170,6 @@
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
-        },
-        {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Sonic",
@@ -316,6 +310,12 @@
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
         },
         {
+            "name": "Gugbang TV",
+            "logo": "https://i.imgur.com/f1tz5fg.png",
+            "group": "Sports Channels",
+            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
+        },
+        {
             "name": "King TV",
             "logo": "https://i.imgur.com/dujrwRE.png",
             "group": "Sports Channels",
@@ -388,24 +388,6 @@
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
         },
         {
-            "name": "Vinh Long TV 1",
-            "logo": "https://i.imgur.com/5YFsqPx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 3",
-            "logo": "https://i.imgur.com/OQXEhqu.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 4",
-            "logo": "https://i.imgur.com/ARhIkvR.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
-        },
-        {
             "name": "Willow",
             "logo": "https://cricket.willow.tv/_nuxt/img/willow_blue_logo.362ed8e.png",
             "group": "Sports Channels",
@@ -428,12 +410,6 @@
             "logo": "https://aloula.faulio.com/storage/mediagallery/33/92/fullhd_879e557011826f507a045b4e0b4c3b57ba93edae.png",
             "group": "Islamic TV",
             "stream_url": "http://m.live.net.sa:1935/live/sunnah/gmswf.m3u8"
-        },
-        {
-            "name": "Alquran",
-            "logo": "https://i.imgur.com/lqVwrAF.png",
-            "group": "Islamic TV",
-            "stream_url": "https://ktvlive.online/stream/hls/ch1.m3u8"
         },
         {
             "name": "Bahrain Quran",
@@ -634,6 +610,12 @@
             "stream_url": "http://88.212.15.17/live/test_cinemax_hd_hevc/playlist.m3u8"
         },
         {
+            "name": "Cinemax  West",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8"
+        },
+        {
             "name": "Cinemax 2",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Cinemax_2_%282016%29.png/960px-Cinemax_2_%282016%29.png",
             "group": "English Movie Channels",
@@ -644,6 +626,18 @@
             "logo": "https://i.imgur.com/c8crJfA.png",
             "group": "English Movie Channels",
             "stream_url": "http://125.227.210.55:1001/VideoInput/play.ts"
+        },
+        {
+            "name": "Cinemax Classics",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Cinemax_Classics_Logo.png/960px-Cinemax_Classics_Logo.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://23.237.104.106:8080/USA_5STARMAX/index.m3u8"
+        },
+        {
+            "name": "Cinemax Hits",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Cinemax_Hits_Logo.png/960px-Cinemax_Hits_Logo.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://23.237.104.106:8080/USA_MOREMAX/index.m3u8"
         },
         {
             "name": "FrightFlix",
@@ -674,12 +668,6 @@
             "logo": "https://static.wikia.nocookie.net/logopedia/images/6/6f/HBO_3_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122202",
             "group": "English Movie Channels",
             "stream_url": "http://88.212.15.17/live/test_hbo3_hd_hevc/playlist.m3u8"
-        },
-        {
-            "name": "HBO Asia HD",
-            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
-            "group": "English Movie Channels",
-            "stream_url": "https://2x2.me/yTKXaE"
         },
         {
             "name": "HBO Asia Taiwan",
@@ -931,6 +919,12 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
@@ -1064,6 +1058,12 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1226,6 +1226,12 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
             "group": "International News",
             "stream_url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd"
+        },
+        {
+            "name": "BBC News North America",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
+            "group": "International News",
+            "stream_url": "http://23.237.104.106:8080/USA_BBC_NEWS/index.m3u8"
         },
         {
             "name": "BBC News South Asia",
