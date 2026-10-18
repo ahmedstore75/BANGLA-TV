@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 237,
+    "total_channels": 235,
     "status": "success",
     "channels": [
         {
@@ -148,12 +148,6 @@
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
         },
         {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
-        },
-        {
             "name": "Sonic",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
             "group": "Bangladeshi TV",
@@ -184,6 +178,12 @@
             "stream_url": "http://103.151.60.162:2122/play/a02p/index.m3u8?hls"
         },
         {
+            "name": "Zee Bangla Sonar",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG00287G7K.png?lock=720x540",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8"
+        },
+        {
             "name": "Arirang TV",
             "logo": "https://i.imgur.com/Asu5pE9.png",
             "group": "Sports Channels",
@@ -205,49 +205,49 @@
             "name": "beIN Sports 1",
             "logo": "https://i.imgur.com/Vtk2cGI.png",
             "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd1/tracks-v1a1/mono.tbin.m3u8"
+            "stream_url": "http://primetv.cc.cd/beinfhd11/tracks-v1a1/mono.tbin.m3u8"
+        },
+        {
+            "name": "beIN Sports 1 Turk",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/2/27/BeinSports1.svg/revision/latest?cb=20230910184457",
+            "group": "Sports Channels",
+            "stream_url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs1.m3u8"
         },
         {
             "name": "beIN Sports 2",
             "logo": "https://i.imgur.com/vUJZSvs.png",
             "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd2/index.m3u8"
+            "stream_url": "http://primetv.cc.cd/beinfhd22/index.m3u8"
         },
         {
-            "name": "beIN Sports 3",
-            "logo": "https://i.imgur.com/UYSMao3.png",
+            "name": "beIN Sports 2 Turk",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/4/40/BeinSports2.svg/revision/latest?cb=20230910185720",
             "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd3/index.m3u8"
+            "stream_url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs2.m3u8"
         },
         {
-            "name": "beIN Sports 4",
-            "logo": "https://i.imgur.com/vwAgJNi.png",
+            "name": "beIN Sports 3 Turk",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/5/53/BeIN_Sports_3_2017_Rectangle.png/revision/latest/scale-to-width-down/1000?cb=20251213114000",
             "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd4/tracks-v1a1/mono.tbin.m3u8"
+            "stream_url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs3.m3u8"
         },
         {
-            "name": "beIN Sports 5",
-            "logo": "https://i.imgur.com/2Rha5aY.png",
+            "name": "beIN Sports 4 Turk",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/9/96/Logo_bein_sports_4.png/revision/latest/scale-to-width-down/1000?cb=20251213115820",
             "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd5/tracks-v1a1/mono.tbin.m3u8"
+            "stream_url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs4.m3u8"
         },
         {
-            "name": "beIN Sports 6",
-            "logo": "https://i.imgur.com/0wBdLYb.png",
+            "name": "beIN Sports 5 Turk",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/1/14/BeIN%2Bsports%2B5.png/revision/latest/scale-to-width-down/1000?cb=20251214104942",
             "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd6/index.m3u8"
+            "stream_url": "https://andro.mangeinde4.lat/checklist/androstreamlivebs5.m3u8"
         },
         {
-            "name": "beIN Sports 7",
-            "logo": "https://i.imgur.com/iODFwZi.png",
+            "name": "beIN Sports Haber",
+            "logo": "https://i.imgur.com/QWo0x7S.jpg",
             "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd7/index.m3u8"
-        },
-        {
-            "name": "beIN Sports 8",
-            "logo": "https://i.imgur.com/CaFEyVn.png",
-            "group": "Sports Channels",
-            "stream_url": "http://primetv.cc.cd/beinfhd8/index.m3u8"
+            "stream_url": "https://andro.mangeinde4.lat/checklist/androstreamlivebsh.m3u8"
         },
         {
             "name": "beIN SPORTS XTRA",
@@ -338,6 +338,12 @@
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
+        },
+        {
+            "name": "Gugbang TV",
+            "logo": "https://i.imgur.com/f1tz5fg.png",
+            "group": "Sports Channels",
+            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -934,6 +940,12 @@
             "stream_url": "https://drk6xq0vhn.gpcdn.net/live/discovery_sd_abr/index.m3u8"
         },
         {
+            "name": "Discovery Channel  HD",
+            "logo": "https://dtil.tmsimg.com/assets/s159106_ld_h15_aa.png?lock=720x540",
+            "group": "Documentary & Info",
+            "stream_url": "https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8"
+        },
+        {
             "name": "Discovery Historia",
             "logo": "https://i.imgur.com/CXqCG0G.png",
             "group": "Documentary & Info",
@@ -985,12 +997,6 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
-        },
-        {
-            "name": "Investigation Discovery",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
-            "group": "Documentary & Info",
             "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
@@ -1003,19 +1009,7 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
-        },
-        {
-            "name": "National Geographic",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
-            "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
-        },
-        {
-            "name": "National Geographic",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
-            "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic  HD East",
@@ -1148,12 +1142,6 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
-        },
-        {
-            "name": "OM TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1354,12 +1342,6 @@
             "stream_url": "https://streaming.onnethn.com/CNN_ESPANOL/playlist.m3u8"
         },
         {
-            "name": "CNN HD",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
-            "group": "International News",
-            "stream_url": "http://212.5.144.156:8080/cnn/index.m3u8"
-        },
-        {
             "name": "CNN International",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CNN_INTERNATIONAL/images/LOGO_HD/image.png",
             "group": "International News",
@@ -1388,6 +1370,12 @@
             "logo": "https://i.imgur.com/bc6tYVZ.png",
             "group": "International News",
             "stream_url": "https://github.com/thomraider12/canaistvpt/raw/main/m3u8s/cnnpt.m3u8"
+        },
+        {
+            "name": "CNN Prima News",
+            "logo": "https://i.imgur.com/elZyUjX.png",
+            "group": "International News",
+            "stream_url": "http://88.212.15.17/live/test_cnn_pirma_news/playlist.m3u8"
         },
         {
             "name": "France 24",
