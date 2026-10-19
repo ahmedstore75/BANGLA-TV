@@ -1,9 +1,7 @@
-#EXTM3U name="Ahmed Store IPTV | Total Channels: 245"
+#EXTM3U name="Ahmed Store IPTV | Total Channels: 235"
 
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png" group-title="Bangladeshi TV",Aamar Bangla
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/K1HmMRz.png" group-title="Bangladeshi TV",ATN Bangla
-http://tvsen5.aynascope.net/atnbangla/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/nCWgp38.png" group-title="Bangladeshi TV",Bangla Vision
 https://tvsen5.aynaott.com/banglavision/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gxL05Y4.png" group-title="Bangladeshi TV",Boishakhi TV
@@ -22,8 +20,6 @@ https://ekusheyserver.com/etvlivesn.m3u8
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/25eWjX2.png" group-title="Bangladeshi TV",Jalsha Movies HD
 http://103.185.24.134:3001/JALSHA-MOVIES-HD/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/uVZJMed.png" group-title="Bangladeshi TV",Maasranga TV
-http://tvsen5.aynascope.net/maasrangatv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/vIJTVia.png" group-title="Bangladeshi TV",Madani Channel Bangla
 https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8
 #EXTINF:-1 tvg-logo="https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg" group-title="Bangladeshi TV",Matribhumi TV
@@ -36,14 +32,10 @@ https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxI
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540" group-title="Bangladeshi TV",National Geographic  HD
 http://103.185.24.134:3001/NATGEO-HD/index.m3u8
-#EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png" group-title="Bangladeshi TV",National Geographic Wild  HD
-http://103.185.24.134:3001/NATGEO-WILD-HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/ijuJfmd.png" group-title="Bangladeshi TV",News 21 Bangla TV
 http://103.190.133.68:1935/news21live/live/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/XcJZKg4.png" group-title="Bangladeshi TV",Nexus TV
 https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8
-#EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png" group-title="Bangladeshi TV",Nick Jr.
-http://103.185.24.134:3001/NICK-JR/index.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png" group-title="Bangladeshi TV",Nickelodeon
 http://103.185.24.134:3001/NICK/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/l75bDTx.png" group-title="Bangladeshi TV",NTV
@@ -52,8 +44,6 @@ https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8
 https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/MBm2gPz.jpeg" group-title="Bangladeshi TV",Rajdhani TV SD
 https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/yu8ugqt.png" group-title="Bangladeshi TV",RTV
-http://tvsen5.aynascope.net/RtvHD/index.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png" group-title="Bangladeshi TV",Sonic
 http://103.185.24.134:3001/SONIC/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/IlufzR5.png" group-title="Bangladeshi TV",Star Jalsha
@@ -114,8 +104,6 @@ https://andro.mangeinde4.lat/checklist/androstreamlivees2.m3u8
 http://57.128.231.171:8080/291/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png" group-title="Sports Channels",FGTV
 https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/f1tz5fg.png" group-title="Sports Channels",Gugbang TV
-http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/dujrwRE.png" group-title="Sports Channels",King TV
 https://streamer12.vdn.dstreamone.net/kingtv/kingtv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SATSANG/images/LOGO_HD/image.png" group-title="Sports Channels",Satsang TV
@@ -146,8 +134,6 @@ https://dethich.pw/thvl1/index.m3u8
 https://dethich.pw/thvl3/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/ARhIkvR.png" group-title="Sports Channels",Vinh Long TV 4
 https://dethich.pw/thvl4/index.m3u8
-#EXTINF:-1 tvg-logo="https://cricket.willow.tv/_nuxt/img/willow_blue_logo.362ed8e.png" group-title="Sports Channels",Willow
-http://tvsen5.aynascope.net/willowhd/index.m3u8
 #EXTINF:-1 tvg-logo="https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png" group-title="Sports Channels",Willow Sports
 https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8
 #EXTINF:-1 tvg-logo="https://aloula.faulio.com/storage/mediagallery/da/6c/fullhd_7eaf7e165c4cad5b3a45eff65d2011e18be5d670.png" group-title="Islamic TV",Al Quran Al Kareem TV
@@ -166,8 +152,6 @@ https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv1/playlist.m
 https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv3/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/HPVsIa4.png" group-title="Islamic TV",Iqraa Quran
 https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv2/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Abi9j0A.png" group-title="Islamic TV",Madani Channel English
-http://tvsen7.aynascope.net/MadaniTV/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/MitLeCJ.png" group-title="Islamic TV",Madani Channel Urdu
 https://streaming.madanichannel.tv/static/streaming-playlists/hls/b9790f10-cb0d-4e30-82bf-84a756234e58/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8aonQ0v.png" group-title="Islamic TV",Madani TV
@@ -238,22 +222,22 @@ http://23.237.104.106:8080/USA_5STARMAX/index.m3u8
 http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/rgNQYAl.png" group-title="English Movie Channels",FrightFlix
 https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2229
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/960px-HBO_logo.svg.png" group-title="English Movie Channels",HBO
-http://57.128.231.171:8080/243/index.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a9/HBO_Silver_glossy_logo.svg/revision/latest?cb=20260529155924" group-title="English Movie Channels",HBO
 http://88.212.15.17/live/test_hbo_hd_hevc/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/960px-HBO_logo.svg.png" group-title="English Movie Channels",HBO
-http://tvsen7.aynascope.net/hbo/index.m3u8
-#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226" group-title="English Movie Channels",HBO 2
-http://88.212.15.17/live/test_hbo2_hd_hevc/playlist.m3u8
+http://57.128.231.171:8080/243/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/2e3muOJ.png" group-title="English Movie Channels",HBO 2
 http://57.128.231.171:8080/246/index.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226" group-title="English Movie Channels",HBO 2
+http://88.212.15.17/live/test_hbo2_hd_hevc/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/6f/HBO_3_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122202" group-title="English Movie Channels",HBO 3
 http://88.212.15.17/live/test_hbo3_hd_hevc/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png" group-title="English Movie Channels",HBO Asia HD
+https://2x2.me/yTKXaE
 #EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png" group-title="English Movie Channels",HBO Asia Taiwan
 http://125.227.210.55:1003/VideoInput/play.ts
-#EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/HBO_Hits_Logo.svg/960px-HBO_Hits_Logo.svg.png" group-title="English Movie Channels",HBO Hits
-http://tvsen7.aynascope.net/hbo2/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/CTjmocc.png" group-title="English Movie Channels",HBO Hits Asia HD
+https://2x2.me/BbwzPx
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png" group-title="English Movie Channels",Khushboo Bangla
 https://cdn.pishow.tv/ott/live/1473/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4Pn0ADQ.png" group-title="English Movie Channels",KidsFlix
@@ -270,8 +254,6 @@ https://jmp2.uk/stvp-IN460001373
 https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png" group-title="English Movie Channels",Paramount Network
 http://57.128.210.196:8080/212/index.m3u8
-#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg" group-title="English Movie Channels",Paramount+ Picks
-https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png" group-title="English Movie Channels",Sony Pix HD
 http://103.151.60.162:2122/play/a01d/index.m3u8?hls
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png" group-title="English Movie Channels",Star Movies  HD
@@ -290,8 +272,6 @@ https://cdn.pishow.tv/ott/live/1143/master.m3u8
 https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CARTOON_NETWORK/images/LOGO_HD/image.png" group-title="Kids Channels",Cartoon Network
 https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="Kids Channels",Cartoon Network
-http://tvsen7.aynascope.net/cartoonnetwork/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="Kids Channels",Cartoon Network CEE Czech Republic
 http://88.212.15.17/live/test_cartoon_network_tizen/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="Kids Channels",Cartoon Network CEE Poland
@@ -337,9 +317,9 @@ http://103.151.60.162:2122/play/a00y/index.m3u8?hls
 #EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INVESTIGATION_DISCOVERY/images/LOGO_HD/image.png" group-title="Documentary & Info",Investigation Discovery
 https://drk6xq0vhn.gpcdn.net/live/id_hd_abr/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
-http://57.128.231.171:8080/239/index.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
 http://88.212.15.17/live/id_hun/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
+http://57.128.231.171:8080/239/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
 http://212.5.144.156:8080/id/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
@@ -347,9 +327,9 @@ http://stream.mcquack.net/205/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
 http://138.121.15.230:9002/NAT-GEO/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
-http://92.114.85.87:8006/play/a00a/index.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
 http://176.61.157.250/NationalGeographic/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
+http://92.114.85.87:8006/play/a00a/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
 http://212.5.144.156:8080/natgeo/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic  HD East
