@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 227,
+    "total_channels": 231,
     "status": "success",
     "channels": [
         {
@@ -14,6 +14,12 @@
             "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
+        },
+        {
+            "name": "Azan TV",
+            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
         },
         {
             "name": "Bangla Vision",
@@ -332,12 +338,6 @@
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
-        },
-        {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -712,12 +712,6 @@
             "stream_url": "http://88.212.15.17/live/test_hbo3_hd_hevc/playlist.m3u8"
         },
         {
-            "name": "HBO Asia HD",
-            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
-            "group": "English Movie Channels",
-            "stream_url": "https://2x2.me/yTKXaE"
-        },
-        {
             "name": "HBO Asia Taiwan",
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
             "group": "English Movie Channels",
@@ -728,12 +722,6 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/HBO_Hits_Logo.svg/960px-HBO_Hits_Logo.svg.png",
             "group": "English Movie Channels",
             "stream_url": "http://tvsen7.aynascope.net/hbo2/index.m3u8"
-        },
-        {
-            "name": "HBO Hits Asia HD",
-            "logo": "https://i.imgur.com/CTjmocc.png",
-            "group": "English Movie Channels",
-            "stream_url": "https://2x2.me/BbwzPx"
         },
         {
             "name": "Khushboo Bangla",
@@ -955,7 +943,19 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+        },
+        {
+            "name": "Investigation Discovery",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://stream.mcquack.net/205/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -968,6 +968,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic  HD East",
@@ -1028,6 +1034,12 @@
             "logo": "https://i.imgur.com/KvdFCD5.png",
             "group": "Music Channels",
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
+        },
+        {
+            "name": "CEACOM TV",
+            "logo": "https://i.imgur.com/hutdRfk.png",
+            "group": "Music Channels",
+            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
         },
         {
             "name": "Dare To Dream Network",
@@ -1100,6 +1112,12 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1234,6 +1252,12 @@
             "stream_url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"
         },
         {
+            "name": "Al Jazeera English HD",
+            "logo": "https://i.imgur.com/7bRVpnu.png",
+            "group": "International News",
+            "stream_url": "http://stream.mcquack.net/131/index.m3u8"
+        },
+        {
             "name": "Al Jazeera Mubasher",
             "logo": "https://i.imgur.com/X80DQvF.png",
             "group": "International News",
@@ -1282,16 +1306,16 @@
             "stream_url": "https://d25usgadhphvwi.cloudfront.net/hls/main.m3u8"
         },
         {
-            "name": "CNN Chile",
-            "logo": "https://i.imgur.com/t4EXijz.png",
-            "group": "International News",
-            "stream_url": "http://190.110.96.238:8000/play/a0f5/index.m3u8"
-        },
-        {
             "name": "CNN en Espanol",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg/960px-Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg.png",
             "group": "International News",
             "stream_url": "https://streaming.onnethn.com/CNN_ESPANOL/playlist.m3u8"
+        },
+        {
+            "name": "CNN HD",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
+            "group": "International News",
+            "stream_url": "http://212.5.144.156:8080/cnn/index.m3u8"
         },
         {
             "name": "CNN International",
