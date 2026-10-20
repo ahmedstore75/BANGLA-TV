@@ -277,13 +277,13 @@
             "name": "DD Sports",
             "logo": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
-            "stream_url": "https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8"
+            "stream_url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8"
         },
         {
-            "name": "DD Sports SD",
+            "name": "DD Sports HD",
             "logo": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
-            "stream_url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8"
+            "stream_url": "https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8"
         },
         {
             "name": "Elbeshara GTV",
@@ -832,12 +832,6 @@
             "stream_url": "https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8"
         },
         {
-            "name": "Sony Pix HD",
-            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://103.151.60.162:2122/play/a01d/index.m3u8?hls"
-        },
-        {
             "name": "Star Movies  HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png",
             "group": "English Movie Channels",
@@ -1057,13 +1051,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -1166,6 +1160,12 @@
             "logo": "https://dtil.tmsimg.com/assets/s143221_ld_h15_aa.png?lock=720x540",
             "group": "Music Channels",
             "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJANAMTV/index.m3u8"
+        },
+        {
+            "name": "JapanimTV",
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
+            "group": "Music Channels",
+            "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
         },
         {
             "name": "Kozoom TV",
@@ -1409,13 +1409,13 @@
         },
         {
             "name": "CNN International",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CNN_INTERNATIONAL/images/LOGO_HD/image.png",
+            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/CNN-International-Logo.svg/960px-CNN-International-Logo.svg.png",
             "group": "International News",
             "stream_url": "https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8"
         },
         {
             "name": "CNN International North America",
-            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CNN_INTERNATIONAL/images/LOGO_HD/image.png",
+            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/CNN-International-Logo.svg/960px-CNN-International-Logo.svg.png",
             "group": "International News",
             "stream_url": "https://d2sybdl23b9psq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-bocx3i7bjz0dg/CNNFAST_GB.m3u8"
         },
