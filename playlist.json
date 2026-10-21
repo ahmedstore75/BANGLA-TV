@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 221,
+    "total_channels": 219,
     "status": "success",
     "channels": [
         {
@@ -29,15 +29,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://i.imgur.com/hJxFLvF.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -170,12 +170,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://103.185.24.134:3001/SONIC/index.m3u8"
-        },
-        {
-            "name": "Star Jalsha",
-            "logo": "https://i.imgur.com/IlufzR5.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.151.60.162:2122/play/a00w/index.m3u8?hls"
         },
         {
             "name": "Star Jalsha HD",
@@ -871,13 +865,13 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://stream.mcquack.net/205/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
         },
         {
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+            "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -889,13 +883,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -962,6 +956,12 @@
             "logo": "https://i.imgur.com/KvdFCD5.png",
             "group": "Music Channels",
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
+        },
+        {
+            "name": "CEACOM TV",
+            "logo": "https://i.imgur.com/hutdRfk.png",
+            "group": "Music Channels",
+            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
         },
         {
             "name": "Dare To Dream Network",
@@ -1078,12 +1078,6 @@
             "stream_url": "https://d2o3r1shda7xvv.cloudfront.net/index_5.m3u8"
         },
         {
-            "name": "Sangkem TV",
-            "logo": "https://i.imgur.com/728fAcC.png",
-            "group": "Music Channels",
-            "stream_url": "https://live.sangkemtv.com/memfs/sangkem.m3u8"
-        },
-        {
             "name": "Sathiyam TV",
             "logo": "https://dtil.tmsimg.com/assets/s143765_ld_h15_aa.png?lock=720x540",
             "group": "Music Channels",
@@ -1148,12 +1142,6 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZOOM/images/LOGO_HD/image.png",
             "group": "Music Channels",
             "stream_url": "https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8"
-        },
-        {
-            "name": "A2 CNN",
-            "logo": "https://i.imgur.com/TgO3Lzi.png",
-            "group": "International News",
-            "stream_url": "https://tv.a2news.com/live/smil:a2cnnweb.stream.smil/playlist.m3u8"
         },
         {
             "name": "Aaj Tak HD",
