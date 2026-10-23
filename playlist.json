@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 205,
+    "total_channels": 200,
     "status": "success",
     "channels": [
         {
@@ -35,15 +35,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.imgur.com/hJxFLvF.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -62,12 +62,6 @@
             "logo": "https://i.imgur.com/gXsddRK.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
-        },
-        {
-            "name": "Ekushey TV",
-            "logo": "https://i.imgur.com/lRpkGHj.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
         },
         {
             "name": "Madani Channel Bangla",
@@ -218,18 +212,6 @@
             "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002E9LQS.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8"
-        },
-        {
-            "name": "Eurosport 1 Hungary",
-            "logo": "https://i.imgur.com/olQJgm7.png",
-            "group": "Sports Channels",
-            "stream_url": "http://88.212.15.17/live/esp1_hun/index.m3u8"
-        },
-        {
-            "name": "Eurosport 2 Hungary",
-            "logo": "https://i.imgur.com/f56dHgR.png",
-            "group": "Sports Channels",
-            "stream_url": "http://88.212.15.17/live/esp2_hun/index.m3u8"
         },
         {
             "name": "FGTV",
@@ -418,6 +400,12 @@
             "stream_url": "https://video1.getstreamhosting.com:1936/8322/8322/playlist.m3u8"
         },
         {
+            "name": "B4U Movies",
+            "logo": "https://i.imgur.com/M9kMFJl.png",
+            "group": "Indian Movie Channels",
+            "stream_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
+        },
+        {
             "name": "Colors Cineplex",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX/images/LOGO_HD/image.png",
             "group": "Indian Movie Channels",
@@ -544,18 +532,6 @@
             "stream_url": "http://88.212.15.17/live/test_hbo_hd_hevc/playlist.m3u8"
         },
         {
-            "name": "HBO 2",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226",
-            "group": "English Movie Channels",
-            "stream_url": "http://88.212.15.17/live/test_hbo2_hd_hevc/playlist.m3u8"
-        },
-        {
-            "name": "HBO 3",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/6/6f/HBO_3_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122202",
-            "group": "English Movie Channels",
-            "stream_url": "http://88.212.15.17/live/test_hbo3_hd_hevc/playlist.m3u8"
-        },
-        {
             "name": "HBO Asia Taiwan",
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
             "group": "English Movie Channels",
@@ -664,12 +640,6 @@
             "stream_url": "http://149.100.11.252:8000/play/a056/index.m3u8"
         },
         {
-            "name": "Cartoon Network CEE Czech Republic",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
-            "group": "Kids Channels",
-            "stream_url": "http://88.212.15.17/live/test_cartoon_network_tizen/playlist.m3u8"
-        },
-        {
             "name": "Cartoon Network CEE Poland",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
@@ -775,12 +745,6 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://88.212.15.17/live/id_hun/index.m3u8"
-        },
-        {
-            "name": "Investigation Discovery",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
-            "group": "Documentary & Info",
             "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
         },
         {
@@ -799,13 +763,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
+            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -872,6 +836,12 @@
             "logo": "https://i.imgur.com/KvdFCD5.png",
             "group": "Music Channels",
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
+        },
+        {
+            "name": "CEACOM TV",
+            "logo": "https://i.imgur.com/hutdRfk.png",
+            "group": "Music Channels",
+            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
         },
         {
             "name": "Dare To Dream Network",
