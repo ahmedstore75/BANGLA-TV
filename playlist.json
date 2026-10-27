@@ -232,6 +232,12 @@
             "stream_url": "https://cdn.pishow.tv/ott/live/1161/master.m3u8"
         },
         {
+            "name": "DG:TV",
+            "logo": "https://dg.church/tile-dgtv.jpg",
+            "group": "Sports Channels",
+            "stream_url": "https://mdn.dg.church/673ac57a073a4-1/index.m3u8"
+        },
+        {
             "name": "Elbeshara GTV",
             "logo": "https://i.imgur.com/b0Wx7pE.png",
             "group": "Sports Channels",
@@ -260,12 +266,6 @@
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
-        },
-        {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -332,18 +332,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s143927_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 1",
-            "logo": "https://i.imgur.com/5YFsqPx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 3",
-            "logo": "https://i.imgur.com/OQXEhqu.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
         },
         {
             "name": "Willow Sports",
@@ -640,6 +628,12 @@
             "stream_url": "https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8"
         },
         {
+            "name": "Sony Pix HD",
+            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://103.151.60.162:2122/play/a01d/index.m3u8?hls"
+        },
+        {
             "name": "ABP Ananda",
             "logo": "https://dtil.tmsimg.com/assets/s142518_ld_h15_aa.png?lock=720x540",
             "group": "Kolkata Bangla",
@@ -926,6 +920,12 @@
             "logo": "https://dtil.tmsimg.com/assets/s143136_ld_h15_aa.png?lock=720x540",
             "group": "Music Channels",
             "stream_url": "https://cdn.pishow.tv/ott/live/280/master.m3u8"
+        },
+        {
+            "name": "Hum TV",
+            "logo": "https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png",
+            "group": "Music Channels",
+            "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
         },
         {
             "name": "Janam TV",
