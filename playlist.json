@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 212,
+    "total_channels": 210,
     "status": "success",
     "channels": [
         {
@@ -142,12 +142,6 @@
             "stream_url": "http://158.69.24.53:8080/probashi_tv/index.m3u8"
         },
         {
-            "name": "Rajdhani TV SD",
-            "logo": "https://i.imgur.com/MBm2gPz.jpeg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
-        },
-        {
             "name": "RTV",
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
@@ -236,12 +230,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://cdn.pishow.tv/ott/live/1161/master.m3u8"
-        },
-        {
-            "name": "DG:TV",
-            "logo": "https://dg.church/tile-dgtv.jpg",
-            "group": "Sports Channels",
-            "stream_url": "https://mdn.dg.church/673ac57a073a4-1/index.m3u8"
         },
         {
             "name": "Elbeshara GTV",
@@ -356,12 +344,6 @@
             "logo": "https://i.imgur.com/OQXEhqu.png",
             "group": "Sports Channels",
             "stream_url": "https://dethich.pw/thvl3/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 4",
-            "logo": "https://i.imgur.com/ARhIkvR.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Willow Sports",
@@ -634,16 +616,28 @@
             "stream_url": "http://103.151.60.162:2122/play/a02w/index.m3u8?hls"
         },
         {
+            "name": "NH BollyFlix",
+            "logo": "https://i.ibb.co/yF9MPTDK/blyflx.png",
+            "group": "English Movie Channels",
+            "stream_url": "https://jmp2.uk/stvp-IN46000140Q"
+        },
+        {
             "name": "NH BollyRaga",
             "logo": "https://i.ibb.co/BKB9mv1K/NH-Bolly-Raga.png",
             "group": "English Movie Channels",
             "stream_url": "https://jmp2.uk/stvp-IN460001373"
         },
         {
-            "name": "Sony Pix HD",
-            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
+            "name": "Paramount Movie Channel",
+            "logo": "https://i.imgur.com/sj5h9bl.png",
             "group": "English Movie Channels",
-            "stream_url": "http://103.151.60.162:2122/play/a01d/index.m3u8?hls"
+            "stream_url": "https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8"
+        },
+        {
+            "name": "Paramount+ Picks",
+            "logo": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
+            "group": "English Movie Channels",
+            "stream_url": "https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8"
         },
         {
             "name": "ABP Ananda",
@@ -823,12 +817,6 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
-        },
-        {
-            "name": "National Geographic",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
-            "group": "Documentary & Info",
             "stream_url": "http://138.121.15.230:9002/NAT-GEO/index.m3u8"
         },
         {
@@ -836,6 +824,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://176.61.157.250/NationalGeographic/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -932,12 +926,6 @@
             "logo": "https://dtil.tmsimg.com/assets/s143136_ld_h15_aa.png?lock=720x540",
             "group": "Music Channels",
             "stream_url": "https://cdn.pishow.tv/ott/live/280/master.m3u8"
-        },
-        {
-            "name": "Hum TV",
-            "logo": "https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png",
-            "group": "Music Channels",
-            "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
         },
         {
             "name": "Janam TV",
