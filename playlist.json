@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 194,
+    "total_channels": 203,
     "status": "success",
     "channels": [
         {
@@ -8,6 +8,12 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
+        },
+        {
+            "name": "ATN Bangla",
+            "logo": "https://i.imgur.com/K1HmMRz.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
         },
         {
             "name": "Azan TV",
@@ -29,15 +35,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.imgur.com/hJxFLvF.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -56,6 +62,12 @@
             "logo": "https://i.imgur.com/lRpkGHj.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
+        },
+        {
+            "name": "Maasranga TV",
+            "logo": "https://i.imgur.com/uVZJMed.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://tvsen5.aynascope.net/maasrangatv/index.m3u8"
         },
         {
             "name": "Madani Channel Bangla",
@@ -122,6 +134,12 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
+        },
+        {
+            "name": "RTV",
+            "logo": "https://i.imgur.com/yu8ugqt.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
         },
         {
             "name": "Rupashi Bangla TV",
@@ -244,12 +262,6 @@
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
         },
         {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
-        },
-        {
             "name": "King TV",
             "logo": "https://i.imgur.com/dujrwRE.png",
             "group": "Sports Channels",
@@ -278,6 +290,30 @@
             "logo": "https://dtil.tmsimg.com/assets/s143927_ld_h15_aa.png?lock=720x540",
             "group": "Sports Channels",
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 1",
+            "logo": "https://i.imgur.com/5YFsqPx.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 3",
+            "logo": "https://i.imgur.com/OQXEhqu.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 4",
+            "logo": "https://i.imgur.com/ARhIkvR.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
+        },
+        {
+            "name": "Willow",
+            "logo": "https://cricket.willow.tv/_nuxt/img/willow_blue_logo.362ed8e.png",
+            "group": "Sports Channels",
+            "stream_url": "http://tvsen5.aynascope.net/willowhd/index.m3u8"
         },
         {
             "name": "Willow Sports",
@@ -332,6 +368,12 @@
             "logo": "https://i.imgur.com/HPVsIa4.png",
             "group": "Islamic TV",
             "stream_url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv2/playlist.m3u8"
+        },
+        {
+            "name": "Madani Channel English",
+            "logo": "https://i.imgur.com/Abi9j0A.png",
+            "group": "Islamic TV",
+            "stream_url": "http://tvsen7.aynascope.net/MadaniTV/index.m3u8"
         },
         {
             "name": "Madani Channel Urdu",
@@ -484,6 +526,12 @@
             "stream_url": "http://88.212.15.50/live/test_hbo_hd_hevc/playlist.m3u8"
         },
         {
+            "name": "HBO",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/960px-HBO_logo.svg.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://tvsen7.aynascope.net/hbo/index.m3u8"
+        },
+        {
             "name": "HBO 2",
             "logo": "https://i.imgur.com/2e3muOJ.png",
             "group": "English Movie Channels",
@@ -506,6 +554,12 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
             "group": "English Movie Channels",
             "stream_url": "http://125.227.210.55:1003/VideoInput/play.ts"
+        },
+        {
+            "name": "HBO Hits",
+            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/HBO_Hits_Logo.svg/960px-HBO_Hits_Logo.svg.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://tvsen7.aynascope.net/hbo2/index.m3u8"
         },
         {
             "name": "Khushboo Bangla",
@@ -709,13 +763,13 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+            "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://stream.mcquack.net/205/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
         },
         {
             "name": "National Geographic",
