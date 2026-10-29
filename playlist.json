@@ -58,12 +58,6 @@
             "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
         },
         {
-            "name": "Green TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
-        },
-        {
             "name": "Madani Channel Bangla",
             "logo": "https://i.imgur.com/vIJTVia.png",
             "group": "Bangladeshi TV",
@@ -286,24 +280,6 @@
             "stream_url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8"
         },
         {
-            "name": "Vinh Long TV 1",
-            "logo": "https://i.imgur.com/5YFsqPx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 3",
-            "logo": "https://i.imgur.com/OQXEhqu.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 4",
-            "logo": "https://i.imgur.com/ARhIkvR.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
-        },
-        {
             "name": "Willow Sports",
             "logo": "https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png",
             "group": "Sports Channels",
@@ -332,6 +308,12 @@
             "logo": "https://i.imgur.com/er5hOK4.png",
             "group": "Islamic TV",
             "stream_url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8"
+        },
+        {
+            "name": "Iqra Bangla",
+            "logo": "https://i.imgur.com/BZBZAeC.png",
+            "group": "Islamic TV",
+            "stream_url": "https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8"
         },
         {
             "name": "Iqraa Africa & Europe",
@@ -544,6 +526,12 @@
             "stream_url": "http://stream.mcquack.net/112/index.m3u8"
         },
         {
+            "name": "NH BollyFlix",
+            "logo": "https://i.ibb.co/yF9MPTDK/blyflx.png",
+            "group": "English Movie Channels",
+            "stream_url": "https://jmp2.uk/stvp-IN46000140Q"
+        },
+        {
             "name": "NH BollyRaga",
             "logo": "https://i.ibb.co/BKB9mv1K/NH-Bolly-Raga.png",
             "group": "English Movie Channels",
@@ -745,13 +733,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
+            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic  HD East",
@@ -880,6 +868,12 @@
             "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8"
         },
         {
+            "name": "Marutam TV",
+            "logo": "https://i.imgur.com/cFNw4Af.png",
+            "group": "Music Channels",
+            "stream_url": "https://mntv.livebox.co.in/mntvhls/live.m3u8"
+        },
+        {
             "name": "Meta Film TV",
             "logo": "",
             "group": "Music Channels",
@@ -956,6 +950,12 @@
             "logo": "https://papaji.freetvindia.com/media/channels/SarnamTV.png",
             "group": "Music Channels",
             "stream_url": "https://mumt06.tangotv.in/qYyB8fXVSHARNAMTV/index.m3u8"
+        },
+        {
+            "name": "Soham TV",
+            "logo": "https://i.imgur.com/cpedJ0L.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSOHAMTV/index.m3u8"
         },
         {
             "name": "SUMtv English",
