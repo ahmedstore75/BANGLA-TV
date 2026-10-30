@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 201,
+    "total_channels": 193,
     "status": "success",
     "channels": [
         {
@@ -8,12 +8,6 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
-        },
-        {
-            "name": "ATN Bangla",
-            "logo": "https://i.imgur.com/K1HmMRz.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
         },
         {
             "name": "Azan TV",
@@ -40,12 +34,6 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
-            "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
             "name": "Deshi TV",
             "logo": "https://i.imgur.com/PzqzgMm.png",
             "group": "Bangladeshi TV",
@@ -62,12 +50,6 @@
             "logo": "https://i.imgur.com/lRpkGHj.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
-        },
-        {
-            "name": "Maasranga TV",
-            "logo": "https://i.imgur.com/uVZJMed.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://tvsen5.aynascope.net/maasrangatv/index.m3u8"
         },
         {
             "name": "Madani Channel Bangla",
@@ -118,12 +100,6 @@
             "stream_url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8"
         },
         {
-            "name": "Peace TV Bangla",
-            "logo": "https://i.imgur.com/1ztVXUi.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8"
-        },
-        {
             "name": "Probashi TV News",
             "logo": "https://i.imgur.com/7oTsfQ4.png",
             "group": "Bangladeshi TV",
@@ -134,12 +110,6 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
-        },
-        {
-            "name": "RTV",
-            "logo": "https://i.imgur.com/yu8ugqt.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
         },
         {
             "name": "Rupashi Bangla TV",
@@ -274,12 +244,6 @@
             "stream_url": "https://d2vfwvjxwtwq1t.cloudfront.net/out/v1/6b24239d5517495b986e7705490c6e65/index.m3u8"
         },
         {
-            "name": "Sky Sports 1",
-            "logo": "https://i.imgur.com/9onSfMi.png",
-            "group": "Sports Channels",
-            "stream_url": "http://45.228.234.9:8000/play/a06b/index.m3u8"
-        },
-        {
             "name": "T Sports 7",
             "logo": "https://i.imgur.com/KyI0s5n.png",
             "group": "Sports Channels",
@@ -308,12 +272,6 @@
             "logo": "https://i.imgur.com/ARhIkvR.png",
             "group": "Sports Channels",
             "stream_url": "https://dethich.pw/thvl4/index.m3u8"
-        },
-        {
-            "name": "Willow",
-            "logo": "https://cricket.willow.tv/_nuxt/img/willow_blue_logo.362ed8e.png",
-            "group": "Sports Channels",
-            "stream_url": "http://tvsen5.aynascope.net/willowhd/index.m3u8"
         },
         {
             "name": "Willow Sports",
@@ -368,12 +326,6 @@
             "logo": "https://i.imgur.com/HPVsIa4.png",
             "group": "Islamic TV",
             "stream_url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv2/playlist.m3u8"
-        },
-        {
-            "name": "Madani Channel English",
-            "logo": "https://i.imgur.com/Abi9j0A.png",
-            "group": "Islamic TV",
-            "stream_url": "http://tvsen7.aynascope.net/MadaniTV/index.m3u8"
         },
         {
             "name": "Madani Channel Urdu",
@@ -532,12 +484,6 @@
             "stream_url": "http://88.212.15.50/live/test_hbo_hd_hevc/playlist.m3u8"
         },
         {
-            "name": "HBO",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/960px-HBO_logo.svg.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://tvsen7.aynascope.net/hbo/index.m3u8"
-        },
-        {
             "name": "HBO 2",
             "logo": "https://i.imgur.com/2e3muOJ.png",
             "group": "English Movie Channels",
@@ -560,12 +506,6 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
             "group": "English Movie Channels",
             "stream_url": "http://125.227.210.55:1003/VideoInput/play.ts"
-        },
-        {
-            "name": "HBO Hits",
-            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/HBO_Hits_Logo.svg/960px-HBO_Hits_Logo.svg.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://tvsen7.aynascope.net/hbo2/index.m3u8"
         },
         {
             "name": "Khushboo Bangla",
@@ -781,13 +721,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
+            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -916,6 +856,12 @@
             "stream_url": "http://ares.mnet.mk/hls/mnet-sport.m3u8"
         },
         {
+            "name": "Madhimugam TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8"
+        },
+        {
             "name": "Marutam TV",
             "logo": "https://i.imgur.com/cFNw4Af.png",
             "group": "Music Channels",
@@ -932,6 +878,12 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
