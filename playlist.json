@@ -1,8 +1,14 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 196,
+    "total_channels": 203,
     "status": "success",
     "channels": [
+        {
+            "name": "Aamar Bangla",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
+        },
         {
             "name": "ATN Bangla",
             "logo": "https://i.imgur.com/K1HmMRz.png",
@@ -29,15 +35,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://i.imgur.com/hJxFLvF.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.imgur.com/hJxFLvF.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -68,12 +74,6 @@
             "logo": "https://i.imgur.com/vIJTVia.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8"
-        },
-        {
-            "name": "Matribhumi TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://live.playmax.live/matribhumi/index.m3u8"
         },
         {
             "name": "Movie Bangla",
@@ -128,6 +128,12 @@
             "logo": "https://i.imgur.com/yu8ugqt.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8"
+        },
+        {
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Star Jalsha HD",
@@ -640,6 +646,18 @@
             "stream_url": "https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8"
         },
         {
+            "name": "Cartoon Network",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+        },
+        {
+            "name": "Cartoon Network",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "http://212.5.144.156:8080/cartoon/index.m3u8"
+        },
+        {
             "name": "Cartoon Network Arabic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cartoon_Network_Arabic_logo.png/960px-Cartoon_Network_Arabic_logo.png",
             "group": "Kids Channels",
@@ -751,6 +769,12 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+        },
+        {
+            "name": "Investigation Discovery",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
@@ -764,6 +788,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic  HD East",
@@ -908,6 +938,12 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1106,6 +1142,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg/960px-Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg.png",
             "group": "International News",
             "stream_url": "https://streaming.onnethn.com/CNN_ESPANOL/playlist.m3u8"
+        },
+        {
+            "name": "CNN HD",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
+            "group": "International News",
+            "stream_url": "http://212.5.144.156:8080/cnn/index.m3u8"
         },
         {
             "name": "CNN International",
