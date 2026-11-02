@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 216,
+    "total_channels": 214,
     "status": "success",
     "channels": [
         {
@@ -14,12 +14,6 @@
             "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangladeshi TV",
             "stream_url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8"
-        },
-        {
-            "name": "Azan TV",
-            "logo": "https://i.imgur.com/JlqS6I4.jpeg",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
         },
         {
             "name": "Bangla Vision",
@@ -178,12 +172,6 @@
             "stream_url": "https://freem3u.xyz/api/live/play.m3u8?vid=111"
         },
         {
-            "name": "Awakening TV",
-            "logo": "https://i.imgur.com/p26iWOi.png",
-            "group": "Sports Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HAWAKENINGTV/index.m3u8"
-        },
-        {
             "name": "beIN SPORTS XTRA",
             "logo": "https://i.ibb.co/HT49GPmB/XTRA-2.png",
             "group": "Sports Channels",
@@ -274,12 +262,6 @@
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
         },
         {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
-        },
-        {
             "name": "King TV",
             "logo": "https://i.imgur.com/dujrwRE.png",
             "group": "Sports Channels",
@@ -290,6 +272,12 @@
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SATSANG/images/LOGO_HD/image.png",
             "group": "Sports Channels",
             "stream_url": "https://d2vfwvjxwtwq1t.cloudfront.net/out/v1/6b24239d5517495b986e7705490c6e65/index.m3u8"
+        },
+        {
+            "name": "Sky Sport Select",
+            "logo": "https://i.imgur.com/6x2anTA.png",
+            "group": "Sports Channels",
+            "stream_url": "http://37.49.224.5/stream/53/index.m3u8"
         },
         {
             "name": "Sky Sports 1",
@@ -326,6 +314,30 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
             "group": "Sports Channels",
             "stream_url": "http://181.78.79.131:8000/play/a0mo"
+        },
+        {
+            "name": "TNT Sports 1",
+            "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/tnt-sports-1-uk.png?raw=true",
+            "group": "Sports Channels",
+            "stream_url": "http://37.49.224.5:80/stream/1/index.m3u8"
+        },
+        {
+            "name": "TNT Sports 2",
+            "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/tnt-sports-2-uk.png?raw=true",
+            "group": "Sports Channels",
+            "stream_url": "http://37.49.224.5:80/stream/2/index.m3u8"
+        },
+        {
+            "name": "TNT Sports 3",
+            "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/tnt-sports-3-uk.png?raw=true",
+            "group": "Sports Channels",
+            "stream_url": "http://37.49.224.5:80/stream/3/index.m3u8"
+        },
+        {
+            "name": "TNT Sports 4",
+            "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/tnt-sports-4-uk.png?raw=true",
+            "group": "Sports Channels",
+            "stream_url": "http://37.49.224.5:80/stream/4/index.m3u8"
         },
         {
             "name": "TNT Sports Premium ArgentinaHD",
@@ -472,24 +484,6 @@
             "stream_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8"
         },
         {
-            "name": "Goldmines 2",
-            "logo": "",
-            "group": "Indian Movie Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINES2/index.m3u8"
-        },
-        {
-            "name": "Goldmines Action",
-            "logo": "https://yt3.googleusercontent.com/_X6U6bMLF-pTu5wBMFwsSI6aubGrXk2B0kUKdGiLIMqFLyDIne4Ot4ro76BS1S8fX3pWcCwS=s900-c-k-c0x00ffffff-no-rj",
-            "group": "Indian Movie Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8"
-        },
-        {
-            "name": "Goldmines Bollywood",
-            "logo": "https://i.imgur.com/6mNQ9mM.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8"
-        },
-        {
             "name": "Zee Cinema",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movie Channels",
@@ -593,15 +587,15 @@
         },
         {
             "name": "HBO 2",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226",
-            "group": "English Movie Channels",
-            "stream_url": "http://88.212.15.50/live/test_hbo2_hd_hevc/playlist.m3u8"
-        },
-        {
-            "name": "HBO 2",
             "logo": "https://i.imgur.com/2e3muOJ.png",
             "group": "English Movie Channels",
             "stream_url": "http://185.227.34.179:8080/hbo-2-hd/index.m3u8"
+        },
+        {
+            "name": "HBO 2",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226",
+            "group": "English Movie Channels",
+            "stream_url": "http://88.212.15.50/live/test_hbo2_hd_hevc/playlist.m3u8"
         },
         {
             "name": "HBO 3",
@@ -787,6 +781,12 @@
             "name": "Animal Planet",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://37.49.224.5/stream/10/index.m3u8"
+        },
+        {
+            "name": "Animal Planet",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://stream.mcquack.net/114/index.m3u8"
         },
         {
@@ -812,6 +812,12 @@
             "logo": "https://dtil.tmsimg.com/assets/s159106_ld_h15_aa.png?lock=720x540",
             "group": "Documentary & Info",
             "stream_url": "https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8"
+        },
+        {
+            "name": "Discovery History",
+            "logo": "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb2407.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://37.49.224.5/stream/12/index.m3u8"
         },
         {
             "name": "Discovery Kids",
@@ -952,6 +958,12 @@
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
         },
         {
+            "name": "Dream TV",
+            "logo": "https://i.imgur.com/XRUDhqQ.png",
+            "group": "Music Channels",
+            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
+        },
+        {
             "name": "EWTN/Bonum TV",
             "logo": "https://i.imgur.com/LdsRz2E.png",
             "group": "Music Channels",
@@ -970,12 +982,6 @@
             "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
         },
         {
-            "name": "Janam TV",
-            "logo": "https://dtil.tmsimg.com/assets/s143221_ld_h15_aa.png?lock=720x540",
-            "group": "Music Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HJANAMTV/index.m3u8"
-        },
-        {
             "name": "JapanimTV",
             "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
             "group": "Music Channels",
@@ -992,12 +998,6 @@
             "logo": "https://i.imgur.com/7k8ar1Z.png",
             "group": "Music Channels",
             "stream_url": "http://ares.mnet.mk/hls/mnet-sport.m3u8"
-        },
-        {
-            "name": "Madhimugam TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8"
         },
         {
             "name": "Marutam TV",
@@ -1084,12 +1084,6 @@
             "stream_url": "https://mumt06.tangotv.in/qYyB8fXVSHARNAMTV/index.m3u8"
         },
         {
-            "name": "Soham TV",
-            "logo": "https://i.imgur.com/cpedJ0L.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HSOHAMTV/index.m3u8"
-        },
-        {
             "name": "SUMtv English",
             "logo": "https://i.imgur.com/hp1rJjX.png",
             "group": "Music Channels",
@@ -1106,12 +1100,6 @@
             "logo": "https://papaji.freetvindia.com/media/channels/Valam_TV.png",
             "group": "Music Channels",
             "stream_url": "http://cabletv.valamtv.in/hls/stream0.m3u8"
-        },
-        {
-            "name": "Valam TV Dayro",
-            "logo": "https://papaji.freetvindia.com/media/channels/Valam_Dayro.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumt03.tangotv.in/Dsly5z3HVALAMDAIRO/index.m3u8"
         },
         {
             "name": "Velicham TV",
