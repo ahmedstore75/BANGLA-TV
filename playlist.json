@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 212,
+    "total_channels": 210,
     "status": "success",
     "channels": [
         {
@@ -94,6 +94,12 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
+            "name": "News 21 Bangla TV",
+            "logo": "https://i.imgur.com/ijuJfmd.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
+        },
+        {
             "name": "Nexus TV",
             "logo": "https://i.imgur.com/XcJZKg4.png",
             "group": "Bangladeshi TV",
@@ -106,12 +112,6 @@
             "stream_url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8"
         },
         {
-            "name": "Peace TV Bangla",
-            "logo": "https://i.imgur.com/1ztVXUi.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8"
-        },
-        {
             "name": "Probashi TV News",
             "logo": "https://i.imgur.com/7oTsfQ4.png",
             "group": "Bangladeshi TV",
@@ -122,6 +122,12 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
+        },
+        {
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Zee Bangla HD",
@@ -361,13 +367,13 @@
             "name": "TNT Sports",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
             "group": "Sports Channels",
-            "stream_url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8"
+            "stream_url": "http://209.45.101.130:8040/play/a03s/index.m3u8"
         },
         {
             "name": "TNT Sports",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
             "group": "Sports Channels",
-            "stream_url": "http://209.45.101.130:8040/play/a03s/index.m3u8"
+            "stream_url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8"
         },
         {
             "name": "TNT Sports  SD",
@@ -410,24 +416,6 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
             "group": "Sports Channels",
             "stream_url": "http://205.235.6.29:8000/play/a104/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 1",
-            "logo": "https://i.imgur.com/5YFsqPx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 3",
-            "logo": "https://i.imgur.com/OQXEhqu.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 4",
-            "logo": "https://i.imgur.com/ARhIkvR.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Vinh Long TV 5",
@@ -883,13 +871,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
+            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
         },
         {
             "name": "3ABN Proclaim! Network",
