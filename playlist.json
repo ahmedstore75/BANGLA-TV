@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 210,
+    "total_channels": 212,
     "status": "success",
     "channels": [
         {
@@ -88,16 +88,10 @@
             "stream_url": "http://alvetv.com/moviebanglatv/8080/index.m3u8"
         },
         {
-            "name": "NAN TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
+            "name": "My TV",
+            "logo": "https://i.imgur.com/475qK5T.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
-        },
-        {
-            "name": "News 21 Bangla TV",
-            "logo": "https://i.imgur.com/ijuJfmd.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
             "name": "Nexus TV",
@@ -416,6 +410,24 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
             "group": "Sports Channels",
             "stream_url": "http://205.235.6.29:8000/play/a104/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 1",
+            "logo": "https://i.imgur.com/5YFsqPx.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 3",
+            "logo": "https://i.imgur.com/OQXEhqu.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 4",
+            "logo": "https://i.imgur.com/ARhIkvR.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Vinh Long TV 5",
