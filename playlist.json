@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 218,
+    "total_channels": 214,
     "status": "success",
     "channels": [
         {
@@ -88,10 +88,22 @@
             "stream_url": "http://alvetv.com/moviebanglatv/8080/index.m3u8"
         },
         {
+            "name": "My TV",
+            "logo": "https://i.imgur.com/475qK5T.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
+        },
+        {
             "name": "NAN TV",
             "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
+        },
+        {
+            "name": "News 21 Bangla TV",
+            "logo": "https://i.imgur.com/ijuJfmd.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
         },
         {
             "name": "Nexus TV",
@@ -152,12 +164,6 @@
             "logo": "https://i.imgur.com/Vtk2cGI.png",
             "group": "Sports Channels",
             "stream_url": "https://vg162.adcdsd123321.shop/7.m3u8"
-        },
-        {
-            "name": "beIN Sports USA",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png",
-            "group": "Sports Channels",
-            "stream_url": "https://tvsen6.aynaott.com/beinsports/index.m3u8"
         },
         {
             "name": "beIN SPORTS XTRA",
@@ -322,12 +328,6 @@
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
         },
         {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
-        },
-        {
             "name": "King TV",
             "logo": "https://i.imgur.com/dujrwRE.png",
             "group": "Sports Channels",
@@ -373,13 +373,13 @@
             "name": "TNT Sports",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
             "group": "Sports Channels",
-            "stream_url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8"
+            "stream_url": "http://209.45.101.130:8040/play/a03s/index.m3u8"
         },
         {
             "name": "TNT Sports",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
             "group": "Sports Channels",
-            "stream_url": "http://209.45.101.130:8040/play/a03s/index.m3u8"
+            "stream_url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8"
         },
         {
             "name": "TNT Sports  SD",
@@ -604,12 +604,6 @@
             "stream_url": "http://193.33.39.108:9009/play/a024"
         },
         {
-            "name": "Cinemax Asia HD",
-            "logo": "https://i.imgur.com/c8crJfA.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://202.150.165.66:8088/play/104-Cinemax/index.m3u8"
-        },
-        {
             "name": "Cinemax Asia Taiwan",
             "logo": "https://i.imgur.com/c8crJfA.png",
             "group": "English Movie Channels",
@@ -664,28 +658,10 @@
             "stream_url": "http://88.212.15.50/live/test_hbo3_hd_hevc/playlist.m3u8"
         },
         {
-            "name": "HBO Asia HD",
-            "logo": "https://i.imgur.com/cE2gBt6.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://202.150.165.66:8088/play/100-HBO/index.m3u8"
-        },
-        {
             "name": "HBO Asia Taiwan",
             "logo": "https://i.imgur.com/cE2gBt6.png",
             "group": "English Movie Channels",
             "stream_url": "http://125.227.210.55:1003/VideoInput/play.ts"
-        },
-        {
-            "name": "HBO Hits Asia HD",
-            "logo": "https://i.imgur.com/CTjmocc.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://202.150.165.66:8088/play/102-HBOHits/index.m3u8"
-        },
-        {
-            "name": "HBO Signature Asia HD",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/HBO_Signature_Asia.png/960px-HBO_Signature_Asia.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://202.150.165.66:8088/play/101-HBOSignature/index.m3u8"
         },
         {
             "name": "Khushboo Bangla",
