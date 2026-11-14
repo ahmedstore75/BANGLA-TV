@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 212,
+    "total_channels": 218,
     "status": "success",
     "channels": [
         {
@@ -35,15 +35,15 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://i.imgur.com/hJxFLvF.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
             "name": "Deshi TV",
@@ -62,12 +62,6 @@
             "logo": "https://i.imgur.com/lRpkGHj.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
-        },
-        {
-            "name": "Jalsha Movies",
-            "logo": "https://i.imgur.com/25eWjX2.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8"
         },
         {
             "name": "Madani Channel Bangla",
@@ -136,16 +130,10 @@
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
         },
         {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
-        },
-        {
             "name": "Zee Bangla HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BANGLA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://livetv.shamon-cable.net:8443/ZEE-Bangla/index.m3u8"
+            "stream_url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8"
         },
         {
             "name": "Arirang TV",
@@ -226,6 +214,12 @@
             "stream_url": "https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8"
         },
         {
+            "name": "Eurosport 1",
+            "logo": "https://i.imgur.com/olQJgm7.png",
+            "group": "Sports Channels",
+            "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_1/live.livx/playlist.m3u8"
+        },
+        {
             "name": "Eurosport 1 Bulgaria",
             "logo": "https://i.imgur.com/olQJgm7.png",
             "group": "Sports Channels",
@@ -280,6 +274,12 @@
             "stream_url": "http://85.117.37.43/eurosport1/index.m3u8"
         },
         {
+            "name": "Eurosport 2",
+            "logo": "https://i.imgur.com/f56dHgR.png",
+            "group": "Sports Channels",
+            "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2/live.livx/playlist.m3u8"
+        },
+        {
             "name": "Eurosport 2 Bulgaria",
             "logo": "https://i.imgur.com/f56dHgR.png",
             "group": "Sports Channels",
@@ -326,6 +326,12 @@
             "logo": "https://i.imgur.com/0o3zjC7.png",
             "group": "Sports Channels",
             "stream_url": "https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/5449.m3u8"
+        },
+        {
+            "name": "Fast Sports",
+            "logo": "https://i.imgur.com/VmaYUcq.png",
+            "group": "Sports Channels",
+            "stream_url": "http://s7.merlive.am/Fastsports/index.m3u8"
         },
         {
             "name": "FGTV",
@@ -542,6 +548,12 @@
             "logo": "https://i.imgur.com/EtQolw6.png",
             "group": "Islamic TV",
             "stream_url": "https://video1.getstreamhosting.com:1936/8322/8322/playlist.m3u8"
+        },
+        {
+            "name": "B4U Movies",
+            "logo": "https://i.imgur.com/M9kMFJl.png",
+            "group": "Indian Movie Channels",
+            "stream_url": "https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8"
         },
         {
             "name": "Colors Cineplex",
@@ -775,13 +787,19 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
         },
         {
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+        },
+        {
+            "name": "Cartoon Network  West",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "http://212.5.144.156:8080/cartoon/index.m3u8"
         },
         {
             "name": "Cartoon Network Arabic",
@@ -877,6 +895,12 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+        },
+        {
+            "name": "Investigation Discovery",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
@@ -890,6 +914,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "3ABN Proclaim! Network",
@@ -976,12 +1006,6 @@
             "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
         },
         {
-            "name": "JapanimTV",
-            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
-            "group": "Music Channels",
-            "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
-        },
-        {
             "name": "Kozoom TV",
             "logo": "https://i.imgur.com/M1Ee79b.png",
             "group": "Music Channels",
@@ -1010,6 +1034,12 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1196,6 +1226,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg/960px-Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg.png",
             "group": "International News",
             "stream_url": "https://amg00803-cnnfast-amg00803c3-lg-es-5477.playouts.now.amagi.tv/playlist.m3u8"
+        },
+        {
+            "name": "CNN HD",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
+            "group": "International News",
+            "stream_url": "http://212.5.144.156:8080/cnn/index.m3u8"
         },
         {
             "name": "CNN International",
