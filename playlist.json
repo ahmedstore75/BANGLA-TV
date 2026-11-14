@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 213,
+    "total_channels": 212,
     "status": "success",
     "channels": [
         {
@@ -136,12 +136,6 @@
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
         },
         {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
-        },
-        {
             "name": "Zee Bangla HD",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BANGLA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Bangladeshi TV",
@@ -218,12 +212,6 @@
             "logo": "https://i.imgur.com/b0Wx7pE.png",
             "group": "Sports Channels",
             "stream_url": "http://media3.smc-host.com:1935/elbesharagtv.com/gtv.smil/playlist.m3u8"
-        },
-        {
-            "name": "Eurosport  HD",
-            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002E9LQS.png?lock=720x540",
-            "group": "Sports Channels",
-            "stream_url": "https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8"
         },
         {
             "name": "Eurosport 1",
@@ -352,6 +340,12 @@
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
         },
         {
+            "name": "Gugbang TV",
+            "logo": "https://i.imgur.com/f1tz5fg.png",
+            "group": "Sports Channels",
+            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
+        },
+        {
             "name": "King TV",
             "logo": "https://i.imgur.com/dujrwRE.png",
             "group": "Sports Channels",
@@ -374,12 +368,6 @@
             "logo": "https://i.imgur.com/9onSfMi.png",
             "group": "Sports Channels",
             "stream_url": "http://45.228.234.9:8000/play/a06b/index.m3u8"
-        },
-        {
-            "name": "Sky Sports 2",
-            "logo": "https://i.imgur.com/VM0a8Ny.png",
-            "group": "Sports Channels",
-            "stream_url": "http://200.115.120.1:8000/play/ca82266/index.m3u8"
         },
         {
             "name": "T Sports 7",
@@ -793,13 +781,13 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
         },
         {
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
         },
         {
             "name": "Cartoon Network Arabic",
@@ -992,6 +980,12 @@
             "logo": "https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png",
             "group": "Music Channels",
             "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
+        },
+        {
+            "name": "JapanimTV",
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
+            "group": "Music Channels",
+            "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
         },
         {
             "name": "Kozoom TV",
