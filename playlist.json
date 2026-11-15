@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 212,
+    "total_channels": 223,
     "status": "success",
     "channels": [
         {
@@ -214,6 +214,12 @@
             "stream_url": "http://media3.smc-host.com:1935/elbesharagtv.com/gtv.smil/playlist.m3u8"
         },
         {
+            "name": "Eurosport  HD",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002E9LQS.png?lock=720x540",
+            "group": "Sports Channels",
+            "stream_url": "https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8"
+        },
+        {
             "name": "Eurosport 1",
             "logo": "https://i.imgur.com/olQJgm7.png",
             "group": "Sports Channels",
@@ -242,6 +248,12 @@
             "logo": "https://i.imgur.com/olQJgm7.png",
             "group": "Sports Channels",
             "stream_url": "http://88.212.7.14/live/esp1_hun/index.m3u8"
+        },
+        {
+            "name": "Eurosport 1 Italy",
+            "logo": "https://i.imgur.com/olQJgm7.png",
+            "group": "Sports Channels",
+            "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_1_it/live.livx/playlist.m3u8"
         },
         {
             "name": "Eurosport 1 Portugal",
@@ -298,6 +310,12 @@
             "stream_url": "http://88.212.7.14/live/esp2_hun/index.m3u8"
         },
         {
+            "name": "Eurosport 2 Italy",
+            "logo": "https://i.imgur.com/f56dHgR.png",
+            "group": "Sports Channels",
+            "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2_it/live.livx/playlist.m3u8"
+        },
+        {
             "name": "Eurosport 2 Portugal",
             "logo": "https://i.imgur.com/f56dHgR.png",
             "group": "Sports Channels",
@@ -320,6 +338,18 @@
             "logo": "https://i.imgur.com/f56dHgR.png",
             "group": "Sports Channels",
             "stream_url": "http://45.134.141.161:2200/ARG/Eurosport_2_HD/index.m3u8"
+        },
+        {
+            "name": "Eurosport 2 UK",
+            "logo": "https://i.imgur.com/f56dHgR.png",
+            "group": "Sports Channels",
+            "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2_en/live.livx/playlist.m3u8"
+        },
+        {
+            "name": "Eurosport 4 Polska",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/a/ae/Eurosport_4_2022.svg/revision/latest?cb=20220418053934",
+            "group": "Sports Channels",
+            "stream_url": "http://sultanios.alwaysdata.net/vavo.php?ID=2896573317"
         },
         {
             "name": "Eurosport 4K Romania",
@@ -665,15 +695,15 @@
         },
         {
             "name": "HBO 2",
-            "logo": "https://i.imgur.com/2e3muOJ.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://185.227.34.179:8080/hbo-2-hd/index.m3u8"
-        },
-        {
-            "name": "HBO 2",
             "logo": "https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226",
             "group": "English Movie Channels",
             "stream_url": "http://88.212.15.50/live/test_hbo2_hd_hevc/playlist.m3u8"
+        },
+        {
+            "name": "HBO 2",
+            "logo": "https://i.imgur.com/2e3muOJ.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://185.227.34.179:8080/hbo-2-hd/index.m3u8"
         },
         {
             "name": "HBO 3",
@@ -736,6 +766,12 @@
             "stream_url": "http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8"
         },
         {
+            "name": "Paramount Network",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://sultanios.alwaysdata.net/vavo.php?ID=3390498693"
+        },
+        {
             "name": "Paramount+ Picks",
             "logo": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
             "group": "English Movie Channels",
@@ -781,13 +817,13 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
         },
         {
-            "name": "Cartoon Network",
+            "name": "Cartoon Network  West",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/cartoon/index.m3u8"
         },
         {
             "name": "Cartoon Network Arabic",
@@ -883,6 +919,12 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+        },
+        {
+            "name": "Investigation Discovery",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
@@ -896,6 +938,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "3ABN Proclaim! Network",
@@ -994,6 +1042,12 @@
             "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8"
         },
         {
+            "name": "M-Net Info",
+            "logo": "https://i.ibb.co/0fnY2cj/IMG-20230419-161527.jpg",
+            "group": "Music Channels",
+            "stream_url": "https://live.mnet.mk/hls/mnet-info.m3u8"
+        },
+        {
             "name": "M-Net Sport",
             "logo": "https://i.imgur.com/7k8ar1Z.png",
             "group": "Music Channels",
@@ -1016,6 +1070,12 @@
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1202,6 +1262,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg/960px-Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg.png",
             "group": "International News",
             "stream_url": "https://amg00803-cnnfast-amg00803c3-lg-es-5477.playouts.now.amagi.tv/playlist.m3u8"
+        },
+        {
+            "name": "CNN HD",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
+            "group": "International News",
+            "stream_url": "http://212.5.144.156:8080/cnn/index.m3u8"
         },
         {
             "name": "CNN International",
