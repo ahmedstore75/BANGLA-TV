@@ -4,6 +4,12 @@
     "status": "success",
     "channels": [
         {
+            "name": "Aamar Bangla",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
+        },
+        {
             "name": "Ananda TV",
             "logo": "https://i.imgur.com/jkbo7Qe.png",
             "group": "Bangladeshi TV",
@@ -76,6 +82,12 @@
             "stream_url": "http://live.playmax.live/matribhumi/index.m3u8"
         },
         {
+            "name": "Movie Bangla",
+            "logo": "https://www.jagobd.com/wp-content/uploads/2016/02/moviebangla.jpg?x50681",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://alvetv.com/moviebanglatv/8080/index.m3u8"
+        },
+        {
             "name": "My TV",
             "logo": "https://i.imgur.com/475qK5T.png",
             "group": "Bangladeshi TV",
@@ -122,6 +134,12 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
+        },
+        {
+            "name": "Rupashi Bangla TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Zee Bangla HD",
@@ -314,12 +332,6 @@
             "logo": "https://i.imgur.com/f56dHgR.png",
             "group": "Sports Channels",
             "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2_en/live.livx/playlist.m3u8"
-        },
-        {
-            "name": "Eurosport 4 Polska",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/a/ae/Eurosport_4_2022.svg/revision/latest?cb=20220418053934",
-            "group": "Sports Channels",
-            "stream_url": "http://sultanios.alwaysdata.net/vavo.php?ID=2896573317"
         },
         {
             "name": "Eurosport 4K Romania",
@@ -730,12 +742,6 @@
             "stream_url": "http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8"
         },
         {
-            "name": "Paramount Network",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://sultanios.alwaysdata.net/vavo.php?ID=3390498693"
-        },
-        {
             "name": "Paramount+ Picks",
             "logo": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
             "group": "English Movie Channels",
@@ -781,13 +787,13 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
         },
         {
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
         },
         {
             "name": "Cartoon Network  HD",
@@ -853,13 +859,13 @@
             "name": "Animal Planet",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://23.237.104.106:8080/USA_ANIMAL_PLANET/index.m3u8"
+            "stream_url": "http://37.49.224.5/stream/10/index.m3u8"
         },
         {
             "name": "Animal Planet",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://37.49.224.5/stream/10/index.m3u8"
+            "stream_url": "http://23.237.104.106:8080/USA_ANIMAL_PLANET/index.m3u8"
         },
         {
             "name": "Animal Planet",
@@ -980,12 +986,6 @@
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
-        },
-        {
-            "name": "Dream TV",
-            "logo": "https://i.imgur.com/XRUDhqQ.png",
-            "group": "Music Channels",
-            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
         },
         {
             "name": "EWTN/Bonum TV",
