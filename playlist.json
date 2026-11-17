@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 212,
+    "total_channels": 220,
     "status": "success",
     "channels": [
         {
@@ -76,12 +76,6 @@
             "stream_url": "http://live.playmax.live/matribhumi/index.m3u8"
         },
         {
-            "name": "Movie Bangla",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2016/02/moviebangla.jpg?x50681",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://alvetv.com/moviebanglatv/8080/index.m3u8"
-        },
-        {
             "name": "My TV",
             "logo": "https://i.imgur.com/475qK5T.png",
             "group": "Bangladeshi TV",
@@ -128,12 +122,6 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
-        },
-        {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Zee Bangla HD",
@@ -328,12 +316,6 @@
             "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2_en/live.livx/playlist.m3u8"
         },
         {
-            "name": "Eurosport 3 Polska",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/d/da/Eurosport_3_2022.svg/revision/latest?cb=20220418054130",
-            "group": "Sports Channels",
-            "stream_url": "http://sultanios.alwaysdata.net/vavo.php?ID=512159637"
-        },
-        {
             "name": "Eurosport 4 Polska",
             "logo": "https://static.wikia.nocookie.net/logopedia/images/a/ae/Eurosport_4_2022.svg/revision/latest?cb=20220418053934",
             "group": "Sports Channels",
@@ -346,16 +328,16 @@
             "stream_url": "https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/5449.m3u8"
         },
         {
-            "name": "Fast Sports",
-            "logo": "https://i.imgur.com/VmaYUcq.png",
-            "group": "Sports Channels",
-            "stream_url": "http://s7.merlive.am/Fastsports/index.m3u8"
-        },
-        {
             "name": "FGTV",
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
+        },
+        {
+            "name": "Gugbang TV",
+            "logo": "https://i.imgur.com/f1tz5fg.png",
+            "group": "Sports Channels",
+            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -397,13 +379,13 @@
             "name": "TNT Sports",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
             "group": "Sports Channels",
-            "stream_url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8"
+            "stream_url": "http://209.45.101.130:8040/play/a03s/index.m3u8"
         },
         {
             "name": "TNT Sports",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/960px-TNT_Sports_2021_logo.svg.png",
             "group": "Sports Channels",
-            "stream_url": "http://209.45.101.130:8040/play/a03s/index.m3u8"
+            "stream_url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8"
         },
         {
             "name": "TNT Sports  SD",
@@ -440,6 +422,24 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
             "group": "Sports Channels",
             "stream_url": "http://181.78.79.131:8000/play/a0q9"
+        },
+        {
+            "name": "Vinh Long TV 1",
+            "logo": "https://i.imgur.com/5YFsqPx.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 3",
+            "logo": "https://i.imgur.com/OQXEhqu.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
+        },
+        {
+            "name": "Vinh Long TV 4",
+            "logo": "https://i.imgur.com/ARhIkvR.png",
+            "group": "Sports Channels",
+            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Vinh Long TV 5",
@@ -530,6 +530,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
             "group": "Islamic TV",
             "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
+        },
+        {
+            "name": "The Islamic Network",
+            "logo": "https://i.imgur.com/EtQolw6.png",
+            "group": "Islamic TV",
+            "stream_url": "https://video1.getstreamhosting.com:1936/8322/8322/playlist.m3u8"
         },
         {
             "name": "B4U Movies",
@@ -775,7 +781,25 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
+            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+        },
+        {
+            "name": "Cartoon Network",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
             "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+        },
+        {
+            "name": "Cartoon Network  HD",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "http://103.255.250.188:5002/cs25.m3u8?token=guoziyun&gid=cs25&channel=zhongying"
+        },
+        {
+            "name": "Cartoon Network  West",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "http://212.5.144.156:8080/cartoon/index.m3u8"
         },
         {
             "name": "Cartoon Network Arabic",
@@ -871,6 +895,12 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+        },
+        {
+            "name": "Investigation Discovery",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
+            "group": "Documentary & Info",
             "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
@@ -884,6 +914,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic Wild",
@@ -1012,6 +1048,12 @@
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
         },
         {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
+        },
+        {
             "name": "Payam TV",
             "logo": "https://i.imgur.com/qySEibb.png",
             "group": "Music Channels",
@@ -1090,16 +1132,16 @@
             "stream_url": "http://cabletv.valamtv.in/hls/stream0.m3u8"
         },
         {
-            "name": "Velicham TV",
-            "logo": "https://upload.wikimedia.org/wikipedia/en/e/e4/Logo_of_Velicham_TV.png",
-            "group": "Music Channels",
-            "stream_url": "https://mumbai-edge.smartplaytv.in/Velichamtv/index.m3u8"
-        },
-        {
             "name": "Zoom",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZOOM/images/LOGO_HD/image.png",
             "group": "Music Channels",
             "stream_url": "https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8"
+        },
+        {
+            "name": "Aaj Tak",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AAJ_TAK/images/LOGO_HD/image.png",
+            "group": "International News",
+            "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-791258/master.m3u8"
         },
         {
             "name": "Aaj Tak HD",
@@ -1196,6 +1238,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg/960px-Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg.png",
             "group": "International News",
             "stream_url": "https://amg00803-cnnfast-amg00803c3-lg-es-5477.playouts.now.amagi.tv/playlist.m3u8"
+        },
+        {
+            "name": "CNN HD",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
+            "group": "International News",
+            "stream_url": "http://212.5.144.156:8080/cnn/index.m3u8"
         },
         {
             "name": "CNN International",
