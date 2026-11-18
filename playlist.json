@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 222,
+    "total_channels": 218,
     "status": "success",
     "channels": [
         {
@@ -428,30 +428,6 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
             "group": "Sports Channels",
             "stream_url": "http://181.78.79.131:8000/play/a0q9"
-        },
-        {
-            "name": "TNT Sports Premium HD",
-            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
-            "group": "Sports Channels",
-            "stream_url": "https://play-fulltv.com.ar/playtvpre/tntsportschile.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 1",
-            "logo": "https://i.imgur.com/5YFsqPx.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl1/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 3",
-            "logo": "https://i.imgur.com/OQXEhqu.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl3/index.m3u8"
-        },
-        {
-            "name": "Vinh Long TV 4",
-            "logo": "https://i.imgur.com/ARhIkvR.png",
-            "group": "Sports Channels",
-            "stream_url": "https://dethich.pw/thvl4/index.m3u8"
         },
         {
             "name": "Vinh Long TV 5",
@@ -901,13 +877,13 @@
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
+            "stream_url": "http://stream.mcquack.net/205/index.m3u8"
         },
         {
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://stream.mcquack.net/205/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -919,13 +895,13 @@
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
+            "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
         },
         {
             "name": "National Geographic Wild",
@@ -1018,16 +994,16 @@
             "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
         },
         {
+            "name": "JapanimTV",
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
+            "group": "Music Channels",
+            "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
+        },
+        {
             "name": "Kozoom TV",
             "logo": "https://i.imgur.com/M1Ee79b.png",
             "group": "Music Channels",
             "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8"
-        },
-        {
-            "name": "M-Net Info",
-            "logo": "https://i.ibb.co/0fnY2cj/IMG-20230419-161527.jpg",
-            "group": "Music Channels",
-            "stream_url": "https://live.mnet.mk/hls/mnet-info.m3u8"
         },
         {
             "name": "M-Net Sport",

@@ -1,4 +1,4 @@
-#EXTM3U name="Ahmed Store IPTV | Total Channels: 222"
+#EXTM3U name="Ahmed Store IPTV | Total Channels: 218"
 
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png" group-title="Bangladeshi TV",Aamar Bangla
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
@@ -142,14 +142,6 @@ http://37.49.224.5/stream/3/index.m3u8
 http://37.49.224.5/stream/4/index.m3u8
 #EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" group-title="Sports Channels",TNT Sports Premium ArgentinaHD
 http://181.78.79.131:8000/play/a0q9
-#EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/TNT_Sports_Premium_%28Argentina%29.png/960px-TNT_Sports_Premium_%28Argentina%29.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" group-title="Sports Channels",TNT Sports Premium HD
-https://play-fulltv.com.ar/playtvpre/tntsportschile.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/5YFsqPx.png" group-title="Sports Channels",Vinh Long TV 1
-https://dethich.pw/thvl1/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/OQXEhqu.png" group-title="Sports Channels",Vinh Long TV 3
-https://dethich.pw/thvl3/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/ARhIkvR.png" group-title="Sports Channels",Vinh Long TV 4
-https://dethich.pw/thvl4/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/refs/heads/master/Truy%E1%BB%81n%20h%C3%ACnh%20V%C4%A9nh%20Long%205%20HD.png" group-title="Sports Channels",Vinh Long TV 5
 https://freem3u.xyz/api/live/play.m3u8?vid=91
 #EXTINF:-1 tvg-logo="https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png" group-title="Sports Channels",Willow Sports
@@ -299,15 +291,15 @@ https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
 http://88.212.7.14/live/id_hun/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
-http://212.5.144.156:8080/id/index.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
 http://stream.mcquack.net/205/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" group-title="Documentary & Info",Investigation Discovery
+http://212.5.144.156:8080/id/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
 http://138.121.15.230:9002/NAT-GEO/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
-http://92.114.85.87:8006/play/a00a/index.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
 http://212.5.144.156:8080/natgeo/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" group-title="Documentary & Info",National Geographic
+http://92.114.85.87:8006/play/a00a/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png" group-title="Documentary & Info",National Geographic Wild
 https://fs.uplink.kz/nat_geo_wild/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-logo="https://i.imgur.com/zUMUNhe.png" group-title="Music Channels",3ABN Proclaim! Network
@@ -338,10 +330,10 @@ https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlis
 https://cdn.pishow.tv/ott/live/280/master.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png" group-title="Music Channels",Hum TV
 https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
+#EXTINF:-1 tvg-logo="https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png" group-title="Music Channels",JapanimTV
+https://foxkidstv.be:3369/stream/play.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/M1Ee79b.png" group-title="Music Channels",Kozoom TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/0fnY2cj/IMG-20230419-161527.jpg" group-title="Music Channels",M-Net Info
-https://live.mnet.mk/hls/mnet-info.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7k8ar1Z.png" group-title="Music Channels",M-Net Sport
 http://ares.mnet.mk/hls/mnet-sport.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/cFNw4Af.png" group-title="Music Channels",Marutam TV
