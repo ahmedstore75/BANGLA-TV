@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 220,
+    "total_channels": 215,
     "status": "success",
     "channels": [
         {
@@ -8,12 +8,6 @@
             "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
-        },
-        {
-            "name": "Ananda TV",
-            "logo": "https://i.imgur.com/jkbo7Qe.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8"
         },
         {
             "name": "Azan TV",
@@ -134,12 +128,6 @@
             "logo": "https://i.imgur.com/MBm2gPz.jpeg",
             "group": "Bangladeshi TV",
             "stream_url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
-        },
-        {
-            "name": "Rupashi Bangla TV",
-            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8"
         },
         {
             "name": "Zee Bangla HD",
@@ -268,12 +256,6 @@
             "stream_url": "https://s7.iptv-24.net/1439/playlist.m3u8"
         },
         {
-            "name": "Eurosport 1 Spain",
-            "logo": "https://i.imgur.com/olQJgm7.png",
-            "group": "Sports Channels",
-            "stream_url": "http://45.134.141.161:2200/ARG/Eurosport_1_HD/index.m3u8"
-        },
-        {
             "name": "Eurosport 1 UK",
             "logo": "https://i.imgur.com/olQJgm7.png",
             "group": "Sports Channels",
@@ -320,12 +302,6 @@
             "logo": "https://i.imgur.com/f56dHgR.png",
             "group": "Sports Channels",
             "stream_url": "https://s7.iptv-24.net/1452/playlist.m3u8"
-        },
-        {
-            "name": "Eurosport 2 Spain",
-            "logo": "https://i.imgur.com/f56dHgR.png",
-            "group": "Sports Channels",
-            "stream_url": "http://45.134.141.161:2200/ARG/Eurosport_2_HD/index.m3u8"
         },
         {
             "name": "Eurosport 2 UK",
@@ -814,12 +790,6 @@
             "stream_url": "http://149.100.11.252:8000/play/a056/index.m3u8"
         },
         {
-            "name": "Cartoon Network Asia Thailand",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
-            "group": "Kids Channels",
-            "stream_url": "http://103.253.74.210:7070/stream/118/index.m3u8"
-        },
-        {
             "name": "Cartoon Network CEE",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
@@ -859,13 +829,13 @@
             "name": "Animal Planet",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://37.49.224.5/stream/10/index.m3u8"
+            "stream_url": "http://23.237.104.106:8080/USA_ANIMAL_PLANET/index.m3u8"
         },
         {
             "name": "Animal Planet",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png",
             "group": "Documentary & Info",
-            "stream_url": "http://23.237.104.106:8080/USA_ANIMAL_PLANET/index.m3u8"
+            "stream_url": "http://37.49.224.5/stream/10/index.m3u8"
         },
         {
             "name": "Animal Planet",
@@ -976,16 +946,16 @@
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
         },
         {
-            "name": "CEACOM TV",
-            "logo": "https://i.imgur.com/hutdRfk.png",
-            "group": "Music Channels",
-            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
-        },
-        {
             "name": "Dare To Dream Network",
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
+        },
+        {
+            "name": "Dream TV",
+            "logo": "https://i.imgur.com/XRUDhqQ.png",
+            "group": "Music Channels",
+            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
         },
         {
             "name": "EWTN/Bonum TV",
@@ -1010,12 +980,6 @@
             "logo": "https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png",
             "group": "Music Channels",
             "stream_url": "https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8"
-        },
-        {
-            "name": "JapanimTV",
-            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
-            "group": "Music Channels",
-            "stream_url": "https://foxkidstv.be:3369/stream/play.m3u8"
         },
         {
             "name": "Kozoom TV",
@@ -1130,6 +1094,12 @@
             "logo": "https://papaji.freetvindia.com/media/channels/Valam_TV.png",
             "group": "Music Channels",
             "stream_url": "http://cabletv.valamtv.in/hls/stream0.m3u8"
+        },
+        {
+            "name": "Velicham TV",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/e/e4/Logo_of_Velicham_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumbai-edge.smartplaytv.in/Velichamtv/index.m3u8"
         },
         {
             "name": "Zoom",
