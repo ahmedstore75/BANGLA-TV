@@ -1,8 +1,14 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 205,
+    "total_channels": 226,
     "status": "success",
     "channels": [
+        {
+            "name": "Aamar Bangla",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
+        },
         {
             "name": "Ananda TV",
             "logo": "https://i.imgur.com/jkbo7Qe.png",
@@ -58,12 +64,6 @@
             "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
         },
         {
-            "name": "Jalsha Movies",
-            "logo": "https://i.imgur.com/25eWjX2.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8"
-        },
-        {
             "name": "Madani Channel Bangla",
             "logo": "https://i.imgur.com/vIJTVia.png",
             "group": "Bangladeshi TV",
@@ -92,6 +92,18 @@
             "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
+        },
+        {
+            "name": "National Geographic  HD",
+            "logo": "https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://116.90.120.149:8000/play/a115/index.m3u8"
+        },
+        {
+            "name": "National Geographic Wild  HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "http://116.90.120.149:8000/play/a11h/index.m3u8"
         },
         {
             "name": "News 21 Bangla TV",
@@ -200,6 +212,12 @@
             "logo": "https://i.imgur.com/b0Wx7pE.png",
             "group": "Sports Channels",
             "stream_url": "http://media3.smc-host.com:1935/elbesharagtv.com/gtv.smil/playlist.m3u8"
+        },
+        {
+            "name": "Eurosport  HD",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002E9LQS.png?lock=720x540",
+            "group": "Sports Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a118/index.m3u8"
         },
         {
             "name": "Eurosport 1",
@@ -532,6 +550,12 @@
             "stream_url": "https://video1.getstreamhosting.com:1936/8322/8322/playlist.m3u8"
         },
         {
+            "name": "&pictures HD",
+            "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0022J67R.png?lock=720x540",
+            "group": "Indian Movie Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a132/index.m3u8"
+        },
+        {
             "name": "B4U Movies",
             "logo": "https://i.imgur.com/M9kMFJl.png",
             "group": "Indian Movie Channels",
@@ -574,6 +598,18 @@
             "stream_url": "http://163.61.226.31:9981/stream/channelid/1393052638?profile=pass"
         },
         {
+            "name": "Sony Max",
+            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Movie Channels",
+            "stream_url": "https://drk6xq0vhn.gpcdn.net/hls/set_max_m4fb8dz2wp6kr9s_720/index.m3u8"
+        },
+        {
+            "name": "Sony Max HD",
+            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Movie Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a123/index.m3u8"
+        },
+        {
             "name": "Zee Cinema APAC",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movie Channels",
@@ -584,6 +620,12 @@
             "logo": "https://i.imgur.com/KoGko6M.png",
             "group": "English Movie Channels",
             "stream_url": "https://jmp2.uk/plu-5f4d86f519358a00072b978e.m3u8"
+        },
+        {
+            "name": "AMC Thrillers",
+            "logo": "https://i.imgur.com/EVD0aIt.png",
+            "group": "English Movie Channels",
+            "stream_url": "https://amc-rushbyamc-1-us.vizio.wurl.tv/playlist.m3u8"
         },
         {
             "name": "ARTFLIX Movie Classics",
@@ -616,22 +658,10 @@
             "stream_url": "http://88.212.15.50/live/test_cinemax2_hd_hevc/playlist.m3u8"
         },
         {
-            "name": "Cinemax 2 Central Europe",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Cinemax_2_%282016%29.png/960px-Cinemax_2_%282016%29.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://193.33.39.108:9009/play/a024"
-        },
-        {
             "name": "Cinemax Asia Taiwan",
             "logo": "https://i.imgur.com/c8crJfA.png",
             "group": "English Movie Channels",
             "stream_url": "http://125.227.210.55:1001/VideoInput/play.ts"
-        },
-        {
-            "name": "Cinemax Central Europe",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://193.33.39.108:9023/play/a01b"
         },
         {
             "name": "Cinemax Hits",
@@ -671,7 +701,7 @@
         },
         {
             "name": "HBO Asia Taiwan",
-            "logo": "https://i.imgur.com/cE2gBt6.png",
+            "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
             "group": "English Movie Channels",
             "stream_url": "http://125.227.210.55:1003/VideoInput/play.ts"
         },
@@ -686,6 +716,30 @@
             "logo": "https://i.imgur.com/4Pn0ADQ.png",
             "group": "English Movie Channels",
             "stream_url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=50"
+        },
+        {
+            "name": "MNX",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a11e/index.m3u8"
+        },
+        {
+            "name": "MNX HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a11m/index.m3u8"
+        },
+        {
+            "name": "Movies Now +",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a11k/index.m3u8"
+        },
+        {
+            "name": "Movies Now HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a11f/index.m3u8"
         },
         {
             "name": "NH BollyFlix",
@@ -710,6 +764,18 @@
             "logo": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
             "group": "English Movie Channels",
             "stream_url": "https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8"
+        },
+        {
+            "name": "Pure Flix TV",
+            "logo": "https://www.tablotv.com/wp-content/uploads/2025/05/PureFlixTV_black.png",
+            "group": "English Movie Channels",
+            "stream_url": "https://amg01884-gac-amg01884c1-vizio-us-5495.playouts.now.amagi.tv/playlist.m3u8"
+        },
+        {
+            "name": "Sony Pix HD",
+            "logo": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a138/index.m3u8"
         },
         {
             "name": "ABP Ananda",
@@ -751,13 +817,13 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
         },
         {
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
         },
         {
             "name": "Cartoon Network  HD",
@@ -766,16 +832,16 @@
             "stream_url": "http://103.255.250.188:5002/cs25.m3u8?channel=zhongying&gid=cs25&token=guoziyun"
         },
         {
+            "name": "Cartoon Network  West",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "http://212.5.144.156:8080/cartoon/index.m3u8"
+        },
+        {
             "name": "Cartoon Network Arabic",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cartoon_Network_Arabic_logo.png/960px-Cartoon_Network_Arabic_logo.png",
             "group": "Kids Channels",
             "stream_url": "http://149.100.11.252:8000/play/a056/index.m3u8"
-        },
-        {
-            "name": "Cartoon Network CEE",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
-            "group": "Kids Channels",
-            "stream_url": "http://193.33.39.108:9007/play/a00l"
         },
         {
             "name": "Cartoon Network CEE Bulgary",
@@ -802,6 +868,24 @@
             "stream_url": "http://45.132.87.69:8080/cartoon_network/index.m3u8"
         },
         {
+            "name": "Disney Channel",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL/images/LOGO_HD/image.png",
+            "group": "Kids Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a124/index.m3u8"
+        },
+        {
+            "name": "Disney Channel  HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL_HD/images/LOGO_HD/image.png",
+            "group": "Kids Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a11r/index.m3u8"
+        },
+        {
+            "name": "Nick HD+",
+            "logo": "https://dtil.tmsimg.com/assets/s159121_ld_h15_aa.png?lock=720x540",
+            "group": "Kids Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a11j/index.m3u8"
+        },
+        {
             "name": "Sonic TV",
             "logo": "https://i.imgur.com/TKhRlrR.png",
             "group": "Kids Channels",
@@ -826,16 +910,40 @@
             "stream_url": "http://37.49.224.5/stream/12/index.m3u8"
         },
         {
+            "name": "Discovery Science",
+            "logo": "https://dtil.tmsimg.com/assets/s159107_ld_h15_aa.png?lock=720x540",
+            "group": "Documentary & Info",
+            "stream_url": "http://116.90.120.149:8000/play/a11b/index.m3u8"
+        },
+        {
+            "name": "Discovery Turbo",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISCOVERY_TURBO/images/LOGO_HD/image.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://116.90.120.149:8000/play/a11d/index.m3u8"
+        },
+        {
             "name": "History TV18 HD",
             "logo": "https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540",
             "group": "Documentary & Info",
-            "stream_url": "https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8"
+            "stream_url": "http://116.90.120.149:8000/play/a12z/index.m3u8"
+        },
+        {
+            "name": "Investigation Discovery",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INVESTIGATION_DISCOVERY/images/LOGO_HD/image.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://116.90.120.149:8000/play/a119/index.m3u8"
         },
         {
             "name": "Investigation Discovery",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://88.212.7.14/live/id_hun/index.m3u8"
+        },
+        {
+            "name": "Investigation Discovery",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/id/index.m3u8"
         },
         {
             "name": "National Geographic",
@@ -848,6 +956,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
             "group": "Documentary & Info",
             "stream_url": "http://92.114.85.87:8006/play/a00a/index.m3u8"
+        },
+        {
+            "name": "National Geographic",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+            "group": "Documentary & Info",
+            "stream_url": "http://212.5.144.156:8080/natgeo/index.m3u8"
         },
         {
             "name": "National Geographic Wild",
@@ -898,22 +1012,10 @@
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
         },
         {
-            "name": "CEACOM TV",
-            "logo": "https://i.imgur.com/hutdRfk.png",
-            "group": "Music Channels",
-            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
-        },
-        {
             "name": "Dare To Dream Network",
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
-        },
-        {
-            "name": "Dream TV",
-            "logo": "https://i.imgur.com/XRUDhqQ.png",
-            "group": "Music Channels",
-            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
         },
         {
             "name": "EWTN/Bonum TV",
@@ -970,10 +1072,22 @@
             "stream_url": "https://metafilmhls.wns.live/hls/stream.m3u8"
         },
         {
+            "name": "MTV  HD",
+            "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MTV/images/LOGO_HD/image.png",
+            "group": "Music Channels",
+            "stream_url": "http://116.90.120.149:8000/play/a136/index.m3u8"
+        },
+        {
             "name": "Muslim Network TV",
             "logo": "",
             "group": "Music Channels",
             "stream_url": "https://afghantv.app/hls2/muslimnetwork/index.m3u8"
+        },
+        {
+            "name": "OM TV",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+            "group": "Music Channels",
+            "stream_url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8"
         },
         {
             "name": "Payam TV",
@@ -1154,6 +1268,18 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg/960px-Logo_de_CNN_en_Espa%C3%B1ol_%282010-2015%29.svg.png",
             "group": "International News",
             "stream_url": "https://amg00803-cnnfast-amg00803c3-lg-es-5477.playouts.now.amagi.tv/playlist.m3u8"
+        },
+        {
+            "name": "CNN HD",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
+            "group": "International News",
+            "stream_url": "http://212.5.144.156:8080/cnn/index.m3u8"
+        },
+        {
+            "name": "CNN Headlines",
+            "logo": "https://provider-static.plex.tv/epg/cms/production/de3851fb-9598-4d13-8e03-f421418c9b5b/CNN_Headlines_ChannelLogo_Dark_1500x1000_2025_-_Grace_Hartwig.png",
+            "group": "International News",
+            "stream_url": "https://amg01918-cnnus-amg01918c1-vizio-us-1813.playouts.now.amagi.tv/playlist/amg01918-cnnus-cnnheadlines-vizious/playlist.m3u8"
         },
         {
             "name": "CNN International",
