@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 244,
+    "total_channels": 240,
     "status": "success",
     "channels": [
         {
@@ -164,12 +164,6 @@
             "logo": "https://i.imgur.com/p26iWOi.png",
             "group": "Sports Channels",
             "stream_url": "https://d2gvyg6lvauoko.cloudfront.net/230226/awakeningtv/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
-        },
-        {
-            "name": "beIN Sports 1 Turk",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/2/27/BeinSports1.svg/revision/latest?cb=20230910184457",
-            "group": "Sports Channels",
-            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F300113394ceebba66c8ad"
         },
         {
             "name": "beIN Sports USA",
@@ -344,18 +338,6 @@
             "logo": "https://i.imgur.com/f56dHgR.png",
             "group": "Sports Channels",
             "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2_en/live.livx/playlist.m3u8"
-        },
-        {
-            "name": "Eurosport 3 Polska",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/d/da/Eurosport_3_2022.svg/revision/latest?cb=20220418054130",
-            "group": "Sports Channels",
-            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F5121596371c5191ed9b35"
-        },
-        {
-            "name": "Eurosport 4 Polska",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/a/ae/Eurosport_4_2022.svg/revision/latest?cb=20220418053934",
-            "group": "Sports Channels",
-            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F2896573317d9d69e0e2d72"
         },
         {
             "name": "Eurosport 4K Romania",
@@ -785,15 +767,15 @@
         },
         {
             "name": "HBO 2",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226",
-            "group": "English Movie Channels",
-            "stream_url": "http://88.212.15.50/live/test_hbo2_hd_hevc/playlist.m3u8"
-        },
-        {
-            "name": "HBO 2",
             "logo": "https://i.imgur.com/2e3muOJ.png",
             "group": "English Movie Channels",
             "stream_url": "http://185.227.34.179:8080/hbo-2-hd/index.m3u8"
+        },
+        {
+            "name": "HBO 2",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226",
+            "group": "English Movie Channels",
+            "stream_url": "http://88.212.15.50/live/test_hbo2_hd_hevc/playlist.m3u8"
         },
         {
             "name": "HBO 3",
@@ -980,12 +962,6 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
             "stream_url": "http://45.132.87.69:8080/cartoon_network/index.m3u8"
-        },
-        {
-            "name": "Cartoon Network Western Europe Portugal",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
-            "group": "Kids Channels",
-            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F327818589842dbaee1327c"
         },
         {
             "name": "Disney Channel",
