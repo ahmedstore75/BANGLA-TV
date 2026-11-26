@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 224,
+    "total_channels": 225,
     "status": "success",
     "channels": [
         {
@@ -20,12 +20,6 @@
             "logo": "https://i.imgur.com/nCWgp38.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen5.aynaott.com/banglavision/index.m3u8"
-        },
-        {
-            "name": "Boishakhi TV",
-            "logo": "https://i.imgur.com/gxL05Y4.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8"
         },
         {
             "name": "Cartoon Network",
@@ -100,12 +94,6 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
         },
         {
-            "name": "News 21 Bangla TV",
-            "logo": "https://i.imgur.com/ijuJfmd.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8"
-        },
-        {
             "name": "Nexus TV",
             "logo": "https://i.imgur.com/XcJZKg4.png",
             "group": "Bangladeshi TV",
@@ -166,10 +154,10 @@
             "stream_url": "https://d2gvyg6lvauoko.cloudfront.net/230226/awakeningtv/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
         },
         {
-            "name": "beIN Sports USA",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png",
+            "name": "beIN Sports 1 Turk",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/2/27/BeinSports1.svg/revision/latest?cb=20230910184457",
             "group": "Sports Channels",
-            "stream_url": "https://tvsen6.aynaott.com/beinsports/index.m3u8"
+            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F300113394ceebba66c8ad"
         },
         {
             "name": "beIN SPORTS XTRA",
@@ -340,22 +328,22 @@
             "stream_url": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2_en/live.livx/playlist.m3u8"
         },
         {
-            "name": "Eurosport 4K Romania",
-            "logo": "https://web02.antik.sk/assets/img/channels/645a85b97a8257d6702639d6e540fe5b.svg",
+            "name": "Eurosport 3 Polska",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/d/da/Eurosport_3_2022.svg/revision/latest?cb=20220418054130",
             "group": "Sports Channels",
-            "stream_url": "https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/5449.m3u8"
+            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F5121596371c5191ed9b35"
+        },
+        {
+            "name": "Eurosport 4 Polska",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/a/ae/Eurosport_4_2022.svg/revision/latest?cb=20220418053934",
+            "group": "Sports Channels",
+            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F2896573317d9d69e0e2d72"
         },
         {
             "name": "FGTV",
             "logo": "https://i.ibb.co/crxz0fd/yfgc-hearder-logo.png",
             "group": "Sports Channels",
             "stream_url": "https://fgtvlive.fgtv.com/smil:fgtv.smil/playlist.m3u8"
-        },
-        {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
         },
         {
             "name": "King TV",
@@ -502,12 +490,6 @@
             "stream_url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8"
         },
         {
-            "name": "Iqra Bangla",
-            "logo": "https://i.imgur.com/BZBZAeC.png",
-            "group": "Islamic TV",
-            "stream_url": "https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8"
-        },
-        {
             "name": "Iqraa Africa & Europe",
             "logo": "https://i.imgur.com/nUlZvSe.png",
             "group": "Islamic TV",
@@ -604,6 +586,12 @@
             "stream_url": "https://drk6xq0vhn.gpcdn.net/hls/set_max_m4fb8dz2wp6kr9s_720/index.m3u8"
         },
         {
+            "name": "Sony Max HD",
+            "logo": "https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540",
+            "group": "Indian Movie Channels",
+            "stream_url": "https://rangdhonulive.samiulislamabhi.workers.dev/sonyMAXhd/tracks-v1a1/mono.ts.m3u8"
+        },
+        {
             "name": "Zee Cinema APAC",
             "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",
             "group": "Indian Movie Channels",
@@ -695,15 +683,15 @@
         },
         {
             "name": "HBO 2",
-            "logo": "https://i.imgur.com/2e3muOJ.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://185.227.34.179:8080/hbo-2-hd/index.m3u8"
-        },
-        {
-            "name": "HBO 2",
             "logo": "https://static.wikia.nocookie.net/logopedia/images/8/8f/HBO_2_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122226",
             "group": "English Movie Channels",
             "stream_url": "http://88.212.15.50/live/test_hbo2_hd_hevc/playlist.m3u8"
+        },
+        {
+            "name": "HBO 2",
+            "logo": "https://i.imgur.com/2e3muOJ.png",
+            "group": "English Movie Channels",
+            "stream_url": "http://185.227.34.179:8080/hbo-2-hd/index.m3u8"
         },
         {
             "name": "HBO 3",
@@ -716,6 +704,12 @@
             "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/HBO_Asia.png/960px-HBO_Asia.png",
             "group": "English Movie Channels",
             "stream_url": "http://125.227.210.55:1003/VideoInput/play.ts"
+        },
+        {
+            "name": "K7 Keralam Channel",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HJ1d-xOsWKg7ZYyU7algdOhJspVrXQUvQnCxqKfsrw&s=10",
+            "group": "English Movie Channels",
+            "stream_url": "https://live.skystream.in/live/keralam2742/index.m3u8"
         },
         {
             "name": "Khushboo Bangla",
@@ -758,6 +752,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png",
             "group": "English Movie Channels",
             "stream_url": "http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8"
+        },
+        {
+            "name": "Paramount Network",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png",
+            "group": "English Movie Channels",
+            "stream_url": "https://guard.sekobes.workers.dev/?url=https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fgeil.to%2Flive%2Fplay%2F3390498693"
         },
         {
             "name": "Paramount+ Picks",
@@ -817,13 +817,13 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
         },
         {
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
         },
         {
             "name": "Cartoon Network  HD",
@@ -842,6 +842,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cartoon_Network_Arabic_logo.png/960px-Cartoon_Network_Arabic_logo.png",
             "group": "Kids Channels",
             "stream_url": "http://149.100.11.252:8000/play/a056/index.m3u8"
+        },
+        {
+            "name": "Cartoon Network Asia Thailand",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "http://103.148.210.190:8000/play/a14r"
         },
         {
             "name": "Cartoon Network CEE",
@@ -872,6 +878,12 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
             "stream_url": "http://45.132.87.69:8080/cartoon_network/index.m3u8"
+        },
+        {
+            "name": "Cartoon Network Western Europe Portugal",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+            "group": "Kids Channels",
+            "stream_url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F327818589842dbaee1327c"
         },
         {
             "name": "Sonic TV",
@@ -998,12 +1010,6 @@
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
-        },
-        {
-            "name": "Dream TV",
-            "logo": "https://i.imgur.com/XRUDhqQ.png",
-            "group": "Music Channels",
-            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
         },
         {
             "name": "EWTN/Bonum TV",
